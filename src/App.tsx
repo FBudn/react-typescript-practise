@@ -1,14 +1,25 @@
 import React from "react";
 import { Background, MaxWidth } from "./Components/Styles";
-import Tile from "./Components/Tile";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import SignUp from "./Pages/SignUp/SignUp";
+import Login from "./Pages/Login/Login";
 
 const App: React.FC = () => {
   return (
-    <Background>
-      <MaxWidth>
-        <Tile />
-      </MaxWidth>
-    </Background>
+    <Router>
+      <Background>
+        <MaxWidth>
+          <Switch>
+            <Route exact path="/SignUp">
+              <SignUp />
+            </Route>
+            <Route exact path="/Login">
+              <Login />
+            </Route>
+          </Switch>
+        </MaxWidth>
+      </Background>
+    </Router>
   );
 };
 
