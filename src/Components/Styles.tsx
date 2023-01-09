@@ -135,6 +135,7 @@ export const SoloIconContainer = styled.div`
   font-size: 1rem;
   border-radius: 100%;
   border: 2px solid black;
+  cursor: pointer;
 `;
 
 export const SignOrLogLinkContainer = styled.div`
