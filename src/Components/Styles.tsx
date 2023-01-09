@@ -23,10 +23,14 @@ export const Tile = styled.div`
   background: white;
   display: flex;
   justify-content: center;
-  padding-top: 16px;
-  padding-bottom: 16px;
+  padding-top: 35px;
+  padding-bottom: 35px;
   border-radius: 10px;
   width: 80%;
+
+  @media screen and (min-width: 768px) {
+    max-width: 24rem;
+  }
 `;
 
 export const TileContainer = styled.div`
@@ -93,7 +97,11 @@ export const HrStyled = styled.hr`
   width: 117px;
   border: none;
   height: 2px;
-  background: rgb(229 231 235); ;
+  background: rgb(229 231 235);
+
+  @media screen and (min-width: 768px) {
+    width: 130px;
+  }
 `;
 
 export const LineTextBox = styled.div`
@@ -109,4 +117,58 @@ font-weight: 500;
 color: rgb(156 163 175);;
 `;
 
-//flex border-2 text-center items-center p-0.5 rounded text-sm font-medium  text-zinc-400 "
+export const IconsContainerMain = styled.div`
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin: 4px;
+`;
+
+export const SoloIconContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text: center;
+  padding: 8px;
+  font-size: 1rem;
+  border-radius: 100%;
+  border: 2px solid black;
+`;
+
+export const SignOrLogLinkContainer = styled.div`
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  gap: 1px;
+  margin: 2px;
+`;
+
+export const CheckboxContainer = styled.div`
+  display: flex;
+  width: 100%;
+  justify-content: start;
+  align-items: center;
+  text: center;
+  gap: 3px;
+  height: 10px;
+  color: rgb(82 82 91);
+  cursor: pointer;
+`;
+
+export const ForgotPassContainer = styled.div`
+  display: flex;
+  width: 100%;
+  justify-content: end;
+  text: center;
+  align-items: center;
+  height: 10px;
+  color: rgb(82 82 91);
+  cursor: pointer;
+  margin-top: -8px;
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+`;
+
+//flex w-full justify-end text-center text-sm font-medium  text-zinc-400 cursor-pointer

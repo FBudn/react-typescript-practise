@@ -4,7 +4,8 @@ import Header from "../../Components/Header";
 import Form from "../../Components/Form";
 import Button from "../../Components/Button";
 import Line from "../../Components/Line";
-//import Line from "../../Components/Line";
+import Icons from "../../Components/Icons";
+import SignOrLogLink from "../../Components/SignOrLogLink";
 
 const SignUp: React.FC = () => {
   return (
@@ -14,6 +15,12 @@ const SignUp: React.FC = () => {
         <Form email="Email" password="Password" />
         <Button text="SIGN UP" />
         <Line text="OR" />
+        <Icons />
+        <SignOrLogLink
+          questionText="Already a user?"
+          linkText="LOGIN"
+          link="/Login"
+        />
       </TileContainer>
     </Tile>
   );
