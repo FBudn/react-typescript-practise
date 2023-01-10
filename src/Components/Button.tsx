@@ -10,3 +10,5 @@ const Button: React.FC<ButtonProps> = ({ text }) => {
 };
 
 export default Button;
+
+//onClick={() => handleValues}
