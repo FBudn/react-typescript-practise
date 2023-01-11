@@ -3,10 +3,15 @@ import { ButtonContainer } from "./Styles";
 
 export interface ButtonProps {
   text: string;
+  onClick?: any;
 }
 
-const Button: React.FC<ButtonProps> = ({ text }) => {
-  return <ButtonContainer>{text}</ButtonContainer>;
+const Button: React.FC<ButtonProps> = ({ text, onClick }) => {
+  return (
+    <ButtonContainer onClick={() => console.log(onClick)}>
+      {text}
+    </ButtonContainer>
+  );
 };
 
 export default Button;

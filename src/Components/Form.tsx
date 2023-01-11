@@ -9,25 +9,10 @@ import {
 export interface LabelProps {
   email: string;
   password: string;
+  handleChange: any;
 }
 
-const Form: React.FC<LabelProps> = ({ email, password }) => {
-  const [inputsValues, setInputsValues] = useState({
-    email: "",
-    password: "",
-  });
-
-  const handleChange = (e: { target: { name: any; value: any } }) => {
-    const { name, value } = e.target;
-    // const name = e.target.name;
-    // const value = e.target.value;
-    setInputsValues((prev) => {
-      return { ...prev, [name]: value };
-    });
-  };
-
-  console.log(inputsValues);
-
+const Form: React.FC<LabelProps> = ({ email, password, handleChange }) => {
   return (
     <InputsContainer>
       <OneInputContainer>
