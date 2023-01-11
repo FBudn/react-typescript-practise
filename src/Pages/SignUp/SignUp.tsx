@@ -12,6 +12,7 @@ const SignUp: React.FC = () => {
     email: "",
     password: "",
   });
+
   const handleChange = (e: { target: { name: any; value: any } }) => {
     const { name, value } = e.target;
     // const name = e.target.name;
@@ -20,12 +21,18 @@ const SignUp: React.FC = () => {
       return { ...prev, [name]: value };
     });
   };
+
+  const checkboxValue = `No checkbox`;
   return (
     <Tile>
       <TileContainer>
         <Header text="SIGN UP" />
         <Form handleChange={handleChange} email="Email" password="Password" />
-        <Button text="SIGN UP" />
+        <Button
+          text="SIGN UP"
+          onClick={inputsValues}
+          checkboxValue={checkboxValue}
+        />
         <Line text="OR" />
         <Icons />
         <SignOrLogLink

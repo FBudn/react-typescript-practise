@@ -10,10 +10,17 @@ import CheckboxPass from "../../Components/CheckboxPass";
 import ForgotPass from "../../Components/ForgotPass";
 
 const Login: React.FC = () => {
+  const [checkboxValue, setCheckboxValue] = useState(false);
+
+  const handleCheckbox = (event: any) => {
+    setCheckboxValue(event.target.checked);
+  };
+
   const [inputsValues, setInputsValues] = useState({
     email: "",
     password: "",
   });
+
   const handleChange = (e: { target: { name: any; value: any } }) => {
     const { name, value } = e.target;
     // const name = e.target.name;
@@ -23,18 +30,17 @@ const Login: React.FC = () => {
     });
   };
 
-  console.log(
-    Object.entries(inputsValues)
-      .flat()
-      .filter((e) => e !== "")
-  );
   return (
     <Tile>
       <TileContainer>
         <Header text="LOGIN" />
         <Form handleChange={handleChange} email="Email" password="Password" />
-        <CheckboxPass text="Remember me?" />
-        <Button text="LOGIN" onClick={inputsValues} />
+        <CheckboxPass text="Remember me?" handleCheckbox={handleCheckbox} />
+        <Button
+          text="LOGIN"
+          onClick={inputsValues}
+          checkboxValue={checkboxValue}
+        />
         <ForgotPass text="Forgot Password?" />
         <Line text="OR" />
         <Icons />
