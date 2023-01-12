@@ -3,20 +3,15 @@ import { ButtonContainer } from "./Styles";
 
 export interface ButtonProps {
   text: string;
-  onClick?: any;
-  checkboxValue?: any;
+  onClick: any;
+  //checkboxValue: any;
 }
 
-const Button: React.FC<ButtonProps> = ({ text, onClick, checkboxValue }) => {
-  return (
-    <ButtonContainer
-      onClick={() => console.log(onClick, "         ", checkboxValue)}
-    >
-      {text}
-    </ButtonContainer>
-  );
+const Button: React.FC<ButtonProps> = ({ text, onClick }) => {
+  return <ButtonContainer onClick={onClick}>{text}</ButtonContainer>;
 };
 
 export default Button;
 
 //onClick={() => handleValues}
+// tu w funkcji ktora przekazuje do Buttona mogę sobie spiąć w obiekt stany email itd zeby wyswietlic w 1

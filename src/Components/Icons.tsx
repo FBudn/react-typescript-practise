@@ -14,13 +14,22 @@ const linkedin = <FontAwesomeIcon icon={faLinkedinIn} />;
 const Icons: React.FC = () => {
   return (
     <IconsContainerMain>
-      <SoloIconContainer style={{ color: "red", borderColor: "red" }}>
+      <SoloIconContainer
+        style={{ color: "red", borderColor: "red" }}
+        onClick={() => console.log(`Google Clicked`)}
+      >
         {google}
       </SoloIconContainer>
-      <SoloIconContainer style={{ color: "blue", borderColor: "blue" }}>
+      <SoloIconContainer
+        style={{ color: "blue", borderColor: "blue" }}
+        onClick={() => console.log(`Facebook Clicked`)}
+      >
         {facebook}
       </SoloIconContainer>
-      <SoloIconContainer style={{ color: "blue", borderColor: "blue" }}>
+      <SoloIconContainer
+        style={{ color: "blue", borderColor: "blue" }}
+        onClick={() => console.log(`LinkedIn Clicked`)}
+      >
         {linkedin}
       </SoloIconContainer>
     </IconsContainerMain>

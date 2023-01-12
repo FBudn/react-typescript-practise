@@ -5,6 +5,10 @@ import SignUp from "./Pages/SignUp/SignUp";
 import Login from "./Pages/Login/Login";
 
 const App: React.FC = () => {
+  /*useEffect(() => {
+    console.log(`jestem`);
+  }, []); */ //nie potrzebny bez zewnętrznych "systemów" i do user eventów
+
   return (
     <Router>
       <Background>
@@ -24,3 +28,5 @@ const App: React.FC = () => {
 };
 
 export default App;
+// w apie przejście między loginem a signupem tylko. Stylowanie backgroundu na całość tu lub osobno w Login Signup na ten moment obojętne
+// Ewentualnie background maxwith i switcha wrzucić w fima?

@@ -11,7 +11,7 @@ const SignUp: React.FC = () => {
   const [inputsValues, setInputsValues] = useState({
     email: "",
     password: "",
-  });
+  }); // na osobne: email i password
 
   const handleChange = (e: { target: { name: any; value: any } }) => {
     const { name, value } = e.target;
@@ -20,9 +20,13 @@ const SignUp: React.FC = () => {
     setInputsValues((prev: any) => {
       return { ...prev, [name]: value };
     });
-  };
+  }; //lepiej rozbić na 2 funkcje
 
-  const checkboxValue = `No checkbox`;
+  const onButtonClick = () => {
+    console.log(inputsValues);
+  }; //do Loginu ta sama poprawka
+
+  //const checkboxValue = `No checkbox`;
   return (
     <Tile>
       <TileContainer>
@@ -30,8 +34,8 @@ const SignUp: React.FC = () => {
         <Form handleChange={handleChange} email="Email" password="Password" />
         <Button
           text="SIGN UP"
-          onClick={inputsValues}
-          checkboxValue={checkboxValue}
+          onClick={onButtonClick}
+          //checkboxValue={checkboxValue}
         />
         <Line text="OR" />
         <Icons />

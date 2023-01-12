@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import { CheckboxContainer } from "./Styles";
 
 export interface CheckboxProps {
   text: string;
-  handleCheckbox: any;
+  handleCheckbox: any; //unikać any tylko stosować konkretne typy. Do funkcji jako typ () => void
 }
 
 const CheckboxPass: React.FC<CheckboxProps> = ({ text, handleCheckbox }) => {
@@ -13,11 +13,11 @@ const CheckboxPass: React.FC<CheckboxProps> = ({ text, handleCheckbox }) => {
         //checked={checkboxValue}
         onChange={handleCheckbox}
         name="checkboxValue"
-        className="cursor-pointer"
+        className="cursor-pointer" //nie to stylizowałem
         type="checkbox"
       />
       {text}
-    </CheckboxContainer>
+    </CheckboxContainer> //children prop sprawdzić jak działa
   );
 };
 

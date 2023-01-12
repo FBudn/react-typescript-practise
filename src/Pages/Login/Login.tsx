@@ -30,6 +30,10 @@ const Login: React.FC = () => {
     });
   };
 
+  /* const clearInput = (e: { target: { name: any; value: any } }) => {
+    
+  }; */
+
   return (
     <Tile>
       <TileContainer>
@@ -39,7 +43,7 @@ const Login: React.FC = () => {
         <Button
           text="LOGIN"
           onClick={inputsValues}
-          checkboxValue={checkboxValue}
+          //checkboxValue={checkboxValue}
         />
         <ForgotPass text="Forgot Password?" />
         <Line text="OR" />

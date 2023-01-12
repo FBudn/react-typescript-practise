@@ -16,9 +16,7 @@ const SignOrLogLink: React.FC<SignOrLogLinkProps> = ({
   return (
     <SignOrLogLinkContainer>
       <div>{questionText}</div>
-      <Link className="underline" to={link}>
-        {linkText}
-      </Link>
+      <Link to={link}>{linkText}</Link>
     </SignOrLogLinkContainer>
   );
 };

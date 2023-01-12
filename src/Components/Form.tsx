@@ -16,12 +16,22 @@ const Form: React.FC<LabelProps> = ({ email, password, handleChange }) => {
   return (
     <InputsContainer>
       <OneInputContainer>
-        <InputLabel>{email}</InputLabel>
-        <Input type="email" name="email" onChange={handleChange}></Input>
+        <InputLabel id="emailInput">{email}</InputLabel>
+        <Input
+          type="email"
+          name="email"
+          onChange={handleChange}
+          required
+        ></Input>
       </OneInputContainer>
       <OneInputContainer>
         <InputLabel>{password}</InputLabel>
-        <Input type="password" name="password" onChange={handleChange}></Input>
+        <Input
+          type="password"
+          name="password"
+          onChange={handleChange}
+          required
+        ></Input>
       </OneInputContainer>
     </InputsContainer>
   );

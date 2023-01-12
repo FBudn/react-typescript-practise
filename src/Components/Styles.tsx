@@ -30,6 +30,7 @@ export const Tile = styled.div`
 
   @media screen and (min-width: 768px) {
     max-width: 24rem;
+    min-height: 27rem;
   }
 `;
 
@@ -80,6 +81,7 @@ export const ButtonContainer = styled.button`
   align-items: center;
   font-weight: bold;
   color: white;
+  cursor: pointer;
   background: rgb(236 72 153);
   box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
   --tw-shadow-color: #94a3b8;
