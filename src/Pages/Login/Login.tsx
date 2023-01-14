@@ -25,7 +25,7 @@ const Login: React.FC = () => {
     const { name, value } = e.target;
     // const name = e.target.name;
     // const value = e.target.value;
-    setInputsValues((prev: any) => {
+    setInputsValues((prev: { email: string; password: string }) => {
       return { ...prev, [name]: value };
     });
   };
