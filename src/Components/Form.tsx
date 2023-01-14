@@ -9,7 +9,7 @@ import {
 export interface LabelProps {
   email: string;
   password: string;
-  handleChange: any;
+  handleChange: (e: { target: { name: string; value: string } }) => void;
 }
 
 const Form: React.FC<LabelProps> = ({ email, password, handleChange }) => {

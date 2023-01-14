@@ -3,7 +3,7 @@ import { CheckboxContainer } from "./Styles";
 
 export interface CheckboxProps {
   text: string;
-  handleCheckbox: any; //unikać any tylko stosować konkretne typy. Do funkcji jako typ () => void
+  handleCheckbox: (event: React.ChangeEvent<HTMLInputElement>) => void; //unikać any tylko stosować konkretne typy. Do funkcji jako typ () => void
 }
 
 const CheckboxPass: React.FC<CheckboxProps> = ({ text, handleCheckbox }) => {

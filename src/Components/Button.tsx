@@ -3,7 +3,7 @@ import { ButtonContainer } from "./Styles";
 
 export interface ButtonProps {
   text: string;
-  onClick: any;
+  onClick: () => void;
   //checkboxValue: any;
 }
 

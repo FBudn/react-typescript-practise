@@ -12,7 +12,7 @@ import ForgotPass from "../../Components/ForgotPass";
 const Login: React.FC = () => {
   const [checkboxValue, setCheckboxValue] = useState(false);
 
-  const handleCheckbox = (event: any) => {
+  const handleCheckbox = (event: React.ChangeEvent<HTMLInputElement>) => {
     setCheckboxValue(event.target.checked);
   };
 
@@ -21,13 +21,17 @@ const Login: React.FC = () => {
     password: "",
   });
 
-  const handleChange = (e: { target: { name: any; value: any } }) => {
+  const handleChange = (e: { target: { name: string; value: string } }) => {
     const { name, value } = e.target;
     // const name = e.target.name;
     // const value = e.target.value;
     setInputsValues((prev: any) => {
       return { ...prev, [name]: value };
     });
+  };
+
+  const onButtonClick = () => {
+    console.log(inputsValues, checkboxValue);
   };
 
   /* const clearInput = (e: { target: { name: any; value: any } }) => {
@@ -42,7 +46,7 @@ const Login: React.FC = () => {
         <CheckboxPass text="Remember me?" handleCheckbox={handleCheckbox} />
         <Button
           text="LOGIN"
-          onClick={inputsValues}
+          onClick={onButtonClick}
           //checkboxValue={checkboxValue}
         />
         <ForgotPass text="Forgot Password?" />
