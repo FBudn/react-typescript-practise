@@ -16,22 +16,12 @@ const Login: React.FC = () => {
     setCheckboxValue(event.target.checked);
   };
 
-  const [inputsValues, setInputsValues] = useState({
-    email: "",
-    password: "",
-  });
+  const [emailValues, setEmailValues] = useState("");
 
-  const handleChange = (e: { target: { name: string; value: string } }) => {
-    const { name, value } = e.target;
-    // const name = e.target.name;
-    // const value = e.target.value;
-    setInputsValues((prev: { email: string; password: string }) => {
-      return { ...prev, [name]: value };
-    });
-  };
+  const [passwordValues, setPasswordValues] = useState("");
 
   const onButtonClick = () => {
-    console.log(inputsValues, checkboxValue);
+    console.log(emailValues, passwordValues, checkboxValue);
   };
 
   /* const clearInput = (e: { target: { name: any; value: any } }) => {
@@ -42,7 +32,12 @@ const Login: React.FC = () => {
     <Tile>
       <TileContainer>
         <Header text="LOGIN" />
-        <Form handleChange={handleChange} email="Email" password="Password" />
+        <Form
+          setEmailValues={(e: any) => setEmailValues(e.target.value)}
+          setPasswordValues={(e: any) => setPasswordValues(e.target.value)}
+          email="Email"
+          password="Password"
+        />
         <CheckboxPass text="Remember me?" handleCheckbox={handleCheckbox} />
         <Button
           text="LOGIN"

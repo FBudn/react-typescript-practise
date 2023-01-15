@@ -8,30 +8,28 @@ import Icons from "../../Components/Icons";
 import SignOrLogLink from "../../Components/SignOrLogLink";
 
 const SignUp: React.FC = () => {
-  const [inputsValues, setInputsValues] = useState({
-    email: "",
-    password: "",
-  }); // na osobne: email i password
+  const [emailValues, setEmailValues] = useState("");
 
-  const handleChange = (e: { target: { name: string; value: string } }) => {
-    const { name, value } = e.target;
-    // const name = e.target.name;
-    // const value = e.target.value;
-    setInputsValues((prev: { email: string; password: string }) => {
-      return { ...prev, [name]: value };
-    });
-  }; //lepiej rozbić na 2 funkcje
+  const [passwordValues, setPasswordValues] = useState("");
 
   const onButtonClick = () => {
-    console.log(inputsValues);
-  }; //do Loginu ta sama poprawka
+    console.log(emailValues, passwordValues);
+  };
 
-  //const checkboxValue = `No checkbox`;
   return (
     <Tile>
       <TileContainer>
         <Header text="SIGN UP" />
-        <Form handleChange={handleChange} email="Email" password="Password" />
+        <Form
+          setEmailValues={(e: React.ChangeEvent<HTMLInputElement>) =>
+            setEmailValues(e.target.value)
+          }
+          setPasswordValues={(e: React.ChangeEvent<HTMLInputElement>) =>
+            setPasswordValues(e.target.value)
+          }
+          email="Email"
+          password="Password"
+        />
         <Button
           text="SIGN UP"
           onClick={onButtonClick}
