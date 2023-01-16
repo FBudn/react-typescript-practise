@@ -11,11 +11,11 @@ const HeaderContainer = styled.div`
 `;
 
 export interface HeaderProps {
-  text: string;
+  children: string;
 }
 
-const Header: React.FC<HeaderProps> = ({ text }) => {
-  return <HeaderContainer>{text}</HeaderContainer>;
+const Header: React.FC<HeaderProps> = (props) => {
+  return <HeaderContainer>{props.children}</HeaderContainer>;
 };
 
 export default Header;

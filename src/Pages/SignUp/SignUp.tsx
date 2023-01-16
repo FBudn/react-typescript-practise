@@ -1,11 +1,12 @@
 import React, { useState } from "react";
-import { Tile, TileContainer } from "../../Components/Styles";
+import { InputsContainer, Tile, TileContainer } from "../../Components/Styles";
 import Header from "../../Components/Header";
-import Form from "../../Components/Form";
 import Button from "../../Components/Button";
 import Line from "../../Components/Line";
 import Icons from "../../Components/Icons";
 import SignOrLogLink from "../../Components/SignOrLogLink";
+import EmailInput from "../../Components/Email-Input";
+import PasswordInput from "../../Components/PasswordInput";
 
 const SignUp: React.FC = () => {
   const [emailValues, setEmailValues] = useState("");
@@ -19,17 +20,19 @@ const SignUp: React.FC = () => {
   return (
     <Tile>
       <TileContainer>
-        <Header text="SIGN UP" />
-        <Form
-          setEmailValues={(e: React.ChangeEvent<HTMLInputElement>) =>
-            setEmailValues(e.target.value)
-          }
-          setPasswordValues={(e: React.ChangeEvent<HTMLInputElement>) =>
-            setPasswordValues(e.target.value)
-          }
-          email="Email"
-          password="Password"
-        />
+        <Header>SIGN UP</Header>
+        <InputsContainer>
+          <EmailInput
+            email="Email"
+            setEmailValues={(e: any) => setEmailValues(e.target.value)}
+          />
+          <PasswordInput
+            password="Password"
+            setPasswordValues={(e: React.ChangeEvent<HTMLInputElement>) =>
+              setPasswordValues(e.target.value)
+            }
+          />
+        </InputsContainer>
         <Button
           text="SIGN UP"
           onClick={onButtonClick}

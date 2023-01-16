@@ -1,13 +1,14 @@
 import React, { useState } from "react";
-import { Tile, TileContainer } from "../../Components/Styles";
+import { InputsContainer, Tile, TileContainer } from "../../Components/Styles";
 import Button from "../../Components/Button";
-import Form from "../../Components/Form";
 import Header from "../../Components/Header";
 import Icons from "../../Components/Icons";
 import Line from "../../Components/Line";
 import SignOrLogLink from "../../Components/SignOrLogLink";
 import CheckboxPass from "../../Components/CheckboxPass";
 import ForgotPass from "../../Components/ForgotPass";
+import EmailInput from "../../Components/Email-Input";
+import PasswordInput from "../../Components/PasswordInput";
 
 const Login: React.FC = () => {
   const [checkboxValue, setCheckboxValue] = useState(false);
@@ -31,14 +32,22 @@ const Login: React.FC = () => {
   return (
     <Tile>
       <TileContainer>
-        <Header text="LOGIN" />
-        <Form
-          setEmailValues={(e: any) => setEmailValues(e.target.value)}
-          setPasswordValues={(e: any) => setPasswordValues(e.target.value)}
-          email="Email"
-          password="Password"
-        />
-        <CheckboxPass text="Remember me?" handleCheckbox={handleCheckbox} />
+        <Header>LOGIN</Header>
+        <InputsContainer>
+          <EmailInput
+            email="Email"
+            setEmailValues={(e: any) => setEmailValues(e.target.value)}
+          />
+          <PasswordInput
+            password="Password"
+            setPasswordValues={(e: React.ChangeEvent<HTMLInputElement>) =>
+              setPasswordValues(e.target.value)
+            }
+          />
+        </InputsContainer>
+        <CheckboxPass handleCheckbox={handleCheckbox}>
+          Remember me?
+        </CheckboxPass>
         <Button
           text="LOGIN"
           onClick={onButtonClick}
@@ -58,3 +67,8 @@ const Login: React.FC = () => {
 };
 
 export default Login;
+
+/*
+
+
+*/
