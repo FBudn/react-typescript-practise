@@ -158,7 +158,9 @@ export const CheckboxContainer = styled.div`
   height: 10px;
   color: rgb(82 82 91);
   cursor: pointer;
+  margin: 5px 0px 5px 0px;
 `;
+//ad. margin góra,prawa,dół,lewa
 
 export const ForgotPassContainer = styled.div`
   display: flex;

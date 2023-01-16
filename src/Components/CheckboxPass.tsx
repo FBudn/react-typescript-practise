@@ -1,5 +1,5 @@
 import React from "react";
-import { CheckboxContainer } from "./Styles";
+import { Background, CheckboxContainer, MaxWidth } from "./Styles";
 
 export interface CheckboxProps {
   children: React.ReactChild; //ReactNode może być kilka childrens
@@ -14,6 +14,13 @@ const CheckboxPass: React.FC<CheckboxProps> = ({
     <CheckboxContainer>
       <input
         //checked={checkboxValue}
+        style={{
+          maxWidth: "35px",
+          width: "20px",
+          maxHeight: "35px",
+          height: "20px",
+          margin: "5px 0px 0px 0px",
+        }}
         onChange={handleCheckbox}
         name="checkboxValue"
         className="cursor-pointer" //nie to stylizowałem
