@@ -16,5 +16,10 @@ jobs:
         run: |
           ls ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
+      - uses: actions/checkout@v2
+      - name: Install modules
+      run: npx
+      - name: Run ESLint
+        run: eslint . --ext .ts,.tsx
       - name: Run ESLint style check
-        run: npm run style:all
+        run: npx run style:all
