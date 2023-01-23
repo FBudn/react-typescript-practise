@@ -160,7 +160,7 @@ export const CheckboxContainer = styled.div`
   cursor: pointer;
   margin: 5px 0px 5px 0px;
 `;
-//ad. margin góra,prawa,dół,lewa
+// ad. margin góra,prawa,dół,lewa
 
 export const ForgotPassContainer = styled.div`
   display: flex;
@@ -176,4 +176,4 @@ export const ForgotPassContainer = styled.div`
   margin-bottom: 8px;
 `;
 
-//flex w-full justify-end text-center text-sm font-medium  text-zinc-400 cursor-pointer
+// flex w-full justify-end text-center text-sm font-medium  text-zinc-400 cursor-pointer

@@ -1,9 +1,9 @@
 import React from "react";
-import { Background, CheckboxContainer, MaxWidth } from "./Styles";
+import { CheckboxContainer } from "./Styles";
 
 export interface CheckboxProps {
-  children: React.ReactChild; //ReactNode może być kilka childrens
-  handleCheckbox: (event: React.ChangeEvent<HTMLInputElement>) => void; //unikać any tylko stosować konkretne typy. Do funkcji jako typ () => void
+  children: React.ReactNode; // ReactNode może być kilka childrens
+  handleCheckbox: (event: React.ChangeEvent<HTMLInputElement>) => void; // unikać any tylko stosować konkretne typy. Do funkcji jako typ () => void
 }
 
 const CheckboxPass: React.FC<CheckboxProps> = ({
@@ -13,7 +13,7 @@ const CheckboxPass: React.FC<CheckboxProps> = ({
   return (
     <CheckboxContainer>
       <input
-        //checked={checkboxValue}
+        // checked={checkboxValue}
         style={{
           maxWidth: "35px",
           width: "20px",
@@ -23,11 +23,11 @@ const CheckboxPass: React.FC<CheckboxProps> = ({
         }}
         onChange={handleCheckbox}
         name="checkboxValue"
-        className="cursor-pointer" //nie to stylizowałem
+        className="cursor-pointer" // nie to stylizowałem
         type="checkbox"
       />
       {children}
-    </CheckboxContainer> //children prop sprawdzić jak działa //tak?
+    </CheckboxContainer> // children prop sprawdzić jak działa //tak?
   );
 };
 

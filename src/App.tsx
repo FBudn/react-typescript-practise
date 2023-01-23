@@ -1,13 +1,13 @@
 import React from "react";
-import { Background, MaxWidth } from "./Components/Styles";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { Background, MaxWidth } from "./Components/Styles";
 import SignUp from "./Pages/SignUp/SignUp";
 import Login from "./Pages/Login/Login";
 
 const App: React.FC = () => {
-  /*useEffect(() => {
+  /* useEffect(() => {
     console.log(`jestem`);
-  }, []); */ //nie potrzebny bez zewnętrznych "systemów" i do user eventów
+  }, []); */ // nie potrzebny bez zewnętrznych "systemów" i do user eventów
 
   return (
     <Router>

@@ -18,7 +18,7 @@ const PasswordInput: React.FC<PasswordProps> = ({
         name="password"
         onChange={setPasswordValues}
         required
-      ></Input>
+      />
     </OneInputContainer>
   );
 };

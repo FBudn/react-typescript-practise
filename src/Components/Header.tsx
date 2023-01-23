@@ -15,6 +15,7 @@ export interface HeaderProps {
 }
 
 const Header: React.FC<HeaderProps> = (props) => {
+  // eslint-disable-next-line react/destructuring-assignment
   return <HeaderContainer>{props.children}</HeaderContainer>;
 };
 

@@ -13,6 +13,7 @@ import PasswordInput from "../../Components/PasswordInput";
 const Login: React.FC = () => {
   const [checkboxValue, setCheckboxValue] = useState(false);
 
+  // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
   const handleCheckbox = (event: React.ChangeEvent<HTMLInputElement>) => {
     setCheckboxValue(event.target.checked);
   };
@@ -21,7 +22,9 @@ const Login: React.FC = () => {
 
   const [passwordValues, setPasswordValues] = useState("");
 
+  // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
   const onButtonClick = () => {
+    // eslint-disable-next-line no-console
     console.log(emailValues, passwordValues, checkboxValue);
   };
 
@@ -36,13 +39,15 @@ const Login: React.FC = () => {
         <InputsContainer>
           <EmailInput
             email="Email"
-            setEmailValues={(e: any) => setEmailValues(e.target.value)}
+            setEmailValues={(e: any) => {
+              setEmailValues(e.target.value);
+            }}
           />
           <PasswordInput
             password="Password"
-            setPasswordValues={(e: React.ChangeEvent<HTMLInputElement>) =>
-              setPasswordValues(e.target.value)
-            }
+            setPasswordValues={(e: React.ChangeEvent<HTMLInputElement>) => {
+              setPasswordValues(e.target.value);
+            }}
           />
         </InputsContainer>
         <CheckboxPass handleCheckbox={handleCheckbox}>
@@ -51,7 +56,7 @@ const Login: React.FC = () => {
         <Button
           text="LOGIN"
           onClick={onButtonClick}
-          //checkboxValue={checkboxValue}
+          // checkboxValue={checkboxValue}
         />
         <ForgotPass text="Forgot Password?" />
         <Line text="OR" />

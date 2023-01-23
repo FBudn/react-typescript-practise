@@ -1,6 +1,6 @@
 import React from "react";
-import { SignOrLogLinkContainer } from "./Styles";
 import { Link } from "react-router-dom";
+import { SignOrLogLinkContainer } from "./Styles";
 
 export interface SignOrLogLinkProps {
   questionText: string;

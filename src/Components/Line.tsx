@@ -8,9 +8,9 @@ export interface LineProps {
 const Line: React.FC<LineProps> = ({ text }) => {
   return (
     <LineContainer>
-      <HrStyled></HrStyled>
+      <HrStyled />
       <LineTextBox>{text}</LineTextBox>
-      <HrStyled></HrStyled>
+      <HrStyled />
     </LineContainer>
   );
 };

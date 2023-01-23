@@ -23,7 +23,7 @@ const EmailInput: React.FC<EmailProps> = ({ email, setEmailValues }) => {
         required
         ref={emailFocus}
         // autoFocus
-      ></Input>
+      />
     </OneInputContainer>
   );
 };

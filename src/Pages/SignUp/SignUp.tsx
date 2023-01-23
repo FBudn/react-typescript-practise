@@ -13,7 +13,9 @@ const SignUp: React.FC = () => {
 
   const [passwordValues, setPasswordValues] = useState("");
 
+  // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
   const onButtonClick = () => {
+    // eslint-disable-next-line no-console
     console.log(emailValues, passwordValues);
   };
 
@@ -24,19 +26,21 @@ const SignUp: React.FC = () => {
         <InputsContainer>
           <EmailInput
             email="Email"
-            setEmailValues={(e: any) => setEmailValues(e.target.value)}
+            setEmailValues={(e: any) => {
+              setEmailValues(e.target.value);
+            }}
           />
           <PasswordInput
             password="Password"
-            setPasswordValues={(e: React.ChangeEvent<HTMLInputElement>) =>
-              setPasswordValues(e.target.value)
-            }
+            setPasswordValues={(e: React.ChangeEvent<HTMLInputElement>) => {
+              setPasswordValues(e.target.value);
+            }}
           />
         </InputsContainer>
         <Button
           text="SIGN UP"
           onClick={onButtonClick}
-          //checkboxValue={checkboxValue}
+          // checkboxValue={checkboxValue}
         />
         <Line text="OR" />
         <Icons />

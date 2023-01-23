@@ -16,19 +16,25 @@ const Icons: React.FC = () => {
     <IconsContainerMain>
       <SoloIconContainer
         style={{ color: "red", borderColor: "red" }}
-        onClick={() => console.log(`Google Clicked`)}
+        onClick={() => {
+          console.log(`Google Clicked`);
+        }}
       >
         {google}
       </SoloIconContainer>
       <SoloIconContainer
         style={{ color: "blue", borderColor: "blue" }}
-        onClick={() => console.log(`Facebook Clicked`)}
+        onClick={() => {
+          console.log(`Facebook Clicked`);
+        }}
       >
         {facebook}
       </SoloIconContainer>
       <SoloIconContainer
         style={{ color: "blue", borderColor: "blue" }}
-        onClick={() => console.log(`LinkedIn Clicked`)}
+        onClick={() => {
+          console.log(`LinkedIn Clicked`);
+        }}
       >
         {linkedin}
       </SoloIconContainer>
