@@ -18,5 +18,5 @@ jobs:
       - run: echo "🍏 This job's status is ${{ job.status }}."
       - name: Run ESLint style check
         run: npm run lint
-      - name Run ESLint style fix
+      - name: Run ESLint style fix
         run: npm run lint -- --fix
