@@ -33,6 +33,7 @@
         "unnamedComponents": "arrow-function"
       }
     ]
+
     //"react/destructuring-assignment": [<enabled>, 'always']
   }
 }
