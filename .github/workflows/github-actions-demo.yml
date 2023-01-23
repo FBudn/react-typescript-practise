@@ -19,4 +19,4 @@ jobs:
       - name: Install modules
         run: npm ci
       - name: Run ESLint style check
-        run: npx run style:all
+        run: npm run style:all
