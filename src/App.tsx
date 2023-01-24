@@ -30,3 +30,13 @@ const App: React.FC = () => {
 export default App;
 // w apie przejście między loginem a signupem tylko. Stylowanie backgroundu na całość tu lub osobno w Login Signup na ten moment obojętne
 // Ewentualnie background maxwith i switcha wrzucić w fima?
+
+/*
+Bardziej atomic/reużywalne u mnie:
+- input jako header+input ,
+- kontener zastępujący diva, na zaś uniwersalny do zmieniania propsami
+- button z kolorem etc
+- tło?
+- checkbox z miejscem na label nwm
+
+*/
