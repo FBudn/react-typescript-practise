@@ -25,7 +25,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "style:all": "npm run lint",
+    "style:all": "tsc && npm run lint",
+    "style:prettier": "prettier --check",
     "lint": "eslint .",
     "lint:fix": "eslint --fix ."
   },

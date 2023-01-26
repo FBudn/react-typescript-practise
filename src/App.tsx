@@ -5,10 +5,6 @@ import SignUp from "./Pages/SignUp/SignUp";
 import Login from "./Pages/Login/Login";
 
 const App: React.FC = () => {
-  /* useEffect(() => {
-    console.log(`jestem`);
-  }, []); */ // nie potrzebny bez zewnętrznych "systemów" i do user eventów
-
   return (
     <Router>
       <Background>
@@ -39,4 +35,8 @@ Bardziej atomic/reużywalne u mnie:
 - tło?
 - checkbox z miejscem na label nwm
 
+
+PYTANIA: 
+  W package.json
+  "style:prettier": "prettier --check" i && run style:prettier w style:all + tsc czy jest sens
 */

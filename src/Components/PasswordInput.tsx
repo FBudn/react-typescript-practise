@@ -3,12 +3,12 @@ import { OneInputContainer, InputLabel, Input } from "./Styles";
 
 export interface PasswordProps {
   password: string;
-  setPasswordValues: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  setPasswordValue: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
 const PasswordInput: React.FC<PasswordProps> = ({
   password,
-  setPasswordValues,
+  setPasswordValue,
 }) => {
   return (
     <OneInputContainer>
@@ -16,7 +16,7 @@ const PasswordInput: React.FC<PasswordProps> = ({
       <Input
         type="password"
         name="password"
-        onChange={setPasswordValues}
+        onChange={setPasswordValue}
         required
       />
     </OneInputContainer>

@@ -3,10 +3,10 @@ import { OneInputContainer, InputLabel, Input } from "./Styles";
 
 export interface EmailProps {
   email: string;
-  setEmailValues: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  setEmailValue: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
-const EmailInput: React.FC<EmailProps> = ({ email, setEmailValues }) => {
+const EmailInput: React.FC<EmailProps> = ({ email, setEmailValue }) => {
   const emailFocus = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
@@ -19,7 +19,7 @@ const EmailInput: React.FC<EmailProps> = ({ email, setEmailValues }) => {
       <Input
         type="email"
         name="email"
-        onChange={setEmailValues}
+        onChange={setEmailValue}
         required
         ref={emailFocus}
         // autoFocus

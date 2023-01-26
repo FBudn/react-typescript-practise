@@ -2,13 +2,13 @@ import React from "react";
 import { ButtonContainer } from "./Styles";
 
 export interface ButtonProps {
-  text: string;
+  children: React.ReactNode;
   onClick: () => void;
   // checkboxValue: any;
 }
 
-const Button: React.FC<ButtonProps> = ({ text, onClick }) => {
-  return <ButtonContainer onClick={onClick}>{text}</ButtonContainer>;
+const Button: React.FC<ButtonProps> = ({ children, onClick }) => {
+  return <ButtonContainer onClick={onClick}>{children}</ButtonContainer>;
 };
 
 export default Button;

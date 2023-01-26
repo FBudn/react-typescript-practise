@@ -1,5 +1,5 @@
 import React from "react";
-import { CheckboxContainer } from "./Styles";
+import { CheckboxContainer, CheckboxInput } from "./Styles";
 
 export interface CheckboxProps {
   children: React.ReactNode; // ReactNode może być kilka childrens
@@ -12,7 +12,20 @@ const CheckboxPass: React.FC<CheckboxProps> = ({
 }: CheckboxProps) => {
   return (
     <CheckboxContainer>
-      <input
+      <CheckboxInput
+        onChange={handleCheckbox}
+        name="checkboxValue"
+        type="checkbox"
+      />
+      {children}
+    </CheckboxContainer> // children prop sprawdzić jak działa //tak?
+  );
+};
+
+export default CheckboxPass;
+
+/*
+ <input
         // checked={checkboxValue}
         style={{
           maxWidth: "35px",
@@ -23,12 +36,8 @@ const CheckboxPass: React.FC<CheckboxProps> = ({
         }}
         onChange={handleCheckbox}
         name="checkboxValue"
-        className="cursor-pointer" // nie to stylizowałem
+       
         type="checkbox"
       />
-      {children}
-    </CheckboxContainer> // children prop sprawdzić jak działa //tak?
-  );
-};
 
-export default CheckboxPass;
+*/

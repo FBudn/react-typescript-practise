@@ -2,14 +2,14 @@ import React from "react";
 import { LineContainer, HrStyled, LineTextBox } from "./Styles";
 
 export interface LineProps {
-  text: string;
+  children: React.ReactNode;
 }
 
-const Line: React.FC<LineProps> = ({ text }) => {
+const Line: React.FC<LineProps> = ({ children }) => {
   return (
     <LineContainer>
       <HrStyled />
-      <LineTextBox>{text}</LineTextBox>
+      <LineTextBox>{children}</LineTextBox>
       <HrStyled />
     </LineContainer>
   );

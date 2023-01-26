@@ -3,19 +3,19 @@ import { Link } from "react-router-dom";
 import { SignOrLogLinkContainer } from "./Styles";
 
 export interface SignOrLogLinkProps {
-  questionText: string;
+  children: React.ReactNode;
   linkText: string;
   link: string;
 }
 
 const SignOrLogLink: React.FC<SignOrLogLinkProps> = ({
-  questionText,
+  children,
   linkText,
   link,
 }) => {
   return (
     <SignOrLogLinkContainer>
-      <div>{questionText}</div>
+      {children}
       <Link to={link}>{linkText}</Link>
     </SignOrLogLinkContainer>
   );

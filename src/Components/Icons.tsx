@@ -12,12 +12,18 @@ const google = <FontAwesomeIcon icon={faGoogle} />;
 const linkedin = <FontAwesomeIcon icon={faLinkedinIn} />;
 
 const Icons: React.FC = () => {
+  const IconsLogs = [`Google Clicked`, `Facebook Clicked`, `LinkedIn Clicked`];
+  // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
+  const PickLog = (i: number) => {
+    // eslint-disable-next-line no-console
+    console.log(IconsLogs[i]);
+  };
   return (
     <IconsContainerMain>
       <SoloIconContainer
-        style={{ color: "red", borderColor: "red" }}
+        style={{ color: "red", borderColor: "red" }} // ZOSTAWIŁEM STYLE BO MAM JEDEN ICON-CONT - KOLOR ZMIENIAĆ EW. PRZEZ PROPSY?
         onClick={() => {
-          console.log(`Google Clicked`);
+          PickLog(0);
         }}
       >
         {google}
@@ -25,7 +31,7 @@ const Icons: React.FC = () => {
       <SoloIconContainer
         style={{ color: "blue", borderColor: "blue" }}
         onClick={() => {
-          console.log(`Facebook Clicked`);
+          PickLog(1);
         }}
       >
         {facebook}
@@ -33,7 +39,7 @@ const Icons: React.FC = () => {
       <SoloIconContainer
         style={{ color: "blue", borderColor: "blue" }}
         onClick={() => {
-          console.log(`LinkedIn Clicked`);
+          PickLog(2);
         }}
       >
         {linkedin}

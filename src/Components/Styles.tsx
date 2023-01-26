@@ -9,16 +9,22 @@ export const Background = styled.div`
 `;
 
 export const MaxWidth = styled.div`
-  background: transparent;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 100vw;
-  max-width: 1700px;
   height: 100vh;
+  max-width: 1700px;
 `;
-
+/*
+ margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+ */
 export const Tile = styled.div`
   background: white;
   display: flex;
@@ -42,6 +48,13 @@ export const TileContainer = styled.div`
   padding: 16px 16px 16px 16px;
   width: 75%;
   gap: 6px;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 `;
 
 export const InputsContainer = styled.div`
@@ -161,6 +174,15 @@ export const CheckboxContainer = styled.div`
   margin: 5px 0px 5px 0px;
 `;
 // ad. margin góra,prawa,dół,lewa
+
+export const CheckboxInput = styled.input`
+max-width: "35px",
+width: "20px",
+max-height: "35px",
+height: "20px",
+margin: "5px 0px 0px 0px",
+cursor: pointer;
+`;
 
 export const ForgotPassContainer = styled.div`
   display: flex;

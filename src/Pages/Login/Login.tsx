@@ -7,7 +7,7 @@ import Line from "../../Components/Line";
 import SignOrLogLink from "../../Components/SignOrLogLink";
 import CheckboxPass from "../../Components/CheckboxPass";
 import ForgotPass from "../../Components/ForgotPass";
-import EmailInput from "../../Components/Email-Input";
+import EmailInput from "../../Components/EmailInput";
 import PasswordInput from "../../Components/PasswordInput";
 
 const Login: React.FC = () => {
@@ -18,14 +18,19 @@ const Login: React.FC = () => {
     setCheckboxValue(event.target.checked);
   };
 
-  const [emailValues, setEmailValues] = useState("");
+  const [emailValue, setEmailValue] = useState("");
 
-  const [passwordValues, setPasswordValues] = useState("");
+  // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
+  const handleEmail = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setEmailValue(e.target.value);
+  };
+
+  const [passwordValue, setPasswordValue] = useState("");
 
   // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
   const onButtonClick = () => {
     // eslint-disable-next-line no-console
-    console.log(emailValues, passwordValues, checkboxValue);
+    console.log(emailValue, passwordValue, checkboxValue);
   };
 
   /* const clearInput = (e: { target: { name: any; value: any } }) => {
@@ -37,35 +42,24 @@ const Login: React.FC = () => {
       <TileContainer>
         <Header>LOGIN</Header>
         <InputsContainer>
-          <EmailInput
-            email="Email"
-            setEmailValues={(e: any) => {
-              setEmailValues(e.target.value);
-            }}
-          />
+          <EmailInput email="Email" setEmailValue={handleEmail} />
           <PasswordInput
             password="Password"
-            setPasswordValues={(e: React.ChangeEvent<HTMLInputElement>) => {
-              setPasswordValues(e.target.value);
+            setPasswordValue={(e: React.ChangeEvent<HTMLInputElement>) => {
+              setPasswordValue(e.target.value);
             }}
           />
         </InputsContainer>
         <CheckboxPass handleCheckbox={handleCheckbox}>
           Remember me?
         </CheckboxPass>
-        <Button
-          text="LOGIN"
-          onClick={onButtonClick}
-          // checkboxValue={checkboxValue}
-        />
+        <Button onClick={onButtonClick}> LOGIN </Button>
         <ForgotPass text="Forgot Password?" />
-        <Line text="OR" />
+        <Line>OR</Line>
         <Icons />
-        <SignOrLogLink
-          questionText="Need an account?"
-          linkText="SIGN UP"
-          link="/SignUp"
-        />
+        <SignOrLogLink linkText="SIGN UP" link="/SignUp">
+          Need an account?
+        </SignOrLogLink>
       </TileContainer>
     </Tile>
   );
