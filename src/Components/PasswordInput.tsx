@@ -13,12 +13,7 @@ const PasswordInput: React.FC<PasswordProps> = ({
   return (
     <OneInputContainer>
       <InputLabel>{password}</InputLabel>
-      <Input
-        type="password"
-        name="password"
-        onChange={setPasswordValue}
-        required
-      />
+      <Input type="password" onChange={setPasswordValue} required />
     </OneInputContainer>
   );
 };

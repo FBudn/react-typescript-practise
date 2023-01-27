@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { InputsContainer, Tile, TileContainer } from "../../Components/Styles";
-import Button from "../../Components/Button";
+import Button from "../../Atoms/Button";
 import Header from "../../Components/Header";
 import Icons from "../../Components/Icons";
 import Line from "../../Components/Line";
@@ -28,6 +28,11 @@ const Login: React.FC = () => {
   const [passwordValue, setPasswordValue] = useState("");
 
   // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
+  const handlePassword = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setPasswordValue(e.target.value);
+  };
+
+  // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
   const onButtonClick = () => {
     // eslint-disable-next-line no-console
     console.log(emailValue, passwordValue, checkboxValue);
@@ -45,9 +50,7 @@ const Login: React.FC = () => {
           <EmailInput email="Email" setEmailValue={handleEmail} />
           <PasswordInput
             password="Password"
-            setPasswordValue={(e: React.ChangeEvent<HTMLInputElement>) => {
-              setPasswordValue(e.target.value);
-            }}
+            setPasswordValue={handlePassword}
           />
         </InputsContainer>
         <CheckboxPass handleCheckbox={handleCheckbox}>

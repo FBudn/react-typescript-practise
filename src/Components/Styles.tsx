@@ -7,7 +7,7 @@ export const Background = styled.div`
   width: 100%;
   height: 100%;
 `;
-
+// box sizing - border box właściwość sprawdzić
 export const MaxWidth = styled.div`
   display: flex;
   flex-direction: column;
