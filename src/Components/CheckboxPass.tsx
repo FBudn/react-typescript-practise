@@ -12,11 +12,7 @@ const CheckboxPass: React.FC<CheckboxProps> = ({
 }: CheckboxProps) => {
   return (
     <CheckboxContainer>
-      <CheckboxInput
-        onChange={handleCheckbox}
-        name="checkboxValue"
-        type="checkbox"
-      />
+      <CheckboxInput onChange={handleCheckbox} />
       {children}
     </CheckboxContainer> // children prop sprawdzić jak działa //tak?
   );
