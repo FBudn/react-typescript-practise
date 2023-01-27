@@ -1,5 +1,5 @@
 import React from "react";
-import { CheckboxContainer, CheckboxInput } from "./Styles";
+import { CheckboxContainer, CheckboxInput } from "../../Components/Styles";
 
 export interface CheckboxProps {
   children: React.ReactNode; // ReactNode może być kilka childrens

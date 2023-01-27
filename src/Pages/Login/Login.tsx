@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import { InputsContainer, Tile, TileContainer } from "../../Components/Styles";
-import Button from "../../Atoms/Button";
+import Button from "../../Atoms/Button/Button";
 import Header from "../../Components/Header";
 import Icons from "../../Components/Icons";
 import Line from "../../Components/Line";
 import SignOrLogLink from "../../Components/SignOrLogLink";
-import CheckboxPass from "../../Components/CheckboxPass";
+import CheckboxPass from "../../Atoms/CheckboxBox/CheckboxPass";
 import ForgotPass from "../../Components/ForgotPass";
 import EmailInput from "../../Components/EmailInput";
 import PasswordInput from "../../Components/PasswordInput";
