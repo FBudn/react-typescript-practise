@@ -2,9 +2,9 @@ import React, { useRef, useState } from "react";
 import { InputsContainer, Tile, TileContainer } from "../../Components/Styles";
 import Header from "../../Components/Header";
 import Button from "../../Atoms/Button/Button";
-import Line from "../../Components/Line";
+import Line from "../../Molecules/Line/Line";
 import Icons from "../../Components/Icons";
-import SignOrLogLink from "../../Components/SignOrLogLink";
+import SignOrLogLink from "../../Molecules/SignOrLogLink/SignOrLogLink";
 import FormInput from "../../Components/FormInput";
 
 const SignUp: React.FC = () => {
