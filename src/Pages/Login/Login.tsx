@@ -5,7 +5,7 @@ import Header from "../../Components/Header";
 import Icons from "../../Components/Icons";
 import Line from "../../Molecules/Line/Line";
 import SignOrLogLink from "../../Molecules/SignOrLogLink/SignOrLogLink";
-import CheckboxPass from "../../Atoms/CheckboxBox/CheckboxPass";
+import CheckboxPass from "../../Molecules/CheckboxPass/CheckboxPass";
 import ForgotPass from "../../Components/ForgotPass";
 import EmailInput from "../../Components/EmailInput";
 import PasswordInput from "../../Components/PasswordInput";
