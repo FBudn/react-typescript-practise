@@ -1,5 +1,5 @@
 import React from "react";
-import { CheckboxContainer } from "../../Components/Styles";
+import { CheckboxContainer } from "./CheckboxPassStyle";
 import CheckboxInput from "../../Atoms/CheckboxBox/CheckboxBox";
 
 export interface CheckboxProps {
