@@ -1,10 +1,9 @@
 import React from "react";
-import { ButtonContainer } from "../../Components/Styles";
+import { ButtonContainer } from "./ButtonStyle";
 
 export interface ButtonProps {
   children: React.ReactNode;
   onClick: () => void;
-  // checkboxValue: any;
 }
 
 const Button: React.FC<ButtonProps> = ({ children, onClick }) => {
@@ -12,6 +11,3 @@ const Button: React.FC<ButtonProps> = ({ children, onClick }) => {
 };
 
 export default Button;
-
-// onClick={() => handleValues}1 kolejny test2
-// tu w funkcji ktora przekazuje do Buttona mogę sobie spiąć w obiekt stany email itd zeby wyswietlic w 1
