@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import { Background, MaxWidth } from "./Components/Styles";
+import { Background, MaxWidth } from "./Pages/PagesStyles";
 import SignUp from "./Pages/SignUp/SignUp";
 import Login from "./Pages/Login/Login";
 
