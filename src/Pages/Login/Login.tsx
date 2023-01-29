@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { InputsContainer, Tile, TileContainer } from "../../Components/Styles";
 import Button from "../../Atoms/Button/Button";
 import Header from "../../Components/Header";
@@ -7,8 +7,7 @@ import Line from "../../Molecules/Line/Line";
 import SignOrLogLink from "../../Molecules/SignOrLogLink/SignOrLogLink";
 import CheckboxPass from "../../Molecules/CheckboxPass/CheckboxPass";
 import ForgotPass from "../../Components/ForgotPass";
-import EmailInput from "../../Components/EmailInput";
-import PasswordInput from "../../Components/PasswordInput";
+import FormInput from "../../Molecules/InputAndLabel/InputAndLabel";
 
 const Login: React.FC = () => {
   const [checkboxValue, setCheckboxValue] = useState(false);
@@ -38,6 +37,8 @@ const Login: React.FC = () => {
     console.log(emailValue, passwordValue, checkboxValue);
   };
 
+  const emailFocus = useRef<HTMLInputElement>(null);
+
   useEffect(() => {
     emailFocus.current?.focus();
   }, []);
@@ -47,11 +48,16 @@ const Login: React.FC = () => {
       <TileContainer>
         <Header>LOGIN</Header>
         <InputsContainer>
-          <EmailInput email="Email" setEmailValue={handleEmail} />
-          <PasswordInput
-            password="Password"
-            setPasswordValue={handlePassword}
-          />
+          <FormInput
+            type="Email"
+            setInputValue={handleEmail}
+            emailFocus={emailFocus}
+          >
+            Email
+          </FormInput>
+          <FormInput type="password" setInputValue={handlePassword}>
+            Password
+          </FormInput>
         </InputsContainer>
         <CheckboxPass handleCheckbox={handleCheckbox}>
           Remember me?
