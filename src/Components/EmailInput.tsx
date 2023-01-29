@@ -1,5 +1,9 @@
 import React, { useRef, useEffect } from "react";
-import { OneInputContainer, InputLabel, Input } from "./Styles";
+import Input from "../Atoms/Input/Input";
+import {
+  OneInputContainer,
+  InputLabel,
+} from "../Molecules/InputAndLabel/InputLabelStyles";
 
 export interface EmailProps {
   email: string;
@@ -16,14 +20,7 @@ const EmailInput: React.FC<EmailProps> = ({ email, setEmailValue }) => {
   return (
     <OneInputContainer>
       <InputLabel id="emailInput">{email}</InputLabel>
-      <Input
-        type="email"
-        name="email"
-        onChange={setEmailValue}
-        required
-        ref={emailFocus}
-        // autoFocus
-      />
+      <Input type="email" setInputValue={setEmailValue} />
     </OneInputContainer>
   );
 };

@@ -50,23 +50,6 @@ export const InputsContainer = styled.div`
   gap: 10px;
 `;
 
-export const OneInputContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 1px;
-  width: 100%;
-`;
-
-export const InputLabel = styled.div`
-  display: flex;
-`;
-
-export const Input = styled.input`
-  border-radius: 5px;
-  height: 40px;
-  border: 2px solid rgb(214 211 209);
-`;
-
 export const LineContainer = styled.div`
   display: flex;
   justify-content: center;

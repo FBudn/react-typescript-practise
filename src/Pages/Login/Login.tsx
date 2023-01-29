@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { InputsContainer, Tile, TileContainer } from "../../Components/Styles";
 import Button from "../../Atoms/Button/Button";
 import Header from "../../Components/Header";
@@ -38,9 +38,9 @@ const Login: React.FC = () => {
     console.log(emailValue, passwordValue, checkboxValue);
   };
 
-  /* const clearInput = (e: { target: { name: any; value: any } }) => {
-    
-  }; */
+  useEffect(() => {
+    emailFocus.current?.focus();
+  }, []);
 
   return (
     <Tile>

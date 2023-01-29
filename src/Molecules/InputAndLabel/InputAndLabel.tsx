@@ -1,35 +1,31 @@
-import React, { useEffect } from "react";
-import { OneInputContainer, InputLabel, Input } from "./Styles";
+import React from "react";
+import Input from "../../Atoms/Input/Input";
+import { OneInputContainer, InputLabel } from "./InputLabelStyles";
 
-export interface FormProps {
+export interface InputAndLabelProps {
   children: React.ReactNode;
   type: string;
   emailFocus?: any;
   setInputValue: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
-const FormInput: React.FC<FormProps> = ({
+const InputAndLabel: React.FC<InputAndLabelProps> = ({
   children,
   type,
   setInputValue,
   emailFocus,
 }) => {
-  useEffect(() => {
-    emailFocus.current?.focus();
-  }, []);
-
   return (
     <OneInputContainer>
       <InputLabel>{children}</InputLabel>
       <Input
         type={type}
-        onChange={setInputValue}
-        required
-        ref={emailFocus}
+        setInputValue={setInputValue}
+        emailFocus={emailFocus}
         // autoFocus
       />
     </OneInputContainer>
   );
 };
 
-export default FormInput;
+export default InputAndLabel;
