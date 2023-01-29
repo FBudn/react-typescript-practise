@@ -8,17 +8,23 @@ import SignOrLogLink from "../../Molecules/SignOrLogLink/SignOrLogLink";
 import FormInput from "../../Components/FormInput";
 
 const SignUp: React.FC = () => {
-  const [InputValue, setInputValue] = useState("");
+  const [emailValue, setEmailValue] = useState("");
+  // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
+  const handleEmail = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setEmailValue(e.target.value);
+  };
+
+  const [passwordValue, setPasswordValue] = useState("");
 
   // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
-  const handleInput = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setInputValue(e.target.value);
+  const handlePassword = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setPasswordValue(e.target.value);
   };
 
   // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
   const onButtonClick = () => {
     // eslint-disable-next-line no-console
-    console.log(InputValue);
+    console.log(emailValue, passwordValue);
   };
 
   const emailFocus = useRef<HTMLInputElement>(null);
@@ -30,16 +36,12 @@ const SignUp: React.FC = () => {
         <InputsContainer>
           <FormInput
             type="Email"
-            setInputValue={handleInput}
+            setInputValue={handleEmail}
             emailFocus={emailFocus}
           >
             Email
           </FormInput>
-          <FormInput
-            type="password"
-            setInputValue={handleInput}
-            emailFocus={emailFocus}
-          >
+          <FormInput type="password" setInputValue={handlePassword}>
             Password
           </FormInput>
         </InputsContainer>
