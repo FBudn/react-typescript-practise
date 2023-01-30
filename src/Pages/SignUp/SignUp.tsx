@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Tile, TileContainer } from "../../Components/Styles";
-import Header from "../../Components/Header";
+import Header from "../../Atoms/Header/Header";
 import Button from "../../Atoms/Button/Button";
 import Line from "../../Molecules/Line/Line";
 import Icons from "../../Components/Icons";
