@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import { InputsContainer, Tile, TileContainer } from "../../Components/Styles";
+import { Tile, TileContainer } from "../../Components/Styles";
 import Button from "../../Atoms/Button/Button";
 import Header from "../../Components/Header";
 import Icons from "../../Components/Icons";
@@ -7,7 +7,7 @@ import Line from "../../Molecules/Line/Line";
 import SignOrLogLink from "../../Molecules/SignOrLogLink/SignOrLogLink";
 import CheckboxPass from "../../Molecules/CheckboxPass/CheckboxPass";
 import ForgotPass from "../../Components/ForgotPass";
-import FormInput from "../../Molecules/InputAndLabel/InputAndLabel";
+import FormSection from "../../Organisms/FormSection/FormSection";
 
 const Login: React.FC = () => {
   const [checkboxValue, setCheckboxValue] = useState(false);
@@ -47,18 +47,11 @@ const Login: React.FC = () => {
     <Tile>
       <TileContainer>
         <Header>LOGIN</Header>
-        <InputsContainer>
-          <FormInput
-            type="Email"
-            setInputValue={handleEmail}
-            emailFocus={emailFocus}
-          >
-            Email
-          </FormInput>
-          <FormInput type="password" setInputValue={handlePassword}>
-            Password
-          </FormInput>
-        </InputsContainer>
+        <FormSection
+          handleEmail={handleEmail}
+          handlePassword={handlePassword}
+          emailFocus={emailFocus}
+        />
         <CheckboxPass handleCheckbox={handleCheckbox}>
           Remember me?
         </CheckboxPass>

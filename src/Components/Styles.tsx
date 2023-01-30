@@ -40,16 +40,6 @@ export const TileContainer = styled.div`
   -moz-osx-font-smoothing: grayscale;
 `;
 
-export const InputsContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  font-weight: 500;
-  color: rgb(82 82 91);
-  margin-top: 4px;
-  gap: 10px;
-`;
-
 export const LineContainer = styled.div`
   display: flex;
   justify-content: center;

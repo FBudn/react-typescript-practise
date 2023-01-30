@@ -1,11 +1,11 @@
 import React, { useEffect, useRef, useState } from "react";
-import { InputsContainer, Tile, TileContainer } from "../../Components/Styles";
+import { Tile, TileContainer } from "../../Components/Styles";
 import Header from "../../Components/Header";
 import Button from "../../Atoms/Button/Button";
 import Line from "../../Molecules/Line/Line";
 import Icons from "../../Components/Icons";
 import SignOrLogLink from "../../Molecules/SignOrLogLink/SignOrLogLink";
-import FormInput from "../../Molecules/InputAndLabel/InputAndLabel";
+import FormSection from "../../Organisms/FormSection/FormSection";
 
 const SignUp: React.FC = () => {
   const [emailValue, setEmailValue] = useState("");
@@ -37,18 +37,11 @@ const SignUp: React.FC = () => {
     <Tile>
       <TileContainer>
         <Header>SIGN UP</Header>
-        <InputsContainer>
-          <FormInput
-            type="Email"
-            setInputValue={handleEmail}
-            emailFocus={emailFocus}
-          >
-            Email
-          </FormInput>
-          <FormInput type="password" setInputValue={handlePassword}>
-            Password
-          </FormInput>
-        </InputsContainer>
+        <FormSection
+          handleEmail={handleEmail}
+          handlePassword={handlePassword}
+          emailFocus={emailFocus}
+        />
         <Button onClick={onButtonClick}> SIGN UP </Button>
         <Line>OR</Line>
         <Icons />
