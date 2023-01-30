@@ -3,7 +3,7 @@ import { Tile, TileContainer } from "../../Components/Styles";
 import Header from "../../Atoms/Header/Header";
 import Button from "../../Atoms/Button/Button";
 import Line from "../../Molecules/Line/Line";
-import Icons from "../../Components/Icons";
+import Icons from "../../Molecules/IconsSecion/Icons";
 import SignOrLogLink from "../../Molecules/SignOrLogLink/SignOrLogLink";
 import FormSection from "../../Organisms/FormSection/FormSection";
 

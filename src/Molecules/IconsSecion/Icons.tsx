@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-confusing-void-expression */
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -5,7 +6,8 @@ import {
   faGoogle,
   faLinkedinIn,
 } from "@fortawesome/free-brands-svg-icons";
-import { IconsContainerMain, SoloIconContainer } from "./Styles";
+import { IconsContainerMain } from "./IconsStyle";
+import Icon from "../../Atoms/Icon/Icon";
 
 const facebook = <FontAwesomeIcon icon={faFacebookF} />;
 const google = <FontAwesomeIcon icon={faGoogle} />;
@@ -20,30 +22,9 @@ const Icons: React.FC = () => {
   };
   return (
     <IconsContainerMain>
-      <SoloIconContainer
-        style={{ color: "red", borderColor: "red" }} // ZOSTAWIŁEM STYLE BO MAM JEDEN ICON-CONT - KOLOR ZMIENIAĆ EW. PRZEZ PROPSY?
-        onClick={() => {
-          PickLog(0);
-        }}
-      >
-        {google}
-      </SoloIconContainer>
-      <SoloIconContainer
-        style={{ color: "blue", borderColor: "blue" }}
-        onClick={() => {
-          PickLog(1);
-        }}
-      >
-        {facebook}
-      </SoloIconContainer>
-      <SoloIconContainer
-        style={{ color: "blue", borderColor: "blue" }}
-        onClick={() => {
-          PickLog(2);
-        }}
-      >
-        {linkedin}
-      </SoloIconContainer>
+      <Icon PickLog={() => PickLog(0)}>{google}</Icon>
+      <Icon PickLog={() => PickLog(1)}>{facebook}</Icon>
+      <Icon PickLog={() => PickLog(2)}>{linkedin}</Icon>
     </IconsContainerMain>
   );
 };

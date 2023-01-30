@@ -40,25 +40,4 @@ export const TileContainer = styled.div`
   -moz-osx-font-smoothing: grayscale;
 `;
 
-export const IconsContainerMain = styled.div`
-  display: flex;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
-  gap: 15px;
-  margin: 4px;
-`;
-
-export const SoloIconContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text: center;
-  padding: 8px;
-  font-size: 1rem;
-  border-radius: 100%;
-  border: 2px solid black;
-  cursor: pointer;
-`;
-
 // flex w-full justify-end text-center text-sm font-medium  text-zinc-400 cursor-pointer

@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { Tile, TileContainer } from "../../Components/Styles";
 import Button from "../../Atoms/Button/Button";
 import Header from "../../Atoms/Header/Header";
-import Icons from "../../Components/Icons";
+import Icons from "../../Molecules/IconsSecion/Icons";
 import Line from "../../Molecules/Line/Line";
 import SignOrLogLink from "../../Molecules/SignOrLogLink/SignOrLogLink";
 import CheckboxPass from "../../Molecules/CheckboxPass/CheckboxPass";
