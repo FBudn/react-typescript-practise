@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { SignOrLogLinkContainer } from "../../Components/Styles";
+import { SignOrLogLinkContainer } from "./SignOrLogStyle";
 
 export interface SignOrLogLinkProps {
   children: React.ReactNode;

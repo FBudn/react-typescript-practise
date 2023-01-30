@@ -6,7 +6,7 @@ import Icons from "../../Components/Icons";
 import Line from "../../Molecules/Line/Line";
 import SignOrLogLink from "../../Molecules/SignOrLogLink/SignOrLogLink";
 import CheckboxPass from "../../Molecules/CheckboxPass/CheckboxPass";
-import ForgotPass from "../../Components/ForgotPass";
+import ForgotPass from "../../Atoms/ForgotPass/ForgotPass";
 import FormSection from "../../Organisms/FormSection/FormSection";
 
 const Login: React.FC = () => {

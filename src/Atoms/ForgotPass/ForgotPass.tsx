@@ -1,5 +1,5 @@
 import React from "react";
-import { ForgotPassContainer } from "./Styles";
+import { ForgotPassContainer } from "./ForgotPassStyle";
 
 export interface ForgotPassProps {
   text: string;
