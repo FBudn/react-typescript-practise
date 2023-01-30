@@ -15,5 +15,5 @@ export const ButtonContainer = styled.button`
   background: rgb(236 72 153);
   box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
   --tw-shadow-color: #94a3b8;
-  margin: 8px;
+  margin: 6px 0px 6px 0px;
 `;

@@ -1,13 +1,23 @@
 import styled from "styled-components";
 
-/*
- margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
- */
+export const Background = styled.div`
+  background: rgb(96 165 250);
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+`;
+// box sizing - border box właściwość sprawdzić
+export const MaxWidth = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  max-width: 1700px;
+`;
+
 export const Tile = styled.div`
   background: white;
   display: flex;
@@ -39,5 +49,3 @@ export const TileContainer = styled.div`
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 `;
-
-// flex w-full justify-end text-center text-sm font-medium  text-zinc-400 cursor-pointer

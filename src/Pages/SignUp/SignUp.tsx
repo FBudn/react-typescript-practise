@@ -1,11 +1,6 @@
+/* eslint-disable import/no-named-as-default */
 import React, { useEffect, useRef, useState } from "react";
-import { Tile, TileContainer } from "../../Components/Styles";
-import Header from "../../Atoms/Header/Header";
-import Button from "../../Atoms/Button/Button";
-import Line from "../../Molecules/Line/Line";
-import Icons from "../../Molecules/IconsSecion/Icons";
-import SignOrLogLink from "../../Molecules/SignOrLogLink/SignOrLogLink";
-import FormSection from "../../Organisms/FormSection/FormSection";
+import SignUpTemplate from "../../Templates/SignUpTemplate";
 
 const SignUp: React.FC = () => {
   const [emailValue, setEmailValue] = useState("");
@@ -34,25 +29,23 @@ const SignUp: React.FC = () => {
   }, []);
 
   return (
-    <Tile>
-      <TileContainer>
-        <Header>SIGN UP</Header>
-        <FormSection
-          handleEmail={handleEmail}
-          handlePassword={handlePassword}
-          emailFocus={emailFocus}
-        />
-        <Button onClick={onButtonClick}> SIGN UP </Button>
-        <Line>OR</Line>
-        <Icons />
-        <SignOrLogLink linkText="LOGIN" link="/Login">
-          Already a user?
-        </SignOrLogLink>
-      </TileContainer>
-    </Tile>
+    <SignUpTemplate
+      handleEmail={handleEmail}
+      handlePassword={handlePassword}
+      onButtonClick={onButtonClick}
+    />
   );
 };
 
 export default SignUp;
 
 // <EmailInput email="Email" setInputValue={handleEmail} />
+
+/*
+ <FormSection
+          handleEmail={handleEmail}
+          handlePassword={handlePassword}
+          emailFocus={emailFocus}
+        />
+        <Button onClick={onButtonClick}> SIGN UP </Button>
+*/

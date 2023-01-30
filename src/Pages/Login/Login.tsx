@@ -1,13 +1,5 @@
-import React, { useEffect, useRef, useState } from "react";
-import { Tile, TileContainer } from "../../Components/Styles";
-import Button from "../../Atoms/Button/Button";
-import Header from "../../Atoms/Header/Header";
-import Icons from "../../Molecules/IconsSecion/Icons";
-import Line from "../../Molecules/Line/Line";
-import SignOrLogLink from "../../Molecules/SignOrLogLink/SignOrLogLink";
-import CheckboxPass from "../../Molecules/CheckboxPass/CheckboxPass";
-import ForgotPass from "../../Atoms/ForgotPass/ForgotPass";
-import FormSection from "../../Organisms/FormSection/FormSection";
+import React, { useState } from "react";
+import LoginTemplate from "../../Templates/LoginTemplate";
 
 const Login: React.FC = () => {
   const [checkboxValue, setCheckboxValue] = useState(false);
@@ -37,17 +29,20 @@ const Login: React.FC = () => {
     console.log(emailValue, passwordValue, checkboxValue);
   };
 
-  const emailFocus = useRef<HTMLInputElement>(null);
-
-  useEffect(() => {
-    emailFocus.current?.focus();
-  }, []);
-
   return (
-    <Tile>
-      <TileContainer>
-        <Header>LOGIN</Header>
-        <FormSection
+    <LoginTemplate
+      handleEmail={handleEmail}
+      handlePassword={handlePassword}
+      onButtonClick={onButtonClick}
+      handleCheckbox={handleCheckbox}
+    />
+  );
+};
+
+export default Login;
+
+/*
+<FormSection
           handleEmail={handleEmail}
           handlePassword={handlePassword}
           emailFocus={emailFocus}
@@ -57,19 +52,5 @@ const Login: React.FC = () => {
         </CheckboxPass>
         <Button onClick={onButtonClick}> LOGIN </Button>
         <ForgotPass text="Forgot Password?" />
-        <Line>OR</Line>
-        <Icons />
-        <SignOrLogLink linkText="SIGN UP" link="/SignUp">
-          Need an account?
-        </SignOrLogLink>
-      </TileContainer>
-    </Tile>
-  );
-};
-
-export default Login;
-
-/*
-
 
 */
