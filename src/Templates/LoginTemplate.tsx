@@ -1,5 +1,5 @@
 import React from "react";
-import { Tile, TileContainer } from "./TemplatesStyles";
+import { Background, MaxWidth, Tile, TileContainer } from "./TemplatesStyles";
 import FormLogin from "../Organisms/FormsSection/FormLogin";
 import LineSection from "../Organisms/LineIconsLink/LineSection";
 
@@ -17,22 +17,26 @@ const LoginTemplate: React.FC<LoginTemplateProps> = ({
   handleCheckbox,
 }) => {
   return (
-    <Tile>
-      <TileContainer>
-        <FormLogin
-          handleCheckbox={handleCheckbox}
-          handleEmail={handleEmail}
-          handlePassword={handlePassword}
-          onButtonClick={onButtonClick}
-        />
-        <LineSection
-          lineText="OR"
-          link="/SignUp"
-          signOrLogText="Need an account?"
-          linkText="SIGN UP"
-        />
-      </TileContainer>
-    </Tile>
+    <Background>
+      <MaxWidth>
+        <Tile>
+          <TileContainer>
+            <FormLogin
+              handleCheckbox={handleCheckbox}
+              handleEmail={handleEmail}
+              handlePassword={handlePassword}
+              onButtonClick={onButtonClick}
+            />
+            <LineSection
+              lineText="OR"
+              link="/SignUp"
+              signOrLogText="Need an account?"
+              linkText="SIGN UP"
+            />
+          </TileContainer>
+        </Tile>
+      </MaxWidth>
+    </Background>
   );
 };
 

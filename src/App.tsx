@@ -1,24 +1,19 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import { Background, MaxWidth } from "./Templates/TemplatesStyles";
 import SignUp from "./Pages/SignUp/SignUp";
 import Login from "./Pages/Login/Login";
 
 const App: React.FC = () => {
   return (
     <Router>
-      <Background>
-        <MaxWidth>
-          <Switch>
-            <Route exact path="/SignUp">
-              <SignUp />
-            </Route>
-            <Route exact path="/Login">
-              <Login />
-            </Route>
-          </Switch>
-        </MaxWidth>
-      </Background>
+      <Switch>
+        <Route exact path="/SignUp">
+          <SignUp />
+        </Route>
+        <Route exact path="/Login">
+          <Login />
+        </Route>
+      </Switch>
     </Router>
   );
 };
