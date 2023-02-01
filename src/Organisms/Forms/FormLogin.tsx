@@ -34,7 +34,7 @@ const FormLogin: React.FC<FormLoginProps> = ({
           Remember me?
         </CheckboxPass>
         <Button onClick={onButtonClick}> LOGIN </Button>
-        <ForgotPass text="Forgot Password?" />
+        <ForgotPass> Forgot Password? </ForgotPass>
       </InputsContainer>
     </>
   );

@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-confusing-void-expression */
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -21,9 +20,32 @@ const Icons: React.FC = () => {
   };
   return (
     <IconsContainerMain>
-      <Icon PickLog={() => PickLog(0)}>{google}</Icon>
-      <Icon PickLog={() => PickLog(1)}>{facebook}</Icon>
-      <Icon PickLog={() => PickLog(2)}>{linkedin}</Icon>
+      <Icon
+        color="red"
+        PickLog={() => {
+          PickLog(0);
+        }}
+      >
+        {google}
+      </Icon>
+
+      <Icon
+        color="blue"
+        PickLog={() => {
+          PickLog(1);
+        }}
+      >
+        {facebook}
+      </Icon>
+
+      <Icon
+        color="blue"
+        PickLog={() => {
+          PickLog(2);
+        }}
+      >
+        {linkedin}
+      </Icon>
     </IconsContainerMain>
   );
 };

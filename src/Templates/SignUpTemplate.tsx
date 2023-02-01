@@ -1,6 +1,6 @@
 import React from "react";
 import { Background, MaxWidth, Tile, TileContainer } from "./TemplatesStyles";
-import FormSignUp from "../Organisms/FormsSection/FormSignUp";
+import FormSignUp from "../Organisms/Forms/FormSignUp";
 import LineSection from "../Organisms/LineIconsLink/LineSection";
 
 export interface SignUpTemplateProps {
@@ -30,12 +30,9 @@ const SignUpTemplate: React.FC<SignUpTemplateProps> = ({
               handlePassword={handlePassword}
               onButtonClick={onButtonClick}
             />
-            <LineSection
-              lineText="OR"
-              link="/Login"
-              signOrLogText="Already a user?"
-              linkText="LOGIN"
-            />
+            <LineSection lineText="OR" link="/Login" linkText="LOGIN">
+              Already a user?
+            </LineSection>
           </TileContainer>
         </Tile>
       </MaxWidth>

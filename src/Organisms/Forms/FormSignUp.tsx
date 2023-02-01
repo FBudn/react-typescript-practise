@@ -8,7 +8,6 @@ export interface FormSignUpProps {
   emailFocus?: any;
   handleEmail: (e: React.ChangeEvent<HTMLInputElement>) => void;
   handlePassword: (e: React.ChangeEvent<HTMLInputElement>) => void;
-  children?: any;
   onButtonClick: () => void;
 }
 

@@ -4,14 +4,14 @@ import Line from "../../Molecules/Line/Line";
 import Icons from "../../Molecules/IconsSecion/Icons";
 
 export interface LineSectionProps {
-  signOrLogText: string;
+  children: string;
   linkText: string;
   link: string;
   lineText: string;
 }
 
 const LineSection: React.FC<LineSectionProps> = ({
-  signOrLogText,
+  children,
   linkText,
   link,
   lineText,
@@ -21,7 +21,7 @@ const LineSection: React.FC<LineSectionProps> = ({
       <Line>{lineText}</Line>
       <Icons />
       <SignOrLogLink linkText={linkText} link={link}>
-        {signOrLogText}
+        {children}
       </SignOrLogLink>
     </>
   );

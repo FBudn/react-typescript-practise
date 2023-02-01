@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
-export const SoloIconContainer = styled.div`
+export const SoloIconContainer = styled.div.attrs(
+  (props: { color: string }) => props,
+)`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -10,4 +12,7 @@ export const SoloIconContainer = styled.div`
   border-radius: 100%;
   border: 2px solid black;
   cursor: pointer;
+
+  border-color: ${(props) => props.color};
+  color: ${(props) => props.color};
 `;

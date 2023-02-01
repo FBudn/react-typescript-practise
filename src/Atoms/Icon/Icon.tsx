@@ -2,16 +2,14 @@ import React from "react";
 import { SoloIconContainer } from "./IconStyle";
 
 export interface IconProps {
-  PickLog: () => any;
-  children: any;
+  PickLog: () => void;
+  children: React.ReactNode;
+  color: string;
 }
 
-const Icons: React.FC<IconProps> = ({ PickLog, children }) => {
+const Icons: React.FC<IconProps> = ({ PickLog, children, color }) => {
   return (
-    <SoloIconContainer
-      // style={{ color: "red", borderColor: "red" }} // ZOSTAWIŁEM STYLE BO MAM JEDEN ICON-CONT - KOLOR ZMIENIAĆ EW. PRZEZ PROPSY?
-      onClick={PickLog}
-    >
+    <SoloIconContainer color={color} onClick={PickLog}>
       {children}
     </SoloIconContainer>
   );
