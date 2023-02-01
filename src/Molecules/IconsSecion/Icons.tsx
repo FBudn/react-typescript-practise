@@ -15,9 +15,8 @@ const linkedin = <FontAwesomeIcon icon={faLinkedinIn} />;
 
 const Icons: React.FC = () => {
   const IconsLogs = [`Google Clicked`, `Facebook Clicked`, `LinkedIn Clicked`];
-  // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
+
   const PickLog = (i: number) => {
-    // eslint-disable-next-line no-console
     console.log(IconsLogs[i]);
   };
   return (

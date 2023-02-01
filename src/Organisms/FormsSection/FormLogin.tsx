@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/rules-of-hooks */
 import React from "react";
 import Button from "../../Atoms/Button/Button";
 import ForgotPass from "../../Atoms/ForgotPass/ForgotPass";

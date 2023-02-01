@@ -1,4 +1,3 @@
-/* eslint-disable import/no-named-as-default */
 import React from "react";
 import { Background, MaxWidth, Tile, TileContainer } from "./TemplatesStyles";
 import FormSignUp from "../Organisms/FormsSection/FormSignUp";

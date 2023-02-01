@@ -32,8 +32,10 @@
         "namedComponents": "arrow-function",
         "unnamedComponents": "arrow-function"
       }
-    ]
-
-    //"react/destructuring-assignment": [<enabled>, 'always']
+    ],
+    "import/prefer-default-export": "off", // tu problem z exportowaniem tylko 1 stylu/elementu z pliku stylu
+    "@typescript-eslint/explicit-function-return-type": "warn",
+    "no-console": "off"
   }
 }
+//"react/destructuring-assignment": [<enabled>, 'always']

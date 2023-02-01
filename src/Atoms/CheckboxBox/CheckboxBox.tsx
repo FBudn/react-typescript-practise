@@ -1,5 +1,5 @@
 import React from "react";
-import CheckboxInputStyle from "./CheckboxStyle";
+import { CheckboxInputStyle } from "./CheckboxStyle";
 
 export interface CheckboxInputProps {
   handleCheckbox: (event: React.ChangeEvent<HTMLInputElement>) => void;

@@ -1,4 +1,3 @@
-/* eslint-disable no-restricted-exports */
 import styled from "styled-components";
 
 export const CheckboxContainer = styled.div`
@@ -14,5 +13,3 @@ export const CheckboxContainer = styled.div`
   margin: 5px 0px 5px 0px;
 `;
 // ad. margin góra,prawa,dół,lewa
-
-export { CheckboxContainer as default };
