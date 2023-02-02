@@ -28,3 +28,7 @@ const LineSection: React.FC<LineSectionProps> = ({
 };
 
 export default LineSection;
+
+/*
+Znów nazwa folder-plik
+*/

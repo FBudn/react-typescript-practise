@@ -40,6 +40,8 @@ const LoginTemplate: React.FC<LoginTemplateProps> = ({
 export default LoginTemplate;
 
 /*
+
+Kafel mógłby być atomem
   handleFocus={handleFocus}
               ref={ref}
 

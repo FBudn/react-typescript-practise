@@ -5,7 +5,6 @@ import { OneInputContainer, InputLabel } from "./InputLabelStyles";
 export interface InputAndLabelProps {
   children: React.ReactNode;
   type: string;
-  emailFocus?: any;
   setInputValue: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
@@ -13,7 +12,6 @@ const InputAndLabel: React.FC<InputAndLabelProps> = ({
   children,
   type,
   setInputValue,
-  emailFocus,
 }) => {
   return (
     <OneInputContainer>
@@ -21,7 +19,6 @@ const InputAndLabel: React.FC<InputAndLabelProps> = ({
       <Input
         type={type}
         setInputValue={setInputValue}
-        emailFocus={emailFocus}
         // autoFocus
       />
     </OneInputContainer>
@@ -31,6 +28,11 @@ const InputAndLabel: React.FC<InputAndLabelProps> = ({
 export default InputAndLabel;
 
 /*
+Tu zrobić jak mam forgotpass to zrobić mu nazwę label - mam uniwersalny komponent wykorzystywany do nadawania nazw. 
+Jest to do wykorzystania zamiast tworzyć InputLabel w styled-componets. 
+Molekuła i wyżej ze styled-components importowane rzeczy to głównie powinien być div. Po to są atomy, żeby z nich składać w większości
+
+
  handleFocus={handleFocus}
         ref={ref}
 */

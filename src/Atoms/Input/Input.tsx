@@ -4,18 +4,20 @@ import { InputAtom } from "./InputStyle";
 export interface InputProps {
   type: string;
   setInputValue: (e: React.ChangeEvent<HTMLInputElement>) => void;
-  emailFocus?: any;
 }
 
-const Input: React.FC<InputProps> = ({ type, setInputValue, emailFocus }) => {
-  return (
-    <InputAtom type={type} onChange={setInputValue} ref={emailFocus} required />
-  );
+const Input: React.FC<InputProps> = ({ type, setInputValue }) => {
+  return <InputAtom type={type} onChange={setInputValue} required />;
 };
 
 export default Input;
 
 /*
+
+Atomy: 
+ForgotPass używam jako tylko tekst, trochę nie wiadomo co to jest, można by to nazwać label, nazwa bardziej określająca co to jest tu
+niż to do czego będę to stosował
+
 
 const Input = forwardRef(function MyInput(props, ref) {
   const inputRef = useRef(null);
@@ -26,10 +28,7 @@ const Input = forwardRef(function MyInput(props, ref) {
       return {
         focus() {
           inputRef.current.focus();
-        },
-        scrollIntoView() {
-          inputRef.current.scrollIntoView();
-        },
+        }
       };
     },
     [],

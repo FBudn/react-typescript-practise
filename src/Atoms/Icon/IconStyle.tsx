@@ -10,7 +10,7 @@ export const SoloIconContainer = styled.div.attrs(
   padding: 8px;
   font-size: 1rem;
   border-radius: 100%;
-  border: 2px solid black;
+  border: 2px solid red;
   cursor: pointer;
 
   border-color: ${(props) => props.color};

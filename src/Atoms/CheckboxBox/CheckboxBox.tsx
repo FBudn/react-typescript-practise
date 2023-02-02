@@ -10,3 +10,7 @@ const CheckboxBox: React.FC<CheckboxInputProps> = ({ handleCheckbox }) => {
 };
 
 export default CheckboxBox;
+
+/*
+onChange na poziomie atomu z nazwą też onChangeCośtam
+*/

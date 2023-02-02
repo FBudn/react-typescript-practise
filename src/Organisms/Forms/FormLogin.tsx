@@ -7,7 +7,6 @@ import InputAndLabel from "../../Molecules/InputAndLabel/InputAndLabel";
 import { InputsContainer } from "./FormsStyle";
 
 export interface FormLoginProps {
-  emailFocus?: any;
   handleEmail: (e: React.ChangeEvent<HTMLInputElement>) => void;
   handlePassword: (e: React.ChangeEvent<HTMLInputElement>) => void;
   handleCheckbox: (e: React.ChangeEvent<HTMLInputElement>) => void;
@@ -43,6 +42,9 @@ const FormLogin: React.FC<FormLoginProps> = ({
 export default FormLogin;
 
 /*
+tu do zmiany - jeden komponent jeden folder czyli tu FormLogin w swoim itd. Nawet jeśli pliki stylu takie same to 1 tu 1 tu
+
+
 handleFocus={handleFocus}
           ref={ref}
 */

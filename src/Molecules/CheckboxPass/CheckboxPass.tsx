@@ -20,3 +20,7 @@ const CheckboxPass: React.FC<CheckboxProps> = ({
 };
 
 export default CheckboxPass;
+
+/*
+Nazwy: CheckboxBox i CheckboxInput nazwy ujednolicone
+*/

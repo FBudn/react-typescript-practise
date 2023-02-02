@@ -37,6 +37,9 @@ const Login: React.FC = () => {
 export default Login;
 
 /*
+ Tu nazwy LoginPage itd. 
+ staty na poziomie templaty a tu tylko funkcje przyjmujące jako paramet itd
+ Tu  tylko kliknięcia w ikone, przycisk 
   const ref = useRef(null);
 
   const handleFocus = () => {

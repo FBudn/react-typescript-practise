@@ -51,3 +51,9 @@ const Icons: React.FC = () => {
 };
 
 export default Icons;
+
+/*
+Przerobienie tego bo wszelka logika na samej górze w page 
+i ogarnąć już funkcje
+znowu nazwy folderów 
+*/

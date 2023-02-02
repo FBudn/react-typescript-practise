@@ -5,7 +5,6 @@ import InputAndLabel from "../../Molecules/InputAndLabel/InputAndLabel";
 import { InputsContainer } from "./FormsStyle";
 
 export interface FormSignUpProps {
-  emailFocus?: any;
   handleEmail: (e: React.ChangeEvent<HTMLInputElement>) => void;
   handlePassword: (e: React.ChangeEvent<HTMLInputElement>) => void;
   onButtonClick: () => void;
@@ -14,18 +13,13 @@ export interface FormSignUpProps {
 const FormSignUp: React.FC<FormSignUpProps> = ({
   handleEmail,
   handlePassword,
-  emailFocus,
   onButtonClick,
 }) => {
   return (
     <>
       <Header>SIGN UP</Header>
       <InputsContainer>
-        <InputAndLabel
-          type="email"
-          setInputValue={handleEmail}
-          emailFocus={emailFocus}
-        >
+        <InputAndLabel type="email" setInputValue={handleEmail}>
           Email
         </InputAndLabel>
 

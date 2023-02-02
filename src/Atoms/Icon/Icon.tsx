@@ -16,3 +16,7 @@ const Icons: React.FC<IconProps> = ({ PickLog, children, color }) => {
 };
 
 export default Icons;
+
+/*
+Nazwa funkcji znowu
+*/
