@@ -35,3 +35,11 @@ const Login: React.FC = () => {
 };
 
 export default Login;
+
+/*
+  const ref = useRef(null);
+
+  const handleFocus = () => {
+    ref.current.focus();
+  };
+*/

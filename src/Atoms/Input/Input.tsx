@@ -14,3 +14,30 @@ const Input: React.FC<InputProps> = ({ type, setInputValue, emailFocus }) => {
 };
 
 export default Input;
+
+/*
+
+const Input = forwardRef(function MyInput(props, ref) {
+  const inputRef = useRef(null);
+
+  useImperativeHandle(
+    ref,
+    () => {
+      return {
+        focus() {
+          inputRef.current.focus();
+        },
+        scrollIntoView() {
+          inputRef.current.scrollIntoView();
+        },
+      };
+    },
+    [],
+  );
+
+  // eslint-disable-next-line react/react-in-jsx-scope, react/jsx-props-no-spreading
+  return <InputAtom {...props} ref={inputRef} />;
+});
+
+
+*/

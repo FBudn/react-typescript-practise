@@ -29,3 +29,8 @@ const InputAndLabel: React.FC<InputAndLabelProps> = ({
 };
 
 export default InputAndLabel;
+
+/*
+ handleFocus={handleFocus}
+        ref={ref}
+*/

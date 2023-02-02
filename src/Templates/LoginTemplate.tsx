@@ -38,3 +38,9 @@ const LoginTemplate: React.FC<LoginTemplateProps> = ({
 };
 
 export default LoginTemplate;
+
+/*
+  handleFocus={handleFocus}
+              ref={ref}
+
+*/
