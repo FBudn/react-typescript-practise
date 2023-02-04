@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import LoginTemplate from "../../Templates/LoginTemplate";
+import LoginTemplate from "../../Templates/LoginTemplate/LoginTemplate";
 
 const Login: React.FC = () => {
   const [checkboxValue, setCheckboxValue] = useState(false);

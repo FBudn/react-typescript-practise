@@ -4,7 +4,7 @@ import ForgotPass from "../../Atoms/ForgotPass/ForgotPass";
 import Header from "../../Atoms/Header/Header";
 import CheckboxPass from "../../Molecules/CheckboxPass/CheckboxPass";
 import InputAndLabel from "../../Molecules/InputAndLabel/InputAndLabel";
-import { InputsContainer } from "./FormsStyle";
+import { InputsContainer } from "../FormSignUp/FormsStyle";
 
 export interface FormLoginProps {
   handleEmail: (e: React.ChangeEvent<HTMLInputElement>) => void;
@@ -29,7 +29,7 @@ const FormLogin: React.FC<FormLoginProps> = ({
         <InputAndLabel type="password" setInputValue={handlePassword}>
           Password
         </InputAndLabel>
-        <CheckboxPass handleCheckbox={handleCheckbox}>
+        <CheckboxPass onChangeCheckbox={handleCheckbox}>
           Remember me?
         </CheckboxPass>
         <Button onClick={onButtonClick}> LOGIN </Button>

@@ -1,7 +1,7 @@
 import React from "react";
 import SignOrLogLink from "../../Molecules/SignOrLogLink/SignOrLogLink";
 import Line from "../../Molecules/Line/Line";
-import Icons from "../../Molecules/IconsSecion/Icons";
+import Icons from "../../Molecules/IconsSecion/IconsSection";
 
 export interface LineSectionProps {
   children: string;

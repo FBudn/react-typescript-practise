@@ -5,7 +5,7 @@ import {
   faGoogle,
   faLinkedinIn,
 } from "@fortawesome/free-brands-svg-icons";
-import { IconsContainerMain } from "./IconsStyle";
+import { IconsContainerMain } from "./IconsSectionStyle";
 import Icon from "../../Atoms/Icon/Icon";
 
 const facebook = <FontAwesomeIcon icon={faFacebookF} />;
@@ -15,15 +15,15 @@ const linkedin = <FontAwesomeIcon icon={faLinkedinIn} />;
 const Icons: React.FC = () => {
   const IconsLogs = [`Google Clicked`, `Facebook Clicked`, `LinkedIn Clicked`];
 
-  const PickLog = (i: number) => {
+  const onClickIcon = (i: number) => {
     console.log(IconsLogs[i]);
   };
   return (
     <IconsContainerMain>
       <Icon
         color="red"
-        PickLog={() => {
-          PickLog(0);
+        onClickIcon={() => {
+          onClickIcon(0);
         }}
       >
         {google}
@@ -31,8 +31,8 @@ const Icons: React.FC = () => {
 
       <Icon
         color="blue"
-        PickLog={() => {
-          PickLog(1);
+        onClickIcon={() => {
+          onClickIcon(1);
         }}
       >
         {facebook}
@@ -40,8 +40,8 @@ const Icons: React.FC = () => {
 
       <Icon
         color="blue"
-        PickLog={() => {
-          PickLog(2);
+        onClickIcon={() => {
+          onClickIcon(2);
         }}
       >
         {linkedin}

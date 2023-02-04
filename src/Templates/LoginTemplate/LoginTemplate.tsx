@@ -1,7 +1,12 @@
 import React from "react";
-import { Background, MaxWidth, Tile, TileContainer } from "./TemplatesStyles";
-import FormLogin from "../Organisms/Forms/FormLogin";
-import LineSection from "../Organisms/LineIconsLink/LineSection";
+import {
+  Background,
+  MaxWidth,
+  Tile,
+  TileContainer,
+} from "../SignUpTemplate/TemplatesStyles";
+import FormLogin from "../../Organisms/FormLogin/FormLogin";
+import LineSection from "../../Organisms/LineSection/LineSection";
 
 export interface LoginTemplateProps {
   handleEmail: (e: React.ChangeEvent<HTMLInputElement>) => void;

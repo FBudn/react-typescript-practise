@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import SignUpTemplate from "../../Templates/SignUpTemplate";
+import SignUpTemplate from "../../Templates/SignUpTemplate/SignUpTemplate";
 
 const SignUp: React.FC = () => {
   const [emailValue, setEmailValue] = useState("");

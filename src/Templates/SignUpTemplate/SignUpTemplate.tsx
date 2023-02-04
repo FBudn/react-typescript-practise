@@ -1,7 +1,7 @@
 import React from "react";
 import { Background, MaxWidth, Tile, TileContainer } from "./TemplatesStyles";
-import FormSignUp from "../Organisms/Forms/FormSignUp";
-import LineSection from "../Organisms/LineIconsLink/LineSection";
+import FormSignUp from "../../Organisms/FormSignUp/FormSignUp";
+import LineSection from "../../Organisms/LineSection/LineSection";
 
 export interface SignUpTemplateProps {
   handleEmail: (e: React.ChangeEvent<HTMLInputElement>) => void;

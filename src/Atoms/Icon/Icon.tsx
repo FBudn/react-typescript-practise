@@ -2,14 +2,14 @@ import React from "react";
 import { SoloIconContainer } from "./IconStyle";
 
 export interface IconProps {
-  PickLog: () => void;
+  onClickIcon: () => void;
   children: React.ReactNode;
   color: string;
 }
 
-const Icons: React.FC<IconProps> = ({ PickLog, children, color }) => {
+const Icons: React.FC<IconProps> = ({ onClickIcon, children, color }) => {
   return (
-    <SoloIconContainer color={color} onClick={PickLog}>
+    <SoloIconContainer color={color} onClick={onClickIcon}>
       {children}
     </SoloIconContainer>
   );

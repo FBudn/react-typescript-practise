@@ -1,19 +1,19 @@
 import React from "react";
 import { CheckboxContainer } from "./CheckboxPassStyle";
-import CheckboxInput from "../../Atoms/CheckboxBox/CheckboxBox";
+import CheckboxInput from "../../Atoms/CheckboxInput/CheckboxInput";
 
 export interface CheckboxProps {
   children: React.ReactNode;
-  handleCheckbox: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  onChangeCheckbox: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
 const CheckboxPass: React.FC<CheckboxProps> = ({
-  handleCheckbox,
+  onChangeCheckbox,
   children,
 }: CheckboxProps) => {
   return (
     <CheckboxContainer>
-      <CheckboxInput handleCheckbox={handleCheckbox} />
+      <CheckboxInput onChangeCheckbox={onChangeCheckbox} />
       {children}
     </CheckboxContainer>
   );
