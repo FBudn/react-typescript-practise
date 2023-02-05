@@ -11,20 +11,10 @@ export const LabelContainer = styled.div.attrs(
 )`
   display: flex;
   width: 100%;
-  height: 40px;
-  border-radius: 5px;
   border: none;
-  justify-content: center;
-  align-items: center;
-  font-weight: bold;
-  color: white;
-  cursor: pointer;
-  background: rgb(236 72 153);
-  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-  --tw-shadow-color: #94a3b8;
-  margin: 6px 0px 6px 0px;
-
   align: ${(props) => props.align};
   color: ${(props) => props.color};
-  justi
+  justify: ${(props) => props.justify};
+  font-weight: ${(props) => props.fontWeight};
+  font-size: ${(props) => props.fontSize};
 `;
