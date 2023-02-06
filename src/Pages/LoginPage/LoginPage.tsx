@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/explicit-function-return-type */
 import React from "react";
 import LoginTemplate from "../../Templates/LoginTemplate/LoginTemplate";
 
@@ -20,7 +19,7 @@ export default Login;
 
 /*
  Tu nazwy LoginPage itd. 
- staty na poziomie templaty a tu tylko funkcje przyjmujące jako paramet itd
+ staty na poziomie templaty a tu tylko funkcje przyjmujące paramet itd
  Tu  tylko kliknięcia w ikone, przycisk, link
   const ref = useRef(null);
 
