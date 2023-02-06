@@ -5,11 +5,14 @@ import { Background, MaxWidth } from "./SignUpTemplate/TemplatesStyles";
 import TestOrganism from "../Organisms/TestOrganism";
 
 const TestTemplate = forwardRef(function TestTemplate(props: any, ref) {
-  const { label } = props;
+  const { label, handleClick } = props;
   return (
     <Background>
       <MaxWidth>
         <TestOrganism label={label} ref={ref} />
+        <button type="button" onClick={handleClick}>
+          Edit
+        </button>
       </MaxWidth>
     </Background>
   );

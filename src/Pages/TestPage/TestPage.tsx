@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-bind */
 /* eslint-disable @typescript-eslint/explicit-function-return-type */
 /* eslint-disable react/react-in-jsx-scope */
 /* eslint-disable react/function-component-definition */
@@ -15,10 +16,11 @@ export default function Form() {
 
   return (
     <form>
-      <TestTemplate label="Enter your name:" ref={ref} />
-      <button type="button" onClick={handleClick}>
-        Edit
-      </button>
+      <TestTemplate
+        label="Enter your name:"
+        ref={ref}
+        handleClick={handleClick}
+      />
     </form>
   );
 }
