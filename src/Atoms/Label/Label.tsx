@@ -26,8 +26,7 @@ const Label: React.FC<LabelProps> = ({
       fontWeight={fontWeight}
       fontSize={fontSize}
     >
-      {" "}
-      {children}{" "}
+      {children}
     </LabelContainer>
   );
 };

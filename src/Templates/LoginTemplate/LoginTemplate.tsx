@@ -19,7 +19,7 @@ const LoginTemplate: React.FC<LoginTemplateProps> = ({
 }) => {
   const [checkboxValue, setCheckboxValue] = useState(false);
 
-  const handleCheckbox = (event: React.ChangeEvent<HTMLInputElement>) => {
+  const onChangeCheckbox = (event: React.ChangeEvent<HTMLInputElement>) => {
     setCheckboxValue(event.target.checked);
   };
 
@@ -43,7 +43,7 @@ const LoginTemplate: React.FC<LoginTemplateProps> = ({
         <Tile>
           <TileContainer>
             <FormLogin
-              handleCheckbox={handleCheckbox}
+              onChangeCheckbox={onChangeCheckbox}
               handleEmail={handleEmail}
               handlePassword={handlePassword}
               onButtonClick={() => {

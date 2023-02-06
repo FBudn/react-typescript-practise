@@ -9,14 +9,14 @@ import { InputsContainer } from "../FormSignUp/FormsStyle";
 export interface FormLoginProps {
   handleEmail: (e: React.ChangeEvent<HTMLInputElement>) => void;
   handlePassword: (e: React.ChangeEvent<HTMLInputElement>) => void;
-  handleCheckbox: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  onChangeCheckbox: (e: React.ChangeEvent<HTMLInputElement>) => void;
   onButtonClick: (email: any, password: any, checkbox: any) => void;
 }
 
 const FormLogin: React.FC<FormLoginProps> = ({
   handleEmail,
   handlePassword,
-  handleCheckbox,
+  onChangeCheckbox,
   onButtonClick,
 }) => {
   return (
@@ -29,7 +29,7 @@ const FormLogin: React.FC<FormLoginProps> = ({
         <InputAndLabel type="password" setInputValue={handlePassword}>
           Password
         </InputAndLabel>
-        <CheckboxPass onChangeCheckbox={handleCheckbox}>
+        <CheckboxPass onChangeCheckbox={onChangeCheckbox}>
           Remember me?
         </CheckboxPass>
         <Button onClick={onButtonClick}> LOGIN </Button>
