@@ -1,36 +1,19 @@
-import React, { useState } from "react";
+import React from "react";
 import LoginTemplate from "../../Templates/LoginTemplate/LoginTemplate";
 
 const Login: React.FC = () => {
-  const [checkboxValue, setCheckboxValue] = useState(false);
-
-  const handleCheckbox = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setCheckboxValue(event.target.checked);
+  const onButtonClick = (email: any, password: any, checkbox: any) => {
+    console.log(email, password, checkbox);
   };
 
-  const [emailValue, setEmailValue] = useState("");
+  const IconsLogs = [`Google Clicked`, `Facebook Clicked`, `LinkedIn Clicked`];
 
-  const handleEmail = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setEmailValue(e.target.value);
-  };
-
-  const [passwordValue, setPasswordValue] = useState("");
-
-  const handlePassword = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setPasswordValue(e.target.value);
-  };
-
-  const onButtonClick = () => {
-    console.log(emailValue, passwordValue, checkboxValue);
+  const onClickIcon = (i: number) => {
+    console.log(IconsLogs[i]);
   };
 
   return (
-    <LoginTemplate
-      handleEmail={handleEmail}
-      handlePassword={handlePassword}
-      onButtonClick={onButtonClick}
-      handleCheckbox={handleCheckbox}
-    />
+    <LoginTemplate onButtonClick={onButtonClick} onClickIcon={onClickIcon} />
   );
 };
 
@@ -39,7 +22,7 @@ export default Login;
 /*
  Tu nazwy LoginPage itd. 
  staty na poziomie templaty a tu tylko funkcje przyjmujące jako paramet itd
- Tu  tylko kliknięcia w ikone, przycisk 
+ Tu  tylko kliknięcia w ikone, przycisk, link
   const ref = useRef(null);
 
   const handleFocus = () => {

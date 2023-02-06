@@ -12,38 +12,22 @@ const facebook = <FontAwesomeIcon icon={faFacebookF} />;
 const google = <FontAwesomeIcon icon={faGoogle} />;
 const linkedin = <FontAwesomeIcon icon={faLinkedinIn} />;
 
-const Icons: React.FC = () => {
-  const IconsLogs = [`Google Clicked`, `Facebook Clicked`, `LinkedIn Clicked`];
+export interface IconsProps {
+  onClickIcon: any;
+}
 
-  const onClickIcon = (i: number) => {
-    console.log(IconsLogs[i]);
-  };
+const Icons: React.FC<IconsProps> = ({ onClickIcon }) => {
   return (
     <IconsContainerMain>
-      <Icon
-        color="red"
-        onClickIcon={() => {
-          onClickIcon(0);
-        }}
-      >
+      <Icon color="red" onClickIcon={onClickIcon}>
         {google}
       </Icon>
 
-      <Icon
-        color="blue"
-        onClickIcon={() => {
-          onClickIcon(1);
-        }}
-      >
+      <Icon color="blue" onClickIcon={onClickIcon}>
         {facebook}
       </Icon>
 
-      <Icon
-        color="blue"
-        onClickIcon={() => {
-          onClickIcon(2);
-        }}
-      >
+      <Icon color="blue" onClickIcon={onClickIcon}>
         {linkedin}
       </Icon>
     </IconsContainerMain>

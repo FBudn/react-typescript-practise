@@ -8,6 +8,7 @@ export interface LineSectionProps {
   linkText: string;
   link: string;
   lineText: string;
+  onClickIcon: any;
 }
 
 const LineSection: React.FC<LineSectionProps> = ({
@@ -15,11 +16,12 @@ const LineSection: React.FC<LineSectionProps> = ({
   linkText,
   link,
   lineText,
+  onClickIcon,
 }) => {
   return (
     <>
       <Line>{lineText}</Line>
-      <Icons />
+      <Icons onClickIcon={onClickIcon} />
       <SignOrLogLink linkText={linkText} link={link}>
         {children}
       </SignOrLogLink>

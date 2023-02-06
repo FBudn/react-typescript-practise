@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Background,
   MaxWidth,
@@ -9,18 +9,31 @@ import FormLogin from "../../Organisms/FormLogin/FormLogin";
 import LineSection from "../../Organisms/LineSection/LineSection";
 
 export interface LoginTemplateProps {
-  handleEmail: (e: React.ChangeEvent<HTMLInputElement>) => void;
-  handlePassword: (e: React.ChangeEvent<HTMLInputElement>) => void;
-  onButtonClick: () => void;
-  handleCheckbox: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  onButtonClick: (email: any, password: any, checkbox: any) => void;
+  onClickIcon: any;
 }
 
 const LoginTemplate: React.FC<LoginTemplateProps> = ({
   onButtonClick,
-  handleEmail,
-  handlePassword,
-  handleCheckbox,
+  onClickIcon,
 }) => {
+  const [checkboxValue, setCheckboxValue] = useState(false);
+
+  const handleCheckbox = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setCheckboxValue(event.target.checked);
+  };
+
+  const [emailValue, setEmailValue] = useState("");
+
+  const handleEmail = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setEmailValue(e.target.value);
+  };
+
+  const [passwordValue, setPasswordValue] = useState("");
+
+  const handlePassword = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setPasswordValue(e.target.value);
+  };
   return (
     <Background>
       <MaxWidth>
@@ -30,9 +43,16 @@ const LoginTemplate: React.FC<LoginTemplateProps> = ({
               handleCheckbox={handleCheckbox}
               handleEmail={handleEmail}
               handlePassword={handlePassword}
-              onButtonClick={onButtonClick}
+              onButtonClick={() => {
+                onButtonClick(emailValue, passwordValue, checkboxValue);
+              }}
             />
-            <LineSection lineText="OR" link="/SignUp" linkText="SIGN UP">
+            <LineSection
+              lineText="OR"
+              link="/SignUp"
+              linkText="SIGN UP"
+              onClickIcon={onClickIcon}
+            >
               Need an account?
             </LineSection>
           </TileContainer>

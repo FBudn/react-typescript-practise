@@ -7,7 +7,7 @@ import { InputsContainer } from "./FormsStyle";
 export interface FormSignUpProps {
   handleEmail: (e: React.ChangeEvent<HTMLInputElement>) => void;
   handlePassword: (e: React.ChangeEvent<HTMLInputElement>) => void;
-  onButtonClick: () => void;
+  onButtonClick: (email: any, password: any, checkbox: any) => void;
 }
 
 const FormSignUp: React.FC<FormSignUpProps> = ({

@@ -1,34 +1,19 @@
-import React, { useEffect, useRef, useState } from "react";
+import React from "react";
 import SignUpTemplate from "../../Templates/SignUpTemplate/SignUpTemplate";
 
 const SignUp: React.FC = () => {
-  const [emailValue, setEmailValue] = useState("");
-  const handleEmail = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setEmailValue(e.target.value);
+  const onButtonClick = (email: any, password: any, checkbox: any) => {
+    console.log(email, password, checkbox);
   };
 
-  const [passwordValue, setPasswordValue] = useState("");
+  const IconsLogs = [`Google Clicked`, `Facebook Clicked`, `LinkedIn Clicked`];
 
-  const handlePassword = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setPasswordValue(e.target.value);
+  const onClickIcon = (i: number) => {
+    console.log(IconsLogs[i]);
   };
-
-  const onButtonClick = () => {
-    console.log(emailValue, passwordValue);
-  };
-
-  const emailFocus = useRef<HTMLInputElement>(null);
-
-  useEffect(() => {
-    emailFocus.current?.focus();
-  }, []);
 
   return (
-    <SignUpTemplate
-      handleEmail={handleEmail}
-      handlePassword={handlePassword}
-      onButtonClick={onButtonClick}
-    />
+    <SignUpTemplate onButtonClick={onButtonClick} onClickIcon={onClickIcon} />
   );
 };
 

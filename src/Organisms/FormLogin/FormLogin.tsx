@@ -10,7 +10,7 @@ export interface FormLoginProps {
   handleEmail: (e: React.ChangeEvent<HTMLInputElement>) => void;
   handlePassword: (e: React.ChangeEvent<HTMLInputElement>) => void;
   handleCheckbox: (e: React.ChangeEvent<HTMLInputElement>) => void;
-  onButtonClick: () => void;
+  onButtonClick: (email: any, password: any, checkbox: any) => void;
 }
 
 const FormLogin: React.FC<FormLoginProps> = ({
