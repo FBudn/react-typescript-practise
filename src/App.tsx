@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import SignUp from "./Pages/SignUpPage/SignUpPage";
 import Login from "./Pages/LoginPage/LoginPage";
+import TestPage from "./Pages/TestPage/TestPage";
 
 const App: React.FC = () => {
   return (
@@ -15,6 +16,9 @@ const App: React.FC = () => {
         </Route>
         <Route exact path="/">
           <Login />
+        </Route>
+        <Route exact path="/Test">
+          <TestPage />
         </Route>
       </Switch>
     </Router>
