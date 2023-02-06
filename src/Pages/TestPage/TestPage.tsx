@@ -2,10 +2,10 @@
 /* eslint-disable react/react-in-jsx-scope */
 /* eslint-disable react/function-component-definition */
 import { useRef } from "react";
-import TestOrganism from "../../Organisms/TestOrganism";
+import TestTemplate from "../../Templates/TestTemplate";
 
 export default function Form() {
-  const ref = useRef<HTMLButtonElement>(null);
+  const ref = useRef<HTMLInputElement>(null);
 
   function handleClick() {
     if (ref.current !== null) {
@@ -15,7 +15,7 @@ export default function Form() {
 
   return (
     <form>
-      <TestOrganism label="Enter your name:" ref={ref} />
+      <TestTemplate label="Enter your name:" ref={ref} />
       <button type="button" onClick={handleClick}>
         Edit
       </button>
