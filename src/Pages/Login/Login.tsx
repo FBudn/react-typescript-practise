@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/explicit-function-return-type */
 import React from "react";
 import LoginTemplate from "../../Templates/LoginTemplate/LoginTemplate";
 
@@ -6,10 +7,8 @@ const Login: React.FC = () => {
     console.log(email, password, checkbox);
   };
 
-  const IconsLogs = [`Google Clicked`, `Facebook Clicked`, `LinkedIn Clicked`];
-
-  const onClickIcon = (i: number) => {
-    console.log(IconsLogs[i]);
+  const onClickIcon = (number: number, logs: any[]) => {
+    console.log(logs[number]);
   };
 
   return (

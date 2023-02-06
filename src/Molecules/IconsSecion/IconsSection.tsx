@@ -14,20 +14,45 @@ const linkedin = <FontAwesomeIcon icon={faLinkedinIn} />;
 
 export interface IconsProps {
   onClickIcon: any;
+  firstIconText: number;
+  secondIconText: number;
+  thirdIconText: number;
+  logs: any;
 }
 
-const Icons: React.FC<IconsProps> = ({ onClickIcon }) => {
+const Icons: React.FC<IconsProps> = ({
+  onClickIcon,
+  firstIconText,
+  secondIconText,
+  thirdIconText,
+  logs,
+}) => {
   return (
     <IconsContainerMain>
-      <Icon color="red" onClickIcon={onClickIcon}>
+      <Icon
+        color="red"
+        onClickIcon={() => {
+          onClickIcon(firstIconText, logs);
+        }}
+      >
         {google}
       </Icon>
 
-      <Icon color="blue" onClickIcon={onClickIcon}>
+      <Icon
+        color="blue"
+        onClickIcon={() => {
+          onClickIcon(secondIconText, logs);
+        }}
+      >
         {facebook}
       </Icon>
 
-      <Icon color="blue" onClickIcon={onClickIcon}>
+      <Icon
+        color="blue"
+        onClickIcon={() => {
+          onClickIcon(thirdIconText, logs);
+        }}
+      >
         {linkedin}
       </Icon>
     </IconsContainerMain>

@@ -24,6 +24,8 @@ const SignUpTemplate: React.FC<SignUpTemplateProps> = ({
     setPasswordValue(e.target.value);
   };
 
+  const IconsLogs = [`Google Clicked`, `Facebook Clicked`, `LinkedIn Clicked`];
+
   return (
     <Background>
       <MaxWidth>
@@ -41,6 +43,7 @@ const SignUpTemplate: React.FC<SignUpTemplateProps> = ({
               link="/Login"
               linkText="LOGIN"
               onClickIcon={onClickIcon}
+              logs={IconsLogs}
             >
               Already a user?
             </LineSection>

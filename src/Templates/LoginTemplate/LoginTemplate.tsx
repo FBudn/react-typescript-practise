@@ -34,6 +34,9 @@ const LoginTemplate: React.FC<LoginTemplateProps> = ({
   const handlePassword = (e: React.ChangeEvent<HTMLInputElement>) => {
     setPasswordValue(e.target.value);
   };
+
+  const IconsLogs = [`Google Clicked`, `Facebook Clicked`, `LinkedIn Clicked`];
+
   return (
     <Background>
       <MaxWidth>
@@ -52,6 +55,7 @@ const LoginTemplate: React.FC<LoginTemplateProps> = ({
               link="/SignUp"
               linkText="SIGN UP"
               onClickIcon={onClickIcon}
+              logs={IconsLogs}
             >
               Need an account?
             </LineSection>
