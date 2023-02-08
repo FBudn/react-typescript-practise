@@ -1,7 +1,7 @@
 import React, { forwardRef } from "react";
 import { CheckboxContainer } from "./CheckboxPassStyle";
 import CheckboxInput from "../../Atoms/CheckboxInput/CheckboxInput";
-import Label from "../../Atoms/Label/Label";
+import Label from "../../Atoms/TextLabel/TextLabel";
 
 export interface CheckboxProps {
   children: React.ReactNode;

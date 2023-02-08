@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Label from "../../Atoms/Label/Label";
+import Label from "../../Atoms/TextLabel/TextLabel";
 import { SignOrLogLinkContainer } from "./SignOrLogStyle";
 
 export interface SignOrLogLinkProps {

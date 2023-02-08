@@ -1,5 +1,5 @@
 import React from "react";
-import { LabelContainer } from "./LabelStyle";
+import { LabelContainer } from "./TextLabelStyle";
 
 export interface LabelProps {
   children: React.ReactNode;
@@ -12,7 +12,7 @@ export interface LabelProps {
   margin?: string;
 }
 
-const Label: React.FC<LabelProps> = ({
+const TextLabel: React.FC<LabelProps> = ({
   children,
   color,
   align,
@@ -37,4 +37,4 @@ const Label: React.FC<LabelProps> = ({
   );
 };
 
-export default Label;
+export default TextLabel;

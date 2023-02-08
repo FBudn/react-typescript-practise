@@ -1,6 +1,6 @@
 import React from "react";
 import Input from "../../Atoms/Input/Input";
-import Label from "../../Atoms/Label/Label";
+import Label from "../../Atoms/TextLabel/TextLabel";
 import { OneInputContainer } from "./InputLabelStyles";
 
 export interface InputAndLabelProps {
