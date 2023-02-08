@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import SignUpTemplate from "../../Templates/SignUpTemplate/SignUpTemplate";
 
 const SignUp: React.FC = () => {
@@ -12,8 +13,17 @@ const SignUp: React.FC = () => {
     console.log(IconsLogs[i]);
   };
 
+  const navigate = useNavigate();
+  const onClickLink = (url: string) => {
+    navigate(url);
+  };
+
   return (
-    <SignUpTemplate onButtonClick={onButtonClick} onClickIcon={onClickIcon} />
+    <SignUpTemplate
+      onButtonClick={onButtonClick}
+      onClickIcon={onClickIcon}
+      onClickLink={onClickLink}
+    />
   );
 };
 

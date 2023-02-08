@@ -6,11 +6,13 @@ import LineSection from "../../Organisms/LineSection/LineSection";
 export interface SignUpTemplateProps {
   onButtonClick: (email: any, password: any, checkbox: any) => void;
   onClickIcon: any;
+  onClickLink: any;
 }
 
 const SignUpTemplate: React.FC<SignUpTemplateProps> = ({
   onButtonClick,
   onClickIcon,
+  onClickLink,
 }) => {
   const [emailValue, setEmailValue] = useState("");
 
@@ -40,10 +42,12 @@ const SignUpTemplate: React.FC<SignUpTemplateProps> = ({
             />
             <LineSection
               lineText="OR"
-              link="/Login"
               linkText="LOGIN"
               onClickIcon={onClickIcon}
               logs={IconsLogs}
+              onClickLink={() => {
+                onClickLink(`/Login`);
+              }}
             >
               Already a user?
             </LineSection>

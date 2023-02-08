@@ -6,19 +6,19 @@ import Icons from "../../Molecules/IconsSecion/IconsSection";
 export interface LineSectionProps {
   children: string;
   linkText: string;
-  link: string;
   lineText: string;
   onClickIcon: any;
   logs: any;
+  onClickLink: any;
 }
 
 const LineSection: React.FC<LineSectionProps> = ({
   children,
   linkText,
-  link,
   lineText,
   onClickIcon,
   logs,
+  onClickLink,
 }) => {
   return (
     <>
@@ -30,7 +30,7 @@ const LineSection: React.FC<LineSectionProps> = ({
         thirdIconText={2}
         logs={logs}
       />
-      <SignOrLogLink linkText={linkText} link={link}>
+      <SignOrLogLink linkText={linkText} onClickLink={onClickLink}>
         {children}
       </SignOrLogLink>
     </>

@@ -1,4 +1,7 @@
+/* eslint-disable react/jsx-no-bind */
+/* eslint-disable @typescript-eslint/explicit-function-return-type */
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import LoginTemplate from "../../Templates/LoginTemplate/LoginTemplate";
 
 const Login: React.FC = () => {
@@ -10,8 +13,17 @@ const Login: React.FC = () => {
     console.log(logs[number]);
   };
 
+  const navigate = useNavigate();
+  const onClickLink = (url: string) => {
+    navigate(url);
+  };
+
   return (
-    <LoginTemplate onButtonClick={onButtonClick} onClickIcon={onClickIcon} />
+    <LoginTemplate
+      onButtonClick={onButtonClick}
+      onClickIcon={onClickIcon}
+      onClickLink={onClickLink}
+    />
   );
 };
 

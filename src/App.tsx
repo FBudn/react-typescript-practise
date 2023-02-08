@@ -1,27 +1,21 @@
+/* eslint-disable react/jsx-no-undef */
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import React from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import SignUp from "./Pages/SignUpPage/SignUpPage";
 import Login from "./Pages/LoginPage/LoginPage";
 import TestPage from "./Pages/TestPage/TestPage";
 
 const App: React.FC = () => {
   return (
-    <Router>
-      <Switch>
-        <Route exact path="/SignUp">
-          <SignUp />
-        </Route>
-        <Route exact path="/Login">
-          <Login />
-        </Route>
-        <Route exact path="/">
-          <Login />
-        </Route>
-        <Route exact path="/Test">
-          <TestPage />
-        </Route>
-      </Switch>
-    </Router>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/SignUp" element={<SignUp />} />
+        <Route path="/Login" element={<Login />} />
+        <Route path="/" element={<Login />} />
+        <Route path="/Test" element={<TestPage />} />
+      </Routes>
+    </BrowserRouter>
   );
 };
 

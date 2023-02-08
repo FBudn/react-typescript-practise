@@ -1,18 +1,18 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import LinkButton from "../../Atoms/LinkButton/LinkButton";
 import Label from "../../Atoms/TextLabel/TextLabel";
 import { SignOrLogLinkContainer } from "./SignOrLogStyle";
 
 export interface SignOrLogLinkProps {
   children: React.ReactNode;
   linkText: string;
-  link: string;
+  onClickLink: any;
 }
 
 const SignOrLogLink: React.FC<SignOrLogLinkProps> = ({
   children,
   linkText,
-  link,
+  onClickLink,
 }) => {
   return (
     <SignOrLogLinkContainer>
@@ -25,7 +25,7 @@ const SignOrLogLink: React.FC<SignOrLogLinkProps> = ({
       >
         {children}
       </Label>
-      <Link to={link}>{linkText}</Link>
+      <LinkButton onClickLink={onClickLink}>{linkText}</LinkButton>
     </SignOrLogLinkContainer>
   );
 };

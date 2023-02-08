@@ -1,3 +1,5 @@
+/* eslint-disable react/jsx-no-bind */
+/* eslint-disable @typescript-eslint/explicit-function-return-type */
 import React, { useRef, useState } from "react";
 import {
   Background,
@@ -11,11 +13,13 @@ import LineSection from "../../Organisms/LineSection/LineSection";
 export interface LoginTemplateProps {
   onButtonClick: (email: any, password: any, checkbox: any) => void;
   onClickIcon: any;
+  onClickLink: any;
 }
 
 const LoginTemplate: React.FC<LoginTemplateProps> = ({
   onButtonClick,
   onClickIcon,
+  onClickLink,
 }) => {
   /* const [checkboxValue, setCheckboxValue] = useState(false);
 
@@ -55,10 +59,12 @@ const LoginTemplate: React.FC<LoginTemplateProps> = ({
             />
             <LineSection
               lineText="OR"
-              link="/SignUp"
               linkText="SIGN UP"
               onClickIcon={onClickIcon}
               logs={IconsLogs}
+              onClickLink={() => {
+                onClickLink(`/SignUp`);
+              }}
             >
               Need an account?
             </LineSection>
