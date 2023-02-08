@@ -6,12 +6,16 @@ import { useRef } from "react";
 import TestTemplate from "../../Templates/TestTemplate";
 
 export default function Form() {
-  const ref = useRef<HTMLInputElement>(null);
+  const ref = useRef<HTMLInputElement>();
 
   function handleClick() {
-    if (ref.current !== null) {
+    if (ref.current !== undefined) {
       ref.current.focus();
     }
+  }
+
+  function onChangeInput() {
+    if (ref.current !== undefined) console.log(ref.current.value);
   }
 
   return (
@@ -20,6 +24,7 @@ export default function Form() {
         label="Enter your name:"
         ref={ref}
         handleClick={handleClick}
+        onChangeInput={onChangeInput}
       />
     </form>
   );

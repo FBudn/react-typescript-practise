@@ -3,14 +3,16 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 /* eslint-disable react/prop-types */
 import { forwardRef } from "react";
+import { InputAtom } from "../../Atoms/Input/InputStyle";
+import { InputTest } from "./TestOrganismStyle";
 
 const TestOrganism = forwardRef(function TestOrganism(props: any, ref) {
-  const { label, ...otherProps } = props;
+  const { label, onChangeInput, ...otherProps } = props;
   return (
-    <label>
+    <InputTest>
       {label}
-      <input {...otherProps} ref={ref} />
-    </label>
+      <InputAtom {...otherProps} ref={ref} onChange={onChangeInput} />
+    </InputTest>
   );
 });
 

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import {
   Background,
   MaxWidth,
@@ -17,11 +17,12 @@ const LoginTemplate: React.FC<LoginTemplateProps> = ({
   onButtonClick,
   onClickIcon,
 }) => {
-  const [checkboxValue, setCheckboxValue] = useState(false);
+  /* const [checkboxValue, setCheckboxValue] = useState(false);
 
   const onChangeCheckbox = (event: React.ChangeEvent<HTMLInputElement>) => {
     setCheckboxValue(event.target.checked);
-  };
+  }; */
+  const ref = useRef<any>();
 
   const [emailValue, setEmailValue] = useState("");
 
@@ -43,11 +44,13 @@ const LoginTemplate: React.FC<LoginTemplateProps> = ({
         <Tile>
           <TileContainer>
             <FormLogin
-              onChangeCheckbox={onChangeCheckbox}
+              // eslint-disable-next-line react/jsx-no-bind
+              // onChangeCheckbox={onChangeCheckbox}
+              ref={ref}
               handleEmail={handleEmail}
               handlePassword={handlePassword}
               onButtonClick={() => {
-                onButtonClick(emailValue, passwordValue, checkboxValue);
+                onButtonClick(emailValue, passwordValue, ref.current.checked);
               }}
             />
             <LineSection
