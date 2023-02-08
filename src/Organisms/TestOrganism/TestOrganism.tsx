@@ -7,11 +7,11 @@ import { InputAtom } from "../../Atoms/Input/InputStyle";
 import { InputTest } from "./TestOrganismStyle";
 
 const TestOrganism = forwardRef(function TestOrganism(props: any, ref) {
-  const { label, onChangeInput, ...otherProps } = props;
+  const { label, ...otherProps } = props;
   return (
     <InputTest>
       {label}
-      <InputAtom {...otherProps} ref={ref} onChange={onChangeInput} />
+      <InputAtom {...otherProps} ref={ref} />
     </InputTest>
   );
 });

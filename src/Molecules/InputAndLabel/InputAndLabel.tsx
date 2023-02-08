@@ -1,6 +1,7 @@
 import React from "react";
 import Input from "../../Atoms/Input/Input";
-import { OneInputContainer, InputLabel } from "./InputLabelStyles";
+import Label from "../../Atoms/Label/Label";
+import { OneInputContainer } from "./InputLabelStyles";
 
 export interface InputAndLabelProps {
   children: React.ReactNode;
@@ -15,7 +16,15 @@ const InputAndLabel: React.FC<InputAndLabelProps> = ({
 }) => {
   return (
     <OneInputContainer>
-      <InputLabel>{children}</InputLabel>
+      <Label
+        color="rgb(82 82 91)"
+        align="center"
+        justify="start"
+        fontSize="1.1rem"
+        fontWeight="500"
+      >
+        {children}
+      </Label>
       <Input
         type={type}
         setInputValue={setInputValue}

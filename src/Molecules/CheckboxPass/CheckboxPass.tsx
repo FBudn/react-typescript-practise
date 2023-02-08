@@ -1,6 +1,7 @@
 import React, { forwardRef } from "react";
 import { CheckboxContainer } from "./CheckboxPassStyle";
 import CheckboxInput from "../../Atoms/CheckboxInput/CheckboxInput";
+import Label from "../../Atoms/Label/Label";
 
 export interface CheckboxProps {
   children: React.ReactNode;
@@ -13,7 +14,15 @@ const CheckboxPass = forwardRef(function CheckboxPass(props: any, ref) {
   return (
     <CheckboxContainer>
       <CheckboxInput ref={ref} />
-      {children}
+      <Label
+        color="rgb(82 82 91)"
+        align="center"
+        justify="start"
+        fontSize="1rem"
+        fontWeight="500"
+      >
+        {children}
+      </Label>
     </CheckboxContainer>
   );
 });

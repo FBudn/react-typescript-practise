@@ -7,14 +7,17 @@ export const LabelContainer = styled.div.attrs(
     justify: string;
     fontWeight: string;
     fontSize: string;
+    width: string;
+    margin: string;
   }) => props,
 )`
   display: flex;
-  width: 100%;
   border: none;
-  align: ${(props) => props.align};
+  width: ${(props) => props.width};
+  align-items: ${(props) => props.align};
   color: ${(props) => props.color};
-  justify: ${(props) => props.justify};
+  justify-content: ${(props) => props.justify};
   font-weight: ${(props) => props.fontWeight};
   font-size: ${(props) => props.fontSize};
+  margin: ${(props) => props.margin};
 `;

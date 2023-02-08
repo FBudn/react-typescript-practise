@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Label from "../../Atoms/Label/Label";
 import { SignOrLogLinkContainer } from "./SignOrLogStyle";
 
 export interface SignOrLogLinkProps {
@@ -15,7 +16,15 @@ const SignOrLogLink: React.FC<SignOrLogLinkProps> = ({
 }) => {
   return (
     <SignOrLogLinkContainer>
-      {children}
+      <Label
+        color="rgb(82 82 91)"
+        align="center"
+        justify="cener"
+        fontSize="1.1rem"
+        fontWeight="400"
+      >
+        {children}
+      </Label>
       <Link to={link}>{linkText}</Link>
     </SignOrLogLinkContainer>
   );

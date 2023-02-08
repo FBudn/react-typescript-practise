@@ -2,12 +2,14 @@ import React from "react";
 import { LabelContainer } from "./LabelStyle";
 
 export interface LabelProps {
-  children: string;
+  children: React.ReactNode;
   color: string;
   align: string;
   justify: string;
   fontWeight: string;
   fontSize: string;
+  width?: string;
+  margin?: string;
 }
 
 const Label: React.FC<LabelProps> = ({
@@ -17,6 +19,8 @@ const Label: React.FC<LabelProps> = ({
   justify,
   fontWeight,
   fontSize,
+  width,
+  margin,
 }) => {
   return (
     <LabelContainer
@@ -25,6 +29,8 @@ const Label: React.FC<LabelProps> = ({
       justify={justify}
       fontWeight={fontWeight}
       fontSize={fontSize}
+      width={width}
+      margin={margin}
     >
       {children}
     </LabelContainer>

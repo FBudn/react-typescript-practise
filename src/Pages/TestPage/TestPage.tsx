@@ -14,17 +14,12 @@ export default function Form() {
     }
   }
 
-  function onChangeInput() {
-    if (ref.current !== undefined) console.log(ref.current.value);
-  }
-
   return (
     <form>
       <TestTemplate
         label="Enter your name:"
         ref={ref}
         handleClick={handleClick}
-        onChangeInput={onChangeInput}
       />
     </form>
   );

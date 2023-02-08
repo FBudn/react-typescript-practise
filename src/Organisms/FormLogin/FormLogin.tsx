@@ -1,7 +1,7 @@
 import React, { forwardRef } from "react";
 import Button from "../../Atoms/Button/Button";
-import ForgotPass from "../../Atoms/ForgotPass/ForgotPass";
 import Header from "../../Atoms/Header/Header";
+import Label from "../../Atoms/Label/Label";
 import CheckboxPass from "../../Molecules/CheckboxPass/CheckboxPass";
 import InputAndLabel from "../../Molecules/InputAndLabel/InputAndLabel";
 import { InputsContainer } from "../FormSignUp/FormsStyle";
@@ -28,7 +28,17 @@ const FormLogin = forwardRef(function FormLogin(props: any, ref) {
         </InputAndLabel>
         <CheckboxPass ref={ref}>Remember me?</CheckboxPass>
         <Button onClick={onButtonClick}> LOGIN </Button>
-        <ForgotPass> Forgot Password? </ForgotPass>
+        <Label
+          color="rgb(82 82 91)"
+          align="center"
+          justify="end"
+          fontSize="0.9rem"
+          fontWeight="450"
+          width="100%"
+          margin="-10px 0 0 0"
+        >
+          Forgot Password?
+        </Label>
       </InputsContainer>
     </>
   );
