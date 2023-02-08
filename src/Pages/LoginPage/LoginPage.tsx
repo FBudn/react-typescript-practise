@@ -4,7 +4,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import LoginTemplate from "../../Templates/LoginTemplate/LoginTemplate";
 
-const Login: React.FC = () => {
+const LoginPage: React.FC = () => {
   const onButtonClick = (email: any, password: any, checkbox: any) => {
     console.log(email, password, checkbox);
   };
@@ -27,11 +27,11 @@ const Login: React.FC = () => {
   );
 };
 
-export default Login;
+export default LoginPage;
 
 /*
  Tu nazwy LoginPage itd. 
- staty na poziomie templaty a tu tylko funkcje przyjmujące paramet itd
+ staty na poziomie templatów a tu tylko funkcje przyjmujące paramet itd
  Tu  tylko kliknięcia w ikone, przycisk, link
   const ref = useRef(null);
 

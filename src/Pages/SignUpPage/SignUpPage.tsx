@@ -2,7 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import SignUpTemplate from "../../Templates/SignUpTemplate/SignUpTemplate";
 
-const SignUp: React.FC = () => {
+const SignUpPage: React.FC = () => {
   const onButtonClick = (email: any, password: any, checkbox: any) => {
     console.log(email, password, checkbox);
   };
@@ -27,4 +27,4 @@ const SignUp: React.FC = () => {
   );
 };
 
-export default SignUp;
+export default SignUpPage;
