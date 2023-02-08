@@ -7,7 +7,7 @@ export const LinkButtonStyled = styled.button`
   align-items: end;
   font-size: 1rem;
   font-weight: 500;
-  color: rgb(82 82 91)
+  color: rgb(82 82 91);
   cursor: pointer;
   text-decoration: underline;
 `;

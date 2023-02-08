@@ -9,6 +9,7 @@ export const LabelContainer = styled.div.attrs(
     fontSize: string;
     width: string;
     margin: string;
+    cursor: string;
   }) => props,
 )`
   display: flex;
@@ -20,4 +21,5 @@ export const LabelContainer = styled.div.attrs(
   font-weight: ${(props) => props.fontWeight};
   font-size: ${(props) => props.fontSize};
   margin: ${(props) => props.margin};
+  cursor: ${(props) => props.cursor};
 `;

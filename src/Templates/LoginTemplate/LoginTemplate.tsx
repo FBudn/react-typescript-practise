@@ -26,7 +26,7 @@ const LoginTemplate: React.FC<LoginTemplateProps> = ({
   const onChangeCheckbox = (event: React.ChangeEvent<HTMLInputElement>) => {
     setCheckboxValue(event.target.checked);
   }; */
-  const ref = useRef<any>();
+  const Checkboxref = useRef<any>();
 
   const [emailValue, setEmailValue] = useState("");
 
@@ -50,11 +50,15 @@ const LoginTemplate: React.FC<LoginTemplateProps> = ({
             <FormLogin
               // eslint-disable-next-line react/jsx-no-bind
               // onChangeCheckbox={onChangeCheckbox}
-              ref={ref}
+              ref={Checkboxref}
               handleEmail={handleEmail}
               handlePassword={handlePassword}
               onButtonClick={() => {
-                onButtonClick(emailValue, passwordValue, ref.current.checked);
+                onButtonClick(
+                  emailValue,
+                  passwordValue,
+                  Checkboxref.current.checked,
+                );
               }}
             />
             <LineSection

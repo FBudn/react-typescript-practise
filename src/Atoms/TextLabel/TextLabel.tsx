@@ -10,6 +10,7 @@ export interface LabelProps {
   fontSize: string;
   width?: string;
   margin?: string;
+  cursor?: string;
 }
 
 const TextLabel: React.FC<LabelProps> = ({
@@ -21,6 +22,7 @@ const TextLabel: React.FC<LabelProps> = ({
   fontSize,
   width,
   margin,
+  cursor,
 }) => {
   return (
     <LabelContainer
@@ -31,6 +33,7 @@ const TextLabel: React.FC<LabelProps> = ({
       fontSize={fontSize}
       width={width}
       margin={margin}
+      cursor={cursor}
     >
       {children}
     </LabelContainer>

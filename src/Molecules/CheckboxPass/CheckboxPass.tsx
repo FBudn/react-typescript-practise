@@ -6,14 +6,14 @@ import Label from "../../Atoms/TextLabel/TextLabel";
 export interface CheckboxProps {
   children: React.ReactNode;
   // onChangeCheckbox: (event: React.ChangeEvent<HTMLInputElement>) => void;
-  ref: any;
+  Checkboxref: any;
 }
 
-const CheckboxPass = forwardRef(function CheckboxPass(props: any, ref) {
+const CheckboxPass = forwardRef(function CheckboxPass(props: any, Checkboxref) {
   const { children } = props;
   return (
     <CheckboxContainer>
-      <CheckboxInput ref={ref} />
+      <CheckboxInput ref={Checkboxref} />
       <Label
         color="rgb(82 82 91)"
         align="center"
