@@ -48,7 +48,7 @@ const LoginTemplate: React.FC<LoginTemplateProps> = ({
                 onButtonClick(
                   emailValue,
                   passwordValue,
-                  Checkboxref.current.checked,
+                  Checkboxref.current?.checked,
                 );
               }}
             />
@@ -73,7 +73,7 @@ const LoginTemplate: React.FC<LoginTemplateProps> = ({
 export default LoginTemplate;
 
 /*
-
+Optional chaining
 Kafel mógłby być atomem
   handleFocus={handleFocus}
               ref={ref}

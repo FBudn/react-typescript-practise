@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React, { forwardRef } from "react";
 import Button from "../../Atoms/Button/Button";
 import Header from "../../Atoms/Header/Header";
@@ -11,39 +12,36 @@ export interface FormLoginProps {
   handlePassword: (e: React.ChangeEvent<HTMLInputElement>) => void;
   // onChangeCheckbox: (e: React.ChangeEvent<HTMLInputElement>) => void;
   onButtonClick: (email: any, password: any, checkbox: any) => void;
-  Checkboxref: any;
 }
 
-const FormLogin = forwardRef(function FormLogin(props: any, Checkboxref) {
-  const { onButtonClick, handleEmail, handlePassword } = props;
-  return (
-    <>
-      <Header>LOGIN</Header>
-      <InputsContainer>
-        <InputAndLabel type="email" setInputValue={handleEmail}>
-          Email
-        </InputAndLabel>
-        <InputAndLabel type="password" setInputValue={handlePassword}>
-          Password
-        </InputAndLabel>
-        <CheckboxPass ref={Checkboxref}>Remember me?</CheckboxPass>
-        <Button onClick={onButtonClick}> LOGIN </Button>
-        <Label
-          color="rgb(82 82 91)"
-          align="center"
-          justify="end"
-          fontSize="0.9rem"
-          fontWeight="450"
-          width="100%"
-          margin="-10px 0 0 0"
-          cursor="pointer"
-        >
-          Forgot Password?
-        </Label>
-      </InputsContainer>
-    </>
-  );
-});
+export type CheckboxRef = HTMLInputElement;
+const FormLogin = forwardRef<CheckboxRef, FormLoginProps>((props, ref) => (
+  <>
+    <Header>LOGIN</Header>
+    <InputsContainer>
+      <InputAndLabel type="email" setInputValue={props.handleEmail}>
+        Email
+      </InputAndLabel>
+      <InputAndLabel type="password" setInputValue={props.handlePassword}>
+        Password
+      </InputAndLabel>
+      <CheckboxPass ref={ref}>Remember me?</CheckboxPass>
+      <Button onClick={props.onButtonClick}> LOGIN </Button>
+      <Label
+        color="rgb(82 82 91)"
+        align="center"
+        justify="end"
+        fontSize="0.9rem"
+        fontWeight="450"
+        width="100%"
+        margin="-10px 0 0 0"
+        cursor="pointer"
+      >
+        Forgot Password?
+      </Label>
+    </InputsContainer>
+  </>
+));
 
 export default FormLogin;
 

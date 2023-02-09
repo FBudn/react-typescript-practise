@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React, { forwardRef } from "react";
 import { CheckboxContainer } from "./CheckboxAndLabelStyle";
 import CheckboxInput from "../../Atoms/CheckboxInput/CheckboxInput";
@@ -6,17 +7,13 @@ import Label from "../../Atoms/TextLabel/TextLabel";
 export interface CheckboxAndLabelProps {
   children: React.ReactNode;
   // onChangeCheckbox: (event: React.ChangeEvent<HTMLInputElement>) => void;
-  Checkboxref: any;
 }
 
-const CheckboxAndLabel = forwardRef(function CheckboxAndLabel(
-  props: any,
-  Checkboxref,
-) {
-  const { children } = props;
-  return (
+export type CheckboxRef = HTMLInputElement;
+const CheckboxAndLabel = forwardRef<CheckboxRef, CheckboxAndLabelProps>(
+  (props, ref) => (
     <CheckboxContainer>
-      <CheckboxInput ref={Checkboxref} />
+      <CheckboxInput id="c" ref={ref} />
       <Label
         color="rgb(82 82 91)"
         align="center"
@@ -24,11 +21,11 @@ const CheckboxAndLabel = forwardRef(function CheckboxAndLabel(
         fontSize="1rem"
         fontWeight="500"
       >
-        {children}
+        {props.children}
       </Label>
     </CheckboxContainer>
-  );
-});
+  ),
+);
 
 export default CheckboxAndLabel;
 

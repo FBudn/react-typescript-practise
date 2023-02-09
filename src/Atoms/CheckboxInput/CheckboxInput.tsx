@@ -1,18 +1,39 @@
+/* eslint-disable react/prop-types */
 import React, { forwardRef } from "react";
 import { CheckboxInputStyle } from "./CheckboxInputStyle";
 
 export interface CheckboxInputProps {
-  // onChangeCheckbox: (event: React.ChangeEvent<HTMLInputElement>) => void;
-  ref: any;
+  id?: string;
 }
 
-const CheckboxInput = forwardRef(function CheckboxInput(props: any, ref: any) {
-  return <CheckboxInputStyle ref={ref} />;
-});
+export type CheckboxRef = HTMLInputElement;
+const CheckboxInput = forwardRef<CheckboxRef, CheckboxInputProps>(
+  ({ id }, ref) => <CheckboxInputStyle id={id} ref={ref} />,
+);
 
 export default CheckboxInput;
 
-/* onChange={onChangeCheckbox}
+/* 
+podkreślnik w funkcji tu: można używać do nazw zmiennych, jako ukryty nieużywany parament 
+
+const CheckboxInput = forwardRef(function CheckboxInput(
+  props: CheckboxInputProps,
+  ref: CheckboxRef,
+) {
+  return <CheckboxInputStyle ref={ref} />;
+}); 
+
+export interface CheckboxInputProps {
+  // onChangeCheckbox: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  // tu się nie definiuje refa , bez propsów ogarnąć dzałanie bo tu nie mam propsów i tak
+  id?: string;
+}
+export type CheckboxRef = HTMLInputElement;
+const CheckboxInput = forwardRef<CheckboxRef, CheckboxInputProps>(
+  ({ id }, ref) => <CheckboxInputStyle id={id} ref={ref} />,
+);
+
+onChange={onChangeCheckbox}
 const TestOrganism = forwardRef(function TestOrganism(props: any, ref) {
   const { label, onChangeInput, ...otherProps } = props;
   return (
