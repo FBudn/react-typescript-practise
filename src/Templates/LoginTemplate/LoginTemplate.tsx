@@ -1,5 +1,3 @@
-/* eslint-disable react/jsx-no-bind */
-/* eslint-disable @typescript-eslint/explicit-function-return-type */
 import React, { useRef, useState } from "react";
 import {
   Background,

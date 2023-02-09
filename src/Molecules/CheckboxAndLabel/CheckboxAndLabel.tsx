@@ -1,15 +1,18 @@
 import React, { forwardRef } from "react";
-import { CheckboxContainer } from "./CheckboxPassStyle";
+import { CheckboxContainer } from "./CheckboxAndLabelStyle";
 import CheckboxInput from "../../Atoms/CheckboxInput/CheckboxInput";
 import Label from "../../Atoms/TextLabel/TextLabel";
 
-export interface CheckboxProps {
+export interface CheckboxAndLabelProps {
   children: React.ReactNode;
   // onChangeCheckbox: (event: React.ChangeEvent<HTMLInputElement>) => void;
   Checkboxref: any;
 }
 
-const CheckboxPass = forwardRef(function CheckboxPass(props: any, Checkboxref) {
+const CheckboxAndLabel = forwardRef(function CheckboxAndLabel(
+  props: any,
+  Checkboxref,
+) {
   const { children } = props;
   return (
     <CheckboxContainer>
@@ -27,7 +30,7 @@ const CheckboxPass = forwardRef(function CheckboxPass(props: any, Checkboxref) {
   );
 });
 
-export default CheckboxPass;
+export default CheckboxAndLabel;
 
 /*
  onChangeCheckbox={onChangeCheckbox}

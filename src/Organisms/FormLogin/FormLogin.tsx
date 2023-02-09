@@ -2,7 +2,7 @@ import React, { forwardRef } from "react";
 import Button from "../../Atoms/Button/Button";
 import Header from "../../Atoms/Header/Header";
 import Label from "../../Atoms/TextLabel/TextLabel";
-import CheckboxPass from "../../Molecules/CheckboxPass/CheckboxPass";
+import CheckboxPass from "../../Molecules/CheckboxAndLabel/CheckboxAndLabel";
 import InputAndLabel from "../../Molecules/InputAndLabel/InputAndLabel";
 import { InputsContainer } from "../FormSignUp/FormsStyle";
 

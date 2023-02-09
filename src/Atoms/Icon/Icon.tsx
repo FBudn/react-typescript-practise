@@ -7,7 +7,7 @@ export interface IconProps {
   color: string;
 }
 
-const Icons: React.FC<IconProps> = ({ onClickIcon, children, color }) => {
+const Icon: React.FC<IconProps> = ({ onClickIcon, children, color }) => {
   return (
     <SoloIconContainer color={color} onClick={onClickIcon}>
       {children}
@@ -15,7 +15,7 @@ const Icons: React.FC<IconProps> = ({ onClickIcon, children, color }) => {
   );
 };
 
-export default Icons;
+export default Icon;
 
 /*
 Nazwa funkcji znowu
