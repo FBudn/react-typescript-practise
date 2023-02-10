@@ -1,3 +1,5 @@
+/* eslint-disable react/jsx-no-bind */
+/* eslint-disable @typescript-eslint/explicit-function-return-type */
 import React, { useRef, useState } from "react";
 import {
   Background,
@@ -21,11 +23,15 @@ const LoginTemplate: React.FC<LoginTemplateProps> = ({
 }) => {
   const Checkboxref = useRef<any>();
 
-  const [emailValue, setEmailValue] = useState("");
+  const EmailInputref = useRef<any>();
+  function handleChange() {
+    console.log(EmailInputref.current?.value);
+  }
+  /* const [emailValue, setEmailValue] = useState("");
 
   const handleEmail = (e: React.ChangeEvent<HTMLInputElement>) => {
     setEmailValue(e.target.value);
-  };
+  }; */
 
   const [passwordValue, setPasswordValue] = useState("");
 
@@ -42,11 +48,11 @@ const LoginTemplate: React.FC<LoginTemplateProps> = ({
           <TileContainer>
             <FormLogin
               ref={Checkboxref}
-              handleEmail={handleEmail}
               handlePassword={handlePassword}
+              handleEmail={handleChange}
               onButtonClick={() => {
                 onButtonClick(
-                  emailValue,
+                  EmailInputref,
                   passwordValue,
                   Checkboxref.current?.checked,
                 );
