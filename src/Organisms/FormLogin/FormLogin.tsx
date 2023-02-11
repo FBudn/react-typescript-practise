@@ -8,7 +8,7 @@ import InputAndLabel from "../../Molecules/InputAndLabel/InputAndLabel";
 import { InputsContainer } from "../FormSignUp/FormsStyle";
 
 export interface FormLoginProps {
-  handleEmail?: any;
+  handleEmail?: (e: React.ChangeEvent<HTMLInputElement>) => void;
   handlePassword: (e: React.ChangeEvent<HTMLInputElement>) => void;
   // onChangeCheckbox: (e: React.ChangeEvent<HTMLInputElement>) => void;
   onButtonClick: (email: any, password: any, checkbox: any) => void;
@@ -23,7 +23,11 @@ const FormLogin = forwardRef<CheckboxRef, FormLoginProps>((props, ref) => (
       <InputAndLabel ref={ref} type="email" setInputValue={props.handleEmail}>
         Email
       </InputAndLabel>
-      <InputAndLabel type="password" setInputValue={props.handlePassword}>
+      <InputAndLabel
+        ref={ref}
+        type="password"
+        setInputValue={props.handlePassword}
+      >
         Password
       </InputAndLabel>
       <CheckboxPass ref={ref}>Remember me?</CheckboxPass>

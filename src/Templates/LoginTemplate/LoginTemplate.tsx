@@ -1,6 +1,6 @@
 /* eslint-disable react/jsx-no-bind */
 /* eslint-disable @typescript-eslint/explicit-function-return-type */
-import React, { useRef, useState } from "react";
+import React, { useRef } from "react";
 import {
   Background,
   MaxWidth,
@@ -24,20 +24,25 @@ const LoginTemplate: React.FC<LoginTemplateProps> = ({
   const Checkboxref = useRef<any>();
 
   const EmailInputref = useRef<any>();
-  function handleChange() {
+  function handleEmail() {
+    console.log(EmailInputref.current?.value);
+  }
+
+  const PasswordInputref = useRef<any>();
+  function handlePassword() {
     console.log(EmailInputref.current?.value);
   }
   /* const [emailValue, setEmailValue] = useState("");
 
   const handleEmail = (e: React.ChangeEvent<HTMLInputElement>) => {
     setEmailValue(e.target.value);
-  }; */
-
-  const [passwordValue, setPasswordValue] = useState("");
+  }; 
+    const [passwordValue, setPasswordValue] = useState("");
 
   const handlePassword = (e: React.ChangeEvent<HTMLInputElement>) => {
     setPasswordValue(e.target.value);
   };
+  */
 
   const IconsLogs = [`Google Clicked`, `Facebook Clicked`, `LinkedIn Clicked`];
 
@@ -49,11 +54,11 @@ const LoginTemplate: React.FC<LoginTemplateProps> = ({
             <FormLogin
               ref={Checkboxref}
               handlePassword={handlePassword}
-              handleEmail={handleChange}
+              handleEmail={handleEmail}
               onButtonClick={() => {
                 onButtonClick(
                   EmailInputref,
-                  passwordValue,
+                  PasswordInputref,
                   Checkboxref.current?.checked,
                 );
               }}
