@@ -1,7 +1,12 @@
+/* eslint-disable react/prop-types */
 /* eslint-disable object-shorthand */
 /* eslint-disable @typescript-eslint/consistent-type-definitions */
-/* eslint-disable react/prop-types */
-import React, { forwardRef, useImperativeHandle, useRef } from "react";
+import React, {
+  forwardRef,
+  RefObject,
+  useImperativeHandle,
+  useRef,
+} from "react";
 import Button from "../../Atoms/Button/Button";
 import Header from "../../Atoms/Header/Header";
 import Label from "../../Atoms/TextLabel/TextLabel";
@@ -20,6 +25,7 @@ export type RefHandler = {
   CheckboxRef: any;
   EmailInputRef: any;
   PasswordInputRef: any;
+  TestRef: RefObject<HTMLInputElement>;
 };
 
 const FormLogin = forwardRef<RefHandler, FormLoginProps>(
@@ -29,8 +35,10 @@ const FormLogin = forwardRef<RefHandler, FormLoginProps>(
     const EmailInputRef = useRef<any>();
 
     const PasswordInputRef = useRef<any>();
+    const TestRef = useRef<HTMLInputElement>(null);
 
     useImperativeHandle(ref, () => ({
+      TestRef,
       CheckboxRef: CheckboxRef,
       EmailInputRef: EmailInputRef,
       PasswordInputRef: PasswordInputRef,
@@ -70,11 +78,14 @@ const FormLogin = forwardRef<RefHandler, FormLoginProps>(
           >
             Forgot Password?
           </Label>
+          <input type="text" value="dupa" ref={TestRef} />
         </InputsContainer>
       </>
     );
   },
 );
+
+FormLogin.displayName = "Child";
 
 export default FormLogin;
 
@@ -96,4 +107,12 @@ handleFocus={handleFocus}
     console.log(EmailInputref.current?.value);
   }
 
+  Mogę podać też referencje wyżej wtedy w rodzicy robię 
+  const childRef* = useRef<RefHandler**>(null***) 
+  i korzystam z nich np tak
+  console.log(childRef?.current?.przykladowaReferencja?.current?.value) 
+
+  * obojętnie jaka nazwa
+  ** też obojętnie jaka nazwa ale ta co w export type dziecka
+  *** null albo nic? tu nie jestem pewien
 */
