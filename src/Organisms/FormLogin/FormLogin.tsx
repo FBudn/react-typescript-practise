@@ -1,12 +1,7 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable object-shorthand */
 /* eslint-disable @typescript-eslint/consistent-type-definitions */
-import React, {
-  forwardRef,
-  RefObject,
-  useImperativeHandle,
-  useRef,
-} from "react";
+import React, { forwardRef, RefObject, useRef } from "react";
 import Button from "../../Atoms/Button/Button";
 import Header from "../../Atoms/Header/Header";
 import Label from "../../Atoms/TextLabel/TextLabel";
@@ -29,18 +24,12 @@ export type RefHandlerLogin = {
 };
 
 const FormLogin = forwardRef<RefHandlerLogin, FormLoginProps>(
-  (props: FormLoginProps, ref) => {
+  (props: FormLoginProps) => {
     const CheckboxRef = useRef<HTMLInputElement>(null);
 
     const EmailInputRef = useRef<HTMLInputElement>(null);
 
     const PasswordInputRef = useRef<HTMLInputElement>(null);
-
-    useImperativeHandle(ref, () => ({
-      CheckboxRef: CheckboxRef,
-      EmailInputRef: EmailInputRef,
-      PasswordInputRef: PasswordInputRef,
-    }));
 
     return (
       <>
@@ -84,6 +73,13 @@ const FormLogin = forwardRef<RefHandlerLogin, FormLoginProps>(
 export default FormLogin;
 
 /*
+   + ref do argumentu i import useRefa
+   useImperativeHandle(ref, () => ({
+      CheckboxRef: CheckboxRef,
+      EmailInputRef: EmailInputRef,
+      PasswordInputRef: PasswordInputRef,
+    }));
+
 (e: React.ChangeEvent<HTMLInputElement>) => void;
  onChangeCheckbox={onChangeCheckbox}
 tu do zmiany - jeden komponent jeden folder czyli tu FormLogin w swoim itd. Nawet jeśli pliki stylu takie same to 1 tu 1 tu
