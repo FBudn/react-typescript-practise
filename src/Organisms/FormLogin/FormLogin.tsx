@@ -26,7 +26,6 @@ export type RefHandlerLogin = {
   CheckboxRef: RefObject<HTMLInputElement>;
   EmailInputRef: RefObject<HTMLInputElement>;
   PasswordInputRef: RefObject<HTMLInputElement>;
-  TestRef: any;
 };
 
 const FormLogin = forwardRef<RefHandlerLogin, FormLoginProps>(
@@ -36,10 +35,8 @@ const FormLogin = forwardRef<RefHandlerLogin, FormLoginProps>(
     const EmailInputRef = useRef<HTMLInputElement>(null);
 
     const PasswordInputRef = useRef<HTMLInputElement>(null);
-    const TestRef = useRef<HTMLInputElement>(null);
 
     useImperativeHandle(ref, () => ({
-      TestRef,
       CheckboxRef: CheckboxRef,
       EmailInputRef: EmailInputRef,
       PasswordInputRef: PasswordInputRef,
@@ -79,7 +76,6 @@ const FormLogin = forwardRef<RefHandlerLogin, FormLoginProps>(
           >
             Forgot Password?
           </Label>
-          <input type="text" value="dupa" ref={TestRef} />
         </InputsContainer>
       </>
     );
@@ -113,4 +109,8 @@ handleFocus={handleFocus}
   * obojętnie jaka nazwa
   ** też obojętnie jaka nazwa ale ta co w export type dziecka
   *** null albo nic? tu nie jestem pewien
+
+
+  TestRef: RefObject<HTMLInputElement> | string | undefined;
+  TestRef: TestRef.current?.value,
 */
