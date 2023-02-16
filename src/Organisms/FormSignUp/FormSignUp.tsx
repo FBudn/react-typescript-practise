@@ -1,6 +1,3 @@
-/* eslint-disable react/prop-types */
-/* eslint-disable object-shorthand */
-/* eslint-disable @typescript-eslint/consistent-type-definitions */
 import React, {
   forwardRef,
   RefObject,
@@ -32,8 +29,8 @@ const FormSignUp = forwardRef<RefHandlerSignUp, FormSignUpProps>(
     const PasswordInputRef = useRef<HTMLInputElement>(null);
 
     useImperativeHandle(ref, () => ({
-      EmailInputRef: EmailInputRef,
-      PasswordInputRef: PasswordInputRef,
+      EmailInputRef,
+      PasswordInputRef,
     }));
 
     return (

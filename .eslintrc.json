@@ -36,7 +36,10 @@
     "import/prefer-default-export": "off", // tu problem z exportowaniem tylko 1 stylu/elementu z pliku stylu
     "@typescript-eslint/explicit-function-return-type": "warn",
     "no-console": "off",
-    "disable-next-line": "off"
+    "disable-next-line": "off",
+    "react/prop-types": "off",
+    "object-shorthand": ["off", "always"],
+    "@typescript-eslint/consistent-type-definitions": "off"
   }
 }
 //"react/destructuring-assignment": [<enabled>, 'always']

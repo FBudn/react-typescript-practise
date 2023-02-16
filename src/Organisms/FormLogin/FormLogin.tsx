@@ -1,7 +1,5 @@
-/* eslint-disable react/prop-types */
-/* eslint-disable object-shorthand */
-/* eslint-disable @typescript-eslint/consistent-type-definitions */
-import React, { forwardRef, RefObject, useRef } from "react";
+/* eslint-disable @typescript-eslint/no-non-null-assertion */
+import React, { forwardRef, useImperativeHandle, useRef } from "react";
 import Button from "../../Atoms/Button/Button";
 import Header from "../../Atoms/Header/Header";
 import Label from "../../Atoms/TextLabel/TextLabel";
@@ -10,26 +8,36 @@ import InputAndLabel from "../../Molecules/InputAndLabel/InputAndLabel";
 import { InputsContainer } from "../FormSignUp/FormsStyle";
 
 export interface FormLoginProps {
-  onButtonClick: (
-    email: undefined | string,
-    password: undefined | string,
-    checkbox: undefined | boolean,
-  ) => void;
+  onButtonClick: (email: string, password: string, checkbox: boolean) => void;
 }
 
 export type RefHandlerLogin = {
-  CheckboxRef: RefObject<HTMLInputElement>;
-  EmailInputRef: RefObject<HTMLInputElement>;
-  PasswordInputRef: RefObject<HTMLInputElement>;
+  focus: () => void;
 };
 
 const FormLogin = forwardRef<RefHandlerLogin, FormLoginProps>(
-  (props: FormLoginProps) => {
+  (props: FormLoginProps, ref) => {
     const CheckboxRef = useRef<HTMLInputElement>(null);
 
     const EmailInputRef = useRef<HTMLInputElement>(null);
 
     const PasswordInputRef = useRef<HTMLInputElement>(null);
+    useImperativeHandle(
+      ref,
+      () => ({
+        focus: () => {
+          EmailInputRef?.current?.focus();
+        },
+      }),
+      [],
+    );
+    const onSubmit = () => {
+      props.onButtonClick(
+        EmailInputRef.current!.value,
+        PasswordInputRef.current!.value,
+        CheckboxRef.current!.checked,
+      );
+    };
 
     return (
       <>
@@ -42,17 +50,7 @@ const FormLogin = forwardRef<RefHandlerLogin, FormLoginProps>(
             Password
           </InputAndLabel>
           <CheckboxPass ref={CheckboxRef}>Remember me?</CheckboxPass>
-          <Button
-            onClick={() => {
-              props.onButtonClick(
-                EmailInputRef.current?.value,
-                PasswordInputRef.current?.value,
-                CheckboxRef.current?.checked,
-              );
-            }}
-          >
-            LOGIN
-          </Button>
+          <Button onClick={onSubmit}>LOGIN</Button>
           <Label
             color="rgb(82 82 91)"
             align="center"
@@ -73,7 +71,7 @@ const FormLogin = forwardRef<RefHandlerLogin, FormLoginProps>(
 export default FormLogin;
 
 /*
-   + ref do argumentu i import useRefa
+   + ref do argumentu i import
    useImperativeHandle(ref, () => ({
       CheckboxRef: CheckboxRef,
       EmailInputRef: EmailInputRef,

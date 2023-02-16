@@ -1,12 +1,13 @@
-/* eslint-disable react/button-has-type */
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import {
   Background,
   MaxWidth,
   Tile,
   TileContainer,
 } from "../SignUpTemplate/TemplatesStyles";
-import FormLogin from "../../Organisms/FormLogin/FormLogin";
+import FormLogin, {
+  RefHandlerLogin,
+} from "../../Organisms/FormLogin/FormLogin";
 import LineSection from "../../Organisms/LineSection/LineSection";
 
 export interface LoginTemplateProps {
@@ -25,13 +26,16 @@ const LoginTemplate: React.FC<LoginTemplateProps> = ({
   onClickLink,
 }) => {
   const IconsLogs = [`Google Clicked`, `Facebook Clicked`, `LinkedIn Clicked`];
-
+  const FormLoginRef = useRef<RefHandlerLogin>(null);
+  useEffect(() => {
+    FormLoginRef.current?.focus();
+  }, []);
   return (
     <Background>
       <MaxWidth>
         <Tile>
           <TileContainer>
-            <FormLogin onButtonClick={onButtonClick} />
+            <FormLogin onButtonClick={onButtonClick} ref={FormLoginRef} />
             <LineSection
               lineText="OR"
               linkText="SIGN UP"

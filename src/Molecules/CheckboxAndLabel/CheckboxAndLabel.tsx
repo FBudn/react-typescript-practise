@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import React, { forwardRef } from "react";
 import { CheckboxContainer } from "./CheckboxAndLabelStyle";
 import CheckboxInput from "../../Atoms/CheckboxInput/CheckboxInput";

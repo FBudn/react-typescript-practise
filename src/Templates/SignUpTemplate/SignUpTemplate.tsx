@@ -19,7 +19,6 @@ const SignUpTemplate: React.FC<SignUpTemplateProps> = ({
   onClickLink,
 }) => {
   const IconsLogs = [`Google Clicked`, `Facebook Clicked`, `LinkedIn Clicked`];
-
   return (
     <Background>
       <MaxWidth>
