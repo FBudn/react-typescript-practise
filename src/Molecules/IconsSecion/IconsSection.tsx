@@ -13,7 +13,7 @@ const google = <FontAwesomeIcon icon={faGoogle} />;
 const linkedin = <FontAwesomeIcon icon={faLinkedinIn} />;
 
 export interface IconsProps {
-  onClickIcon: any;
+  onClickIcon: (number: number, logs: []) => void;
   firstIconText: number;
   secondIconText: number;
   thirdIconText: number;

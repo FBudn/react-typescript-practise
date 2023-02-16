@@ -6,7 +6,7 @@ export interface CheckboxInputProps {
   id?: string;
 }
 
-export type CheckboxRef = any;
+export type CheckboxRef = HTMLInputElement;
 const CheckboxInput = forwardRef<CheckboxRef, CheckboxInputProps>(
   ({ id }, ref) => <CheckboxInputStyle id={id} ref={ref} />,
 );

@@ -7,9 +7,9 @@ export interface LineSectionProps {
   children: string;
   linkText: string;
   lineText: string;
-  onClickIcon: any;
-  logs: any;
-  onClickLink: any;
+  onClickIcon: (number: number, logs: []) => void;
+  logs: string[];
+  onClickLink: React.MouseEventHandler<HTMLButtonElement>;
 }
 
 const LineSection: React.FC<LineSectionProps> = ({

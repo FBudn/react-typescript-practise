@@ -6,7 +6,7 @@ import { SignOrLogLinkContainer } from "./SignOrLogStyle";
 export interface SignOrLogLinkProps {
   children: React.ReactNode;
   linkText: string;
-  onClickLink: any;
+  onClickLink: React.MouseEventHandler<HTMLButtonElement>;
 }
 
 const SignOrLogLink: React.FC<SignOrLogLinkProps> = ({

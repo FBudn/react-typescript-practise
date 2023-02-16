@@ -9,7 +9,7 @@ export interface CheckboxAndLabelProps {
   // onChangeCheckbox: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
-export type CheckboxRef = any;
+export type CheckboxRef = HTMLInputElement;
 const CheckboxAndLabel = forwardRef<CheckboxRef, CheckboxAndLabelProps>(
   (props, ref) => (
     <CheckboxContainer>

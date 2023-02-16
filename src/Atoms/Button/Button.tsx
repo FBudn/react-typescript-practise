@@ -3,7 +3,7 @@ import { ButtonContainer } from "./ButtonStyle";
 
 export interface ButtonProps {
   children: React.ReactNode;
-  onClick: any;
+  onClick: React.MouseEventHandler<HTMLButtonElement>;
 }
 
 const Button: React.FC<ButtonProps> = ({ children, onClick }) => {

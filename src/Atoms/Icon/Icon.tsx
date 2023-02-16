@@ -2,7 +2,7 @@ import React from "react";
 import { SoloIconContainer } from "./IconStyle";
 
 export interface IconProps {
-  onClickIcon: any;
+  onClickIcon: React.MouseEventHandler<HTMLDivElement>;
   children: React.ReactNode;
   color: string;
 }

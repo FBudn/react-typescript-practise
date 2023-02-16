@@ -4,7 +4,7 @@ import { LinkButtonStyled } from "./LinkButtonStyle";
 
 export interface LinkButtonProps {
   children: React.ReactNode;
-  onClickLink: any;
+  onClickLink: React.MouseEventHandler<HTMLButtonElement>;
 }
 
 const LinkButton: React.FC<LinkButtonProps> = ({ children, onClickLink }) => {
