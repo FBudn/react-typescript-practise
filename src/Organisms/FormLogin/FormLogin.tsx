@@ -1,12 +1,7 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable object-shorthand */
 /* eslint-disable @typescript-eslint/consistent-type-definitions */
-import React, {
-  forwardRef,
-  RefObject,
-  useImperativeHandle,
-  useRef,
-} from "react";
+import React, { forwardRef, useImperativeHandle, useRef } from "react";
 import Button from "../../Atoms/Button/Button";
 import Header from "../../Atoms/Header/Header";
 import Label from "../../Atoms/TextLabel/TextLabel";
@@ -15,9 +10,6 @@ import InputAndLabel from "../../Molecules/InputAndLabel/InputAndLabel";
 import { InputsContainer } from "../FormSignUp/FormsStyle";
 
 export interface FormLoginProps {
-  handleEmail?: (e: React.ChangeEvent<HTMLInputElement>) => void;
-  handlePassword?: (e: React.ChangeEvent<HTMLInputElement>) => void;
-  // onChangeCheckbox: (e: React.ChangeEvent<HTMLInputElement>) => void;
   onButtonClick: (email: any, password: any, checkbox: any) => void;
 }
 
@@ -25,7 +17,7 @@ export type RefHandler = {
   CheckboxRef: any;
   EmailInputRef: any;
   PasswordInputRef: any;
-  TestRef: RefObject<HTMLInputElement>;
+  TestRef: any;
 };
 
 const FormLogin = forwardRef<RefHandler, FormLoginProps>(
@@ -84,9 +76,6 @@ const FormLogin = forwardRef<RefHandler, FormLoginProps>(
     );
   },
 );
-
-FormLogin.displayName = "Child";
-
 export default FormLogin;
 
 /*

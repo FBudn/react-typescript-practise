@@ -41,7 +41,7 @@ const LoginTemplate: React.FC<LoginTemplateProps> = ({
             </LineSection>
             <button
               onClick={() => {
-                console.log(childRef?.current?.TestRef);
+                console.log(childRef?.current?.TestRef?.current?.value);
               }}
             >
               {" "}

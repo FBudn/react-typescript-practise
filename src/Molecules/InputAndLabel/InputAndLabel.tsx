@@ -7,7 +7,6 @@ import { OneInputContainer } from "./InputLabelStyles";
 export interface InputAndLabelProps {
   children: React.ReactNode;
   type: string;
-  setInputValue?: any;
 }
 
 export type InputRef = HTMLInputElement;
@@ -25,7 +24,6 @@ const InputAndLabel = forwardRef<InputRef, InputAndLabelProps>(
       </Label>
       <Input
         type={props.type}
-        setInputValue={props.setInputValue}
         ref={ref}
         // autoFocus
       />

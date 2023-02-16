@@ -4,12 +4,11 @@ import { InputAtom } from "./InputStyle";
 
 export interface InputProps {
   type: string;
-  setInputValue?: any;
 }
 
 export type InputRef = HTMLInputElement;
 const Input = forwardRef<InputRef, InputProps>((props: InputProps, ref) => (
-  <InputAtom type={props.type} onChange={props.setInputValue} ref={ref} />
+  <InputAtom type={props.type} ref={ref} />
 ));
 
 export default Input;
