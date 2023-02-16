@@ -4,9 +4,13 @@ import FormSignUp from "../../Organisms/FormSignUp/FormSignUp";
 import LineSection from "../../Organisms/LineSection/LineSection";
 
 export interface SignUpTemplateProps {
-  onButtonClick: (email: any, password: any, checkbox: any) => void;
-  onClickIcon: any;
-  onClickLink: any;
+  onButtonClick: (
+    email: undefined | string,
+    password: undefined | string,
+    checkbox: string,
+  ) => void;
+  onClickIcon: (number: number, logs: []) => void;
+  onClickLink: (url: string) => void;
 }
 
 const SignUpTemplate: React.FC<SignUpTemplateProps> = ({

@@ -12,7 +12,11 @@ import FormLogin, {
 import LineSection from "../../Organisms/LineSection/LineSection";
 
 export interface LoginTemplateProps {
-  onButtonClick: (email: string, password: string, checkbox: string) => void;
+  onButtonClick: (
+    email: undefined | string,
+    password: undefined | string,
+    checkbox: undefined | boolean,
+  ) => void;
   onClickIcon: (number: number, logs: []) => void;
   onClickLink: (url: string) => void;
 }

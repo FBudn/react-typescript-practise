@@ -15,7 +15,11 @@ import InputAndLabel from "../../Molecules/InputAndLabel/InputAndLabel";
 import { InputsContainer } from "../FormSignUp/FormsStyle";
 
 export interface FormLoginProps {
-  onButtonClick: (email: string, password: string, checkbox: string) => void;
+  onButtonClick: (
+    email: undefined | string,
+    password: undefined | string,
+    checkbox: undefined | boolean,
+  ) => void;
 }
 
 export type RefHandlerLogin = {
@@ -27,11 +31,11 @@ export type RefHandlerLogin = {
 
 const FormLogin = forwardRef<RefHandlerLogin, FormLoginProps>(
   (props: FormLoginProps, ref) => {
-    const CheckboxRef = useRef<any>();
+    const CheckboxRef = useRef<HTMLInputElement>(null);
 
-    const EmailInputRef = useRef<any>();
+    const EmailInputRef = useRef<HTMLInputElement>(null);
 
-    const PasswordInputRef = useRef<any>();
+    const PasswordInputRef = useRef<HTMLInputElement>(null);
     const TestRef = useRef<HTMLInputElement>(null);
 
     useImperativeHandle(ref, () => ({

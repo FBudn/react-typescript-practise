@@ -3,7 +3,11 @@ import { useNavigate } from "react-router-dom";
 import LoginTemplate from "../../Templates/LoginTemplate/LoginTemplate";
 
 const LoginPage: React.FC = () => {
-  const onButtonClick = (email: string, password: string, checkbox: string) => {
+  const onButtonClick = (
+    email: undefined | string,
+    password: undefined | string,
+    checkbox: undefined | boolean,
+  ) => {
     console.log(email, password, checkbox);
   };
 

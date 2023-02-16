@@ -1,28 +1,35 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable object-shorthand */
 /* eslint-disable @typescript-eslint/consistent-type-definitions */
-import React, { forwardRef, useImperativeHandle, useRef } from "react";
+import React, {
+  forwardRef,
+  RefObject,
+  useImperativeHandle,
+  useRef,
+} from "react";
 import Button from "../../Atoms/Button/Button";
 import Header from "../../Atoms/Header/Header";
 import InputAndLabel from "../../Molecules/InputAndLabel/InputAndLabel";
 import { InputsContainer } from "./FormsStyle";
 
 export interface FormSignUpProps {
-  handleEmail?: (e: React.ChangeEvent<HTMLInputElement>) => void;
-  handlePassword?: (e: React.ChangeEvent<HTMLInputElement>) => void;
-  onButtonClick: (email: any, password: any, checkbox: any) => void;
+  onButtonClick: (
+    email: undefined | string,
+    password: undefined | string,
+    checkbox: string,
+  ) => void;
 }
 
 export type RefHandlerSignUp = {
-  EmailInputRef: any;
-  PasswordInputRef: any;
+  EmailInputRef: RefObject<HTMLInputElement>;
+  PasswordInputRef: RefObject<HTMLInputElement>;
 };
 
 const FormSignUp = forwardRef<RefHandlerSignUp, FormSignUpProps>(
   (props: FormSignUpProps, ref) => {
-    const EmailInputRef = useRef<any>();
+    const EmailInputRef = useRef<HTMLInputElement>(null);
 
-    const PasswordInputRef = useRef<any>();
+    const PasswordInputRef = useRef<HTMLInputElement>(null);
 
     useImperativeHandle(ref, () => ({
       EmailInputRef: EmailInputRef,

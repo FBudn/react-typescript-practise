@@ -3,7 +3,11 @@ import { useNavigate } from "react-router-dom";
 import SignUpTemplate from "../../Templates/SignUpTemplate/SignUpTemplate";
 
 const SignUpPage: React.FC = () => {
-  const onButtonClick = (email: any, password: any, checkbox: any) => {
+  const onButtonClick = (
+    email: undefined | string,
+    password: undefined | string,
+    checkbox: string,
+  ) => {
     console.log(email, password, checkbox);
   };
 
