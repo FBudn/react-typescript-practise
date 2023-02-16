@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Background, MaxWidth, Tile, TileContainer } from "./TemplatesStyles";
 import FormSignUp from "../../Organisms/FormSignUp/FormSignUp";
 import LineSection from "../../Organisms/LineSection/LineSection";
@@ -14,18 +14,6 @@ const SignUpTemplate: React.FC<SignUpTemplateProps> = ({
   onClickIcon,
   onClickLink,
 }) => {
-  const [emailValue, setEmailValue] = useState("");
-
-  const handleEmail = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setEmailValue(e.target.value);
-  };
-
-  const [passwordValue, setPasswordValue] = useState("");
-
-  const handlePassword = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setPasswordValue(e.target.value);
-  };
-
   const IconsLogs = [`Google Clicked`, `Facebook Clicked`, `LinkedIn Clicked`];
 
   return (
@@ -33,13 +21,7 @@ const SignUpTemplate: React.FC<SignUpTemplateProps> = ({
       <MaxWidth>
         <Tile>
           <TileContainer>
-            <FormSignUp
-              handleEmail={handleEmail}
-              handlePassword={handlePassword}
-              onButtonClick={() => {
-                onButtonClick(emailValue, passwordValue, "No checkbox here");
-              }}
-            />
+            <FormSignUp onButtonClick={onButtonClick} />
             <LineSection
               lineText="OR"
               linkText="LOGIN"
@@ -59,3 +41,18 @@ const SignUpTemplate: React.FC<SignUpTemplateProps> = ({
 };
 
 export default SignUpTemplate;
+
+/*
+  const [emailValue, setEmailValue] = useState("");
+
+  const handleEmail = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setEmailValue(e.target.value);
+  };
+
+  const [passwordValue, setPasswordValue] = useState("");
+
+  const handlePassword = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setPasswordValue(e.target.value);
+  };
+
+*/

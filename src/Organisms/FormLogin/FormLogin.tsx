@@ -13,14 +13,14 @@ export interface FormLoginProps {
   onButtonClick: (email: any, password: any, checkbox: any) => void;
 }
 
-export type RefHandler = {
+export type RefHandlerLogin = {
   CheckboxRef: any;
   EmailInputRef: any;
   PasswordInputRef: any;
   TestRef: any;
 };
 
-const FormLogin = forwardRef<RefHandler, FormLoginProps>(
+const FormLogin = forwardRef<RefHandlerLogin, FormLoginProps>(
   (props: FormLoginProps, ref) => {
     const CheckboxRef = useRef<any>();
 
@@ -52,7 +52,7 @@ const FormLogin = forwardRef<RefHandler, FormLoginProps>(
               props.onButtonClick(
                 EmailInputRef.current?.value,
                 PasswordInputRef.current?.value,
-                CheckboxRef.current?.value,
+                CheckboxRef.current?.checked,
               );
             }}
           >

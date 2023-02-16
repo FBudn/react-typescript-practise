@@ -6,7 +6,9 @@ import {
   Tile,
   TileContainer,
 } from "../SignUpTemplate/TemplatesStyles";
-import FormLogin, { RefHandler } from "../../Organisms/FormLogin/FormLogin";
+import FormLogin, {
+  RefHandlerLogin,
+} from "../../Organisms/FormLogin/FormLogin";
 import LineSection from "../../Organisms/LineSection/LineSection";
 
 export interface LoginTemplateProps {
@@ -21,7 +23,7 @@ const LoginTemplate: React.FC<LoginTemplateProps> = ({
   onClickLink,
 }) => {
   const IconsLogs = [`Google Clicked`, `Facebook Clicked`, `LinkedIn Clicked`];
-  const childRef = useRef<RefHandler>(null);
+  const childRef = useRef<RefHandlerLogin>(null);
   return (
     <Background>
       <MaxWidth>
