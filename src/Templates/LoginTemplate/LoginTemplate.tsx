@@ -12,9 +12,9 @@ import FormLogin, {
 import LineSection from "../../Organisms/LineSection/LineSection";
 
 export interface LoginTemplateProps {
-  onButtonClick: (email: any, password: any, checkbox: any) => void;
-  onClickIcon: any;
-  onClickLink: any;
+  onButtonClick: (email: string, password: string, checkbox: string) => void;
+  onClickIcon: (number: number, logs: []) => void;
+  onClickLink: (url: string) => void;
 }
 
 const LoginTemplate: React.FC<LoginTemplateProps> = ({

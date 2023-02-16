@@ -46,7 +46,7 @@ const FormSignUp = forwardRef<RefHandlerSignUp, FormSignUpProps>(
               props.onButtonClick(
                 EmailInputRef.current?.value,
                 PasswordInputRef.current?.value,
-                `No checkbox here`,
+                `  No-checkbox-here`,
               );
             }}
           >

@@ -1,7 +1,12 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable object-shorthand */
 /* eslint-disable @typescript-eslint/consistent-type-definitions */
-import React, { forwardRef, useImperativeHandle, useRef } from "react";
+import React, {
+  forwardRef,
+  RefObject,
+  useImperativeHandle,
+  useRef,
+} from "react";
 import Button from "../../Atoms/Button/Button";
 import Header from "../../Atoms/Header/Header";
 import Label from "../../Atoms/TextLabel/TextLabel";
@@ -10,13 +15,13 @@ import InputAndLabel from "../../Molecules/InputAndLabel/InputAndLabel";
 import { InputsContainer } from "../FormSignUp/FormsStyle";
 
 export interface FormLoginProps {
-  onButtonClick: (email: any, password: any, checkbox: any) => void;
+  onButtonClick: (email: string, password: string, checkbox: string) => void;
 }
 
 export type RefHandlerLogin = {
-  CheckboxRef: any;
-  EmailInputRef: any;
-  PasswordInputRef: any;
+  CheckboxRef: RefObject<HTMLInputElement>;
+  EmailInputRef: RefObject<HTMLInputElement>;
+  PasswordInputRef: RefObject<HTMLInputElement>;
   TestRef: any;
 };
 
