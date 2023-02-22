@@ -16,8 +16,8 @@ FlexFullWidth.args = {
   children: "Press me",
 };
 // export const Flex100percentwidth = () => <Button>1</Button>;
-export const FlexWidth20 = Template.bind({});
-FlexWidth20.args = {
+export const FlexStyleTesting = Template.bind({});
+FlexStyleTesting.args = {
   children: "I'm for testing",
   storybookTesting: { backgroundColor: "green", width: "50%" },
 };

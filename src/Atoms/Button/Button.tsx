@@ -13,7 +13,7 @@ const Button: React.FC<ButtonProps> = ({
   storybookTesting,
 }) => {
   return (
-    <ButtonContainer style={storybookTesting} onClick={onClick}>
+    <ButtonContainer onClick={onClick} style={storybookTesting}>
       {children}
     </ButtonContainer>
   );

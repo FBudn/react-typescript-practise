@@ -1,8 +1,9 @@
 import React from "react";
+import { Meta, Story } from "@storybook/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebookF } from "@fortawesome/free-brands-svg-icons";
-import { any, string } from "prop-types";
-import Icon from "../../Atoms/Icon/Icon";
+import { string } from "prop-types";
+import Icon, { IconProps } from "../../Atoms/Icon/Icon";
 
 export default {
   title: "Atoms/Icon",
@@ -10,11 +11,15 @@ export default {
   argTypes: {
     onClickIcon: { action: "Console.log: `My name Clicked` " },
     color: string,
-    children: any,
   },
-};
-const facebook = <FontAwesomeIcon icon={faFacebookF} />;
+} as Meta;
 
-const Template = (args: any) => <Icon {...args}>{facebook}</Icon>;
+const Template: Story<IconProps> = (args) => (
+  <Icon {...args}>{args.children}</Icon>
+);
 
 export const BasicIcon = Template.bind({});
+BasicIcon.args = {
+  children: <FontAwesomeIcon icon={faFacebookF} />,
+  storybookTesting: { width: "30px" },
+};

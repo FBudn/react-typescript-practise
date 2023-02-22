@@ -12,7 +12,7 @@ export default {
 
 const Template: Story<InputProps> = (args) => <Input {...args} />;
 
-export const TextInputBasic = Template.bind({});
-TextInputBasic.args = {
+export const FlexFullWidth = Template.bind({});
+FlexFullWidth.args = {
   type: "text",
 };
