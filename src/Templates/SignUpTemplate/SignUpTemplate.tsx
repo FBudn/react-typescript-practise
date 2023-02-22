@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { Background, MaxWidth, Tile, TileContainer } from "./TemplatesStyles";
-import FormSignUp from "../../Organisms/FormSignUp/FormSignUp";
+import FormSignUp, {
+  RefHandlerSignUp,
+} from "../../Organisms/FormSignUp/FormSignUp";
 import LineSection from "../../Organisms/LineSection/LineSection";
 
 export interface SignUpTemplateProps {
@@ -19,12 +21,16 @@ const SignUpTemplate: React.FC<SignUpTemplateProps> = ({
   onClickLink,
 }) => {
   const IconsLogs = [`Google Clicked`, `Facebook Clicked`, `LinkedIn Clicked`];
+  const FormSignUpRef = useRef<RefHandlerSignUp>(null);
+  useEffect(() => {
+    FormSignUpRef.current?.focus();
+  }, []);
   return (
     <Background>
       <MaxWidth>
         <Tile>
           <TileContainer>
-            <FormSignUp onButtonClick={onButtonClick} />
+            <FormSignUp onButtonClick={onButtonClick} ref={FormSignUpRef} />
             <LineSection
               lineText="OR"
               linkText="LOGIN"

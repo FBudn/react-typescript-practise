@@ -1,9 +1,5 @@
-import React, {
-  forwardRef,
-  RefObject,
-  useImperativeHandle,
-  useRef,
-} from "react";
+/* eslint-disable @typescript-eslint/no-non-null-assertion */
+import React, { forwardRef, useImperativeHandle, useRef } from "react";
 import Button from "../../Atoms/Button/Button";
 import Header from "../../Atoms/Header/Header";
 import InputAndLabel from "../../Molecules/InputAndLabel/InputAndLabel";
@@ -18,8 +14,7 @@ export interface FormSignUpProps {
 }
 
 export type RefHandlerSignUp = {
-  EmailInputRef: RefObject<HTMLInputElement>;
-  PasswordInputRef: RefObject<HTMLInputElement>;
+  focus: () => void;
 };
 
 const FormSignUp = forwardRef<RefHandlerSignUp, FormSignUpProps>(
@@ -28,10 +23,23 @@ const FormSignUp = forwardRef<RefHandlerSignUp, FormSignUpProps>(
 
     const PasswordInputRef = useRef<HTMLInputElement>(null);
 
-    useImperativeHandle(ref, () => ({
-      EmailInputRef,
-      PasswordInputRef,
-    }));
+    useImperativeHandle(
+      ref,
+      () => ({
+        focus: () => {
+          EmailInputRef?.current?.focus();
+        },
+      }),
+      [],
+    );
+
+    const onSubmit = () => {
+      props.onButtonClick(
+        EmailInputRef.current!.value,
+        PasswordInputRef.current!.value,
+        `No checkbox here`,
+      );
+    };
 
     return (
       <>
@@ -45,17 +53,7 @@ const FormSignUp = forwardRef<RefHandlerSignUp, FormSignUpProps>(
             Password
           </InputAndLabel>
 
-          <Button
-            onClick={() => {
-              props.onButtonClick(
-                EmailInputRef.current?.value,
-                PasswordInputRef.current?.value,
-                `  No-checkbox-here`,
-              );
-            }}
-          >
-            SIGN UP
-          </Button>
+          <Button onClick={onSubmit}>SIGN UP</Button>
         </InputsContainer>
       </>
     );
