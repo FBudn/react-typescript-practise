@@ -1,7 +1,7 @@
 import React from "react";
 import { LabelContainer } from "./TextLabelStyle";
 
-export interface LabelProps {
+export interface TextLabelProps {
   children: React.ReactNode;
   color: string;
   align: string;
@@ -13,7 +13,7 @@ export interface LabelProps {
   cursor?: string;
 }
 
-const TextLabel: React.FC<LabelProps> = ({
+const TextLabel: React.FC<TextLabelProps> = ({
   children,
   color,
   align,
