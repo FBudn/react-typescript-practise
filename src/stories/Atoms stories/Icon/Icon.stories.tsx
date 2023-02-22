@@ -3,7 +3,7 @@ import { Meta, Story } from "@storybook/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebookF } from "@fortawesome/free-brands-svg-icons";
 import { string } from "prop-types";
-import Icon, { IconProps } from "../../Atoms/Icon/Icon";
+import Icon, { IconProps } from "../../../Atoms/Icon/Icon";
 
 export default {
   title: "Atoms/Icon",

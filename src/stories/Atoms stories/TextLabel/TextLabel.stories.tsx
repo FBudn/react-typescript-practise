@@ -1,6 +1,6 @@
 import React from "react";
 import { Meta, Story } from "@storybook/react";
-import TextLabel, { TextLabelProps } from "../../Atoms/TextLabel/TextLabel";
+import TextLabel, { TextLabelProps } from "../../../Atoms/TextLabel/TextLabel";
 
 export default {
   title: "Atoms/TextLabel",

@@ -1,6 +1,8 @@
 import React from "react";
 import { Meta, Story } from "@storybook/react";
-import LinkButton, { LinkButtonProps } from "../../Atoms/LinkButton/LinkButton";
+import LinkButton, {
+  LinkButtonProps,
+} from "../../../Atoms/LinkButton/LinkButton";
 
 export default {
   title: "Atoms/LinkButton",
