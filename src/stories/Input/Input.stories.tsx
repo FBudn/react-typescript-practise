@@ -1,6 +1,3 @@
-/* eslint-disable @typescript-eslint/consistent-type-assertions */
-/* eslint-disable import/no-extraneous-dependencies */
-/* eslint-disable react/jsx-props-no-spreading */
 import React from "react";
 import { Meta, Story } from "@storybook/react";
 import Input, { InputProps } from "../../Atoms/Input/Input";

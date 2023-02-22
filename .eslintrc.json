@@ -39,7 +39,10 @@
     "disable-next-line": "off",
     "react/prop-types": "off",
     "object-shorthand": ["off", "always"],
-    "@typescript-eslint/consistent-type-definitions": "off"
+    "@typescript-eslint/consistent-type-definitions": "off",
+    "@typescript-eslint/consistent-type-assertions": "off",
+    "react/destructuring-assignment": "warn",
+    "react/jsx-props-no-spreading": "warn"
   }
 }
 //"react/destructuring-assignment": [<enabled>, 'always']

@@ -1,6 +1,3 @@
-/* eslint-disable @typescript-eslint/explicit-function-return-type */
-/* eslint-disable react/destructuring-assignment */
-/* eslint-disable react/jsx-props-no-spreading */
 import React from "react";
 import Button from "../../Atoms/Button/Button";
 

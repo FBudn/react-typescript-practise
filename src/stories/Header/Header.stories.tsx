@@ -1,15 +1,14 @@
-/* eslint-disable react/jsx-props-no-spreading */
-/* eslint-disable react/destructuring-assignment */
 import React from "react";
-import Header from "../../Atoms/Header/Header";
+import { Meta, Story } from "@storybook/react";
+import Header, { HeaderProps } from "../../Atoms/Header/Header";
 
 export default {
   title: "Atoms/Header",
   component: Header,
-  children: "Label",
-};
+} as Meta;
 
-const Template = () => (
-  <Header>LABEL: Label which as a default has global text styles</Header>
-);
+const Template: Story<HeaderProps> = (args) => <Header>{args.children}</Header>;
 export const FlexFullWidth = Template.bind({});
+FlexFullWidth.args = {
+  children: "LABEL: Label which as a default has global text styles",
+};

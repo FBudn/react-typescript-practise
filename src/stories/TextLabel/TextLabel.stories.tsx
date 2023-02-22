@@ -1,6 +1,3 @@
-/* eslint-disable @typescript-eslint/consistent-type-assertions */
-/* eslint-disable react/destructuring-assignment */
-/* eslint-disable react/jsx-props-no-spreading */
 import React from "react";
 import { Meta, Story } from "@storybook/react";
 import TextLabel, { TextLabelProps } from "../../Atoms/TextLabel/TextLabel";
