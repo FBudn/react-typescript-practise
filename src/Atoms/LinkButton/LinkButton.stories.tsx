@@ -1,6 +1,6 @@
 import React from "react";
 import { ComponentMeta, ComponentStory } from "@storybook/react";
-import LinkButton from "../../../Atoms/LinkButton/LinkButton";
+import LinkButton from "./LinkButton";
 
 export default {
   title: "Atoms/LinkButton",

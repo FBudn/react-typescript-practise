@@ -1,6 +1,6 @@
 import React from "react";
 import { ComponentMeta, ComponentStory } from "@storybook/react";
-import InputAndLabel from "../../../Molecules/InputAndLabel/InputAndLabel";
+import InputAndLabel from "./InputAndLabel";
 
 export default {
   title: "Molecules/InputAndLabel",

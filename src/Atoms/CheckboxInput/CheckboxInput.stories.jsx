@@ -1,5 +1,5 @@
 import React from "react";
-import CheckboxInput from "../../../Atoms/CheckboxInput/CheckboxInput";
+import CheckboxInput from "./CheckboxInput";
 
 export default {
   title: "Atoms/CheckboxInput",
