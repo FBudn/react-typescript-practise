@@ -8,8 +8,14 @@ export default {
 } as ComponentMeta<typeof Header>;
 
 const Template: Story<HeaderProps> = (args) => <Header {...args} />;
-export const FlexFullWidth = Template.bind({});
+export const FlexFullWidthLOGIN = Template.bind({});
 
-FlexFullWidth.args = {
-  children: "LABEL: Label which as a default has global text styles",
+FlexFullWidthLOGIN.args = {
+  children: "LOGIN",
+};
+
+export const FlexFullWidthSIGNUP = Template.bind({});
+
+FlexFullWidthSIGNUP.args = {
+  children: "SIGN UP",
 };

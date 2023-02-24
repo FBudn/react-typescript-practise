@@ -21,9 +21,7 @@ export default {
   ],
 } as ComponentMeta<typeof Icon>;
 
-const Template: ComponentStory<typeof Icon> = (args) => (
-  <Icon {...args}>{args.children}</Icon>
-);
+const Template: ComponentStory<typeof Icon> = (args) => <Icon {...args} />;
 
 export const BasicIcon = Template.bind({});
 BasicIcon.args = {

@@ -1,8 +1,6 @@
 import React from "react";
-import { Meta, Story } from "@storybook/react";
-import LinkButton, {
-  LinkButtonProps,
-} from "../../../Atoms/LinkButton/LinkButton";
+import { ComponentMeta, ComponentStory } from "@storybook/react";
+import LinkButton from "../../../Atoms/LinkButton/LinkButton";
 
 export default {
   title: "Atoms/LinkButton",
@@ -10,13 +8,18 @@ export default {
   argTypes: {
     onClickLink: { action: "Im switching page" },
   },
-} as Meta;
+} as ComponentMeta<typeof LinkButton>;
 
-const Template: Story<LinkButtonProps> = (args) => (
-  <LinkButton {...args}>{args.children}</LinkButton>
+const Template: ComponentStory<typeof LinkButton> = (args) => (
+  <LinkButton {...args} />
 );
 
-export const Basic = Template.bind({});
-Basic.args = {
-  children: "Link which as a default has global text styles",
+export const BasicLOGIN = Template.bind({});
+BasicLOGIN.args = {
+  children: "LOGIN",
+};
+
+export const BasicSIGNUP = Template.bind({});
+BasicSIGNUP.args = {
+  children: "SIGN UP",
 };

@@ -8,9 +8,14 @@ export default {
 
 const Template = (args) => <Button {...args} />;
 
-export const FlexFullWidth = Template.bind({});
-FlexFullWidth.args = {
-  children: "Press me",
+export const FlexFullWidthLOGIN = Template.bind({});
+FlexFullWidthLOGIN.args = {
+  children: "LOGIN",
+};
+
+export const FlexFullWidthSIGNUP = Template.bind({});
+FlexFullWidthSIGNUP.args = {
+  children: "SIGN UP",
 };
 
 /*

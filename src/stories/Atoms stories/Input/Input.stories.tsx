@@ -1,6 +1,6 @@
 import React from "react";
-import { Meta, Story } from "@storybook/react";
-import Input, { InputProps } from "../../../Atoms/Input/Input";
+import { ComponentMeta, ComponentStory } from "@storybook/react";
+import Input from "../../../Atoms/Input/Input";
 
 export default {
   title: "Atoms/Input",
@@ -8,11 +8,14 @@ export default {
   argTypes: {
     ref: { action: "I'm forwarding a reference" },
   },
-} as Meta;
+} as ComponentMeta<typeof Input>;
 
-const Template: Story<InputProps> = (args) => <Input {...args} />;
+const Template: ComponentStory<typeof Input> = (args) => <Input {...args} />;
 
 export const FlexFullWidth = Template.bind({});
 FlexFullWidth.args = {
   type: "text",
 };
+
+// roznica w componentMeta vs as Meta po prostu i tak samo w Story
+// szerokość inputa co tutaj
