@@ -4,19 +4,11 @@ import { ButtonContainer } from "./ButtonStyle";
 export interface ButtonProps {
   children: React.ReactNode;
   onClick: React.MouseEventHandler<HTMLButtonElement>;
-  storybookTesting?: any;
+  // storybookTesting?: any; storybookTesting, style={storybookTesting}
 }
 
-const Button: React.FC<ButtonProps> = ({
-  children,
-  onClick,
-  storybookTesting,
-}) => {
-  return (
-    <ButtonContainer onClick={onClick} style={storybookTesting}>
-      {children}
-    </ButtonContainer>
-  );
+const Button: React.FC<ButtonProps> = ({ children, onClick }) => {
+  return <ButtonContainer onClick={onClick}>{children}</ButtonContainer>;
 };
 
 export default Button;
