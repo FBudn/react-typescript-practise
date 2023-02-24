@@ -39,7 +39,20 @@ BasicForgotPassword.args = {
 
 export const BasicAlreadyUser = Template.bind({});
 BasicAlreadyUser.args = {
-  children: "Already a user",
+  children: "Already a user?",
+  color: "black",
+  align: "center",
+  justify: "center",
+  fontWeight: "bold",
+  fontSize: "1rem",
+  width: "100%",
+  margin: "2px",
+  cursor: "pointer",
+};
+
+export const BasicNeedAccount = Template.bind({});
+BasicNeedAccount.args = {
+  children: "Need an account?",
   color: "black",
   align: "center",
   justify: "center",
@@ -54,6 +67,7 @@ import React from "react";
 import { Meta, Story } from "@storybook/react";
 import Input, { InputProps } from "../../../Atoms/Input/Input";
 import TextLabel, { TextLabelProps } from "../../../Atoms/TextLabel/TextLabel";
+Need an account?
 
 export default {
   title: "Molecules/InputAndLabel",
