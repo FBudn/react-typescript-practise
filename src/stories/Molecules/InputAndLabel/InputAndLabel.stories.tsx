@@ -1,20 +1,22 @@
 import React from "react";
-import { Meta, Story } from "@storybook/react";
-import InputAndLabel, {
-  InputAndLabelProps,
-} from "../../../Molecules/InputAndLabel/InputAndLabel";
+import { ComponentMeta, ComponentStory } from "@storybook/react";
+import InputAndLabel from "../../../Molecules/InputAndLabel/InputAndLabel";
 
 export default {
   title: "Molecules/InputAndLabel",
   component: InputAndLabel,
   type: "Text",
-} as Meta;
+} as ComponentMeta<typeof InputAndLabel>;
 
-const Template: Story<InputAndLabelProps> = (args) => (
-  <InputAndLabel type={args.type}>{args.children}</InputAndLabel>
+const Template: ComponentStory<typeof InputAndLabel> = (args) => (
+  <InputAndLabel {...args} />
 );
 
-export const Basic = Template.bind({});
-Basic.args = {
+export const BasicEmail = Template.bind({});
+BasicEmail.args = {
   children: "Email",
+};
+export const BasicPassword = Template.bind({});
+BasicPassword.args = {
+  children: "Password",
 };
