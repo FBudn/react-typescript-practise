@@ -12,7 +12,7 @@ const facebook = <FontAwesomeIcon icon={faFacebookF} />;
 const google = <FontAwesomeIcon icon={faGoogle} />;
 const linkedin = <FontAwesomeIcon icon={faLinkedinIn} />;
 
-export interface IconsProps {
+export interface IconsSectionProps {
   onClickIcon: (number: number, logs: []) => void;
   firstIconText: number;
   secondIconText: number;
@@ -20,7 +20,7 @@ export interface IconsProps {
   logs: any;
 }
 
-const Icons: React.FC<IconsProps> = ({
+const IconsSection: React.FC<IconsSectionProps> = ({
   onClickIcon,
   firstIconText,
   secondIconText,
@@ -59,7 +59,7 @@ const Icons: React.FC<IconsProps> = ({
   );
 };
 
-export default Icons;
+export default IconsSection;
 
 /*
 Przerobienie tego bo wszelka logika na samej górze w page 
