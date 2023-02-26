@@ -5,7 +5,6 @@ import LoginTemplate from "./LoginTemplate";
 export default {
   title: "Templates/LoginTemplate",
   component: LoginTemplate,
-  argTypes: { ref: { action: "I'm forwardind ref" } },
 } as ComponentMeta<typeof LoginTemplate>;
 
 const Template: ComponentStory<typeof LoginTemplate> = (args) => (
