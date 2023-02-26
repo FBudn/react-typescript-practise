@@ -32,3 +32,5 @@ const SignUpPage: React.FC = () => {
 };
 
 export default SignUpPage;
+
+// useNavigate poprawki
