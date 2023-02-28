@@ -1,8 +1,11 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
 import SignUpTemplate from "../../Templates/SignUpTemplate/SignUpTemplate";
 
-const SignUpPage: React.FC = () => {
+export interface TestProps {
+  navigate: any;
+}
+
+const SignUpPage: React.FC<TestProps> = ({ navigate }) => {
   const onButtonClick = (
     email: undefined | string,
     password: undefined | string,
@@ -17,7 +20,6 @@ const SignUpPage: React.FC = () => {
     console.log(IconsLogs[i]);
   };
 
-  const navigate = useNavigate();
   const onClickLink = (url: string) => {
     navigate(url);
   };

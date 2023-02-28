@@ -1,16 +1,17 @@
 import React from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes, useNavigate } from "react-router-dom";
 import SignUp from "./Pages/SignUpPage/SignUpPage";
 import Login from "./Pages/LoginPage/LoginPage";
 import TestPage from "./Pages/TestPage/TestPage";
 
 const App: React.FC = () => {
+  const navigate = useNavigate();
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/SignUp" element={<SignUp />} />
-        <Route path="/Login" element={<Login />} />
-        <Route path="/" element={<Login />} />
+        <Route path="/SignUp" element={<SignUp navigate={navigate} />} />
+        <Route path="/Login" element={<Login navigate={navigate} />} />
+        <Route path="/" element={<Login navigate={navigate} />} />
         <Route path="/Test" element={<TestPage />} />
       </Routes>
     </BrowserRouter>

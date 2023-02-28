@@ -1,8 +1,11 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
 import LoginTemplate from "../../Templates/LoginTemplate/LoginTemplate";
 
-const LoginPage: React.FC = () => {
+export interface TestProps {
+  navigate: any;
+}
+
+const LoginPage: React.FC<TestProps> = ({ navigate }) => {
   const onButtonClick = (
     email: undefined | string,
     password: undefined | string,
@@ -15,7 +18,6 @@ const LoginPage: React.FC = () => {
     console.log(logs[number]);
   };
 
-  const navigate = useNavigate();
   const onClickLink = (url: string) => {
     navigate(url);
   };
