@@ -4,6 +4,8 @@ export const SoloIconContainer = styled.div.attrs(
   (props: { color: string }) => props,
 )`
   display: flex;
+  width: 25px;
+  height: 25px;
   justify-content: center;
   align-items: center;
   text: center;

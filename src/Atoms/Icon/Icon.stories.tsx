@@ -12,13 +12,13 @@ export default {
     onClickIcon: { action: "Console.log: `My name Clicked` " },
     color: string,
   },
-  decorators: [
+  /* decorators: [
     (Story) => (
       <div style={{ backgroundColor: "transparent", width: "30px" }}>
         <Story />
       </div>
     ),
-  ],
+  ], */
 } as ComponentMeta<typeof Icon>;
 
 const Template: ComponentStory<typeof Icon> = (args) => <Icon {...args} />;
