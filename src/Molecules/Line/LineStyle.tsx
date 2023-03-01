@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const LineContainer = styled.div`
   display: flex;
+  max-width: 21rem;
   justify-content: center;
   align-items: center;
   margin: 2px;
