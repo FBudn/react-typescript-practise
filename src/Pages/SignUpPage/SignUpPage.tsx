@@ -2,10 +2,10 @@ import React from "react";
 import SignUpTemplate from "../../Templates/SignUpTemplate/SignUpTemplate";
 
 export interface TestProps {
-  navigate: any;
+  onClickLink: (url: string) => void;
 }
 
-const SignUpPage: React.FC<TestProps> = ({ navigate }) => {
+const SignUpPage: React.FC<TestProps> = ({ onClickLink }) => {
   const onButtonClick = (
     email: undefined | string,
     password: undefined | string,
@@ -18,10 +18,6 @@ const SignUpPage: React.FC<TestProps> = ({ navigate }) => {
 
   const onClickIcon = (i: number) => {
     console.log(IconsLogs[i]);
-  };
-
-  const onClickLink = (url: string) => {
-    navigate(url);
   };
 
   return (

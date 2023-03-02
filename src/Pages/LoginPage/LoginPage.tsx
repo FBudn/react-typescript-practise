@@ -2,10 +2,10 @@ import React from "react";
 import LoginTemplate from "../../Templates/LoginTemplate/LoginTemplate";
 
 export interface TestProps {
-  navigate: any;
+  onClickLink: (url: string) => void;
 }
 
-const LoginPage: React.FC<TestProps> = ({ navigate }) => {
+const LoginPage: React.FC<TestProps> = ({ onClickLink }) => {
   const onButtonClick = (
     email: undefined | string,
     password: undefined | string,
@@ -16,10 +16,6 @@ const LoginPage: React.FC<TestProps> = ({ navigate }) => {
 
   const onClickIcon = (number: number, logs: []) => {
     console.log(logs[number]);
-  };
-
-  const onClickLink = (url: string) => {
-    navigate(url);
   };
 
   return (

@@ -7,7 +7,9 @@ export interface CheckboxInputProps {
 
 export type CheckboxRef = HTMLInputElement;
 const CheckboxInput = forwardRef<CheckboxRef, CheckboxInputProps>(
-  ({ id }, ref) => <CheckboxInputStyle id={id} ref={ref} />,
+  ({ id }, ref) => (
+    <CheckboxInputStyle data-testid="CheckboxInput-1" id={id} ref={ref} />
+  ),
 );
 
 export default CheckboxInput;

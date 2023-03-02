@@ -42,7 +42,7 @@ const LoginTemplate: React.FC<LoginTemplateProps> = ({
               onClickIcon={onClickIcon}
               logs={IconsLogs}
               onClickLink={() => {
-                onClickLink(`/SignUp`);
+                onClickLink("/SignUp");
               }}
             >
               Need an account?

@@ -6,11 +6,14 @@ import TestPage from "./Pages/TestPage/TestPage";
 
 const App: React.FC = () => {
   const navigate = useNavigate();
+  const onClickLink = (url: string) => {
+    navigate(url);
+  };
   return (
     <Routes>
-      <Route path="/SignUp" element={<SignUp navigate={navigate} />} />
-      <Route path="/Login" element={<Login navigate={navigate} />} />
-      <Route path="/" element={<Login navigate={navigate} />} />
+      <Route path="/SignUp" element={<SignUp onClickLink={onClickLink} />} />
+      <Route path="/Login" element={<Login onClickLink={onClickLink} />} />
+      <Route path="/" element={<Login onClickLink={onClickLink} />} />
       <Route path="/Test" element={<TestPage />} />
     </Routes>
   );
