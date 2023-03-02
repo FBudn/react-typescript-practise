@@ -1,28 +1,6 @@
 import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faFacebookF,
-  faGoogle,
-  faLinkedinIn,
-} from "@fortawesome/free-brands-svg-icons";
 import { IconsContainerMain } from "./IconsSectionStyle";
 import Icon from "../../Atoms/Icon/Icon";
-
-const facebook = <FontAwesomeIcon icon={faFacebookF} />;
-const google = <FontAwesomeIcon icon={faGoogle} />;
-const linkedin = <FontAwesomeIcon icon={faLinkedinIn} />;
-
-const IconsList = {
-  IconFacebook: facebook,
-  IconGoogle: google,
-  IconLinkedIn: linkedin,
-} as const;
-
-const IconsListTypes = {
-  IconFacebook: `facebook`,
-  IconGoogle: `google`,
-  IconLinkedIn: `linkedin`,
-} as const;
 
 export interface IconsSectionProps {
   onClickIcon: (number: number, logs: []) => void;
@@ -43,33 +21,27 @@ const IconsSection: React.FC<IconsSectionProps> = ({
     <IconsContainerMain>
       <Icon
         color="red"
-        name={IconsListTypes.IconGoogle}
+        icon="facebook"
         onClickIcon={() => {
           onClickIcon(firstIconText, logs);
         }}
-      >
-        {IconsList.IconGoogle}
-      </Icon>
+      />
 
       <Icon
         color="blue"
-        name={IconsListTypes.IconFacebook}
+        icon="google"
         onClickIcon={() => {
           onClickIcon(secondIconText, logs);
         }}
-      >
-        {IconsList.IconFacebook}
-      </Icon>
+      />
 
       <Icon
         color="blue"
-        name={IconsListTypes.IconLinkedIn}
+        icon="linkedin"
         onClickIcon={() => {
           onClickIcon(thirdIconText, logs);
         }}
-      >
-        {IconsList.IconLinkedIn}
-      </Icon>
+      />
     </IconsContainerMain>
   );
 };

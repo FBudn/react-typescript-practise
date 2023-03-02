@@ -1,11 +1,9 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
+import GlobalStyle from "../../GlobalStyle/GlobalStyle";
 import SignUpTemplate from "../../Templates/SignUpTemplate/SignUpTemplate";
 
-export interface TestProps {
-  onClickLink: (url: string) => void;
-}
-
-const SignUpPage: React.FC<TestProps> = ({ onClickLink }) => {
+const SignUpPage: React.FC = () => {
   const onButtonClick = (
     email: undefined | string,
     password: undefined | string,
@@ -19,13 +17,20 @@ const SignUpPage: React.FC<TestProps> = ({ onClickLink }) => {
   const onClickIcon = (i: number) => {
     console.log(IconsLogs[i]);
   };
+  const navigate = useNavigate();
+  const onClickLink = (url: string) => {
+    navigate(url);
+  };
 
   return (
-    <SignUpTemplate
-      onButtonClick={onButtonClick}
-      onClickIcon={onClickIcon}
-      onClickLink={onClickLink}
-    />
+    <>
+      <GlobalStyle />
+      <SignUpTemplate
+        onButtonClick={onButtonClick}
+        onClickIcon={onClickIcon}
+        onClickLink={onClickLink}
+      />
+    </>
   );
 };
 

@@ -1,19 +1,47 @@
+/* eslint-disable default-case */
+import {
+  faFacebookF,
+  faGoogle,
+  faLinkedinIn,
+} from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import { SoloIconContainer } from "./IconStyle";
 
 export interface IconProps {
   onClickIcon: React.MouseEventHandler<HTMLDivElement>;
-  children: React.ReactNode;
   color: string;
-  name: string;
+  icon: "facebook" | "google" | "linkedin";
 }
 
-const Icon: React.FC<IconProps> = ({ onClickIcon, children, color }) => {
-  return (
-    <SoloIconContainer color={color} onClick={onClickIcon}>
-      {children}
-    </SoloIconContainer>
-  );
+const Icon: React.FC<IconProps> = ({ onClickIcon, color, icon }) => {
+  switch (icon) {
+    case "facebook":
+      return (
+        <SoloIconContainer color={color} onClick={onClickIcon}>
+          <FontAwesomeIcon icon={faFacebookF} />
+        </SoloIconContainer>
+      );
+    case "google":
+      return (
+        <SoloIconContainer color={color} onClick={onClickIcon}>
+          <FontAwesomeIcon icon={faGoogle} />
+        </SoloIconContainer>
+      );
+    case "linkedin":
+      return (
+        <SoloIconContainer color={color} onClick={onClickIcon}>
+          <FontAwesomeIcon icon={faLinkedinIn} />
+        </SoloIconContainer>
+      );
+
+    default:
+      return (
+        <SoloIconContainer color={color} onClick={onClickIcon}>
+          <FontAwesomeIcon icon={faFacebookF} />
+        </SoloIconContainer>
+      );
+  }
 };
 
 export default Icon;

@@ -1,19 +1,15 @@
 import React from "react";
-import { Route, Routes, useNavigate } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import SignUp from "./Pages/SignUpPage/SignUpPage";
 import Login from "./Pages/LoginPage/LoginPage";
 import TestPage from "./Pages/TestPage/TestPage";
 
 const App: React.FC = () => {
-  const navigate = useNavigate();
-  const onClickLink = (url: string) => {
-    navigate(url);
-  };
   return (
     <Routes>
-      <Route path="/SignUp" element={<SignUp onClickLink={onClickLink} />} />
-      <Route path="/Login" element={<Login onClickLink={onClickLink} />} />
-      <Route path="/" element={<Login onClickLink={onClickLink} />} />
+      <Route path="/SignUp" element={<SignUp />} />
+      <Route path="/Login" element={<Login />} />
+      <Route path="/" element={<Login />} />
       <Route path="/Test" element={<TestPage />} />
     </Routes>
   );

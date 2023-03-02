@@ -1,11 +1,5 @@
 import React from "react";
 import { ComponentMeta, ComponentStory } from "@storybook/react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faFacebookF,
-  faGoogle,
-  faLinkedinIn,
-} from "@fortawesome/free-brands-svg-icons";
 import { string } from "prop-types";
 import Icon from "./Icon";
 
@@ -25,21 +19,8 @@ export default {
   ], */
 } as ComponentMeta<typeof Icon>;
 
-const facebook = <FontAwesomeIcon icon={faFacebookF} />;
-const google = <FontAwesomeIcon icon={faGoogle} />;
-const linkedin = <FontAwesomeIcon icon={faLinkedinIn} />;
-
-const IconsList = {
-  IconFacebook: facebook,
-  IconGoogle: google,
-  IconLinkedIn: linkedin,
-} as const;
-
 const Template: ComponentStory<typeof Icon> = (args) => <Icon {...args} />;
 
 export const BasicIcon = Template.bind({});
-BasicIcon.args = {
-  children: IconsList.IconFacebook,
-};
 
 // enum przetrenować11

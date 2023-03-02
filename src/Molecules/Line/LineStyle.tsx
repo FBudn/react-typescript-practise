@@ -17,6 +17,10 @@ export const HrStyled = styled.hr`
   @media screen and (min-width: 768px) {
     width: 130px;
   }
+
+  @media screen and (max-width: 320px) {
+    width: 95px;
+  }
 `;
 
 export const LineTextBox = styled.div`

@@ -6,7 +6,10 @@ export const Background = styled.div`
   justify-content: center;
   width: 100%;
   height: 100%;
+  box-sizing: border-box;
+  margin: 0;
 `;
+
 // box sizing - border box właściwość sprawdzić
 export const MaxWidth = styled.div`
   display: flex;
@@ -27,7 +30,7 @@ export const Tile = styled.div`
   border-radius: 10px;
   width: 80%;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 426px) {
     max-width: 24rem;
     min-height: 27rem;
   }
