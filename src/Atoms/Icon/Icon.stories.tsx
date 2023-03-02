@@ -42,4 +42,4 @@ BasicIcon.args = {
   children: IconsList.IconFacebook,
 };
 
-// enum przetrenować
+// enum przetrenować11
