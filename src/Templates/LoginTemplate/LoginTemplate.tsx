@@ -9,6 +9,7 @@ import FormLogin, {
   RefHandlerLogin,
 } from "../../Organisms/FormLogin/FormLogin";
 import LineSection from "../../Organisms/LineSection/LineSection";
+import GlobalStyle from "../GlobalStyle/GlobalStyle";
 
 export interface LoginTemplateProps {
   onButtonClick: (
@@ -31,26 +32,29 @@ const LoginTemplate: React.FC<LoginTemplateProps> = ({
     FormLoginRef.current?.focus();
   }, []);
   return (
-    <Background>
-      <MaxWidth>
-        <Tile>
-          <TileContainer>
-            <FormLogin onButtonClick={onButtonClick} ref={FormLoginRef} />
-            <LineSection
-              lineText="OR"
-              linkText="SIGN UP"
-              onClickIcon={onClickIcon}
-              logs={IconsLogs}
-              onClickLink={() => {
-                onClickLink("/SignUp");
-              }}
-            >
-              Need an account?
-            </LineSection>
-          </TileContainer>
-        </Tile>
-      </MaxWidth>
-    </Background>
+    <>
+      <GlobalStyle />
+      <Background>
+        <MaxWidth>
+          <Tile>
+            <TileContainer>
+              <FormLogin onButtonClick={onButtonClick} ref={FormLoginRef} />
+              <LineSection
+                lineText="OR"
+                linkText="SIGN UP"
+                onClickIcon={onClickIcon}
+                logs={IconsLogs}
+                onClickLink={() => {
+                  onClickLink("/SignUp");
+                }}
+              >
+                Need an account?
+              </LineSection>
+            </TileContainer>
+          </Tile>
+        </MaxWidth>
+      </Background>
+    </>
   );
 };
 

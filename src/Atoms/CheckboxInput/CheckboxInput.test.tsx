@@ -1,6 +1,6 @@
 /* eslint-disable react/react-in-jsx-scope */
 import { render, screen } from "@testing-library/react";
-import CheckboxInput from "../../Atoms/CheckboxInput/CheckboxInput";
+import CheckboxInput from "./CheckboxInput";
 
 test(`Should render CheckboxInput Component`, () => {
   render(<CheckboxInput />);

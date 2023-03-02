@@ -1,6 +1,5 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import GlobalStyle from "../../GlobalStyle/GlobalStyle";
 import SignUpTemplate from "../../Templates/SignUpTemplate/SignUpTemplate";
 
 const SignUpPage: React.FC = () => {
@@ -23,14 +22,11 @@ const SignUpPage: React.FC = () => {
   };
 
   return (
-    <>
-      <GlobalStyle />
-      <SignUpTemplate
-        onButtonClick={onButtonClick}
-        onClickIcon={onClickIcon}
-        onClickLink={onClickLink}
-      />
-    </>
+    <SignUpTemplate
+      onButtonClick={onButtonClick}
+      onClickIcon={onClickIcon}
+      onClickLink={onClickLink}
+    />
   );
 };
 
