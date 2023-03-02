@@ -5,21 +5,12 @@ export interface IconProps {
   onClickIcon: React.MouseEventHandler<HTMLDivElement>;
   children: React.ReactNode;
   color: string;
-  storybookTesting?: any;
+  name: string;
 }
 
-const Icon: React.FC<IconProps> = ({
-  onClickIcon,
-  children,
-  color,
-  storybookTesting,
-}) => {
+const Icon: React.FC<IconProps> = ({ onClickIcon, children, color }) => {
   return (
-    <SoloIconContainer
-      color={color}
-      onClick={onClickIcon}
-      style={storybookTesting}
-    >
+    <SoloIconContainer color={color} onClick={onClickIcon}>
       {children}
     </SoloIconContainer>
   );

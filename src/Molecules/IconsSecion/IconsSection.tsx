@@ -12,6 +12,18 @@ const facebook = <FontAwesomeIcon icon={faFacebookF} />;
 const google = <FontAwesomeIcon icon={faGoogle} />;
 const linkedin = <FontAwesomeIcon icon={faLinkedinIn} />;
 
+const IconsList = {
+  IconFacebook: facebook,
+  IconGoogle: google,
+  IconLinkedIn: linkedin,
+} as const;
+
+const IconsListTypes = {
+  IconFacebook: `facebook`,
+  IconGoogle: `google`,
+  IconLinkedIn: `linkedin`,
+} as const;
+
 export interface IconsSectionProps {
   onClickIcon: (number: number, logs: []) => void;
   firstIconText: number;
@@ -31,29 +43,32 @@ const IconsSection: React.FC<IconsSectionProps> = ({
     <IconsContainerMain>
       <Icon
         color="red"
+        name={IconsListTypes.IconGoogle}
         onClickIcon={() => {
           onClickIcon(firstIconText, logs);
         }}
       >
-        {google}
+        {IconsList.IconGoogle}
       </Icon>
 
       <Icon
         color="blue"
+        name={IconsListTypes.IconFacebook}
         onClickIcon={() => {
           onClickIcon(secondIconText, logs);
         }}
       >
-        {facebook}
+        {IconsList.IconFacebook}
       </Icon>
 
       <Icon
         color="blue"
+        name={IconsListTypes.IconLinkedIn}
         onClickIcon={() => {
           onClickIcon(thirdIconText, logs);
         }}
       >
-        {linkedin}
+        {IconsList.IconLinkedIn}
       </Icon>
     </IconsContainerMain>
   );
