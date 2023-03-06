@@ -7,7 +7,7 @@ export interface InputProps {
 
 export type InputRef = HTMLInputElement;
 const Input = forwardRef<InputRef, InputProps>((props: InputProps, ref) => (
-  <InputAtom type={props.type} ref={ref} />
+  <InputAtom data-testid="InputField-1" type={props.type} ref={ref} />
 ));
 
 export default Input;
