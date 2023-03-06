@@ -6,7 +6,7 @@ export interface HeaderProps {
 }
 
 const Header: React.FC<HeaderProps> = ({ children }) => {
-  return <HeaderContainer>{children}</HeaderContainer>;
+  return <HeaderContainer data-testid="Header-1">{children}</HeaderContainer>;
 };
 
 export default Header;

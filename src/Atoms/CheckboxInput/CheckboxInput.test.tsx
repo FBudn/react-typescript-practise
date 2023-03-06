@@ -2,6 +2,7 @@
 import { render, screen } from "@testing-library/react";
 import TestRenderer from "react-test-renderer";
 import CheckboxInput from "./CheckboxInput";
+import "jest-styled-components";
 
 test(`Should render CheckboxInput Component`, () => {
   render(<CheckboxInput />);
@@ -10,7 +11,12 @@ test(`Should render CheckboxInput Component`, () => {
   expect(checkboxInputElement).not.toBeChecked();
 });
 
-test(`matches snapshot`, () => {
+test(`Should match snapshot and have styles`, () => {
   const tree = TestRenderer.create(<CheckboxInput />).toJSON();
   expect(tree).toMatchSnapshot();
+  expect(tree).toHaveStyleRule("max-width", "35px");
+  expect(tree).toHaveStyleRule("min-width", "20px");
+  expect(tree).toHaveStyleRule("max-height", "35px");
+  expect(tree).toHaveStyleRule("min-height", "20px");
+  expect(tree).toHaveStyleRule("cursor", "pointer");
 });

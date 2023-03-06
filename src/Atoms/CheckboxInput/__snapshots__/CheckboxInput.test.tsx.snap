@@ -1,8 +1,51 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`matches snapshot 1`] = `
+exports[`Should match snapshot and have styles 1`] = `
+.c0 {
+  max-width: 35px;
+  min-width: 20px;
+  max-height: 35px;
+  min-height: 20px;
+  margin: 5px 0px 0px 0px;
+  cursor: pointer;
+}
+
 <input
-  className="sc-bcXHqe ckEHdr"
+  className="c0"
+  data-testid="CheckboxInput-1"
+  type="checkbox"
+/>
+`;
+
+exports[`matches snapshot 1`] = `
+.c0 {
+  max-width: 35px;
+  min-width: 20px;
+  max-height: 35px;
+  min-height: 20px;
+  margin: 5px 0px 0px 0px;
+  cursor: pointer;
+}
+
+<input
+  className="c0"
+  data-testid="CheckboxInput-1"
+  type="checkbox"
+/>
+`;
+
+exports[`matches snapshot and have styles 1`] = `
+.c0 {
+  max-width: 35px;
+  min-width: 20px;
+  max-height: 35px;
+  min-height: 20px;
+  margin: 5px 0px 0px 0px;
+  cursor: pointer;
+}
+
+<input
+  className="c0"
   data-testid="CheckboxInput-1"
   type="checkbox"
 />

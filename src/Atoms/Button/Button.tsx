@@ -8,7 +8,11 @@ export interface ButtonProps {
 }
 
 const Button: React.FC<ButtonProps> = ({ children, onClick }) => {
-  return <ButtonContainer onClick={onClick}>{children}</ButtonContainer>;
+  return (
+    <ButtonContainer data-testid="Button-1" onClick={onClick}>
+      {children}
+    </ButtonContainer>
+  );
 };
 
 export default Button;
