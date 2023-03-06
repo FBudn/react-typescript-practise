@@ -18,19 +18,31 @@ const Icon: React.FC<IconProps> = ({ onClickIcon, color, icon }) => {
   switch (icon) {
     case "facebook":
       return (
-        <SoloIconContainer color={color} onClick={onClickIcon}>
+        <SoloIconContainer
+          data-testid="Icon-1-case"
+          color={color}
+          onClick={onClickIcon}
+        >
           <FontAwesomeIcon icon={faFacebookF} />
         </SoloIconContainer>
       );
     case "google":
       return (
-        <SoloIconContainer color={color} onClick={onClickIcon}>
+        <SoloIconContainer
+          data-testid="Icon-2-case"
+          color={color}
+          onClick={onClickIcon}
+        >
           <FontAwesomeIcon icon={faGoogle} />
         </SoloIconContainer>
       );
     case "linkedin":
       return (
-        <SoloIconContainer color={color} onClick={onClickIcon}>
+        <SoloIconContainer
+          data-testid="Icon-3-case"
+          color={color}
+          onClick={onClickIcon}
+        >
           <FontAwesomeIcon icon={faLinkedinIn} />
         </SoloIconContainer>
       );
