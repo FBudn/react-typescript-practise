@@ -1,36 +1,44 @@
 /* eslint-disable react/react-in-jsx-scope */
 import { fireEvent, render, screen } from "@testing-library/react";
 import TestRenderer from "react-test-renderer";
-import LinkButton from "./LinkButton";
+import LinkButton, { LinkButtonProps } from "./LinkButton";
 import "jest-styled-components";
 
+const mockonClickLink = jest.fn();
+
+const props: LinkButtonProps = {
+  testId: `test-linkButton-id`,
+  children: `LinkButton Test`,
+  onClickLink: mockonClickLink,
+};
+
 test(`Should renred LinkButton component`, () => {
-  const mockonClickLink = jest.fn();
-  render(
-    <LinkButton onClickLink={mockonClickLink}>LinkButton Test </LinkButton>,
-  );
-  const LinkButtonElement = screen.getByTestId(`LinkButton-1`);
+  render(<LinkButton {...props} />);
+  const LinkButtonElement = screen.getByTestId(`test-linkButton-id`);
   expect(LinkButtonElement).toBeInTheDocument();
 });
 
 test(`Should handleClick`, () => {
-  const mockonClickLink = jest.fn();
-  render(
-    <LinkButton onClickLink={mockonClickLink}>LinkButton Test </LinkButton>,
-  );
-  const LinkButtonElement = screen.getByTestId(`LinkButton-1`);
+  render(<LinkButton {...props} />);
+  const LinkButtonElement = screen.getByTestId(`test-linkButton-id`);
   fireEvent.click(LinkButtonElement);
   expect(mockonClickLink).toBeCalledTimes(1);
   mockonClickLink(`LinkButton Test 1`);
   expect(mockonClickLink).toBeCalledWith(`LinkButton Test 1`);
 });
 
-test(`To match snapshot and have styles:`, () => {
-  const mockonClickLink = jest.fn();
+test(`To match snapshot`, () => {
   const LinkButtonElement = TestRenderer.create(
-    <LinkButton onClickLink={mockonClickLink}>LinkButton Test</LinkButton>,
+    <LinkButton {...props} />,
   ).toJSON();
   expect(LinkButtonElement).toMatchSnapshot();
+});
+
+test(`To render and have styles:`, () => {
+  render(<LinkButton {...props} />);
+  const LinkButtonElement = screen.getByTestId(`test-linkButton-id`);
+  expect(LinkButtonElement).toBeInTheDocument();
+
   expect(LinkButtonElement).toHaveStyleRule("display", "flex");
   expect(LinkButtonElement).toHaveStyleRule("border", "none");
   expect(LinkButtonElement).toHaveStyleRule("justify-content", "center");
