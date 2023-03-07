@@ -8,6 +8,7 @@ export interface TextLabelProps {
   justify: string;
   fontWeight: string;
   fontSize: string;
+  testId?: string;
   width?: string;
   margin?: string;
   cursor?: string;
@@ -23,10 +24,11 @@ const TextLabel: React.FC<TextLabelProps> = ({
   width,
   margin,
   cursor,
+  testId,
 }) => {
   return (
     <LabelContainer
-      data-testid="TextLabel-1"
+      data-testid={testId}
       color={color}
       align={align}
       justify={justify}

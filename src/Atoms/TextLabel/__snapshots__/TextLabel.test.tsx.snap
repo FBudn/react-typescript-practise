@@ -23,7 +23,7 @@ exports[`Should match snapshot and havestyles: 1`] = `
 <div
   className="c0"
   color="black"
-  data-testid="TextLabel-1"
+  data-testid="test-TextLabel-id"
   fontSize="1rem"
   fontWeight="500"
 >
