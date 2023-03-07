@@ -26,6 +26,7 @@ test(`Should match snapshot`, () => {
 test(`Should have styles`, () => {
   render(<CheckboxInput {...props} />);
   const checkboxInputElement = screen.getByTestId(`test-checkbox-id`);
+  expect(checkboxInputElement).toBeInTheDocument();
 
   expect(checkboxInputElement).toHaveStyleRule("max-width", "35px");
   expect(checkboxInputElement).toHaveStyleRule("min-width", "20px");
