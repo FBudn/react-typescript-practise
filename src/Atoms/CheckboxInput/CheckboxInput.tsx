@@ -3,12 +3,13 @@ import { CheckboxInputStyle } from "./CheckboxInputStyle";
 
 export interface CheckboxInputProps {
   id?: string;
+  testId?: string;
 }
 
 export type CheckboxRef = HTMLInputElement;
 const CheckboxInput = forwardRef<CheckboxRef, CheckboxInputProps>(
-  ({ id }, ref) => (
-    <CheckboxInputStyle data-testid="CheckboxInput-1" id={id} ref={ref} />
+  ({ id, testId }, ref) => (
+    <CheckboxInputStyle data-testid={testId} id={id} ref={ref} />
   ),
 );
 
