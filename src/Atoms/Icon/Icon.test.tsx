@@ -4,8 +4,9 @@ import TestRenderer from "react-test-renderer";
 import Icon, { IconProps } from "./Icon";
 import "jest-styled-components";
 
+const mockOnClickIcon = jest.fn();
+
 test(`Should render Icon component`, () => {
-  const mockOnClickIcon = jest.fn();
   render(<Icon onClickIcon={mockOnClickIcon} color="red" icon="facebook" />);
   render(<Icon onClickIcon={mockOnClickIcon} color="blue" icon="google" />);
   render(<Icon onClickIcon={mockOnClickIcon} color="blue" icon="linkedin" />);
@@ -45,7 +46,6 @@ test(`handler is called`, () => {
 });
 
 test(`Should match snapshot and have styles:`, () => {
-  const mockOnClickIcon = jest.fn();
   const IconElement1 = TestRenderer.create(
     <Icon onClickIcon={mockOnClickIcon} color="red" icon="facebook" />,
   ).toJSON();

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Should match snapshot and have styles: 1`] = `
+exports[`Should match snapshot 1`] = `
 .c0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -14,7 +14,7 @@ exports[`Should match snapshot and have styles: 1`] = `
 
 <input
   className="c0"
-  data-testid="InputField-1"
+  data-testid="test-input-id"
   type="text"
 />
 `;

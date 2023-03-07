@@ -2,23 +2,26 @@
 /* eslint-disable react/react-in-jsx-scope */
 import { render, screen } from "@testing-library/react";
 import TestRenderer from "react-test-renderer";
-import user from "@testing-library/user-event";
-// import userEvent from "@testing-library/user-event";
-import Input from "./Input";
+import Input, { InputProps } from "./Input";
 import "jest-styled-components";
 
+const props: InputProps = {
+  type: `text`,
+  testId: `test-input-id`,
+};
+
 test(`Should render Input component`, () => {
-  render(<Input type="text" />);
-  const InputElement = screen.getByTestId(`InputField-1`);
+  render(<Input {...props} />);
+  const InputElement = screen.getByTestId(`test-input-id`);
   expect(InputElement).toBeInTheDocument();
 });
 test(`Should store input value`, () => {
   // const mockInputRef = jest.fn();
-  render(<Input type="text" />);
-  const InputElement = screen.getByTestId(`InputField-1`) as HTMLInputElement;
+  render(<Input {...props} />);
+  const InputElement = screen.getByTestId(`test-input-id`) as HTMLInputElement;
   InputElement.value = "Test";
   expect(InputElement).toHaveValue("Test");
-  user.type(InputElement, "Test");
+  // userEvent.type(InputElement, "Test");
 
   // InputElement.onchange = mockInputRef;
   // expect(mockInputRef).toBeCalledTimes(4);
@@ -29,11 +32,20 @@ test(`Should store input value`, () => {
     "InputField-1",
   ); */
 });
-test(`Should match snapshot and have styles:`, () => {
-  const InputElement = TestRenderer.create(<Input type="text" />).toJSON();
+test(`Should match snapshot`, () => {
+  const InputElement = TestRenderer.create(<Input {...props} />).toJSON();
   expect(InputElement).toMatchSnapshot();
-  expect(InputElement).toHaveStyleRule("display", "flex");
-  expect(InputElement).toHaveStyleRule("width", "100%");
-  expect(InputElement).toHaveStyleRule("border-radius", "5px");
-  expect(InputElement).toHaveStyleRule("height", "40px");
+});
+
+test(`Should render and have styles:`, () => {
+  render(<Input {...props} />);
+  const InputElement = screen.getByTestId(`test-input-id`);
+  expect(InputElement).toBeInTheDocument();
+
+  expect(InputElement).toHaveStyle({
+    display: "flex",
+    width: "100%",
+    borderRadius: "5px",
+    height: "40px",
+  });
 });

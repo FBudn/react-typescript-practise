@@ -3,11 +3,12 @@ import { InputAtom } from "./InputStyle";
 
 export interface InputProps {
   type: string;
+  testId?: string;
 }
 
 export type InputRef = HTMLInputElement;
-const Input = forwardRef<InputRef, InputProps>((props: InputProps, ref) => (
-  <InputAtom data-testid="InputField-1" type={props.type} ref={ref} />
+const Input = forwardRef<InputRef, InputProps>(({ type, testId }, ref) => (
+  <InputAtom data-testid={testId} type={type} ref={ref} />
 ));
 
 export default Input;
