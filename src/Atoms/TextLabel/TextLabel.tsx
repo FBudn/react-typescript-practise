@@ -26,6 +26,7 @@ const TextLabel: React.FC<TextLabelProps> = ({
 }) => {
   return (
     <LabelContainer
+      data-testid="TextLabel-1"
       color={color}
       align={align}
       justify={justify}

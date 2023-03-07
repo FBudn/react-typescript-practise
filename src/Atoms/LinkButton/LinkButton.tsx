@@ -7,7 +7,11 @@ export interface LinkButtonProps {
 }
 
 const LinkButton: React.FC<LinkButtonProps> = ({ children, onClickLink }) => {
-  return <LinkButtonStyled onClick={onClickLink}>{children}</LinkButtonStyled>;
+  return (
+    <LinkButtonStyled data-testid="LinkButton-1" onClick={onClickLink}>
+      {children}
+    </LinkButtonStyled>
+  );
 };
 
 export default LinkButton;
