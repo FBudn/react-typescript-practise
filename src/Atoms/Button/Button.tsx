@@ -4,12 +4,13 @@ import { ButtonContainer } from "./ButtonStyle";
 export interface ButtonProps {
   children: React.ReactNode;
   onClick: React.MouseEventHandler<HTMLButtonElement>;
+  testId?: string;
   // storybookTesting?: any; storybookTesting, style={storybookTesting}
 }
 
-const Button: React.FC<ButtonProps> = ({ children, onClick }) => {
+const Button: React.FC<ButtonProps> = ({ children, onClick, testId }) => {
   return (
-    <ButtonContainer data-testid="Button-1" onClick={onClick}>
+    <ButtonContainer data-testid={testId} onClick={onClick}>
       {children}
     </ButtonContainer>
   );

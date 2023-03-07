@@ -1,7 +1,6 @@
 /* eslint-disable react/react-in-jsx-scope */
-import { render, screen } from "@testing-library/react";
+import { fireEvent, render, screen } from "@testing-library/react";
 import TestRenderer from "react-test-renderer";
-import user from "@testing-library/user-event";
 import LinkButton from "./LinkButton";
 import "jest-styled-components";
 
@@ -20,7 +19,7 @@ test(`Should handleClick`, () => {
     <LinkButton onClickLink={mockonClickLink}>LinkButton Test </LinkButton>,
   );
   const LinkButtonElement = screen.getByTestId(`LinkButton-1`);
-  user.click(LinkButtonElement);
+  fireEvent.click(LinkButtonElement);
   expect(mockonClickLink).toBeCalledTimes(1);
   mockonClickLink(`LinkButton Test 1`);
   expect(mockonClickLink).toBeCalledWith(`LinkButton Test 1`);

@@ -1,7 +1,6 @@
 /* eslint-disable react/react-in-jsx-scope */
-import { render, screen } from "@testing-library/react";
+import { fireEvent, render, screen } from "@testing-library/react";
 import TestRenderer from "react-test-renderer";
-import user from "@testing-library/user-event";
 import Icon, { IconProps } from "./Icon";
 import "jest-styled-components";
 
@@ -25,21 +24,21 @@ test(`handler is called`, () => {
 
   render(<Icon onClickIcon={mockOnClickIcon1} color="red" icon="facebook" />);
   const consoleLogIcon1 = screen.getByTestId(`Icon-1-case`);
-  user.click(consoleLogIcon1);
+  fireEvent.click(consoleLogIcon1);
   expect(mockOnClickIcon1).toBeCalledTimes(1);
   mockOnClickIcon1(`Icon Test 1`);
   expect(mockOnClickIcon1).toBeCalledWith(`Icon Test 1`);
 
   render(<Icon onClickIcon={mockOnClickIcon2} color="blue" icon="google" />);
   const consoleLogIcon2 = screen.getByTestId(`Icon-2-case`);
-  user.click(consoleLogIcon2);
+  fireEvent.click(consoleLogIcon2);
   expect(mockOnClickIcon2).toBeCalledTimes(1);
   mockOnClickIcon2(`Icon Test 2`);
   expect(mockOnClickIcon2).toBeCalledWith(`Icon Test 2`);
 
   render(<Icon onClickIcon={mockOnClickIcon3} color="blue" icon="linkedin" />);
   const consoleLogIcon3 = screen.getByTestId(`Icon-3-case`);
-  user.click(consoleLogIcon3);
+  fireEvent.click(consoleLogIcon3);
   expect(mockOnClickIcon3).toBeCalledTimes(1);
   mockOnClickIcon3(`Icon Test 3`);
   expect(mockOnClickIcon3).toBeCalledWith(`Icon Test 3`);

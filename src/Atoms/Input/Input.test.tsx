@@ -3,6 +3,7 @@
 import { render, screen } from "@testing-library/react";
 import TestRenderer from "react-test-renderer";
 import user from "@testing-library/user-event";
+// import userEvent from "@testing-library/user-event";
 import Input from "./Input";
 import "jest-styled-components";
 
@@ -18,6 +19,7 @@ test(`Should store input value`, () => {
   InputElement.value = "Test";
   expect(InputElement).toHaveValue("Test");
   user.type(InputElement, "Test");
+
   // InputElement.onchange = mockInputRef;
   // expect(mockInputRef).toBeCalledTimes(4);
 
