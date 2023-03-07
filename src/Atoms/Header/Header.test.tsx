@@ -11,11 +11,13 @@ test("Should render Header component", () => {
 });
 
 test("Should match snapshot and have styles:", () => {
-  const tree = TestRenderer.create(<Header>Header Test</Header>).toJSON();
-  expect(tree).toMatchSnapshot();
-  expect(tree).toHaveStyleRule("display", "flex");
-  expect(tree).toHaveStyleRule("width", "100%");
-  expect(tree).toHaveStyleRule("justify-content", "start");
-  expect(tree).toHaveStyleRule("align-items", "center");
-  expect(tree).toHaveStyleRule("display", "flex");
+  const HeaderElement = TestRenderer.create(
+    <Header>Header Test</Header>,
+  ).toJSON();
+  expect(HeaderElement).toMatchSnapshot();
+  expect(HeaderElement).toHaveStyleRule("display", "flex");
+  expect(HeaderElement).toHaveStyleRule("width", "100%");
+  expect(HeaderElement).toHaveStyleRule("justify-content", "start");
+  expect(HeaderElement).toHaveStyleRule("align-items", "center");
+  expect(HeaderElement).toHaveStyleRule("display", "flex");
 });

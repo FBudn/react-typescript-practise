@@ -6,27 +6,27 @@ import Button, { ButtonProps } from "./Button";
 import "jest-styled-components";
 
 test(`Should render Button Component`, () => {
-  const onButtonClick = jest.fn();
-  render(<Button onClick={onButtonClick}>Button Test</Button>);
+  const mockOnButtonClick = jest.fn();
+  render(<Button onClick={mockOnButtonClick}>Button Test</Button>);
   const ButtonElement = screen.getByTestId(`Button-1`);
   expect(ButtonElement).toBeInTheDocument();
 });
 
 test(`Should match snapshot and have styles`, () => {
-  const onButtonClick = jest.fn();
-  const tree = TestRenderer.create(
-    <Button onClick={onButtonClick}>Button Test</Button>,
+  const mockOnButtonClick = jest.fn();
+  const ButtonElement = TestRenderer.create(
+    <Button onClick={mockOnButtonClick}>Button Test</Button>,
   ).toJSON();
-  expect(tree).toMatchSnapshot();
-  expect(tree).toHaveStyleRule("display", "flex");
-  expect(tree).toHaveStyleRule("justify-content", "center");
-  expect(tree).toHaveStyleRule("align-items", "center");
-  expect(tree).toHaveStyleRule("width", "100%");
-  expect(tree).toHaveStyleRule("height", "40px");
-  expect(tree).toHaveStyleRule("border", "none");
-  expect(tree).toHaveStyleRule("border-radius", "5px");
-  expect(tree).toHaveStyleRule("color", "white");
-  expect(tree).toHaveStyleRule("cursor", "pointer");
+  expect(ButtonElement).toMatchSnapshot();
+  expect(ButtonElement).toHaveStyleRule("display", "flex");
+  expect(ButtonElement).toHaveStyleRule("justify-content", "center");
+  expect(ButtonElement).toHaveStyleRule("align-items", "center");
+  expect(ButtonElement).toHaveStyleRule("width", "100%");
+  expect(ButtonElement).toHaveStyleRule("height", "40px");
+  expect(ButtonElement).toHaveStyleRule("border", "none");
+  expect(ButtonElement).toHaveStyleRule("border-radius", "5px");
+  expect(ButtonElement).toHaveStyleRule("color", "white");
+  expect(ButtonElement).toHaveStyleRule("cursor", "pointer");
 });
 
 test(`handler is called`, () => {

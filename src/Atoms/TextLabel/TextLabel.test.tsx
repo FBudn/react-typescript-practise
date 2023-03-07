@@ -21,7 +21,7 @@ test(`Should render TextLabel component`, () => {
 });
 
 test(`Should match snapshot and havestyles:`, () => {
-  const tree = TestRenderer.create(
+  const TextLabelElement = TestRenderer.create(
     <TextLabel
       color="black"
       align="center"
@@ -32,7 +32,7 @@ test(`Should match snapshot and havestyles:`, () => {
       TextLabel Test
     </TextLabel>,
   ).toJSON();
-  expect(tree).toMatchSnapshot();
-  expect(tree).toHaveStyleRule("display", "flex");
-  expect(tree).toHaveStyleRule("border", "none");
+  expect(TextLabelElement).toMatchSnapshot();
+  expect(TextLabelElement).toHaveStyleRule("display", "flex");
+  expect(TextLabelElement).toHaveStyleRule("border", "none");
 });

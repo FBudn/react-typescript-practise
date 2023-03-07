@@ -28,16 +28,16 @@ test(`Should handleClick`, () => {
 
 test(`To match snapshot and have styles:`, () => {
   const mockonClickLink = jest.fn();
-  const tree = TestRenderer.create(
+  const LinkButtonElement = TestRenderer.create(
     <LinkButton onClickLink={mockonClickLink}>LinkButton Test</LinkButton>,
   ).toJSON();
-  expect(tree).toMatchSnapshot();
-  expect(tree).toHaveStyleRule("display", "flex");
-  expect(tree).toHaveStyleRule("border", "none");
-  expect(tree).toHaveStyleRule("justify-content", "center");
-  expect(tree).toHaveStyleRule("align-items", "end");
-  expect(tree).toHaveStyleRule("justify-content", "center");
-  expect(tree).toHaveStyleRule("align-items", "end");
-  expect(tree).toHaveStyleRule("cursor", "pointer");
-  expect(tree).toHaveStyleRule("text-decoration", "underline");
+  expect(LinkButtonElement).toMatchSnapshot();
+  expect(LinkButtonElement).toHaveStyleRule("display", "flex");
+  expect(LinkButtonElement).toHaveStyleRule("border", "none");
+  expect(LinkButtonElement).toHaveStyleRule("justify-content", "center");
+  expect(LinkButtonElement).toHaveStyleRule("align-items", "end");
+  expect(LinkButtonElement).toHaveStyleRule("justify-content", "center");
+  expect(LinkButtonElement).toHaveStyleRule("align-items", "end");
+  expect(LinkButtonElement).toHaveStyleRule("cursor", "pointer");
+  expect(LinkButtonElement).toHaveStyleRule("text-decoration", "underline");
 });

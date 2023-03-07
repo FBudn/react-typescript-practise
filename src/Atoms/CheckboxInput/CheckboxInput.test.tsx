@@ -12,11 +12,11 @@ test(`Should render CheckboxInput Component`, () => {
 });
 
 test(`Should match snapshot and have styles`, () => {
-  const tree = TestRenderer.create(<CheckboxInput />).toJSON();
-  expect(tree).toMatchSnapshot();
-  expect(tree).toHaveStyleRule("max-width", "35px");
-  expect(tree).toHaveStyleRule("min-width", "20px");
-  expect(tree).toHaveStyleRule("max-height", "35px");
-  expect(tree).toHaveStyleRule("min-height", "20px");
-  expect(tree).toHaveStyleRule("cursor", "pointer");
+  const checkboxInputElement = TestRenderer.create(<CheckboxInput />).toJSON();
+  expect(checkboxInputElement).toMatchSnapshot();
+  expect(checkboxInputElement).toHaveStyleRule("max-width", "35px");
+  expect(checkboxInputElement).toHaveStyleRule("min-width", "20px");
+  expect(checkboxInputElement).toHaveStyleRule("max-height", "35px");
+  expect(checkboxInputElement).toHaveStyleRule("min-height", "20px");
+  expect(checkboxInputElement).toHaveStyleRule("cursor", "pointer");
 });
