@@ -11,6 +11,8 @@ export interface LineSectionProps {
   onClickIcon: (number: number, logs: []) => void;
   logs: string[];
   onClickLink: React.MouseEventHandler<HTMLButtonElement>;
+  testId?: string;
+  testIdButton?: string;
 }
 
 const LineSection: React.FC<LineSectionProps> = ({
@@ -20,9 +22,11 @@ const LineSection: React.FC<LineSectionProps> = ({
   onClickIcon,
   logs,
   onClickLink,
+  testId,
+  testIdButton,
 }) => {
   return (
-    <LineSectionContainer>
+    <LineSectionContainer data-testid={testId}>
       <Line>{lineText}</Line>
       <Icons
         onClickIcon={onClickIcon}
@@ -31,7 +35,11 @@ const LineSection: React.FC<LineSectionProps> = ({
         thirdIconText={2}
         logs={logs}
       />
-      <SignOrLogLink linkText={linkText} onClickLink={onClickLink}>
+      <SignOrLogLink
+        linkText={linkText}
+        onClickLink={onClickLink}
+        testIdButton={testIdButton}
+      >
         {children}
       </SignOrLogLink>
     </LineSectionContainer>

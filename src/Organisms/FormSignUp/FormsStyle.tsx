@@ -9,3 +9,9 @@ export const InputsContainer = styled.div`
   margin-top: 4px;
   gap: 10px;
 `;
+
+export const FormSignUpContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+`;

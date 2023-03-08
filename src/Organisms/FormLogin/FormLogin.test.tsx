@@ -37,7 +37,7 @@ test(`Should render and have styles:`, () => {
   });
 });
 
-test(`Should render with text`, () => {
+test(`Should render with texts`, () => {
   render(<FormLogin {...props} />);
   const { getByText } = within(screen.getByTestId(`test-formLogin-id`));
   const { getAllByText } = within(screen.getByTestId(`test-formLogin-id`));
@@ -55,6 +55,7 @@ test(`Should render and handle onButtonClick`, () => {
   expect(FormLoginElement).toBeInTheDocument();
 
   const ButtonElement = within(FormLoginElement).getByTestId(`test-button-id`);
+  expect(ButtonElement).toBeInTheDocument();
   expect(mockOnButtonClick).toBeCalledTimes(0);
   fireEvent.click(ButtonElement);
   expect(mockOnButtonClick).toBeCalledTimes(1);

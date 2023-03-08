@@ -3,7 +3,7 @@ import React, { forwardRef, useImperativeHandle, useRef } from "react";
 import Button from "../../Atoms/Button/Button";
 import Header from "../../Atoms/Header/Header";
 import InputAndLabel from "../../Molecules/InputAndLabel/InputAndLabel";
-import { InputsContainer } from "./FormsStyle";
+import { FormSignUpContainer, InputsContainer } from "./FormsStyle";
 
 export interface FormSignUpProps {
   onButtonClick: (
@@ -11,6 +11,8 @@ export interface FormSignUpProps {
     password: undefined | string,
     checkbox: string,
   ) => void;
+  testId?: string;
+  testIdButton?: string;
 }
 
 export type RefHandlerSignUp = {
@@ -42,7 +44,7 @@ const FormSignUp = forwardRef<RefHandlerSignUp, FormSignUpProps>(
     };
 
     return (
-      <>
+      <FormSignUpContainer data-testid={props.testId}>
         <Header>SIGN UP</Header>
         <InputsContainer>
           <InputAndLabel type="email" ref={EmailInputRef}>
@@ -53,9 +55,11 @@ const FormSignUp = forwardRef<RefHandlerSignUp, FormSignUpProps>(
             Password
           </InputAndLabel>
 
-          <Button onClick={onSubmit}>SIGN UP</Button>
+          <Button onClick={onSubmit} testId={props.testIdButton}>
+            SIGN UP
+          </Button>
         </InputsContainer>
-      </>
+      </FormSignUpContainer>
     );
   },
 );

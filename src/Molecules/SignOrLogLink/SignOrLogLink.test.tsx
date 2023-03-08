@@ -1,5 +1,5 @@
 import React from "react";
-import { render, screen, within } from "@testing-library/react";
+import { fireEvent, render, screen, within } from "@testing-library/react";
 import TestRenderer from "react-test-renderer";
 import SignOrLogLink, { SignOrLogLinkProps } from "./SignOrLogLink";
 import "jest-styled-components";
@@ -47,4 +47,17 @@ test(`Should render with text`, () => {
   const { getByText } = within(screen.getByTestId(`test-signOrLogLink-id`));
   expect(getByText("SignOrLogLink Test")).toBeInTheDocument();
   expect(getByText("linkText Test")).toBeInTheDocument();
+});
+
+test(`Should render and handle onClickIcon`, () => {
+  render(<SignOrLogLink {...props} />);
+  const SignOrLogLinkElement = screen.getByTestId(`test-signOrLogLink-id`);
+  expect(SignOrLogLinkElement).toBeInTheDocument();
+
+  const LinkButtonElement =
+    within(SignOrLogLinkElement).getByTestId(`test-button-id`);
+  expect(LinkButtonElement).toBeInTheDocument();
+  expect(mockOnClickLink).toBeCalledTimes(0);
+  fireEvent.click(LinkButtonElement);
+  expect(mockOnClickLink).toBeCalledTimes(1);
 });

@@ -1,5 +1,5 @@
 import React from "react";
-import { render, screen, within } from "@testing-library/react";
+import { fireEvent, render, screen, within } from "@testing-library/react";
 import TestRenderer from "react-test-renderer";
 import IconsSection, { IconsSectionProps } from "./IconsSection";
 import "jest-styled-components";
@@ -58,4 +58,25 @@ test(`Should render three icons components`, () => {
 
   const Icon3 = within(IconsSectionElement).getByTestId(`Icon-3-case`);
   expect(Icon3).toBeInTheDocument();
+});
+
+test(`Should render and handle onClickIcon`, () => {
+  render(<IconsSection {...props} />);
+  const LineSectionElement = screen.getByTestId(`iconsSection-test-id`);
+  expect(LineSectionElement).toBeInTheDocument();
+
+  const IconElement = within(LineSectionElement).getByTestId(`Icon-1-case`);
+  expect(mockOnClickIcon).toBeCalledTimes(0);
+  fireEvent.click(IconElement);
+  expect(mockOnClickIcon).toBeCalledTimes(1);
+
+  const IconElement2 = within(LineSectionElement).getByTestId(`Icon-2-case`);
+  expect(mockOnClickIcon).toBeCalledTimes(1);
+  fireEvent.click(IconElement2);
+  expect(mockOnClickIcon).toBeCalledTimes(2);
+
+  const IconElement3 = within(LineSectionElement).getByTestId(`Icon-3-case`);
+  expect(mockOnClickIcon).toBeCalledTimes(2);
+  fireEvent.click(IconElement3);
+  expect(mockOnClickIcon).toBeCalledTimes(3);
 });
