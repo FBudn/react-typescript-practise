@@ -6,9 +6,12 @@ import Label from "../../Atoms/TextLabel/TextLabel";
 import CheckboxPass from "../../Molecules/CheckboxAndLabel/CheckboxAndLabel";
 import InputAndLabel from "../../Molecules/InputAndLabel/InputAndLabel";
 import { InputsContainer } from "../FormSignUp/FormsStyle";
+import { FormLoginContainer } from "./FormsStyle";
 
 export interface FormLoginProps {
   onButtonClick: (email: string, password: string, checkbox: boolean) => void;
+  testId?: string;
+  testIdButton?: string;
 }
 
 export type RefHandlerLogin = {
@@ -40,7 +43,7 @@ const FormLogin = forwardRef<RefHandlerLogin, FormLoginProps>(
     };
 
     return (
-      <>
+      <FormLoginContainer data-testid={props.testId}>
         <Header>LOGIN</Header>
         <InputsContainer>
           <InputAndLabel ref={EmailInputRef} type="email">
@@ -50,7 +53,9 @@ const FormLogin = forwardRef<RefHandlerLogin, FormLoginProps>(
             Password
           </InputAndLabel>
           <CheckboxPass ref={CheckboxRef}>Remember me?</CheckboxPass>
-          <Button onClick={onSubmit}>LOGIN</Button>
+          <Button onClick={onSubmit} testId={props.testIdButton}>
+            LOGIN
+          </Button>
           <Label
             color="rgb(82 82 91)"
             align="center"
@@ -64,7 +69,7 @@ const FormLogin = forwardRef<RefHandlerLogin, FormLoginProps>(
             Forgot Password?
           </Label>
         </InputsContainer>
-      </>
+      </FormLoginContainer>
     );
   },
 );
