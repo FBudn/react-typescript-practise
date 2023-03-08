@@ -1,17 +1,19 @@
 import React from "react";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, BrowserRouter } from "react-router-dom";
 import SignUp from "./Pages/SignUpPage/SignUpPage";
 import Login from "./Pages/LoginPage/LoginPage";
 import TestPage from "./Pages/TestPage/TestPage";
 
 const App: React.FC = () => {
   return (
-    <Routes>
-      <Route path="/SignUp" element={<SignUp />} />
-      <Route path="/Login" element={<Login />} />
-      <Route path="/" element={<Login />} />
-      <Route path="/Test" element={<TestPage />} />
-    </Routes>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/SignUp" element={<SignUp />} />
+        <Route path="/Login" element={<Login />} />
+        <Route path="/" element={<Login />} />
+        <Route path="/Test" element={<TestPage />} />
+      </Routes>
+    </BrowserRouter>
   );
 };
 

@@ -22,7 +22,8 @@ const LoginPage: React.FC = () => {
 
   return (
     <LoginTemplate
-      data-testId="test-loginPage-id"
+      testId="test-loginPage-id"
+      testIdButton="test-button-id"
       onButtonClick={onButtonClick}
       onClickIcon={onClickIcon}
       onClickLink={onClickLink}
