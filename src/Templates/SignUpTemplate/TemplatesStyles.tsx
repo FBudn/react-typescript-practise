@@ -51,3 +51,9 @@ export const TileContainer = styled.div`
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 `;
+
+export const SignUpTemplateContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+`;

@@ -1,5 +1,11 @@
 import React, { useEffect, useRef } from "react";
-import { Background, MaxWidth, Tile, TileContainer } from "./TemplatesStyles";
+import {
+  Background,
+  MaxWidth,
+  SignUpTemplateContainer,
+  Tile,
+  TileContainer,
+} from "./TemplatesStyles";
 import FormSignUp, {
   RefHandlerSignUp,
 } from "../../Organisms/FormSignUp/FormSignUp";
@@ -14,12 +20,28 @@ export interface SignUpTemplateProps {
   ) => void;
   onClickIcon: (number: number, logs: []) => void;
   onClickLink: (url: string) => void;
+  testId?: string;
+  testIdButton?: string;
+  testIdButtonLink?: string;
+  testIdGlobalStyle?: string;
+  testIdBackground?: string;
+  testIdMaxWidth?: string;
+  testIdTile?: string;
+  testIdTileContainer?: string;
 }
 
 const SignUpTemplate: React.FC<SignUpTemplateProps> = ({
   onButtonClick,
   onClickIcon,
   onClickLink,
+  testId,
+  testIdButton,
+  testIdButtonLink,
+  testIdGlobalStyle,
+  testIdBackground,
+  testIdMaxWidth,
+  testIdTile,
+  testIdTileContainer,
 }) => {
   const IconsLogs = [`Google Clicked`, `Facebook Clicked`, `LinkedIn Clicked`];
   const FormSignUpRef = useRef<RefHandlerSignUp>(null);
@@ -27,14 +49,19 @@ const SignUpTemplate: React.FC<SignUpTemplateProps> = ({
     FormSignUpRef.current?.focus();
   }, []);
   return (
-    <>
-      <GlobalStyle />
-      <Background>
-        <MaxWidth>
-          <Tile>
-            <TileContainer>
-              <FormSignUp onButtonClick={onButtonClick} ref={FormSignUpRef} />
+    <SignUpTemplateContainer data-testid={testId}>
+      <GlobalStyle data-testid={testIdGlobalStyle} />
+      <Background data-testid={testIdBackground}>
+        <MaxWidth data-testid={testIdMaxWidth}>
+          <Tile data-testid={testIdTile}>
+            <TileContainer data-testid={testIdTileContainer}>
+              <FormSignUp
+                onButtonClick={onButtonClick}
+                ref={FormSignUpRef}
+                testIdButton={testIdButton}
+              />
               <LineSection
+                testIdButton={testIdButtonLink}
                 lineText="OR"
                 linkText="LOGIN"
                 onClickIcon={onClickIcon}
@@ -49,7 +76,7 @@ const SignUpTemplate: React.FC<SignUpTemplateProps> = ({
           </Tile>
         </MaxWidth>
       </Background>
-    </>
+    </SignUpTemplateContainer>
   );
 };
 
