@@ -10,6 +10,7 @@ import FormLogin, {
 } from "../../Organisms/FormLogin/FormLogin";
 import LineSection from "../../Organisms/LineSection/LineSection";
 import GlobalStyle from "../GlobalStyle/GlobalStyle";
+import { LoginTemplateContainer } from "./TemplatesStyles";
 
 export interface LoginTemplateProps {
   onButtonClick: (
@@ -19,12 +20,28 @@ export interface LoginTemplateProps {
   ) => void;
   onClickIcon: (number: number, logs: []) => void;
   onClickLink: (url: string) => void;
+  testId?: string;
+  testIdButton?: string;
+  testIdButtonLink?: string;
+  testIdGlobalStyle?: string;
+  testIdBackground?: string;
+  testIdMaxWidth?: string;
+  testIdTile?: string;
+  testIdTileContainer?: string;
 }
 
 const LoginTemplate: React.FC<LoginTemplateProps> = ({
   onButtonClick,
   onClickIcon,
   onClickLink,
+  testId,
+  testIdButton,
+  testIdButtonLink,
+  testIdGlobalStyle,
+  testIdBackground,
+  testIdMaxWidth,
+  testIdTile,
+  testIdTileContainer,
 }) => {
   const IconsLogs = [`Google Clicked`, `Facebook Clicked`, `LinkedIn Clicked`];
   const FormLoginRef = useRef<RefHandlerLogin>(null);
@@ -32,14 +49,19 @@ const LoginTemplate: React.FC<LoginTemplateProps> = ({
     FormLoginRef.current?.focus();
   }, []);
   return (
-    <>
-      <GlobalStyle />
-      <Background>
-        <MaxWidth>
-          <Tile>
-            <TileContainer>
-              <FormLogin onButtonClick={onButtonClick} ref={FormLoginRef} />
+    <LoginTemplateContainer data-testid={testId}>
+      <GlobalStyle data-testid={testIdGlobalStyle} />
+      <Background data-testid={testIdBackground}>
+        <MaxWidth data-testid={testIdMaxWidth}>
+          <Tile data-testid={testIdTile}>
+            <TileContainer data-testid={testIdTileContainer}>
+              <FormLogin
+                onButtonClick={onButtonClick}
+                ref={FormLoginRef}
+                testIdButton={testIdButton}
+              />
               <LineSection
+                testIdButton={testIdButtonLink}
                 lineText="OR"
                 linkText="SIGN UP"
                 onClickIcon={onClickIcon}
@@ -54,7 +76,7 @@ const LoginTemplate: React.FC<LoginTemplateProps> = ({
           </Tile>
         </MaxWidth>
       </Background>
-    </>
+    </LoginTemplateContainer>
   );
 };
 

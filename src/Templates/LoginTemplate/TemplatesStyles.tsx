@@ -6,7 +6,6 @@ export const Background = styled.div`
   justify-content: center;
   width: 100%;
   height: 100%;
-  box-sizing: border-box;
   margin: 0;
 `;
 
@@ -51,4 +50,10 @@ export const TileContainer = styled.div`
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+`;
+
+export const LoginTemplateContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 `;
