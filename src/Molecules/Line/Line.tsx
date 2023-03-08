@@ -3,13 +3,21 @@ import { LineContainer, HrStyled, LineTextBox } from "./LineStyle";
 
 export interface LineProps {
   children: React.ReactNode;
+  testId?: string;
+  testIdHR?: string;
+  testIdTextBox?: string;
 }
 
-const Line: React.FC<LineProps> = ({ children }) => {
+const Line: React.FC<LineProps> = ({
+  children,
+  testId,
+  testIdHR,
+  testIdTextBox,
+}) => {
   return (
-    <LineContainer>
-      <HrStyled />
-      <LineTextBox>{children}</LineTextBox>
+    <LineContainer data-testid={testId}>
+      <HrStyled data-testid={testIdHR} />
+      <LineTextBox data-testid={testIdTextBox}>{children}</LineTextBox>
       <HrStyled />
     </LineContainer>
   );
