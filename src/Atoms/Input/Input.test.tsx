@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-unnecessary-type-assertion */
-/* eslint-disable react/react-in-jsx-scope */
+import React from "react";
 import { render, screen } from "@testing-library/react";
 import TestRenderer from "react-test-renderer";
 import Input, { InputProps } from "./Input";

@@ -1,4 +1,4 @@
-/* eslint-disable react/react-in-jsx-scope */
+import React from "react";
 import { fireEvent, render, screen } from "@testing-library/react";
 import TestRenderer from "react-test-renderer";
 import LinkButton, { LinkButtonProps } from "./LinkButton";
