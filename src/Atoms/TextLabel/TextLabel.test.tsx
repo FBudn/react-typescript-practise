@@ -20,13 +20,11 @@ test(`Should render TextLabel component`, () => {
   expect(TextLabelElement).toBeInTheDocument();
 });
 
-test(`Should match snapshot and havestyles:`, () => {
+test(`Should match snapshot`, () => {
   const TextLabelElement = TestRenderer.create(
     <TextLabel {...props} />,
   ).toJSON();
   expect(TextLabelElement).toMatchSnapshot();
-  expect(TextLabelElement).toHaveStyleRule("display", "flex");
-  expect(TextLabelElement).toHaveStyleRule("border", "none");
 });
 
 test(`Should render and have styles:`, () => {

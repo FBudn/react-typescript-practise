@@ -8,6 +8,10 @@ export interface IconsSectionProps {
   secondIconText: number;
   thirdIconText: number;
   logs: any;
+  testId?: string;
+  testIdIcon1?: string;
+  testIdIcon2?: string;
+  testIdIcon3?: string;
 }
 
 const IconsSection: React.FC<IconsSectionProps> = ({
@@ -16,12 +20,17 @@ const IconsSection: React.FC<IconsSectionProps> = ({
   secondIconText,
   thirdIconText,
   logs,
+  testId,
+  testIdIcon1,
+  testIdIcon2,
+  testIdIcon3,
 }) => {
   return (
-    <IconsContainerMain>
+    <IconsContainerMain data-testid={testId}>
       <Icon
         color="red"
         icon="facebook"
+        data-testid={testIdIcon1}
         onClickIcon={() => {
           onClickIcon(firstIconText, logs);
         }}
@@ -30,6 +39,7 @@ const IconsSection: React.FC<IconsSectionProps> = ({
       <Icon
         color="blue"
         icon="google"
+        data-testid={testIdIcon2}
         onClickIcon={() => {
           onClickIcon(secondIconText, logs);
         }}
@@ -38,6 +48,7 @@ const IconsSection: React.FC<IconsSectionProps> = ({
       <Icon
         color="blue"
         icon="linkedin"
+        data-testid={testIdIcon3}
         onClickIcon={() => {
           onClickIcon(thirdIconText, logs);
         }}

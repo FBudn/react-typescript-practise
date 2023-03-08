@@ -6,12 +6,14 @@ import { OneInputContainer } from "./InputLabelStyles";
 export interface InputAndLabelProps {
   children: React.ReactNode;
   type: string;
+  testId?: string;
+  testIdInput?: string;
 }
 
 export type InputRef = HTMLInputElement;
 const InputAndLabel = forwardRef<InputRef, InputAndLabelProps>(
   (props: InputAndLabelProps, ref) => (
-    <OneInputContainer>
+    <OneInputContainer data-testid={props.testId}>
       <Label
         color="rgb(82 82 91)"
         align="center"
@@ -24,6 +26,7 @@ const InputAndLabel = forwardRef<InputRef, InputAndLabelProps>(
       <Input
         type={props.type}
         ref={ref}
+        testId={props.testIdInput}
         // autoFocus
       />
     </OneInputContainer>
