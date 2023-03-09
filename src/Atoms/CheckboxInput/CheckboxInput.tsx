@@ -16,6 +16,12 @@ const CheckboxInput = forwardRef<CheckboxRef, CheckboxInputProps>(
 export default CheckboxInput;
 
 /* 
+Używam checkboxa tylko raz, nieużywam tu id akurat - może do usunięcia by przeszło jak jest już testoweId?
+Ogólnie wszędzie może bym dodał inne wersje stylów itp, ale w sumie pod konkretny projekt nie wiem czy to 
+konieczne
+Nazewnictwo chyba ok
+
+
 podkreślnik w funkcji tu: można używać do nazw zmiennych, jako ukryty nieużywany parament 
 
 const CheckboxInput = forwardRef(function CheckboxInput(

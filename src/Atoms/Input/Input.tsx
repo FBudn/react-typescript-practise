@@ -14,7 +14,10 @@ const Input = forwardRef<InputRef, InputProps>(({ type, testId }, ref) => (
 export default Input;
 
 /*
-/*
+Używam inputa x4, po 2 w page. Nic się w nim nie zmienia, w propsach ma tylko typ. Mógłby być
+typ w stylu zamiast propsa? 
+Nazewnictwo chyba ok 
+
 (e: React.ChangeEvent<HTMLInputElement>) => void;
 const Input: React.FC<InputProps> = ({ type, setInputValue }) => {
   return <InputAtom type={type} onChange={setInputValue} required />;
