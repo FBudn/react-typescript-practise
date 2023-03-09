@@ -11,7 +11,7 @@ const LoginPage: React.FC = () => {
     console.log(email, password, checkbox);
   };
 
-  const onClickIcon = (number: number, logs: []) => {
+  const onClickIcon = (number: number, logs: string[]) => {
     console.log(logs[number]);
   };
 

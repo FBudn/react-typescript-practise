@@ -36,6 +36,11 @@ const InputAndLabel = forwardRef<InputRef, InputAndLabelProps>(
 export default InputAndLabel;
 
 /*
+Nazwa containera vs komponentu i same te u mnie za długie nazwy typu xANDy itd. pewnie krócej
+Tu typ inputa ew. to co wcześniej w atomie. Mam też zrobione to tak, że jest input + label a  
+używam x2 sklejone 2 inputy + 2 labele to ewentualnie większa molekuła niż ta? Wtedy w 
+signup page dochodzi tylko button to od razu by był organizm/cała taka duża molekuła?
+
 Tu zrobić jak mam forgotpass to zrobić mu nazwę label - mam uniwersalny komponent wykorzystywany do nadawania nazw. 
 Jest to do wykorzystania zamiast tworzyć InputLabel w styled-componets. 
 Molekuła i wyżej ze styled-components importowane rzeczy to głównie powinien być div. Po to są atomy, żeby z nich składać w większości

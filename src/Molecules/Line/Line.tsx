@@ -24,3 +24,10 @@ const Line: React.FC<LineProps> = ({
 };
 
 export default Line;
+
+/*
+Używam raz z tym samym tekstem w projekcie więc niepotrzebny props tylko zakodowane by mogło być OR?
+Ewentualnie inny sposób na zrobienie linii może jest lepszy. 
+Reszta wydaje się ok, 
+używam x2 
+*/
