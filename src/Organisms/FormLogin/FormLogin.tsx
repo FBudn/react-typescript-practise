@@ -76,6 +76,12 @@ const FormLogin = forwardRef<RefHandlerLogin, FormLoginProps>(
 export default FormLogin;
 
 /*
+
+   No tu te rzeczy z atomów/molekuł plus ten useImperativeHandler był niezbędny? Chyba nie,
+   tu co robił wykrzyknik current!.value 
+   głównie z tym rzeczy tak to chyba ok
+
+
    + ref do argumentu i import
    useImperativeHandle(ref, () => ({
       CheckboxRef: CheckboxRef,

@@ -83,6 +83,8 @@ const SignUpTemplate: React.FC<SignUpTemplateProps> = ({
 export default SignUpTemplate;
 
 /*
+Jak w logintemplate i chyba nie mam jednak rozjazdu w tabeli z logami
+
   const [emailValue, setEmailValue] = useState("");
 
   const handleEmail = (e: React.ChangeEvent<HTMLInputElement>) => {

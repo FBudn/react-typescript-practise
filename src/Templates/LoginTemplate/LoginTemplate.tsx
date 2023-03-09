@@ -83,6 +83,10 @@ const LoginTemplate: React.FC<LoginTemplateProps> = ({
 export default LoginTemplate;
 
 /*
+Na pewno testy i powtarzanie np handleClicków
+wszystkie propsy wspomniane niżej 
+chyba all?
+
 Optional chaining
 Kafel mógłby być atomem
   handleFocus={handleFocus}
