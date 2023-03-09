@@ -34,4 +34,5 @@ const SignUpPage: React.FC = () => {
 
 export default SignUpPage;
 
-// useNavigate poprawki
+// tu widzę, że powtarza mi się bez sensu tabela logów więc to do poprawki, pytanie która
+// wersja lepsza, pewnie z login page

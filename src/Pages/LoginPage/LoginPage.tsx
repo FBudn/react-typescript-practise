@@ -34,6 +34,8 @@ const LoginPage: React.FC = () => {
 export default LoginPage;
 
 /*
+tu te testy 
+
  Tu nazwy LoginPage itd. 
  staty na poziomie templatów a tu tylko funkcje przyjmujące paramet itd
  Tu  tylko kliknięcia w ikone, przycisk, link
