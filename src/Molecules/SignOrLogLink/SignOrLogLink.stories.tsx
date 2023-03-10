@@ -5,11 +5,6 @@ import SignOrLogLink from "./SignOrLogLink";
 export default {
   title: "Molecules/SignOrLogLink",
   component: SignOrLogLink,
-  color: "red",
-  align: "center",
-  justify: "cener",
-  fontSize: "1.1rem",
-  fontWeight: "400",
 } as ComponentMeta<typeof SignOrLogLink>;
 
 const Template: ComponentStory<typeof SignOrLogLink> = (args) => (

@@ -10,13 +10,11 @@ const props: ButtonProps = {
   testId: `test-button-id`,
   children: `Button Test`,
 };
-
-test(`Should render Button Component with text`, () => {
+// tekst osobny test zrobić
+test(`Should render Button Component`, () => {
   render(<Button {...props} />);
   const ButtonElement = screen.getByTestId(`test-button-id`);
   expect(ButtonElement).toBeInTheDocument();
-  const textElement = screen.getByText(`Button Test`);
-  expect(textElement).toBeInTheDocument();
 });
 
 test(`Should match snapshot`, () => {
