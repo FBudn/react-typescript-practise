@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const CheckboxContainer = styled.div`
+export const CheckboxAndLabelContainer = styled.div`
   display: flex;
   width: 100%;
   justify-content: start;
