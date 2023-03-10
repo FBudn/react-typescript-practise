@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const OneInputContainer = styled.div`
+export const InputAndLabelContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1px;

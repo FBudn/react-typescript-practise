@@ -1,7 +1,7 @@
 import React, { forwardRef } from "react";
 import Input from "../../Atoms/Input/Input";
 import Label from "../../Atoms/TextLabel/TextLabel";
-import { OneInputContainer } from "./InputLabelStyles";
+import { InputAndLabelContainer } from "./InputLabelStyles";
 
 export interface InputAndLabelProps {
   children: React.ReactNode;
@@ -13,7 +13,7 @@ export interface InputAndLabelProps {
 export type InputRef = HTMLInputElement;
 const InputAndLabel = forwardRef<InputRef, InputAndLabelProps>(
   (props: InputAndLabelProps, ref) => (
-    <OneInputContainer data-testid={props.testId}>
+    <InputAndLabelContainer data-testid={props.testId}>
       <Label
         color="rgb(82 82 91)"
         align="center"
@@ -29,7 +29,7 @@ const InputAndLabel = forwardRef<InputRef, InputAndLabelProps>(
         testId={props.testIdInput}
         // autoFocus
       />
-    </OneInputContainer>
+    </InputAndLabelContainer>
   ),
 );
 
