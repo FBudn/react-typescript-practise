@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const LabelContainer = styled.div.attrs(
+export const TextLabelContainer = styled.div.attrs(
   (props: {
     color: string;
     align: string;

@@ -1,5 +1,5 @@
 import React from "react";
-import { LabelContainer } from "./TextLabelStyle";
+import { TextLabelContainer } from "./TextLabelStyle";
 
 export interface TextLabelProps {
   children: React.ReactNode;
@@ -27,7 +27,7 @@ const TextLabel: React.FC<TextLabelProps> = ({
   testId,
 }) => {
   return (
-    <LabelContainer
+    <TextLabelContainer
       data-testid={testId}
       color={color}
       align={align}
@@ -39,7 +39,7 @@ const TextLabel: React.FC<TextLabelProps> = ({
       cursor={cursor}
     >
       {children}
-    </LabelContainer>
+    </TextLabelContainer>
   );
 };
 
