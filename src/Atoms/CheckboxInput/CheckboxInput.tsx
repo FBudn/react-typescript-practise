@@ -1,5 +1,5 @@
 import React, { forwardRef } from "react";
-import { CheckboxInputStyle } from "./CheckboxInputStyle";
+import { CheckboxInputContainer } from "./CheckboxInputStyle";
 
 export interface CheckboxInputProps {
   id?: string;
@@ -9,7 +9,7 @@ export interface CheckboxInputProps {
 export type CheckboxRef = HTMLInputElement;
 const CheckboxInput = forwardRef<CheckboxRef, CheckboxInputProps>(
   ({ id, testId }, ref) => (
-    <CheckboxInputStyle data-testid={testId} id={id} ref={ref} />
+    <CheckboxInputContainer data-testid={testId} id={id} ref={ref} />
   ),
 );
 

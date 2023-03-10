@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const CheckboxInputStyle = styled.input.attrs({ type: "checkbox" })`
+export const CheckboxInputContainer = styled.input.attrs({ type: "checkbox" })`
   max-width: 35px;
   min-width: 20px;
   max-height: 35px;
