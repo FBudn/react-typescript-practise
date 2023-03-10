@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const InputAtom = styled.input`
+export const InputContainer = styled.input`
   display: flex;
   width: 100%;
   border-radius: 5px;

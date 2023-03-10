@@ -1,5 +1,5 @@
 import React, { forwardRef } from "react";
-import { InputAtom } from "./InputStyle";
+import { InputContainer } from "./InputStyle";
 
 export interface InputProps {
   type: string;
@@ -8,7 +8,7 @@ export interface InputProps {
 
 export type InputRef = HTMLInputElement;
 const Input = forwardRef<InputRef, InputProps>(({ type, testId }, ref) => (
-  <InputAtom data-testid={testId} type={type} ref={ref} />
+  <InputContainer data-testid={testId} type={type} ref={ref} />
 ));
 
 export default Input;
