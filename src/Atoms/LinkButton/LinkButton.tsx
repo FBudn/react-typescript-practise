@@ -1,5 +1,5 @@
 import React from "react";
-import { LinkButtonStyled } from "./LinkButtonStyle";
+import { LinkButtonContainer } from "./LinkButtonStyle";
 
 export interface LinkButtonProps {
   children: React.ReactNode;
@@ -13,9 +13,9 @@ const LinkButton: React.FC<LinkButtonProps> = ({
   testId,
 }) => {
   return (
-    <LinkButtonStyled data-testid={testId} onClick={onClickLink}>
+    <LinkButtonContainer data-testid={testId} onClick={onClickLink}>
       {children}
-    </LinkButtonStyled>
+    </LinkButtonContainer>
   );
 };
 

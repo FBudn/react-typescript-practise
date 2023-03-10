@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const LinkButtonStyled = styled.button`
+export const LinkButtonContainer = styled.button`
   display: flex;
   border: none;
   justify-content: center;
