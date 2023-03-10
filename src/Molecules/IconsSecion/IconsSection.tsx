@@ -1,5 +1,5 @@
 import React from "react";
-import { IconsContainerMain } from "./IconsSectionStyle";
+import { IconsContainer } from "./IconsSectionStyle";
 import Icon from "../../Atoms/Icon/Icon";
 
 export interface IconsSectionProps {
@@ -26,7 +26,7 @@ const IconsSection: React.FC<IconsSectionProps> = ({
   testIdIcon3,
 }) => {
   return (
-    <IconsContainerMain data-testid={testId}>
+    <IconsContainer data-testid={testId}>
       <Icon
         color="red"
         icon="facebook"
@@ -53,7 +53,7 @@ const IconsSection: React.FC<IconsSectionProps> = ({
           onClickIcon(thirdIconText, logs);
         }}
       />
-    </IconsContainerMain>
+    </IconsContainer>
   );
 };
 

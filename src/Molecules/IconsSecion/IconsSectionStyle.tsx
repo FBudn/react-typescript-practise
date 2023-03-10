@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const IconsContainerMain = styled.div`
+export const IconsContainer = styled.div`
   display: flex;
   width: 100%;
   justify-content: center;
