@@ -3,7 +3,7 @@ import React, { forwardRef, useImperativeHandle, useRef } from "react";
 import Button from "../../Atoms/Button/Button";
 import Header from "../../Atoms/Header/Header";
 import InputAndLabel from "../../Molecules/InputAndLabel/InputAndLabel";
-import { FormSignUpContainer, InputsContainer } from "./FormsStyle";
+import { FormSignUpContainer, InputsContainer } from "./Forms.style";
 
 export interface FormSignUpProps {
   onButtonClick: (

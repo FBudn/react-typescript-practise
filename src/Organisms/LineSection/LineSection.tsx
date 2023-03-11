@@ -2,7 +2,7 @@ import React from "react";
 import SignOrLogLink from "../../Molecules/SignOrLogLink/SignOrLogLink";
 import Line from "../../Molecules/Line/Line";
 import Icons from "../../Molecules/IconsSecion/IconsSection";
-import { LineSectionContainer } from "./LineSectionStyled";
+import { LineSectionContainer } from "./LineSection.styled";
 
 export interface LineSectionProps {
   children: string;

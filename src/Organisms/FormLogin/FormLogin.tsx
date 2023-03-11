@@ -5,8 +5,8 @@ import Header from "../../Atoms/Header/Header";
 import Label from "../../Atoms/TextLabel/TextLabel";
 import CheckboxPass from "../../Molecules/CheckboxAndLabel/CheckboxAndLabel";
 import InputAndLabel from "../../Molecules/InputAndLabel/InputAndLabel";
-import { InputsContainer } from "../FormSignUp/FormsStyle";
-import { FormLoginContainer } from "./FormsStyle";
+import { InputsContainer } from "../FormSignUp/Forms.style";
+import { FormLoginContainer } from "./Forms.style";
 
 export interface FormLoginProps {
   onButtonClick: (email: string, password: string, checkbox: boolean) => void;
