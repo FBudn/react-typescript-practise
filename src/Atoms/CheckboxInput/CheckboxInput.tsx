@@ -1,5 +1,5 @@
 import React, { forwardRef } from "react";
-import { CheckboxInputContainer } from "./CheckboxInputStyle";
+import { CheckboxInputContainer } from "./CheckboxInput.style";
 
 export interface CheckboxInputProps {
   id?: string;

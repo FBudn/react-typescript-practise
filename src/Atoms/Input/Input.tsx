@@ -1,5 +1,5 @@
 import React, { forwardRef } from "react";
-import { InputContainer } from "./InputStyle";
+import { InputContainer } from "./Input.style";
 
 export interface InputProps {
   type: string;

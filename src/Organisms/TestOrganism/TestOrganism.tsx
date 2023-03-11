@@ -3,7 +3,7 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 /* eslint-disable react/prop-types */
 import { forwardRef } from "react";
-import { InputContainer } from "../../Atoms/Input/InputStyle";
+import { InputContainer } from "../../Atoms/Input/Input.style";
 import { InputTest } from "./TestOrganismStyle";
 
 const TestOrganism = forwardRef(function TestOrganism(props: any, ref) {

@@ -1,5 +1,5 @@
 import React from "react";
-import { LinkButtonContainer } from "./LinkButtonStyle";
+import { LinkButtonContainer } from "./LinkButton.style";
 
 export interface LinkButtonProps {
   children: React.ReactNode;

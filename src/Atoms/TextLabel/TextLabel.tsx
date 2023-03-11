@@ -1,5 +1,5 @@
 import React from "react";
-import { TextLabelContainer } from "./TextLabelStyle";
+import { TextLabelContainer } from "./TextLabel.style";
 
 export interface TextLabelProps {
   children: React.ReactNode;

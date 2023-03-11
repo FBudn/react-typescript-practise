@@ -1,5 +1,5 @@
 import React from "react";
-import { HeaderContainer } from "./HeaderStyle";
+import { HeaderContainer } from "./Header.style";
 
 export interface HeaderProps {
   children: string;
