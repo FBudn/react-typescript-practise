@@ -1,7 +1,7 @@
 import React from "react";
 import LinkButton from "../../Atoms/LinkButton/LinkButton";
 import Label from "../../Atoms/TextLabel/TextLabel";
-import { SignOrLogLinkContainer } from "./SignOrLogStyle";
+import { SignOrLogLinkContainer } from "./SignOrLog.style";
 
 export interface SignOrLogLinkProps {
   children: React.ReactNode;

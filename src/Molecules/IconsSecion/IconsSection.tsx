@@ -1,5 +1,5 @@
 import React from "react";
-import { IconsContainer } from "./IconsSectionStyle";
+import { IconsContainer } from "./IconsSection.style";
 import Icon from "../../Atoms/Icon/Icon";
 
 export interface IconsSectionProps {

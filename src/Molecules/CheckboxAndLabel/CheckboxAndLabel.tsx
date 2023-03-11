@@ -1,5 +1,5 @@
 import React, { forwardRef } from "react";
-import { CheckboxAndLabelContainer } from "./CheckboxAndLabelStyle";
+import { CheckboxAndLabelContainer } from "./CheckboxAndLabel.style";
 import CheckboxInput from "../../Atoms/CheckboxInput/CheckboxInput";
 import Label from "../../Atoms/TextLabel/TextLabel";
 

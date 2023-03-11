@@ -1,5 +1,5 @@
 import React from "react";
-import { LineContainer, HrStyled, LineTextBox } from "./LineStyle";
+import { LineContainer, HrStyled, LineTextBox } from "./Line.style";
 
 export interface LineProps {
   children: React.ReactNode;

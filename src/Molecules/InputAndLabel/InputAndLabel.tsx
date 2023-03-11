@@ -1,7 +1,7 @@
 import React, { forwardRef } from "react";
 import Input from "../../Atoms/Input/Input";
 import Label from "../../Atoms/TextLabel/TextLabel";
-import { InputAndLabelContainer } from "./InputLabelStyles";
+import { InputAndLabelContainer } from "./InputLabel.styles";
 
 export interface InputAndLabelProps {
   children: React.ReactNode;
