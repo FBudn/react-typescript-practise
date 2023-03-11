@@ -4,13 +4,13 @@ import {
   MaxWidth,
   Tile,
   TileContainer,
-} from "../SignUpTemplate/TemplatesStyles";
+} from "../SignUpTemplate/Templates.styles";
 import FormLogin, {
   RefHandlerLogin,
 } from "../../Organisms/FormLogin/FormLogin";
 import LineSection from "../../Organisms/LineSection/LineSection";
 import GlobalStyle from "../GlobalStyle/GlobalStyle";
-import { LoginTemplateContainer } from "./TemplatesStyles";
+import { LoginTemplateContainer } from "./Templates.styles";
 
 export interface LoginTemplateProps {
   onButtonClick: (

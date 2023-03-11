@@ -5,7 +5,7 @@ import {
   SignUpTemplateContainer,
   Tile,
   TileContainer,
-} from "./TemplatesStyles";
+} from "./Templates.styles";
 import FormSignUp, {
   RefHandlerSignUp,
 } from "../../Organisms/FormSignUp/FormSignUp";
