@@ -81,26 +81,3 @@ const LoginTemplate: React.FC<LoginTemplateProps> = ({
 };
 
 export default LoginTemplate;
-
-/*
-Na pewno testy i powtarzanie np handleClicków
-wszystkie propsy wspomniane niżej 
-chyba all?
-
-Optional chaining
-Kafel mógłby być atomem
-  handleFocus={handleFocus}
-              ref={ref}
-
-              /* const [emailValue, setEmailValue] = useState("");
-
-  const handleEmail = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setEmailValue(e.target.value);
-  }; 
-    const [passwordValue, setPasswordValue] = useState("");
-
-  const handlePassword = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setPasswordValue(e.target.value);
-  };
-  
-*/

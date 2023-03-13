@@ -65,7 +65,3 @@ const FormSignUp = forwardRef<RefHandlerSignUp, FormSignUpProps>(
 );
 
 export default FormSignUp;
-
-/*
-Tu tak samo jak w formLoginie
-*/

@@ -47,10 +47,3 @@ const LineSection: React.FC<LineSectionProps> = ({
 };
 
 export default LineSection;
-
-/*
-Tu ten text z linii o którym było w molekule
-I tu tych propsów ogólnie poograniczać pewnie by można
-
-Znów nazwa folder-plik
-*/

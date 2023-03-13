@@ -81,20 +81,3 @@ const SignUpTemplate: React.FC<SignUpTemplateProps> = ({
 };
 
 export default SignUpTemplate;
-
-/*
-Jak w logintemplate i chyba nie mam jednak rozjazdu w tabeli z logami
-
-  const [emailValue, setEmailValue] = useState("");
-
-  const handleEmail = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setEmailValue(e.target.value);
-  };
-
-  const [passwordValue, setPasswordValue] = useState("");
-
-  const handlePassword = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setPasswordValue(e.target.value);
-  };
-
-*/

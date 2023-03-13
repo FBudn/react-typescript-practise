@@ -23,12 +23,7 @@ const InputAndLabel = forwardRef<InputRef, InputAndLabelProps>(
       >
         {props.children}
       </Label>
-      <Input
-        type={props.type}
-        ref={ref}
-        testId={props.testIdInput}
-        // autoFocus
-      />
+      <Input type={props.type} ref={ref} testId={props.testIdInput} />
     </InputAndLabelContainer>
   ),
 );
