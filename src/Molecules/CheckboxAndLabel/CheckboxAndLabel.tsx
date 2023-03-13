@@ -7,7 +7,6 @@ export interface CheckboxAndLabelProps {
   children: React.ReactNode;
   testId?: string;
   testIdCheckbox?: string;
-  // onChangeCheckbox: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
 export type CheckboxRef = HTMLInputElement;
@@ -29,15 +28,3 @@ const CheckboxAndLabel = forwardRef<CheckboxRef, CheckboxAndLabelProps>(
 );
 
 export default CheckboxAndLabel;
-
-/*
-
-CheckboxContainer - powinno być jak folderu i komponentu CheckboxAndLabelContainer pewnie?
-Ogólnie ta molekuła jest jednorazowa w tym projekcie więc mogłaby być osobnym bytem 
-zamiast osobno checkboxInputa i labelu? 
-Tylko cała gotowa molekuła jak tu też "Line"?
-
-
- onChangeCheckbox={onChangeCheckbox}
-Nazwy: CheckboxBox i CheckboxInput nazwy ujednolicone
-*/

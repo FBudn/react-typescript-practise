@@ -58,17 +58,3 @@ const IconsSection: React.FC<IconsSectionProps> = ({
 };
 
 export default IconsSection;
-
-/*
-Tu na pewno testy i testowe id,  pewnie poprawić testy pod tym kątem. 
-Sam wybór tekstu do console.log po kliknięciu pewnie też mógłbym inaczej zrobić niż tu z 
-wyboru elementu z tablicy i inaczej to rozpisać 
-Nazewnictwo IconsContainer bez Main ale może bardziej IconsSectionContainer żeby pasowało do
-innych komponentów. 
-Na górze inaczej mam w LoginPage a inaczej w singlePage: idzie trochę inaczej rospisana funkcja
-onClicka tu i tablica strignów jest na różnym poziomie page vs template
-
-Przerobienie tego bo wszelka logika na samej górze w page 
-i ogarnąć już funkcje
-znowu nazwy folderów 
-*/
