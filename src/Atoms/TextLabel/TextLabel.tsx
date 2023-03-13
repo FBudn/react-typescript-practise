@@ -44,11 +44,3 @@ const TextLabel: React.FC<TextLabelProps> = ({
 };
 
 export default TextLabel;
-
-/*
-Tego reużywam x5. A propo zmieniania styli takiego jak tu, czy jakbym chciał 2 wersje kolorystyczne robić buttona
-to wydaje mi się ta litania propsów mało "pro", pewnie da się to lepiej ogarnać. 
-To label używany z róznym stylem tekstu. 
-Każdy props nie jest używany za każdym razem.
-<LabelContainer> vs komponent nazwany TextLabel. To do ujednolicenia? 
-*/

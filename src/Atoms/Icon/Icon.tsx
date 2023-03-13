@@ -57,11 +57,3 @@ const Icon: React.FC<IconProps> = ({ onClickIcon, color, icon }) => {
 };
 
 export default Icon;
-
-/*
-Tu poprawialiśmy na switcha, może bym to zrobił z mapowaniem po tablicy jeszcze zamiast tego switcha?
-Używam tylko 3 ikon tu w 2 kolorach więc może bez propsa color tylko 2 style?
-Nazwenictwo może ten props icon inaczej ale raczej chyba ok
-
-Nazwa funkcji znowu
-*/
