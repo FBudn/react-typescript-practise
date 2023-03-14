@@ -26,8 +26,6 @@ export const HrStyled = styled.hr`
 export const LineTextBox = styled.div`
   display: flex;
   border: 2px solid rgb(229 231 235);
-  text: center;
-  items: center;
   padding: 2px;
   border-radius: 5px;
   font-size: 0.875rem;
