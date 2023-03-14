@@ -58,12 +58,11 @@ const LoginTemplate: React.FC<LoginTemplateProps> = ({
                 linkText="SIGN UP"
                 onClickIcon={onClickIcon}
                 logs={IconsLogs}
+                infoText="Need an account?"
                 onClickLink={() => {
                   onClickLink("/SignUp");
                 }}
-              >
-                Need an account?
-              </LineSection>
+              />
             </TileContainer>
           </Tile>
         </MaxWidth>

@@ -8,3 +8,11 @@ export const LineSectionContainer = styled.div`
   justify-content: center;
   align-items: center;
 `;
+
+export const TextLabelAndLinkButtonContainer = styled.div`
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  gap: 2px;
+  margin: 2px;
+`;

@@ -2,7 +2,7 @@
 import React, { forwardRef, useImperativeHandle, useRef } from "react";
 import Button from "../../Atoms/Button/Button";
 import Header from "../../Atoms/Header/Header";
-import Label from "../../Atoms/TextLabel/TextLabel";
+import TextLabel from "../../Atoms/TextLabel/TextLabel";
 import CheckboxPass from "../../Molecules/CheckboxAndLabel/CheckboxAndLabel";
 import InputAndLabel from "../../Molecules/InputAndLabel/InputAndLabel";
 import { InputsContainer } from "../FormSignUp/Forms.style";
@@ -45,17 +45,17 @@ const FormLogin = forwardRef<RefHandlerLogin, FormLoginProps>(
       <FormLoginContainer data-testid={testId}>
         <Header>LOGIN</Header>
         <InputsContainer>
-          <InputAndLabel ref={EmailInputRef} type="email">
-            Email
-          </InputAndLabel>
-          <InputAndLabel ref={PasswordInputRef} type="password">
-            Password
-          </InputAndLabel>
-          <CheckboxPass ref={CheckboxRef}>Remember me?</CheckboxPass>
+          <InputAndLabel ref={EmailInputRef} type="email" infoText="Email" />
+          <InputAndLabel
+            ref={PasswordInputRef}
+            type="password"
+            infoText="Password"
+          />
+          <CheckboxPass ref={CheckboxRef} infoText="Remember me?" />
           <Button onClick={onSubmit} testId="test-button-id">
             LOGIN
           </Button>
-          <Label
+          <TextLabel
             color="rgb(82 82 91)"
             align="center"
             justify="end"
@@ -66,7 +66,7 @@ const FormLogin = forwardRef<RefHandlerLogin, FormLoginProps>(
             cursor="pointer"
           >
             Forgot Password?
-          </Label>
+          </TextLabel>
         </InputsContainer>
       </FormLoginContainer>
     );

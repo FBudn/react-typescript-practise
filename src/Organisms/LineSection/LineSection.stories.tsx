@@ -13,14 +13,14 @@ const Template: ComponentStory<typeof LineSection> = (args) => (
 
 export const BasicLogin = Template.bind({});
 BasicLogin.args = {
-  children: "Need an account?",
+  infoText: "Need an account?",
   lineText: "OR",
   linkText: "SIGN UP",
 };
 
 export const BasicSignUp = Template.bind({});
 BasicSignUp.args = {
-  children: "Already a user?",
+  infoText: "Already a user?",
   lineText: "OR",
   linkText: "LOGIN",
 };

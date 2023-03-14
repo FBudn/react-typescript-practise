@@ -11,7 +11,7 @@ const props: LineSectionProps = {
   onClickIcon: mockOnClickIcon,
   onClickLink: mockOnClickLink,
   testId: `test-LineSection-id`,
-  children: `Link Test`,
+  infoText: `Link Test`,
   linkText: `LinkText Test`,
   lineText: `LineText Test`,
   logs: [`facebook clicked`, `google clicked`, `linkedin clicked`],

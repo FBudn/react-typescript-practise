@@ -13,5 +13,5 @@ const Template: ComponentStory<typeof CheckboxAndLabel> = (args) => (
 
 export const Basic = Template.bind({});
 Basic.args = {
-  children: "Remember me?",
+  infoText: "Remember me?",
 };

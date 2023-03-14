@@ -1,11 +1,15 @@
 import React from "react";
-import SignOrLogLink from "../../Molecules/SignOrLogLink/SignOrLogLink";
 import Line from "../../Molecules/Line/Line";
 import Icons from "../../Molecules/IconsSecion/IconsSection";
-import { LineSectionContainer } from "./LineSection.styled";
+import {
+  LineSectionContainer,
+  TextLabelAndLinkButtonContainer,
+} from "./LineSection.styled";
+import LinkButton from "../../Atoms/LinkButton/LinkButton";
+import TextLabel from "../../Atoms/TextLabel/TextLabel";
 
 export interface LineSectionProps {
-  children: string;
+  infoText: string;
   linkText: string;
   lineText: string;
   onClickIcon: (number: number, logs: string[]) => void;
@@ -16,7 +20,7 @@ export interface LineSectionProps {
 }
 
 const LineSection: React.FC<LineSectionProps> = ({
-  children,
+  infoText,
   linkText,
   lineText,
   onClickIcon,
@@ -34,13 +38,20 @@ const LineSection: React.FC<LineSectionProps> = ({
         thirdIconText={2}
         logs={logs}
       />
-      <SignOrLogLink
-        linkText={linkText}
-        onClickLink={onClickLink}
-        testId="test-linkButton-id"
-      >
-        {children}
-      </SignOrLogLink>
+      <TextLabelAndLinkButtonContainer>
+        <TextLabel
+          color="rgb(82 82 91)"
+          align="center"
+          justify="cener"
+          fontSize="1.1rem"
+          fontWeight="400"
+        >
+          {infoText}
+        </TextLabel>
+        <LinkButton onClickLink={onClickLink} testId="test-linkButton-id">
+          {linkText}
+        </LinkButton>
+      </TextLabelAndLinkButtonContainer>
     </LineSectionContainer>
   );
 };

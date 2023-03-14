@@ -63,12 +63,11 @@ const SignUpTemplate: React.FC<SignUpTemplateProps> = ({
                 linkText="LOGIN"
                 onClickIcon={onClickIcon}
                 logs={IconsLogs}
+                infoText="Already a user?"
                 onClickLink={() => {
                   onClickLink(`/Login`);
                 }}
-              >
-                Already a user?
-              </LineSection>
+              />
             </TileContainer>
           </Tile>
         </MaxWidth>

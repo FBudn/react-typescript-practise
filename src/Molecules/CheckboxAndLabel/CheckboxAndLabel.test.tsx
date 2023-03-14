@@ -5,7 +5,7 @@ import CheckboxAndLabel, { CheckboxAndLabelProps } from "./CheckboxAndLabel";
 import "jest-styled-components";
 
 const props: CheckboxAndLabelProps = {
-  children: `CheckboxAndLabel Test`,
+  infoText: `CheckboxAndLabel Test`,
   testId: `checkboxAndLabel-test-id`,
 };
 
