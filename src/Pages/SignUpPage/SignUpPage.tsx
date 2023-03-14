@@ -23,7 +23,6 @@ const SignUpPage: React.FC = () => {
   return (
     <SignUpTemplate
       testId="test-signUpPage-id"
-      testIdButton="test-button-id"
       onButtonClick={onButtonClick}
       onClickIcon={onClickIcon}
       onClickLink={onClickLink}
