@@ -10,7 +10,6 @@ import FormSignUp, {
   RefHandlerSignUp,
 } from "../../Organisms/FormSignUp/FormSignUp";
 import LineSection from "../../Organisms/LineSection/LineSection";
-import GlobalStyle from "../GlobalStyle/GlobalStyle";
 
 export interface SignUpTemplateProps {
   onButtonClick: (
@@ -27,6 +26,7 @@ export interface SignUpTemplateProps {
   testIdMaxWidth?: string;
   testIdTile?: string;
   testIdTileContainer?: string;
+  IconsLogs: string[];
 }
 
 const SignUpTemplate: React.FC<SignUpTemplateProps> = ({
@@ -36,20 +36,18 @@ const SignUpTemplate: React.FC<SignUpTemplateProps> = ({
   testId,
   testIdButton,
   testIdButtonLink,
-  testIdGlobalStyle,
   testIdBackground,
   testIdMaxWidth,
   testIdTile,
   testIdTileContainer,
+  IconsLogs,
 }) => {
-  const IconsLogs = [`Google Clicked`, `Facebook Clicked`, `LinkedIn Clicked`];
   const FormSignUpRef = useRef<RefHandlerSignUp>(null);
   useEffect(() => {
     FormSignUpRef.current?.focus();
   }, []);
   return (
     <SignUpTemplateContainer data-testid={testId}>
-      <GlobalStyle data-testid={testIdGlobalStyle} />
       <Background data-testid={testIdBackground}>
         <MaxWidth data-testid={testIdMaxWidth}>
           <Tile data-testid={testIdTile}>

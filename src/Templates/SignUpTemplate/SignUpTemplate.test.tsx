@@ -17,6 +17,7 @@ const props: SignUpTemplateProps = {
   testIdGlobalStyle: `test-globalStyle-id`,
   testIdMaxWidth: `test-maxWidth-id`,
   testIdTile: `test-tile-id`,
+  IconsLogs: [`facebook`, `google`, `linkedin`],
   testIdTileContainer: `test-tileContainer-id`,
 };
 

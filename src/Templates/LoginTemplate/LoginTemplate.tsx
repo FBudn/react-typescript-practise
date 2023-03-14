@@ -9,7 +9,6 @@ import FormLogin, {
   RefHandlerLogin,
 } from "../../Organisms/FormLogin/FormLogin";
 import LineSection from "../../Organisms/LineSection/LineSection";
-import GlobalStyle from "../GlobalStyle/GlobalStyle";
 import { LoginTemplateContainer } from "./Templates.styles";
 
 export interface LoginTemplateProps {
@@ -36,7 +35,6 @@ const LoginTemplate: React.FC<LoginTemplateProps> = ({
   onClickLink,
   testId,
   testIdButtonLink,
-  testIdGlobalStyle,
   testIdBackground,
   testIdMaxWidth,
   testIdTile,
@@ -49,7 +47,6 @@ const LoginTemplate: React.FC<LoginTemplateProps> = ({
   }, []);
   return (
     <LoginTemplateContainer data-testid={testId}>
-      <GlobalStyle data-testid={testIdGlobalStyle} />
       <Background data-testid={testIdBackground}>
         <MaxWidth data-testid={testIdMaxWidth}>
           <Tile data-testid={testIdTile}>
