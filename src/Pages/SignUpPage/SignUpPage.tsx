@@ -6,9 +6,8 @@ const SignUpPage: React.FC = () => {
   const onButtonClick = (
     email: undefined | string,
     password: undefined | string,
-    checkbox: string,
   ) => {
-    console.log(email, password, checkbox);
+    console.log(email, password);
   };
 
   const IconsLogs = [`Google Clicked`, `Facebook Clicked`, `LinkedIn Clicked`];

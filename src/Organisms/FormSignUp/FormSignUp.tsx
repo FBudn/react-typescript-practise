@@ -9,7 +9,6 @@ export interface FormSignUpProps {
   onButtonClick: (
     email: undefined | string,
     password: undefined | string,
-    checkbox: string,
   ) => void;
   testId?: string;
   testIdButton?: string;
@@ -39,7 +38,6 @@ const FormSignUp = forwardRef<RefHandlerSignUp, FormSignUpProps>(
       onButtonClick(
         EmailInputRef.current!.value,
         PasswordInputRef.current!.value,
-        `No checkbox here`,
       );
     };
 
