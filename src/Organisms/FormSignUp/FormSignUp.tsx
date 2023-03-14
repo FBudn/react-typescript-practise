@@ -20,7 +20,7 @@ export type RefHandlerSignUp = {
 };
 
 const FormSignUp = forwardRef<RefHandlerSignUp, FormSignUpProps>(
-  (props: FormSignUpProps, ref) => {
+  ({ onButtonClick, testId }, ref) => {
     const EmailInputRef = useRef<HTMLInputElement>(null);
 
     const PasswordInputRef = useRef<HTMLInputElement>(null);
@@ -36,7 +36,7 @@ const FormSignUp = forwardRef<RefHandlerSignUp, FormSignUpProps>(
     );
 
     const onSubmit = () => {
-      props.onButtonClick(
+      onButtonClick(
         EmailInputRef.current!.value,
         PasswordInputRef.current!.value,
         `No checkbox here`,
@@ -44,7 +44,7 @@ const FormSignUp = forwardRef<RefHandlerSignUp, FormSignUpProps>(
     };
 
     return (
-      <FormSignUpContainer data-testid={props.testId}>
+      <FormSignUpContainer data-testid={testId}>
         <Header>SIGN UP</Header>
         <InputsContainer>
           <InputAndLabel type="email" ref={EmailInputRef}>

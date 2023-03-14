@@ -6,7 +6,6 @@ import "jest-styled-components";
 
 const props: InputAndLabelProps = {
   testId: `inputAndLabel-test-id`,
-  testIdInput: `input-test-id`,
   children: `InputAndLabel Test`,
   type: `text`,
 };

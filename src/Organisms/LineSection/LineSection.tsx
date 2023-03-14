@@ -23,7 +23,6 @@ const LineSection: React.FC<LineSectionProps> = ({
   logs,
   onClickLink,
   testId,
-  testIdButton,
 }) => {
   return (
     <LineSectionContainer data-testid={testId}>
@@ -38,7 +37,7 @@ const LineSection: React.FC<LineSectionProps> = ({
       <SignOrLogLink
         linkText={linkText}
         onClickLink={onClickLink}
-        testIdButton={testIdButton}
+        testId="test-linkButton-id"
       >
         {children}
       </SignOrLogLink>

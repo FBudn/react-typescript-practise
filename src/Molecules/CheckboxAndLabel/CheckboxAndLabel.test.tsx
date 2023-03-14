@@ -7,7 +7,6 @@ import "jest-styled-components";
 const props: CheckboxAndLabelProps = {
   children: `CheckboxAndLabel Test`,
   testId: `checkboxAndLabel-test-id`,
-  testIdCheckbox: `test-checkbox-id`,
 };
 
 test(`Should render CheckboxAndLabel component`, () => {

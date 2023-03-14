@@ -9,7 +9,7 @@ const mockOnButtonClick = jest.fn();
 const props: FormLoginProps = {
   onButtonClick: mockOnButtonClick,
   testId: `test-formLogin-id`,
-  testIdButton: `test-button-id`,
+  // testIdButton: `test-button-id`,
 };
 
 test(`Should render FormLogin component`, () => {

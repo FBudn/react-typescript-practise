@@ -11,7 +11,6 @@ import { FormLoginContainer } from "./Forms.style";
 export interface FormLoginProps {
   onButtonClick: (email: string, password: string, checkbox: boolean) => void;
   testId?: string;
-  testIdButton?: string;
 }
 
 export type RefHandlerLogin = {
@@ -19,7 +18,7 @@ export type RefHandlerLogin = {
 };
 
 const FormLogin = forwardRef<RefHandlerLogin, FormLoginProps>(
-  (props: FormLoginProps, ref) => {
+  ({ onButtonClick, testId }, ref) => {
     const CheckboxRef = useRef<HTMLInputElement>(null);
 
     const EmailInputRef = useRef<HTMLInputElement>(null);
@@ -35,7 +34,7 @@ const FormLogin = forwardRef<RefHandlerLogin, FormLoginProps>(
       [],
     );
     const onSubmit = () => {
-      props.onButtonClick(
+      onButtonClick(
         EmailInputRef.current!.value,
         PasswordInputRef.current!.value,
         CheckboxRef.current!.checked,
@@ -43,7 +42,7 @@ const FormLogin = forwardRef<RefHandlerLogin, FormLoginProps>(
     };
 
     return (
-      <FormLoginContainer data-testid={props.testId}>
+      <FormLoginContainer data-testid={testId}>
         <Header>LOGIN</Header>
         <InputsContainer>
           <InputAndLabel ref={EmailInputRef} type="email">

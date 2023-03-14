@@ -1,6 +1,6 @@
 import React from "react";
 import LinkButton from "../../Atoms/LinkButton/LinkButton";
-import Label from "../../Atoms/TextLabel/TextLabel";
+import TextLabel from "../../Atoms/TextLabel/TextLabel";
 import { SignOrLogLinkContainer } from "./SignOrLog.style";
 
 export interface SignOrLogLinkProps {
@@ -8,7 +8,6 @@ export interface SignOrLogLinkProps {
   linkText: string;
   onClickLink: React.MouseEventHandler<HTMLButtonElement>;
   testId?: string;
-  testIdButton?: string;
   testIdLabel?: string;
 }
 
@@ -17,12 +16,11 @@ const SignOrLogLink: React.FC<SignOrLogLinkProps> = ({
   linkText,
   onClickLink,
   testId,
-  testIdButton,
   testIdLabel,
 }) => {
   return (
     <SignOrLogLinkContainer data-testid={testId}>
-      <Label
+      <TextLabel
         color="rgb(82 82 91)"
         align="center"
         justify="cener"
@@ -31,8 +29,8 @@ const SignOrLogLink: React.FC<SignOrLogLinkProps> = ({
         testId={testIdLabel}
       >
         {children}
-      </Label>
-      <LinkButton onClickLink={onClickLink} testId={testIdButton}>
+      </TextLabel>
+      <LinkButton onClickLink={onClickLink} testId="test-linkButton-id">
         {linkText}
       </LinkButton>
     </SignOrLogLinkContainer>

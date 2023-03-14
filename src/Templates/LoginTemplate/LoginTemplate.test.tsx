@@ -11,7 +11,7 @@ const props: LoginTemplateProps = {
   testId: `test-loginTemplate-id`,
   onClickIcon: mockOnClick,
   onClickLink: mockOnClick,
-  testIdButton: `test-button-id`,
+  // testIdButton: `test-button-id`,
   testIdButtonLink: `test-Linkbutton-id`,
   testIdBackground: `test-background-id`,
   testIdGlobalStyle: `test-globalStyle-id`,

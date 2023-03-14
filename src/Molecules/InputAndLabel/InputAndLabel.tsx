@@ -7,13 +7,12 @@ export interface InputAndLabelProps {
   children: React.ReactNode;
   type: string;
   testId?: string;
-  testIdInput?: string;
 }
 
 export type InputRef = HTMLInputElement;
 const InputAndLabel = forwardRef<InputRef, InputAndLabelProps>(
-  (props: InputAndLabelProps, ref) => (
-    <InputAndLabelContainer data-testid={props.testId}>
+  ({ children, type, testId }, ref) => (
+    <InputAndLabelContainer data-testid={testId}>
       <Label
         color="rgb(82 82 91)"
         align="center"
@@ -21,9 +20,9 @@ const InputAndLabel = forwardRef<InputRef, InputAndLabelProps>(
         fontSize="1.1rem"
         fontWeight="500"
       >
-        {props.children}
+        {children}
       </Label>
-      <Input type={props.type} ref={ref} testId="test-input-id" />
+      <Input type={type} ref={ref} testId="test-input-id" />
     </InputAndLabelContainer>
   ),
 );

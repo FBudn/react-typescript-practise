@@ -21,7 +21,7 @@ export interface LoginTemplateProps {
   onClickIcon: (number: number, logs: string[]) => void;
   onClickLink: (url: string) => void;
   testId?: string;
-  testIdButton?: string;
+
   testIdButtonLink?: string;
   testIdGlobalStyle?: string;
   testIdBackground?: string;
@@ -35,7 +35,6 @@ const LoginTemplate: React.FC<LoginTemplateProps> = ({
   onClickIcon,
   onClickLink,
   testId,
-  testIdButton,
   testIdButtonLink,
   testIdGlobalStyle,
   testIdBackground,
@@ -55,11 +54,7 @@ const LoginTemplate: React.FC<LoginTemplateProps> = ({
         <MaxWidth data-testid={testIdMaxWidth}>
           <Tile data-testid={testIdTile}>
             <TileContainer data-testid={testIdTileContainer}>
-              <FormLogin
-                onButtonClick={onButtonClick}
-                ref={FormLoginRef}
-                testIdButton={testIdButton}
-              />
+              <FormLogin onButtonClick={onButtonClick} ref={FormLoginRef} />
               <LineSection
                 testIdButton={testIdButtonLink}
                 lineText="OR"
