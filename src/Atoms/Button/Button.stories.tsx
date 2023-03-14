@@ -1,12 +1,13 @@
+import { Meta, Story } from "@storybook/react";
 import React from "react";
-import Button from "./Button";
+import Button, { ButtonProps } from "./Button";
 
 export default {
   title: "Atoms/Button",
   component: Button,
-};
+} as Meta;
 
-const Template = (args) => <Button {...args} />;
+const Template: Story<ButtonProps> = (args) => <Button {...args} />;
 
 export const FlexFullWidthLOGIN = Template.bind({});
 FlexFullWidthLOGIN.args = {
