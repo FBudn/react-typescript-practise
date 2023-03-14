@@ -53,7 +53,7 @@ const FormLogin = forwardRef<RefHandlerLogin, FormLoginProps>(
             Password
           </InputAndLabel>
           <CheckboxPass ref={CheckboxRef}>Remember me?</CheckboxPass>
-          <Button onClick={onSubmit} testId={props.testIdButton}>
+          <Button onClick={onSubmit} testId="test-button-id">
             LOGIN
           </Button>
           <Label

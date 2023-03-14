@@ -23,7 +23,7 @@ const InputAndLabel = forwardRef<InputRef, InputAndLabelProps>(
       >
         {props.children}
       </Label>
-      <Input type={props.type} ref={ref} testId={props.testIdInput} />
+      <Input type={props.type} ref={ref} testId="test-input-id" />
     </InputAndLabelContainer>
   ),
 );

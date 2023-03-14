@@ -6,7 +6,6 @@ import "jest-styled-components";
 
 const props: CheckboxInputProps = {
   testId: `test-checkbox-id`,
-  id: `id`,
 };
 
 test(`Should render CheckboxInput Component with not checked checkbox`, () => {

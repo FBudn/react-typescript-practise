@@ -13,7 +13,7 @@ export type CheckboxRef = HTMLInputElement;
 const CheckboxAndLabel = forwardRef<CheckboxRef, CheckboxAndLabelProps>(
   (props, ref) => (
     <CheckboxAndLabelContainer data-testid={props.testId}>
-      <CheckboxInput id="c" ref={ref} testId={props.testIdCheckbox} />
+      <CheckboxInput ref={ref} testId="test-checkbox-id" />
       <Label
         color="rgb(82 82 91)"
         align="center"

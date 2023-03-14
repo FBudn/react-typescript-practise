@@ -4,7 +4,7 @@ import { ButtonContainer } from "./Button.style";
 export interface ButtonProps {
   children: React.ReactNode;
   onClick: React.MouseEventHandler<HTMLButtonElement>;
-  testId?: string;
+  testId: string;
 }
 
 const Button: React.FC<ButtonProps> = ({ children, onClick, testId }) => {

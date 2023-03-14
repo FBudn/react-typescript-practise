@@ -55,7 +55,7 @@ const FormSignUp = forwardRef<RefHandlerSignUp, FormSignUpProps>(
             Password
           </InputAndLabel>
 
-          <Button onClick={onSubmit} testId={props.testIdButton}>
+          <Button onClick={onSubmit} testId="test-button-id">
             SIGN UP
           </Button>
         </InputsContainer>

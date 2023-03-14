@@ -3,7 +3,7 @@ import { InputContainer } from "./Input.style";
 
 export interface InputProps {
   type: string;
-  testId?: string;
+  testId: string;
 }
 
 export type InputRef = HTMLInputElement;
