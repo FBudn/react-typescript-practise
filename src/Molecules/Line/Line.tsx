@@ -4,20 +4,13 @@ import { LineContainer, HrStyled, LineTextBox } from "./Line.style";
 export interface LineProps {
   children: React.ReactNode;
   testId?: string;
-  testIdHR?: string;
-  testIdTextBox?: string;
 }
 
-const Line: React.FC<LineProps> = ({
-  children,
-  testId,
-  testIdHR,
-  testIdTextBox,
-}) => {
+const Line: React.FC<LineProps> = ({ children, testId }) => {
   return (
     <LineContainer data-testid={testId}>
-      <HrStyled data-testid={testIdHR} />
-      <LineTextBox data-testid={testIdTextBox}>{children}</LineTextBox>
+      <HrStyled data-testid="test-Line-HRStyled" />
+      <LineTextBox data-testid="test-Line-LineTextBox">{children}</LineTextBox>
       <HrStyled />
     </LineContainer>
   );

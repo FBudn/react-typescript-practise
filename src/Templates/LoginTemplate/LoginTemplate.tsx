@@ -20,13 +20,6 @@ export interface LoginTemplateProps {
   onClickIcon: (number: number, logs: string[]) => void;
   onClickLink: (url: string) => void;
   testId?: string;
-
-  testIdButtonLink?: string;
-  testIdGlobalStyle?: string;
-  testIdBackground?: string;
-  testIdMaxWidth?: string;
-  testIdTile?: string;
-  testIdTileContainer?: string;
 }
 
 const LoginTemplate: React.FC<LoginTemplateProps> = ({
@@ -34,11 +27,6 @@ const LoginTemplate: React.FC<LoginTemplateProps> = ({
   onClickIcon,
   onClickLink,
   testId,
-  testIdButtonLink,
-  testIdBackground,
-  testIdMaxWidth,
-  testIdTile,
-  testIdTileContainer,
 }) => {
   const IconsLogs = [`Google Clicked`, `Facebook Clicked`, `LinkedIn Clicked`];
   const FormLoginRef = useRef<RefHandlerLogin>(null);
@@ -47,13 +35,12 @@ const LoginTemplate: React.FC<LoginTemplateProps> = ({
   }, []);
   return (
     <LoginTemplateContainer data-testid={testId}>
-      <Background data-testid={testIdBackground}>
-        <MaxWidth data-testid={testIdMaxWidth}>
-          <Tile data-testid={testIdTile}>
-            <TileContainer data-testid={testIdTileContainer}>
+      <Background data-testid="test-background-id">
+        <MaxWidth data-testid="test-maxWidth-id">
+          <Tile data-testid="test-tile-id">
+            <TileContainer data-testid="test-tileContainer-id">
               <FormLogin onButtonClick={onButtonClick} ref={FormLoginRef} />
               <Footer
-                testIdButton={testIdButtonLink}
                 lineText="OR"
                 linkText="SIGN UP"
                 onClickIcon={onClickIcon}

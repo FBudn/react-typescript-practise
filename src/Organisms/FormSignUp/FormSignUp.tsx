@@ -11,7 +11,6 @@ export interface FormSignUpProps {
     password: undefined | string,
   ) => void;
   testId?: string;
-  testIdButton?: string;
 }
 
 export type RefHandlerSignUp = {

@@ -32,7 +32,6 @@ test(`Should render and have styles:`, () => {
     width: "100%",
     justifyContent: "start",
     alignItems: "center",
-    // text: "center",
     gap: "3px",
     height: "10px",
     cursor: "pointer",

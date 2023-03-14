@@ -11,13 +11,6 @@ const props: LoginTemplateProps = {
   testId: `test-loginTemplate-id`,
   onClickIcon: mockOnClick,
   onClickLink: mockOnClick,
-  // testIdButton: `test-button-id`,
-  testIdButtonLink: `test-Linkbutton-id`,
-  testIdBackground: `test-background-id`,
-  testIdGlobalStyle: `test-globalStyle-id`,
-  testIdMaxWidth: `test-maxWidth-id`,
-  testIdTile: `test-tile-id`,
-  testIdTileContainer: `test-tileContainer-id`,
 };
 
 test(`Should render LoginTemplate component`, () => {

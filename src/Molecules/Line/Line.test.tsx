@@ -7,8 +7,6 @@ import "jest-styled-components";
 const props: LineProps = {
   children: `Line Test`,
   testId: `line-test-id`,
-  testIdHR: `hr-test-id`,
-  testIdTextBox: `textBox-test-id`,
 };
 
 test(`Should render Line component`, () => {
@@ -59,15 +57,7 @@ test(`Should render and text-box element have styles:`, () => {
   const TextBoxElement = within(LineElement).getByTestId(`textBox-test-id`);
   expect(TextBoxElement).toBeInTheDocument();
   expect(TextBoxElement).toHaveStyle({
-    // border: "2px",
     display: "flex",
-    // borderRadius: "5px",
-    // fontSize: "0.875rem",
-    // fontWeight: "500",
-    // items: "center",
-    //  lineHeight: "1.25rem",
-    // text: "center",
     padding: "2px",
-    // color: "rgb(156 163 175)",
   });
 });

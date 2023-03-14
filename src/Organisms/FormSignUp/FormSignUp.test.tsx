@@ -9,7 +9,6 @@ const mockOnButtonClick = jest.fn();
 const props: FormSignUpProps = {
   onButtonClick: mockOnButtonClick,
   testId: `test-formSignup-id`,
-  testIdButton: `test-button-id`,
 };
 
 test(`Should render FormSignUp component`, () => {
@@ -33,9 +32,6 @@ test(`Should render and have styles:`, () => {
   expect(FormSignUpElement).toHaveStyle({
     display: "flex",
     width: "100%",
-    // justifyContent: "center",
-    // gap: "2px",
-    // margin: "2px",
   });
 });
 

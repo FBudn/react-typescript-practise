@@ -16,7 +16,6 @@ export interface FooterProps {
   logs: string[];
   onClickLink: React.MouseEventHandler<HTMLButtonElement>;
   testId?: string;
-  testIdButton?: string;
 }
 
 const Footer: React.FC<FooterProps> = ({
@@ -48,7 +47,10 @@ const Footer: React.FC<FooterProps> = ({
         >
           {infoText}
         </TextLabel>
-        <LinkButton onClickLink={onClickLink} testId="test-linkButton-id">
+        <LinkButton
+          onClickLink={onClickLink}
+          testId="test-Footer-linkButton-id"
+        >
           {linkText}
         </LinkButton>
       </TextLabelAndLinkButtonContainer>

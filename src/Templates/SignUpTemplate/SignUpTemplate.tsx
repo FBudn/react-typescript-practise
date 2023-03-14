@@ -19,13 +19,6 @@ export interface SignUpTemplateProps {
   onClickIcon: (number: number, logs: string[]) => void;
   onClickLink: (url: string) => void;
   testId?: string;
-  testIdButton?: string;
-  testIdButtonLink?: string;
-  testIdGlobalStyle?: string;
-  testIdBackground?: string;
-  testIdMaxWidth?: string;
-  testIdTile?: string;
-  testIdTileContainer?: string;
   IconsLogs: string[];
 }
 
@@ -34,12 +27,6 @@ const SignUpTemplate: React.FC<SignUpTemplateProps> = ({
   onClickIcon,
   onClickLink,
   testId,
-  testIdButton,
-  testIdButtonLink,
-  testIdBackground,
-  testIdMaxWidth,
-  testIdTile,
-  testIdTileContainer,
   IconsLogs,
 }) => {
   const FormSignUpRef = useRef<RefHandlerSignUp>(null);
@@ -48,17 +35,12 @@ const SignUpTemplate: React.FC<SignUpTemplateProps> = ({
   }, []);
   return (
     <SignUpTemplateContainer data-testid={testId}>
-      <Background data-testid={testIdBackground}>
-        <MaxWidth data-testid={testIdMaxWidth}>
-          <Tile data-testid={testIdTile}>
-            <TileContainer data-testid={testIdTileContainer}>
-              <FormSignUp
-                onButtonClick={onButtonClick}
-                ref={FormSignUpRef}
-                testIdButton={testIdButton}
-              />
+      <Background data-testid="test-background-id">
+        <MaxWidth data-testid="test-maxWidth-id">
+          <Tile data-testid="test-tile-id">
+            <TileContainer data-testid="test-tileContainer-id">
+              <FormSignUp onButtonClick={onButtonClick} ref={FormSignUpRef} />
               <Footer
-                testIdButton={testIdButtonLink}
                 lineText="OR"
                 linkText="LOGIN"
                 onClickIcon={onClickIcon}
