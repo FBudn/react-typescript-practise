@@ -16,6 +16,3 @@ export const FlexFullWidth = Template.bind({});
 FlexFullWidth.args = {
   type: "text",
 };
-
-// roznica w componentMeta vs as Meta po prostu i tak samo w Story
-// szerokość inputa co tutaj

@@ -10,6 +10,3 @@ export default {
 const Template = (args) => <CheckboxInput {...args} />;
 
 export const StyledChecbox = Template.bind({});
-StyledChecbox.args = {
-  id: 1,
-};

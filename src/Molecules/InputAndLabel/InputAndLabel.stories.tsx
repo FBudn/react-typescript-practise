@@ -5,7 +5,6 @@ import InputAndLabel from "./InputAndLabel";
 export default {
   title: "Molecules/InputAndLabel",
   component: InputAndLabel,
-  type: "Text",
 } as ComponentMeta<typeof InputAndLabel>;
 
 const Template: ComponentStory<typeof InputAndLabel> = (args) => (
