@@ -33,7 +33,7 @@
         "unnamedComponents": "arrow-function"
       }
     ],
-    "import/prefer-default-export": "off", // tu problem z exportowaniem tylko 1 stylu/elementu z pliku stylu
+    "import/prefer-default-export": "off",
     "@typescript-eslint/explicit-function-return-type": "off",
     "no-console": "off",
     "disable-next-line": "off",
@@ -45,4 +45,3 @@
     "react/jsx-props-no-spreading": "off"
   }
 }
-//"react/destructuring-assignment": [<enabled>, 'always']
