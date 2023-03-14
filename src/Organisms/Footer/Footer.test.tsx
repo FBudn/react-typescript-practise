@@ -1,16 +1,16 @@
 import React from "react";
 import { fireEvent, render, screen, within } from "@testing-library/react";
 import TestRenderer from "react-test-renderer";
-import LineSection, { LineSectionProps } from "./LineSection";
+import Footer, { FooterProps } from "./Footer";
 import "jest-styled-components";
 
 const mockOnClickIcon = jest.fn();
 const mockOnClickLink = jest.fn();
 
-const props: LineSectionProps = {
+const props: FooterProps = {
   onClickIcon: mockOnClickIcon,
   onClickLink: mockOnClickLink,
-  testId: `test-LineSection-id`,
+  testId: `test-footer-id`,
   infoText: `Link Test`,
   linkText: `LinkText Test`,
   lineText: `LineText Test`,
@@ -18,25 +18,23 @@ const props: LineSectionProps = {
   testIdButton: `test-button-id`,
 };
 
-test(`Should render LineSection component`, () => {
-  render(<LineSection {...props} />);
-  const LineSectionElement = screen.getByTestId(`test-LineSection-id`);
-  expect(LineSectionElement).toBeInTheDocument();
+test(`Should render Footer component`, () => {
+  render(<Footer {...props} />);
+  const FooterElement = screen.getByTestId(`test-footer-id`);
+  expect(FooterElement).toBeInTheDocument();
 });
 
 test(`Should match the snapshot`, () => {
-  const LineSectionElement = TestRenderer.create(
-    <LineSection {...props} />,
-  ).toJSON;
-  expect(LineSectionElement).toMatchSnapshot();
+  const FooterElement = TestRenderer.create(<Footer {...props} />).toJSON;
+  expect(FooterElement).toMatchSnapshot();
 });
 
 test(`Should render and have styles:`, () => {
-  render(<LineSection {...props} />);
-  const LineSectionElement = screen.getByTestId(`test-LineSection-id`);
-  expect(LineSectionElement).toBeInTheDocument();
+  render(<Footer {...props} />);
+  const FooterElement = screen.getByTestId(`test-footer-id`);
+  expect(FooterElement).toBeInTheDocument();
 
-  expect(LineSectionElement).toHaveStyle({
+  expect(FooterElement).toHaveStyle({
     display: "flex",
     width: "100%",
     flexDirection: "column",
@@ -47,20 +45,19 @@ test(`Should render and have styles:`, () => {
 });
 
 test(`Should render with texts`, () => {
-  render(<LineSection {...props} />);
-  const { getByText } = within(screen.getByTestId(`test-LineSection-id`));
+  render(<Footer {...props} />);
+  const { getByText } = within(screen.getByTestId(`test-footer-id`));
   expect(getByText("Link Test")).toBeInTheDocument();
   expect(getByText("LinkText Test")).toBeInTheDocument();
   expect(getByText("LineText Test")).toBeInTheDocument();
 });
 
 test(`Should render and handle onButtonLinkClick`, () => {
-  render(<LineSection {...props} />);
-  const LineSectionElement = screen.getByTestId(`test-LineSection-id`);
-  expect(LineSectionElement).toBeInTheDocument();
+  render(<Footer {...props} />);
+  const FooterElement = screen.getByTestId(`test-footer-id`);
+  expect(FooterElement).toBeInTheDocument();
 
-  const ButtonLinkElement =
-    within(LineSectionElement).getByTestId(`test-button-id`);
+  const ButtonLinkElement = within(FooterElement).getByTestId(`test-button-id`);
   expect(ButtonLinkElement).toBeInTheDocument();
 
   expect(mockOnClickLink).toBeCalledTimes(0);

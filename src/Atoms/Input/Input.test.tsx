@@ -16,21 +16,10 @@ test(`Should render Input component`, () => {
   expect(InputElement).toBeInTheDocument();
 });
 test(`Should store input value`, () => {
-  // const mockInputRef = jest.fn();
   render(<Input {...props} />);
   const InputElement = screen.getByTestId(`test-input-id`) as HTMLInputElement;
   InputElement.value = "Test";
   expect(InputElement).toHaveValue("Test");
-  // userEvent.type(InputElement, "Test");
-
-  // InputElement.onchange = mockInputRef;
-  // expect(mockInputRef).toBeCalledTimes(4);
-
-  /* InputElement.value = "test";
-  expect(screen.getByDisplayValue("test")).toHaveAttribute(
-    "data-testid",
-    "InputField-1",
-  ); */
 });
 test(`Should match snapshot`, () => {
   const InputElement = TestRenderer.create(<Input {...props} />).toJSON();

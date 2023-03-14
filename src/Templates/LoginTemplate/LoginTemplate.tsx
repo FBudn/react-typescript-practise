@@ -8,7 +8,7 @@ import {
 import FormLogin, {
   RefHandlerLogin,
 } from "../../Organisms/FormLogin/FormLogin";
-import LineSection from "../../Organisms/LineSection/LineSection";
+import Footer from "../../Organisms/Footer/Footer";
 import { LoginTemplateContainer } from "./Templates.styles";
 
 export interface LoginTemplateProps {
@@ -52,7 +52,7 @@ const LoginTemplate: React.FC<LoginTemplateProps> = ({
           <Tile data-testid={testIdTile}>
             <TileContainer data-testid={testIdTileContainer}>
               <FormLogin onButtonClick={onButtonClick} ref={FormLoginRef} />
-              <LineSection
+              <Footer
                 testIdButton={testIdButtonLink}
                 lineText="OR"
                 linkText="SIGN UP"

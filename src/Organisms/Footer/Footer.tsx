@@ -2,13 +2,13 @@ import React from "react";
 import Line from "../../Molecules/Line/Line";
 import Icons from "../../Molecules/IconsSecion/IconsSection";
 import {
-  LineSectionContainer,
+  FooterContainer,
   TextLabelAndLinkButtonContainer,
-} from "./LineSection.styled";
+} from "./Footer.styled";
 import LinkButton from "../../Atoms/LinkButton/LinkButton";
 import TextLabel from "../../Atoms/TextLabel/TextLabel";
 
-export interface LineSectionProps {
+export interface FooterProps {
   infoText: string;
   linkText: string;
   lineText: string;
@@ -19,7 +19,7 @@ export interface LineSectionProps {
   testIdButton?: string;
 }
 
-const LineSection: React.FC<LineSectionProps> = ({
+const Footer: React.FC<FooterProps> = ({
   infoText,
   linkText,
   lineText,
@@ -29,7 +29,7 @@ const LineSection: React.FC<LineSectionProps> = ({
   testId,
 }) => {
   return (
-    <LineSectionContainer data-testid={testId}>
+    <FooterContainer data-testid={testId}>
       <Line>{lineText}</Line>
       <Icons
         onClickIcon={onClickIcon}
@@ -52,8 +52,8 @@ const LineSection: React.FC<LineSectionProps> = ({
           {linkText}
         </LinkButton>
       </TextLabelAndLinkButtonContainer>
-    </LineSectionContainer>
+    </FooterContainer>
   );
 };
 
-export default LineSection;
+export default Footer;

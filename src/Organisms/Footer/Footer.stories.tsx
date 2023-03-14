@@ -1,15 +1,13 @@
+import { Meta, Story } from "@storybook/react";
 import React from "react";
-import { ComponentMeta, ComponentStory } from "@storybook/react";
-import LineSection from "./LineSection";
+import Footer, { FooterProps } from "./Footer";
 
 export default {
-  title: "Organisms/LineSection",
-  component: LineSection,
-} as ComponentMeta<typeof LineSection>;
+  title: "Organisms/Footer",
+  component: Footer,
+} as Meta;
 
-const Template: ComponentStory<typeof LineSection> = (args) => (
-  <LineSection {...args} />
-);
+const Template: Story<FooterProps> = (args) => <Footer {...args} />;
 
 export const BasicLogin = Template.bind({});
 BasicLogin.args = {

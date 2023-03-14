@@ -51,18 +51,6 @@ test(`Should render and <hr> element have styles:`, () => {
   });
 });
 
-/* test(`Should render and <hr> element have media query styles:`, () => {
-  render(<Line {...props} />);
-  const LineElement = screen.getByTestId(`line-test-id`);
-  expect(LineElement).toBeInTheDocument();
-
-  const HrElement = within(LineElement).getByTestId(`hr-test-id`);
-  expect(HrElement).toBeInTheDocument();
-  expect(HrElement).toHaveStyleRule("border", "none", {
-    media: "screen and (min-width: 768px)",
-  });
-}); */
-
 test(`Should render and text-box element have styles:`, () => {
   render(<Line {...props} />);
   const LineElement = screen.getByTestId(`line-test-id`);

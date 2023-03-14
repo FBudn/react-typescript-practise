@@ -1,7 +1,7 @@
 import React, { forwardRef } from "react";
 import { CheckboxAndLabelContainer } from "./CheckboxAndLabel.style";
 import CheckboxInput from "../../Atoms/CheckboxInput/CheckboxInput";
-import Label from "../../Atoms/TextLabel/TextLabel";
+import TextLabel from "../../Atoms/TextLabel/TextLabel";
 
 export interface CheckboxAndLabelProps {
   infoText: React.ReactNode;
@@ -13,7 +13,7 @@ const CheckboxAndLabel = forwardRef<CheckboxRef, CheckboxAndLabelProps>(
   ({ infoText, testId }, ref) => (
     <CheckboxAndLabelContainer data-testid={testId}>
       <CheckboxInput ref={ref} testId="test-checkbox-id" />
-      <Label
+      <TextLabel
         color="rgb(82 82 91)"
         align="center"
         justify="start"
@@ -21,7 +21,7 @@ const CheckboxAndLabel = forwardRef<CheckboxRef, CheckboxAndLabelProps>(
         fontWeight="500"
       >
         {infoText}
-      </Label>
+      </TextLabel>
     </CheckboxAndLabelContainer>
   ),
 );

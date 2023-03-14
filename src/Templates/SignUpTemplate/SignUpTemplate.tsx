@@ -9,7 +9,7 @@ import {
 import FormSignUp, {
   RefHandlerSignUp,
 } from "../../Organisms/FormSignUp/FormSignUp";
-import LineSection from "../../Organisms/LineSection/LineSection";
+import Footer from "../../Organisms/Footer/Footer";
 
 export interface SignUpTemplateProps {
   onButtonClick: (
@@ -57,7 +57,7 @@ const SignUpTemplate: React.FC<SignUpTemplateProps> = ({
                 ref={FormSignUpRef}
                 testIdButton={testIdButton}
               />
-              <LineSection
+              <Footer
                 testIdButton={testIdButtonLink}
                 lineText="OR"
                 linkText="LOGIN"

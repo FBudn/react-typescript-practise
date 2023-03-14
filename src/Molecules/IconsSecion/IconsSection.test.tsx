@@ -62,20 +62,20 @@ test(`Should render three icons components`, () => {
 
 test(`Should render and handle onClickIcon`, () => {
   render(<IconsSection {...props} />);
-  const LineSectionElement = screen.getByTestId(`iconsSection-test-id`);
-  expect(LineSectionElement).toBeInTheDocument();
+  const IconsSectionlement = screen.getByTestId(`iconsSection-test-id`);
+  expect(IconsSectionlement).toBeInTheDocument();
 
-  const IconElement = within(LineSectionElement).getByTestId(`Icon-1-case`);
+  const IconElement = within(IconsSectionlement).getByTestId(`Icon-1-case`);
   expect(mockOnClickIcon).toBeCalledTimes(0);
   fireEvent.click(IconElement);
   expect(mockOnClickIcon).toBeCalledTimes(1);
 
-  const IconElement2 = within(LineSectionElement).getByTestId(`Icon-2-case`);
+  const IconElement2 = within(IconsSectionlement).getByTestId(`Icon-2-case`);
   expect(mockOnClickIcon).toBeCalledTimes(1);
   fireEvent.click(IconElement2);
   expect(mockOnClickIcon).toBeCalledTimes(2);
 
-  const IconElement3 = within(LineSectionElement).getByTestId(`Icon-3-case`);
+  const IconElement3 = within(IconsSectionlement).getByTestId(`Icon-3-case`);
   expect(mockOnClickIcon).toBeCalledTimes(2);
   fireEvent.click(IconElement3);
   expect(mockOnClickIcon).toBeCalledTimes(3);

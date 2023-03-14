@@ -69,7 +69,7 @@ test(`(Button from Forms) Should render and handle onButtonClick`, () => {
   expect(mockOnClick).toBeCalledTimes(1);
 });
 
-test(`(Button from LineSection) Should render and handle onButtonLinkClick`, () => {
+test(`(Button from Footer) Should render and handle onButtonLinkClick`, () => {
   render(<SignUpTemplate {...props} />);
   const SignUpTemplateElement = screen.getByTestId(`test-signUpTemplate-id`);
   expect(SignUpTemplateElement).toBeInTheDocument();
@@ -82,17 +82,6 @@ test(`(Button from LineSection) Should render and handle onButtonLinkClick`, () 
   fireEvent.click(ButtonLinkElement);
   expect(mockOnClick).toBeCalledTimes(1);
 });
-
-/* test(`Should render and have global styles:`, () => {
-  render(<SignUpTemplate {...props} />);
-  const GlobalStyle = screen.getByTestId(`test-globalStyle-id`);
-  expect(GlobalStyle).toBeInTheDocument();
-
-  expect(GlobalStyle).toHaveStyle({
-    margin: 0,
-    padding: 0,
-  });
-}); */
 
 test(`Should render and have backgound styles:`, () => {
   render(<SignUpTemplate {...props} />);
