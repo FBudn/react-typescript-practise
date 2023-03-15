@@ -56,10 +56,25 @@ test(`Should render and handle onButtonLinkClick`, () => {
   const FooterElement = screen.getByTestId(`test-footer-id`);
   expect(FooterElement).toBeInTheDocument();
 
-  const ButtonLinkElement = within(FooterElement).getByTestId(`test-button-id`);
+  const ButtonLinkElement = within(FooterElement).getByTestId(
+    `test-Footer-linkButton-id`,
+  );
   expect(ButtonLinkElement).toBeInTheDocument();
 
   expect(mockOnClickLink).toBeCalledTimes(0);
   fireEvent.click(ButtonLinkElement);
   expect(mockOnClickLink).toBeCalledTimes(1);
+});
+
+test(`Should render and handle onIconLinkClick`, () => {
+  render(<Footer {...props} />);
+  const FooterElement = screen.getByTestId(`test-footer-id`);
+  expect(FooterElement).toBeInTheDocument();
+
+  const IconLinkElement = within(FooterElement).getByTestId(`Icon-3-case`);
+  expect(IconLinkElement).toBeInTheDocument();
+
+  expect(mockOnClickIcon).toBeCalledTimes(0);
+  fireEvent.click(IconLinkElement);
+  expect(mockOnClickIcon).toBeCalledTimes(1);
 });

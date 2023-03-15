@@ -56,5 +56,3 @@ test(`Should render and handle onButtonClick`, () => {
   fireEvent.click(ButtonElement);
   expect(mockOnButtonClick).toBeCalledTimes(1);
 });
-
-// expect(getByText("Already a user? LOGIN")).toBeInTheDocument(); NIE TEN KOMPONENT

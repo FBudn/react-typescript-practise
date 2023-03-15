@@ -13,9 +13,9 @@ const Template: ComponentStory<typeof InputAndLabel> = (args) => (
 
 export const BasicEmail = Template.bind({});
 BasicEmail.args = {
-  infoText: "Email",
+  children: "Email",
 };
 export const BasicPassword = Template.bind({});
 BasicPassword.args = {
-  infoText: "Password",
+  children: "Password",
 };

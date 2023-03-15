@@ -46,8 +46,7 @@ const FormLogin = forwardRef<RefHandlerLogin, FormLoginProps>(
         <Header>LOGIN</Header>
         <InputsContainer>
           <InputAndLabel ref={EmailInputRef} type="email">
-            {" "}
-            Email{" "}
+            Email
           </InputAndLabel>
           <InputAndLabel ref={PasswordInputRef} type="password">
             Password

@@ -56,3 +56,13 @@ test(`Should render and handle onButtonClick`, () => {
   fireEvent.click(ButtonElement);
   expect(mockOnButtonClick).toBeCalledTimes(1);
 });
+
+test(`CheckboxInput should not be checked`, () => {
+  render(<FormLogin {...props} />);
+  const ChecboxAndLabelElem = screen.getByTestId(`test-formLogin-id`);
+  expect(ChecboxAndLabelElem).toBeInTheDocument();
+  const CheckboxInput =
+    within(ChecboxAndLabelElem).getByTestId(`test-checkbox-id`);
+  expect(CheckboxInput).toBeInTheDocument();
+  expect(CheckboxInput).not.toBeChecked();
+});
