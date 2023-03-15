@@ -12,7 +12,7 @@ export interface FooterProps {
   infoText: string;
   linkText: string;
   lineText: string;
-  onClickIcon: (number: number) => void;
+  onClickIcon: (i: string) => void;
   onClickLink: React.MouseEventHandler<HTMLButtonElement>;
   testId?: string;
 }
@@ -28,12 +28,7 @@ const Footer: React.FC<FooterProps> = ({
   return (
     <FooterContainer data-testid={testId}>
       <Line>{lineText}</Line>
-      <Icons
-        onClickIcon={onClickIcon}
-        firstIconText={0}
-        secondIconText={1}
-        thirdIconText={2}
-      />
+      <Icons onClickIcon={onClickIcon} />
       <TextLabelAndLinkButtonContainer>
         <TextLabel
           color="rgb(82 82 91)"

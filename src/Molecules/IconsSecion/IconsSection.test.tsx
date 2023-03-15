@@ -9,9 +9,6 @@ const mockOnClickIcon = jest.fn();
 const props: IconsSectionProps = {
   testId: `iconsSection-test-id`,
   onClickIcon: mockOnClickIcon,
-  firstIconText: 0,
-  secondIconText: 1,
-  thirdIconText: 2,
   testIdIcon1: `Icon-1-case`,
   testIdIcon2: `Icon-2-case`,
   testIdIcon3: `Icon-3-case`,

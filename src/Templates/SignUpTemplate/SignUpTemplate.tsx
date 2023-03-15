@@ -16,7 +16,7 @@ export interface SignUpTemplateProps {
     email: undefined | string,
     password: undefined | string,
   ) => void;
-  onClickIcon: (number: number) => void;
+  onClickIcon: (i: string) => void;
   onClickLink: (url: string) => void;
   testId?: string;
 }

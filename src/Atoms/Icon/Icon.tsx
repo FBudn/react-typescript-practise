@@ -8,7 +8,7 @@ import React from "react";
 import { SoloIconContainer } from "./Icon.style";
 
 export interface IconProps {
-  onClickIcon: React.MouseEventHandler<HTMLDivElement>;
+  onClickIcon: (i: string) => void;
   color: string;
   icon: "facebook" | "google" | "linkedin";
 }
@@ -20,7 +20,9 @@ const Icon: React.FC<IconProps> = ({ onClickIcon, color, icon }) => {
         <SoloIconContainer
           data-testid="Icon-1-case"
           color={color}
-          onClick={onClickIcon}
+          onClick={() => {
+            onClickIcon(`Facebook Clicked`);
+          }}
         >
           <FontAwesomeIcon icon={faFacebookF} />
         </SoloIconContainer>
@@ -30,7 +32,9 @@ const Icon: React.FC<IconProps> = ({ onClickIcon, color, icon }) => {
         <SoloIconContainer
           data-testid="Icon-2-case"
           color={color}
-          onClick={onClickIcon}
+          onClick={() => {
+            onClickIcon(`Google Clicked`);
+          }}
         >
           <FontAwesomeIcon icon={faGoogle} />
         </SoloIconContainer>
@@ -40,7 +44,9 @@ const Icon: React.FC<IconProps> = ({ onClickIcon, color, icon }) => {
         <SoloIconContainer
           data-testid="Icon-3-case"
           color={color}
-          onClick={onClickIcon}
+          onClick={() => {
+            onClickIcon(`LinkedIn Clicked`);
+          }}
         >
           <FontAwesomeIcon icon={faLinkedinIn} />
         </SoloIconContainer>
@@ -48,7 +54,12 @@ const Icon: React.FC<IconProps> = ({ onClickIcon, color, icon }) => {
 
     default:
       return (
-        <SoloIconContainer color={color} onClick={onClickIcon}>
+        <SoloIconContainer
+          color={color}
+          onClick={() => {
+            onClickIcon(`Facebook Clicked`);
+          }}
+        >
           <FontAwesomeIcon icon={faFacebookF} />
         </SoloIconContainer>
       );
