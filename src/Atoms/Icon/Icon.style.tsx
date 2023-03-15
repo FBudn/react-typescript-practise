@@ -8,7 +8,6 @@ export const SoloIconContainer = styled.div.attrs(
   height: 25px;
   justify-content: center;
   align-items: center;
-  text: center;
   padding: 8px;
   font-size: 1rem;
   border-radius: 100%;

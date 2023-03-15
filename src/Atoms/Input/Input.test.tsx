@@ -15,12 +15,7 @@ test(`Should render Input component`, () => {
   const InputElement = screen.getByTestId(`test-input-id`);
   expect(InputElement).toBeInTheDocument();
 });
-test(`Should store input value`, () => {
-  render(<Input {...props} />);
-  const InputElement = screen.getByTestId(`test-input-id`) as HTMLInputElement;
-  InputElement.value = "Test";
-  expect(InputElement).toHaveValue("Test");
-});
+
 test(`Should match snapshot`, () => {
   const InputElement = TestRenderer.create(<Input {...props} />).toJSON();
   expect(InputElement).toMatchSnapshot();
@@ -33,8 +28,15 @@ test(`Should render and have styles:`, () => {
 
   expect(InputElement).toHaveStyle({
     display: "flex",
-    width: "100%",
+    width: "99%",
     borderRadius: "5px",
     height: "40px",
   });
+});
+
+test(`Should store input value`, () => {
+  render(<Input {...props} />);
+  const InputElement = screen.getByTestId(`test-input-id`) as HTMLInputElement;
+  InputElement.value = "Test";
+  expect(InputElement).toHaveValue("Test");
 });

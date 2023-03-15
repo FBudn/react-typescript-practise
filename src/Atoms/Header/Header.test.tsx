@@ -31,3 +31,10 @@ test("Should render and have styles:", () => {
   expect(HeaderElement).toHaveStyleRule("align-items", "center");
   expect(HeaderElement).toHaveStyleRule("display", "flex");
 });
+
+test(`Should render with text`, () => {
+  render(<Header {...props} />);
+  const HeaderElement = screen.getByTestId(`test-header-id`);
+  expect(HeaderElement).toBeInTheDocument();
+  expect(HeaderElement).toHaveTextContent(`Header Test`);
+});

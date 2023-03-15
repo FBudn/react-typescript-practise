@@ -22,11 +22,10 @@ test(`Should match snapshot`, () => {
   expect(ButtonElement).toMatchSnapshot();
 });
 
-test(`Should have styles and render with text`, () => {
+test(`Should have styles and render`, () => {
   render(<Button {...props} />);
   const ButtonElement = screen.getByTestId(`test-button-id`);
   expect(ButtonElement).toBeInTheDocument();
-  expect(ButtonElement).toHaveTextContent(`Button Test`);
   expect(ButtonElement).toHaveStyle({
     display: "flex",
     width: "100%",
@@ -39,6 +38,13 @@ test(`Should have styles and render with text`, () => {
     color: "white",
     cursor: "pointer",
   });
+});
+
+test(`Should render with text`, () => {
+  render(<Button {...props} />);
+  const ButtonElement = screen.getByTestId(`test-button-id`);
+  expect(ButtonElement).toBeInTheDocument();
+  expect(ButtonElement).toHaveTextContent(`Button Test`);
 });
 
 test(`Should render button and handle onClick`, () => {

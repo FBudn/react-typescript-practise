@@ -18,15 +18,6 @@ test(`Should renred LinkButton component`, () => {
   expect(LinkButtonElement).toBeInTheDocument();
 });
 
-test(`Should handleClick`, () => {
-  render(<LinkButton {...props} />);
-  const LinkButtonElement = screen.getByTestId(`test-linkButton-id`);
-  fireEvent.click(LinkButtonElement);
-  expect(mockonClickLink).toBeCalledTimes(1);
-  mockonClickLink(`LinkButton Test 1`);
-  expect(mockonClickLink).toBeCalledWith(`LinkButton Test 1`);
-});
-
 test(`To match snapshot`, () => {
   const LinkButtonElement = TestRenderer.create(
     <LinkButton {...props} />,
@@ -47,4 +38,13 @@ test(`To render and have styles:`, () => {
   expect(LinkButtonElement).toHaveStyleRule("align-items", "end");
   expect(LinkButtonElement).toHaveStyleRule("cursor", "pointer");
   expect(LinkButtonElement).toHaveStyleRule("text-decoration", "underline");
+});
+
+test(`Should handleClick`, () => {
+  render(<LinkButton {...props} />);
+  const LinkButtonElement = screen.getByTestId(`test-linkButton-id`);
+  fireEvent.click(LinkButtonElement);
+  expect(mockonClickLink).toBeCalledTimes(1);
+  mockonClickLink(`LinkButton Test 1`);
+  expect(mockonClickLink).toBeCalledWith(`LinkButton Test 1`);
 });

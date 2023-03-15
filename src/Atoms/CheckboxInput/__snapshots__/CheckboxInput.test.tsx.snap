@@ -13,7 +13,6 @@ exports[`Should match snapshot 1`] = `
 <input
   className="c0"
   data-testid="test-checkbox-id"
-  id="id"
   type="checkbox"
 />
 `;

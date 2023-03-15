@@ -10,13 +10,13 @@ const props: TextLabelProps = {
   justify: "center",
   fontSize: "1rem",
   fontWeight: "500",
-  testId: `test-TextLabel-id`,
+  testId: `test-textLabel-id`,
   children: `TextLabel Test`,
 };
 
 test(`Should render TextLabel component`, () => {
   render(<TextLabel {...props} />);
-  const TextLabelElement = screen.getByTestId(`test-TextLabel-id`);
+  const TextLabelElement = screen.getByTestId(`test-textLabel-id`);
   expect(TextLabelElement).toBeInTheDocument();
 });
 
@@ -29,11 +29,18 @@ test(`Should match snapshot`, () => {
 
 test(`Should render and have styles:`, () => {
   render(<TextLabel {...props} />);
-  const TextLabelElement = screen.getByTestId(`test-TextLabel-id`);
+  const TextLabelElement = screen.getByTestId(`test-textLabel-id`);
   expect(TextLabelElement).toBeInTheDocument();
 
   expect(TextLabelElement).toHaveStyle({
     display: "flex",
     border: "none",
   });
+});
+
+test(`Should render with text`, () => {
+  render(<TextLabel {...props} />);
+  const TextLabelElement = screen.getByTestId(`test-textLabel-id`);
+  expect(TextLabelElement).toBeInTheDocument();
+  expect(TextLabelElement).toHaveTextContent(`TextLabel Test`);
 });
