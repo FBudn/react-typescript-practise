@@ -64,7 +64,6 @@ test(`Should match snapshot and have styles:`, () => {
   expect(IconElement1).toHaveStyleRule("height", "25px");
   expect(IconElement1).toHaveStyleRule("justify-content", "center");
   expect(IconElement1).toHaveStyleRule("align-items", "center");
-  expect(IconElement1).toHaveStyleRule("text", "center");
   expect(IconElement1).toHaveStyleRule("padding", "8px");
   expect(IconElement1).toHaveStyleRule("font-size", "1rem");
   expect(IconElement1).toHaveStyleRule("border-radius", "100%");
@@ -74,7 +73,6 @@ test(`Should match snapshot and have styles:`, () => {
   expect(IconElement2).toHaveStyleRule("height", "25px");
   expect(IconElement2).toHaveStyleRule("justify-content", "center");
   expect(IconElement2).toHaveStyleRule("align-items", "center");
-  expect(IconElement2).toHaveStyleRule("text", "center");
   expect(IconElement2).toHaveStyleRule("padding", "8px");
   expect(IconElement2).toHaveStyleRule("font-size", "1rem");
   expect(IconElement2).toHaveStyleRule("border-radius", "100%");
@@ -84,7 +82,6 @@ test(`Should match snapshot and have styles:`, () => {
   expect(IconElement3).toHaveStyleRule("height", "25px");
   expect(IconElement3).toHaveStyleRule("justify-content", "center");
   expect(IconElement3).toHaveStyleRule("align-items", "center");
-  expect(IconElement3).toHaveStyleRule("text", "center");
   expect(IconElement3).toHaveStyleRule("padding", "8px");
   expect(IconElement3).toHaveStyleRule("font-size", "1rem");
   expect(IconElement3).toHaveStyleRule("border-radius", "100%");

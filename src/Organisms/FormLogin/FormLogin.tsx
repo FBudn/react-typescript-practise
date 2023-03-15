@@ -45,12 +45,13 @@ const FormLogin = forwardRef<RefHandlerLogin, FormLoginProps>(
       <FormLoginContainer data-testid={testId}>
         <Header>LOGIN</Header>
         <InputsContainer>
-          <InputAndLabel ref={EmailInputRef} type="email" infoText="Email" />
-          <InputAndLabel
-            ref={PasswordInputRef}
-            type="password"
-            infoText="Password"
-          />
+          <InputAndLabel ref={EmailInputRef} type="email">
+            {" "}
+            Email{" "}
+          </InputAndLabel>
+          <InputAndLabel ref={PasswordInputRef} type="password">
+            Password
+          </InputAndLabel>
           <CheckboxPass ref={CheckboxRef} infoText="Remember me?" />
           <Button onClick={onSubmit} testId="test-button-id">
             LOGIN

@@ -6,12 +6,12 @@ import "jest-styled-components";
 
 const props: LineProps = {
   children: `Line Test`,
-  testId: `line-test-id`,
+  testId: `test-line-id`,
 };
 
 test(`Should render Line component`, () => {
   render(<Line {...props} />);
-  const LineElement = screen.getByTestId(`line-test-id`);
+  const LineElement = screen.getByTestId(`test-line-id`);
   expect(LineElement).toBeInTheDocument();
 });
 
@@ -22,7 +22,7 @@ test(`Should match the snapshot`, () => {
 
 test(`Should render and have styles:`, () => {
   render(<Line {...props} />);
-  const LineElement = screen.getByTestId(`line-test-id`);
+  const LineElement = screen.getByTestId(`test-line-id`);
   expect(LineElement).toBeInTheDocument();
 
   expect(LineElement).toHaveStyle({
@@ -34,12 +34,18 @@ test(`Should render and have styles:`, () => {
   });
 });
 
-test(`Should render and <hr> element have styles:`, () => {
+test(`Should render with text`, () => {
   render(<Line {...props} />);
-  const LineElement = screen.getByTestId(`line-test-id`);
+  const { getByText } = within(screen.getByTestId(`test-line-id`));
+  expect(getByText("Line Test")).toBeInTheDocument();
+});
+
+test(`Should render and <hr> element should have styles:`, () => {
+  render(<Line {...props} />);
+  const LineElement = screen.getByTestId(`test-line-id`);
   expect(LineElement).toBeInTheDocument();
 
-  const HrElement = within(LineElement).getByTestId(`hr-test-id`);
+  const HrElement = within(LineElement).getByTestId(`test-Line-HRStyled`);
   expect(HrElement).toBeInTheDocument();
   expect(HrElement).toHaveStyle({
     width: "117px",
@@ -49,12 +55,14 @@ test(`Should render and <hr> element have styles:`, () => {
   });
 });
 
-test(`Should render and text-box element have styles:`, () => {
+test(`Should render and text-box element should have styles:`, () => {
   render(<Line {...props} />);
-  const LineElement = screen.getByTestId(`line-test-id`);
+  const LineElement = screen.getByTestId(`test-line-id`);
   expect(LineElement).toBeInTheDocument();
 
-  const TextBoxElement = within(LineElement).getByTestId(`textBox-test-id`);
+  const TextBoxElement = within(LineElement).getByTestId(
+    `test-Line-LineTextBox`,
+  );
   expect(TextBoxElement).toBeInTheDocument();
   expect(TextBoxElement).toHaveStyle({
     display: "flex",

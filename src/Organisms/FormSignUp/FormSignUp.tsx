@@ -44,13 +44,12 @@ const FormSignUp = forwardRef<RefHandlerSignUp, FormSignUpProps>(
       <FormSignUpContainer data-testid={testId}>
         <Header>SIGN UP</Header>
         <InputsContainer>
-          <InputAndLabel type="email" ref={EmailInputRef} infoText="Email" />
-
-          <InputAndLabel
-            type="password"
-            ref={PasswordInputRef}
-            infoText="Password"
-          />
+          <InputAndLabel type="email" ref={EmailInputRef}>
+            Email
+          </InputAndLabel>
+          <InputAndLabel type="password" ref={PasswordInputRef}>
+            Password
+          </InputAndLabel>
 
           <Button onClick={onSubmit} testId="test-button-id">
             SIGN UP

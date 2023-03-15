@@ -5,14 +5,14 @@ import InputAndLabel, { InputAndLabelProps } from "./InputAndLabel";
 import "jest-styled-components";
 
 const props: InputAndLabelProps = {
-  testId: `inputAndLabel-test-id`,
-  infoText: `InputAndLabel Test`,
+  testId: `test-inputAndLabel-id`,
+  children: `InputAndLabel Test`,
   type: `text`,
 };
 
 test(`Should render InputAndLabel component`, () => {
   render(<InputAndLabel {...props} />);
-  const InputAndLabelElement = screen.getByTestId(`inputAndLabel-test-id`);
+  const InputAndLabelElement = screen.getByTestId(`test-inputAndLabel-id`);
   expect(InputAndLabelElement).toBeInTheDocument();
 });
 
@@ -25,7 +25,7 @@ test(`Should match the snapshot`, () => {
 
 test(`Should render and have styles`, () => {
   render(<InputAndLabel {...props} />);
-  const InputAndLabelElement = screen.getByTestId(`inputAndLabel-test-id`);
+  const InputAndLabelElement = screen.getByTestId(`test-inputAndLabel-id`);
   expect(InputAndLabelElement).toBeInTheDocument();
 
   expect(InputAndLabelElement).toHaveStyle({
@@ -38,15 +38,15 @@ test(`Should render and have styles`, () => {
 
 test(`Should render with text`, () => {
   render(<InputAndLabel {...props} />);
-  const { getByText } = within(screen.getByTestId(`inputAndLabel-test-id`));
+  const { getByText } = within(screen.getByTestId(`test-inputAndLabel-id`));
   expect(getByText("InputAndLabel Test")).toBeInTheDocument();
 });
 
-test(`Should do smth with input`, () => {
+test(`Should redner input element`, () => {
   render(<InputAndLabel {...props} />);
-  const InputAndLabelElement = screen.getByTestId(`inputAndLabel-test-id`);
+  const InputAndLabelElement = screen.getByTestId(`test-inputAndLabel-id`);
   expect(InputAndLabelElement).toBeInTheDocument();
   const InputElement =
-    within(InputAndLabelElement).getByTestId(`input-test-id`);
+    within(InputAndLabelElement).getByTestId(`test-input-id`);
   expect(InputElement).toBeInTheDocument();
 });
