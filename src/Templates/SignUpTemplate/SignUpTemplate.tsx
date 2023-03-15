@@ -16,10 +16,9 @@ export interface SignUpTemplateProps {
     email: undefined | string,
     password: undefined | string,
   ) => void;
-  onClickIcon: (number: number, logs: string[]) => void;
+  onClickIcon: (number: number) => void;
   onClickLink: (url: string) => void;
   testId?: string;
-  IconsLogs: string[];
 }
 
 const SignUpTemplate: React.FC<SignUpTemplateProps> = ({
@@ -27,7 +26,6 @@ const SignUpTemplate: React.FC<SignUpTemplateProps> = ({
   onClickIcon,
   onClickLink,
   testId,
-  IconsLogs,
 }) => {
   const FormSignUpRef = useRef<RefHandlerSignUp>(null);
   useEffect(() => {
@@ -44,7 +42,6 @@ const SignUpTemplate: React.FC<SignUpTemplateProps> = ({
                 lineText="OR"
                 linkText="LOGIN"
                 onClickIcon={onClickIcon}
-                logs={IconsLogs}
                 infoText="Already a user?"
                 onClickLink={() => {
                   onClickLink(`/Login`);

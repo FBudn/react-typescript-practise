@@ -26,7 +26,6 @@ const SignUpPage: React.FC = () => {
       onButtonClick={onButtonClick}
       onClickIcon={onClickIcon}
       onClickLink={onClickLink}
-      IconsLogs={IconsLogs}
     />
   );
 };

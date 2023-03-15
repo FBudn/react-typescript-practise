@@ -3,11 +3,10 @@ import { IconsContainer } from "./IconsSection.style";
 import Icon from "../../Atoms/Icon/Icon";
 
 export interface IconsSectionProps {
-  onClickIcon: (number: number, logs: string[]) => void;
+  onClickIcon: (number: number) => void;
   firstIconText: number;
   secondIconText: number;
   thirdIconText: number;
-  logs: string[];
   testId?: string;
   testIdIcon1?: string;
   testIdIcon2?: string;
@@ -19,7 +18,6 @@ const IconsSection: React.FC<IconsSectionProps> = ({
   firstIconText,
   secondIconText,
   thirdIconText,
-  logs,
   testId,
   testIdIcon1,
   testIdIcon2,
@@ -32,7 +30,7 @@ const IconsSection: React.FC<IconsSectionProps> = ({
         icon="facebook"
         data-testid={testIdIcon1}
         onClickIcon={() => {
-          onClickIcon(firstIconText, logs);
+          onClickIcon(firstIconText);
         }}
       />
 
@@ -41,7 +39,7 @@ const IconsSection: React.FC<IconsSectionProps> = ({
         icon="google"
         data-testid={testIdIcon2}
         onClickIcon={() => {
-          onClickIcon(secondIconText, logs);
+          onClickIcon(secondIconText);
         }}
       />
 
@@ -50,7 +48,7 @@ const IconsSection: React.FC<IconsSectionProps> = ({
         icon="linkedin"
         data-testid={testIdIcon3}
         onClickIcon={() => {
-          onClickIcon(thirdIconText, logs);
+          onClickIcon(thirdIconText);
         }}
       />
     </IconsContainer>

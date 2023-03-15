@@ -11,7 +11,6 @@ const props: SignUpTemplateProps = {
   testId: `test-signUpTemplate-id`,
   onClickIcon: mockOnClick,
   onClickLink: mockOnClick,
-  IconsLogs: [`facebook`, `google`, `linkedin`],
 };
 
 test(`Should render SignUpTemplate component`, () => {

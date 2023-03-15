@@ -1,11 +1,12 @@
+/* eslint-disable import/no-duplicates */
 import React from "react";
-import { fireEvent, render, screen, within } from "@testing-library/react";
+import { render, screen, within } from "@testing-library/react";
 import { BrowserRouter } from "react-router-dom";
 import TestRenderer from "react-test-renderer";
 import LoginPage from "./LoginPage";
 import "jest-styled-components";
 
-const mockOnButtonClick = jest.fn();
+// const mockOnButtonClick = jest.fn();  leaved to remember about testing/mocking functions on this level
 
 test(`Should render LoginPage component`, () => {
   render(
@@ -42,6 +43,7 @@ test(`Should render with texts`, () => {
   expect(getByText("Forgot Password?")).toBeInTheDocument();
 });
 
+/* leaved to remember about testing/mocking functions on this level
 test(`Should render and handle onButtonClick`, () => {
   render(
     <BrowserRouter>
@@ -52,8 +54,10 @@ test(`Should render and handle onButtonClick`, () => {
   expect(LoginPageElement).toBeInTheDocument();
 
   const ButtonElement = within(LoginPageElement).getByTestId(`test-button-id`);
+   const ButtonOnClick = within(LoginPageElement).getBy
   expect(ButtonElement).toBeInTheDocument();
-  expect(mockOnButtonClick).toBeCalledTimes(0);
-  fireEvent.click(ButtonElement);
-  // expect(mockOnButtonClick).toBeCalledTimes(1);
+   expect(mockOnButtonClick).toBeCalledTimes(0);
+   fireEvent.click(ButtonElement);
+   expect(mockOnButtonClick).toBeCalledTimes(1);
 });
+*/

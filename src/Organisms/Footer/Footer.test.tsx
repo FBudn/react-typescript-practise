@@ -14,7 +14,6 @@ const props: FooterProps = {
   infoText: `Link Test`,
   linkText: `LinkText Test`,
   lineText: `LineText Test`,
-  logs: [`facebook clicked`, `google clicked`, `linkedin clicked`],
 };
 
 test(`Should render Footer component`, () => {

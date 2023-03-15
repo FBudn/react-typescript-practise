@@ -1,11 +1,9 @@
 import React from "react";
-import { fireEvent, render, screen, within } from "@testing-library/react";
+import { render, screen, within } from "@testing-library/react";
 import { BrowserRouter } from "react-router-dom";
 import TestRenderer from "react-test-renderer";
 import SignUpPage from "./SignUpPage";
 import "jest-styled-components";
-
-const mockOnButtonClick = jest.fn();
 
 test(`Should render SignUpPage component`, () => {
   render(
@@ -38,20 +36,4 @@ test(`Should render with texts`, () => {
   expect(getByText("Password")).toBeInTheDocument();
   expect(getAllByText("SIGN UP")[0]).toBeInTheDocument();
   expect(getAllByText("SIGN UP")).toHaveLength(2);
-});
-
-test(`Should render and handle onButtonClick`, () => {
-  render(
-    <BrowserRouter>
-      <SignUpPage />
-    </BrowserRouter>,
-  );
-  const SignUpPageElement = screen.getByTestId(`test-signUpPage-id`);
-  expect(SignUpPageElement).toBeInTheDocument();
-
-  const ButtonElement = within(SignUpPageElement).getByTestId(`test-button-id`);
-  expect(ButtonElement).toBeInTheDocument();
-  expect(mockOnButtonClick).toBeCalledTimes(0);
-  fireEvent.click(ButtonElement);
-  // expect(mockOnButtonClick).toBeCalledTimes(1);
 });

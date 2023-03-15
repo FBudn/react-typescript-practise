@@ -17,7 +17,7 @@ export interface LoginTemplateProps {
     password: undefined | string,
     checkbox: undefined | boolean,
   ) => void;
-  onClickIcon: (number: number, logs: string[]) => void;
+  onClickIcon: (number: number) => void;
   onClickLink: (url: string) => void;
   testId?: string;
 }
@@ -28,7 +28,6 @@ const LoginTemplate: React.FC<LoginTemplateProps> = ({
   onClickLink,
   testId,
 }) => {
-  const IconsLogs = [`Google Clicked`, `Facebook Clicked`, `LinkedIn Clicked`];
   const FormLoginRef = useRef<RefHandlerLogin>(null);
   useEffect(() => {
     FormLoginRef.current?.focus();
@@ -44,7 +43,6 @@ const LoginTemplate: React.FC<LoginTemplateProps> = ({
                 lineText="OR"
                 linkText="SIGN UP"
                 onClickIcon={onClickIcon}
-                logs={IconsLogs}
                 infoText="Need an account?"
                 onClickLink={() => {
                   onClickLink("/SignUp");

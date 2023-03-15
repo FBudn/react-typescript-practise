@@ -11,8 +11,10 @@ const LoginPage: React.FC = () => {
     console.log(email, password, checkbox);
   };
 
-  const onClickIcon = (number: number, logs: string[]) => {
-    console.log(logs[number]);
+  const IconsLogs = [`Google Clicked`, `Facebook Clicked`, `LinkedIn Clicked`];
+
+  const onClickIcon = (i: number) => {
+    console.log(IconsLogs[i]);
   };
 
   const navigate = useNavigate();

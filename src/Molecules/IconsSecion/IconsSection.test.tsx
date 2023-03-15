@@ -12,7 +12,6 @@ const props: IconsSectionProps = {
   firstIconText: 0,
   secondIconText: 1,
   thirdIconText: 2,
-  logs: [`facebook clicked`, `google clicked`, `linkedin clicked`],
   testIdIcon1: `Icon-1-case`,
   testIdIcon2: `Icon-2-case`,
   testIdIcon3: `Icon-3-case`,
