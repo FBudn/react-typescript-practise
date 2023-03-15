@@ -67,15 +67,16 @@ test(`(Button from Footer) Should render and handle onButtonLinkClick`, () => {
   const LoginTemplateElement = screen.getByTestId(`test-loginTemplate-id`);
   expect(LoginTemplateElement).toBeInTheDocument();
 
-  const ButtonLinkElement =
-    within(LoginTemplateElement).getByTestId(`test-Linkbutton-id`);
+  const ButtonLinkElement = within(LoginTemplateElement).getByTestId(
+    `test-Footer-linkButton-id`,
+  );
   expect(ButtonLinkElement).toBeInTheDocument();
   expect(mockOnClick).toBeCalledTimes(0);
   fireEvent.click(ButtonLinkElement);
   expect(mockOnClick).toBeCalledTimes(1);
 });
 
-test(`Should render and have backgound styles:`, () => {
+test(`Should render and have background styles:`, () => {
   render(<LoginTemplate {...props} />);
   const LoginTemplateElement = screen.getByTestId(`test-loginTemplate-id`);
   expect(LoginTemplateElement).toBeInTheDocument();

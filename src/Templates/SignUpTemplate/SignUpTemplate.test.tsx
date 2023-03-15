@@ -68,7 +68,7 @@ test(`(Button from Footer) Should render and handle onButtonLinkClick`, () => {
   expect(SignUpTemplateElement).toBeInTheDocument();
 
   const ButtonLinkElement = within(SignUpTemplateElement).getByTestId(
-    `test-Linkbutton-id`,
+    `test-Footer-linkButton-id`,
   );
   expect(ButtonLinkElement).toBeInTheDocument();
   expect(mockOnClick).toBeCalledTimes(0);
