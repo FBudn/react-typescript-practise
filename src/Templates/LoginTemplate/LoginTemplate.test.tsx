@@ -76,6 +76,16 @@ test(`(Button from Footer) Should render and handle onButtonLinkClick`, () => {
   expect(mockOnClick).toBeCalledTimes(1);
 });
 
+test(`CheckboxInput should not be checked`, () => {
+  render(<LoginTemplate {...props} />);
+  const ChecboxAndLabelElem = screen.getByTestId(`test-loginTemplate-id`);
+  expect(ChecboxAndLabelElem).toBeInTheDocument();
+  const CheckboxInput =
+    within(ChecboxAndLabelElem).getByTestId(`test-checkbox-id`);
+  expect(CheckboxInput).toBeInTheDocument();
+  expect(CheckboxInput).not.toBeChecked();
+});
+
 test(`Should render and have background styles:`, () => {
   render(<LoginTemplate {...props} />);
   const LoginTemplateElement = screen.getByTestId(`test-loginTemplate-id`);
