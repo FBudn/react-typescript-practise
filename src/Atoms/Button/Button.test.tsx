@@ -10,7 +10,7 @@ const props: ButtonProps = {
   testId: `test-button-id`,
   children: `Button Test`,
 };
-// tekst osobny test zrobić
+
 test(`Should render Button Component`, () => {
   render(<Button {...props} />);
   const ButtonElement = screen.getByTestId(`test-button-id`);

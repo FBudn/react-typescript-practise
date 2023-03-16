@@ -18,14 +18,14 @@ test(`Should renred LinkButton component`, () => {
   expect(LinkButtonElement).toBeInTheDocument();
 });
 
-test(`To match snapshot`, () => {
+test(`Schould match snapshot`, () => {
   const LinkButtonElement = TestRenderer.create(
     <LinkButton {...props} />,
   ).toJSON();
   expect(LinkButtonElement).toMatchSnapshot();
 });
 
-test(`To render and have styles:`, () => {
+test(`Should render and have styles:`, () => {
   render(<LinkButton {...props} />);
   const LinkButtonElement = screen.getByTestId(`test-linkButton-id`);
   expect(LinkButtonElement).toBeInTheDocument();

@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unnecessary-type-assertion */
 import React from "react";
 import { render, screen, within } from "@testing-library/react";
 import TestRenderer from "react-test-renderer";
@@ -49,4 +50,11 @@ test(`Should redner input element`, () => {
   const InputElement =
     within(InputAndLabelElement).getByTestId(`test-input-id`);
   expect(InputElement).toBeInTheDocument();
+});
+
+test(`Should store input value`, () => {
+  render(<InputAndLabel {...props} />);
+  const InputElement = screen.getByTestId(`test-input-id`) as HTMLInputElement;
+  InputElement.value = "Test";
+  expect(InputElement).toHaveValue("Test");
 });

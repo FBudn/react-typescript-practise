@@ -41,7 +41,7 @@ test(`Should render and have styles`, () => {
   });
 });
 
-test(`Should render three icons components`, () => {
+test(`Should render three icon components`, () => {
   render(<IconsSection {...props} />);
   const IconsSectionElement = screen.getByTestId(`iconsSection-test-id`);
   expect(IconsSectionElement).toBeInTheDocument();

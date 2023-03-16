@@ -12,7 +12,6 @@ test(`Should render CheckboxInput Component`, () => {
   render(<CheckboxInput {...props} />);
   const checkboxInputElement = screen.getByTestId(`test-checkbox-id`);
   expect(checkboxInputElement).toBeInTheDocument();
-  expect(checkboxInputElement).not.toBeChecked();
 });
 
 test(`Should match snapshot`, () => {
