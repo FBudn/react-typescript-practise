@@ -7,6 +7,7 @@ import {
 } from "./Footer.styled";
 import LinkButton from "../../Atoms/LinkButton/LinkButton";
 import TextLabel from "../../Atoms/TextLabel/TextLabel";
+import TestIcon from "../../Atoms/TestIcon";
 
 export interface FooterProps {
   infoText: string;
@@ -29,6 +30,7 @@ const Footer: React.FC<FooterProps> = ({
     <FooterContainer data-testid={testId}>
       <Line>{lineText}</Line>
       <Icons onClickIcon={onClickIcon} />
+      <TestIcon onClickIcon={onClickIcon} />
       <TextLabelAndLinkButtonContainer>
         <TextLabel
           color="rgb(82 82 91)"
