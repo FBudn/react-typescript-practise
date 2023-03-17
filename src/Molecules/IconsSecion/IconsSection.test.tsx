@@ -13,7 +13,7 @@ const props: IconsSectionProps = {
 
 test(`Should render IconsSection component`, () => {
   render(<IconsSection {...props} />);
-  const IconsSectionElement = screen.getByTestId(`iconsSection-test-id`);
+  const IconsSectionElement = screen.getByTestId(`test-iconsSection-id`);
   expect(IconsSectionElement).toBeInTheDocument();
 });
 
@@ -26,7 +26,7 @@ test(`Should match the snapshot`, () => {
 
 test(`Should render and have styles`, () => {
   render(<IconsSection {...props} />);
-  const IconsSectionElement = screen.getByTestId(`iconsSection-test-id`);
+  const IconsSectionElement = screen.getByTestId(`test-iconsSection-id`);
   expect(IconsSectionElement).toBeInTheDocument();
 
   expect(IconsSectionElement).toHaveStyle({
@@ -40,7 +40,7 @@ test(`Should render and have styles`, () => {
 
 test(`Should render three icon components`, () => {
   render(<IconsSection {...props} />);
-  const IconsSectionElement = screen.getByTestId(`iconsSection-test-id`);
+  const IconsSectionElement = screen.getByTestId(`test-iconsSection-id`);
   expect(IconsSectionElement).toBeInTheDocument();
 
   const Icon1 = within(IconsSectionElement).getByTestId(`test-icon1-id`);
@@ -53,23 +53,35 @@ test(`Should render three icon components`, () => {
   expect(Icon3).toBeInTheDocument();
 });
 
-test(`Should render and handle onClickIcon`, () => {
+test(`Should render and handle onClickIcon test-icon1-id`, () => {
   render(<IconsSection {...props} />);
-  const IconsSectionlement = screen.getByTestId(`iconsSection-test-id`);
+  const IconsSectionlement = screen.getByTestId(`test-iconsSection-id`);
   expect(IconsSectionlement).toBeInTheDocument();
 
   const IconElement = within(IconsSectionlement).getByTestId(`test-icon1-id`);
   expect(mockOnClickIcon).toBeCalledTimes(0);
   fireEvent.click(IconElement);
   expect(mockOnClickIcon).toBeCalledTimes(1);
+});
+
+test(`Should render and handle onClickIcon test-icon2-id`, () => {
+  render(<IconsSection {...props} />);
+  const IconsSectionlement = screen.getByTestId(`test-iconsSection-id`);
+  expect(IconsSectionlement).toBeInTheDocument();
 
   const IconElement2 = within(IconsSectionlement).getByTestId(`test-icon2-id`);
-  expect(mockOnClickIcon).toBeCalledTimes(1);
+  expect(mockOnClickIcon).toBeCalledTimes(0);
   fireEvent.click(IconElement2);
-  expect(mockOnClickIcon).toBeCalledTimes(2);
+  expect(mockOnClickIcon).toBeCalledTimes(1);
+});
+
+test(`Should render and handle onClickIcon test-icon3-id`, () => {
+  render(<IconsSection {...props} />);
+  const IconsSectionlement = screen.getByTestId(`test-iconsSection-id`);
+  expect(IconsSectionlement).toBeInTheDocument();
 
   const IconElement3 = within(IconsSectionlement).getByTestId(`test-icon3-id`);
-  expect(mockOnClickIcon).toBeCalledTimes(2);
+  expect(mockOnClickIcon).toBeCalledTimes(0);
   fireEvent.click(IconElement3);
-  expect(mockOnClickIcon).toBeCalledTimes(3);
+  expect(mockOnClickIcon).toBeCalledTimes(1);
 });

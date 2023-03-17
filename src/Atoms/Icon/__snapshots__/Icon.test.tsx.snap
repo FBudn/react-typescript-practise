@@ -1,6 +1,57 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Should match snapshot and have styles: 1`] = `
+exports[`Should match snapshot test-icon1-id: 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 25px;
+  height: 25px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 8px;
+  font-size: 1rem;
+  border-radius: 100%;
+  border: 2px solid red;
+  cursor: pointer;
+  border-color: blue;
+  color: blue;
+}
+
+<div
+  className="c0"
+  color="blue"
+  data-testid="test-icon1-id"
+  onClick={[MockFunction]}
+>
+  <svg
+    aria-hidden="true"
+    className="svg-inline--fa fa-facebook-f "
+    data-icon="facebook-f"
+    data-prefix="fab"
+    focusable="false"
+    role="img"
+    style={Object {}}
+    viewBox="0 0 320 512"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"
+      fill="currentColor"
+      style={Object {}}
+    />
+  </svg>
+</div>
+`;
+
+exports[`Should match snapshot test-icon2-id: 1`] = `
 .c0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -28,56 +79,7 @@ exports[`Should match snapshot and have styles: 1`] = `
 <div
   className="c0"
   color="red"
-  onClick={[MockFunction]}
->
-  <svg
-    aria-hidden="true"
-    className="svg-inline--fa fa-facebook-f "
-    data-icon="facebook-f"
-    data-prefix="fab"
-    focusable="false"
-    role="img"
-    style={Object {}}
-    viewBox="0 0 320 512"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <path
-      d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"
-      fill="currentColor"
-      style={Object {}}
-    />
-  </svg>
-</div>
-`;
-
-exports[`Should match snapshot and have styles: 2`] = `
-.c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  width: 25px;
-  height: 25px;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding: 8px;
-  font-size: 1rem;
-  border-radius: 100%;
-  border: 2px solid red;
-  cursor: pointer;
-  border-color: blue;
-  color: blue;
-}
-
-<div
-  className="c0"
-  color="blue"
+  data-testid="test-icon2-id"
   onClick={[MockFunction]}
 >
   <svg
@@ -100,7 +102,7 @@ exports[`Should match snapshot and have styles: 2`] = `
 </div>
 `;
 
-exports[`Should match snapshot and have styles: 3`] = `
+exports[`Should match snapshot test-icon3-id: 1`] = `
 .c0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -128,6 +130,7 @@ exports[`Should match snapshot and have styles: 3`] = `
 <div
   className="c0"
   color="blue"
+  data-testid="test-icon3-id"
   onClick={[MockFunction]}
 >
   <svg

@@ -31,35 +31,3 @@ exports[`Schould match snapshot 1`] = `
   LinkButton Test
 </button>
 `;
-
-exports[`To match snapshot 1`] = `
-.c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  border: none;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: end;
-  -webkit-box-align: end;
-  -ms-flex-align: end;
-  align-items: end;
-  font-size: 1rem;
-  font-weight: 500;
-  color: rgb(82 82 91);
-  cursor: pointer;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-<button
-  className="c0"
-  data-testid="test-linkButton-id"
-  onClick={[MockFunction]}
->
-  LinkButton Test
-</button>
-`;

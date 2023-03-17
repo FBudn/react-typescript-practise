@@ -1,53 +1,60 @@
 import React from "react";
 import { fireEvent, render, screen } from "@testing-library/react";
 import TestRenderer from "react-test-renderer";
-import Icon from "./Icon";
+import Icon, { IconProps } from "./Icon";
 import "jest-styled-components";
 
 const mockOnClickIcon = jest.fn();
 
-/* const props: IconProps = {
-  testId: `test-icon-id`,
-}; */
+const props1: IconProps = {
+  testId: `test-icon1-id`,
+  color: `blue`,
+  icon: `facebook`,
+  onClickIcon: mockOnClickIcon,
+};
+const props2: IconProps = {
+  testId: `test-icon2-id`,
+  color: `red`,
+  icon: `google`,
+  onClickIcon: mockOnClickIcon,
+};
+const props3: IconProps = {
+  testId: `test-icon3-id`,
+  color: `blue`,
+  icon: `linkedin`,
+  onClickIcon: mockOnClickIcon,
+};
 
 test(`Should render Icon component`, () => {
-  render(<Icon onClickIcon={mockOnClickIcon} color="blue" icon="google" />);
-  render(<Icon onClickIcon={mockOnClickIcon} color="blue" icon="google" />);
-  render(<Icon onClickIcon={mockOnClickIcon} color="blue" icon="linkedin" />);
-  const IconElement1 = screen.getByTestId(`Icon-1-case`);
-  const IconElement2 = screen.getByTestId(`Icon-2-case`);
-  const IconElement3 = screen.getByTestId(`Icon-3-case`);
+  render(<Icon {...props1} />);
+  render(<Icon {...props2} />);
+  render(<Icon {...props3} />);
+  const IconElement1 = screen.getByTestId(`test-icon1-id`);
+  const IconElement2 = screen.getByTestId(`test-icon2-id`);
+  const IconElement3 = screen.getByTestId(`test-icon3-id`);
   expect(IconElement1).toBeInTheDocument();
   expect(IconElement2).toBeInTheDocument();
   expect(IconElement3).toBeInTheDocument();
 });
 
-test(`Should match snapshot and have styles:`, () => {
-  const IconElement1 = TestRenderer.create(
-    <Icon onClickIcon={mockOnClickIcon} color="red" icon="facebook" />,
-  ).toJSON();
-  const IconElement2 = TestRenderer.create(
-    <Icon onClickIcon={mockOnClickIcon} color="blue" icon="google" />,
-  ).toJSON();
-  const IconElement3 = TestRenderer.create(
-    <Icon onClickIcon={mockOnClickIcon} color="blue" icon="linkedin" />,
-  ).toJSON();
-
+test(`Should match snapshot test-icon1-id:`, () => {
+  const IconElement1 = TestRenderer.create(<Icon {...props1} />).toJSON();
   expect(IconElement1).toMatchSnapshot();
+});
+
+test(`Should match snapshot test-icon2-id:`, () => {
+  const IconElement2 = TestRenderer.create(<Icon {...props2} />).toJSON();
   expect(IconElement2).toMatchSnapshot();
+});
+
+test(`Should match snapshot test-icon3-id:`, () => {
+  const IconElement3 = TestRenderer.create(<Icon {...props3} />).toJSON();
   expect(IconElement3).toMatchSnapshot();
 });
 
-test(`Should render and have styles:`, () => {
-  const IconElement1 = TestRenderer.create(
-    <Icon onClickIcon={mockOnClickIcon} color="red" icon="facebook" />,
-  ).toJSON();
-  const IconElement2 = TestRenderer.create(
-    <Icon onClickIcon={mockOnClickIcon} color="blue" icon="google" />,
-  ).toJSON();
-  const IconElement3 = TestRenderer.create(
-    <Icon onClickIcon={mockOnClickIcon} color="blue" icon="linkedin" />,
-  ).toJSON();
+test(`Should render and have styles test-icon1-id:`, () => {
+  render(<Icon {...props1} />);
+  const IconElement1 = screen.getByTestId(`test-icon1-id`);
 
   expect(IconElement1).toHaveStyleRule("display", "flex");
   expect(IconElement1).toHaveStyleRule("width", "25px");
@@ -58,6 +65,12 @@ test(`Should render and have styles:`, () => {
   expect(IconElement1).toHaveStyleRule("font-size", "1rem");
   expect(IconElement1).toHaveStyleRule("border-radius", "100%");
   expect(IconElement1).toHaveStyleRule("cursor", "pointer");
+});
+
+test(`Should render and have styles test-icon2-id:`, () => {
+  render(<Icon {...props2} />);
+  const IconElement2 = screen.getByTestId(`test-icon2-id`);
+
   expect(IconElement2).toHaveStyleRule("display", "flex");
   expect(IconElement2).toHaveStyleRule("width", "25px");
   expect(IconElement2).toHaveStyleRule("height", "25px");
@@ -67,6 +80,12 @@ test(`Should render and have styles:`, () => {
   expect(IconElement2).toHaveStyleRule("font-size", "1rem");
   expect(IconElement2).toHaveStyleRule("border-radius", "100%");
   expect(IconElement2).toHaveStyleRule("cursor", "pointer");
+});
+
+test(`Should render and have styles test-icon3-id:`, () => {
+  render(<Icon {...props3} />);
+  const IconElement3 = screen.getByTestId(`test-icon3-id`);
+
   expect(IconElement3).toHaveStyleRule("display", "flex");
   expect(IconElement3).toHaveStyleRule("width", "25px");
   expect(IconElement3).toHaveStyleRule("height", "25px");
@@ -78,29 +97,29 @@ test(`Should render and have styles:`, () => {
   expect(IconElement3).toHaveStyleRule("cursor", "pointer");
 });
 
-test(`should handle onClicks`, () => {
-  const mockOnClickIcon1 = jest.fn();
-  const mockOnClickIcon2 = jest.fn();
-  const mockOnClickIcon3 = jest.fn();
-
-  render(<Icon onClickIcon={mockOnClickIcon1} color="red" icon="facebook" />);
-  const consoleLogIcon1 = screen.getByTestId(`Icon-1-case`);
+test(`should handle onClicks test-icon1-id`, () => {
+  render(<Icon {...props1} />);
+  const consoleLogIcon1 = screen.getByTestId(`test-icon1-id`);
   fireEvent.click(consoleLogIcon1);
-  expect(mockOnClickIcon1).toBeCalledTimes(1);
-  mockOnClickIcon1(`Icon Test 1`);
-  expect(mockOnClickIcon1).toBeCalledWith(`Icon Test 1`);
+  expect(mockOnClickIcon).toBeCalledTimes(1);
+  mockOnClickIcon(`Icon Test 1`);
+  expect(mockOnClickIcon).toBeCalledWith(`Icon Test 1`);
+});
 
-  render(<Icon onClickIcon={mockOnClickIcon2} color="blue" icon="google" />);
-  const consoleLogIcon2 = screen.getByTestId(`Icon-2-case`);
+test(`should handle onClicks test-icon2-id`, () => {
+  render(<Icon {...props2} />);
+  const consoleLogIcon2 = screen.getByTestId(`test-icon2-id`);
   fireEvent.click(consoleLogIcon2);
-  expect(mockOnClickIcon2).toBeCalledTimes(1);
-  mockOnClickIcon2(`Icon Test 2`);
-  expect(mockOnClickIcon2).toBeCalledWith(`Icon Test 2`);
+  expect(mockOnClickIcon).toBeCalledTimes(1);
+  mockOnClickIcon(`Icon Test 2`);
+  expect(mockOnClickIcon).toBeCalledWith(`Icon Test 2`);
+});
 
-  render(<Icon onClickIcon={mockOnClickIcon3} color="blue" icon="linkedin" />);
-  const consoleLogIcon3 = screen.getByTestId(`Icon-3-case`);
+test(`should handle onClicks test-icon3-id`, () => {
+  render(<Icon {...props3} />);
+  const consoleLogIcon3 = screen.getByTestId(`test-icon3-id`);
   fireEvent.click(consoleLogIcon3);
-  expect(mockOnClickIcon3).toBeCalledTimes(1);
-  mockOnClickIcon3(`Icon Test 3`);
-  expect(mockOnClickIcon3).toBeCalledWith(`Icon Test 3`);
+  expect(mockOnClickIcon).toBeCalledTimes(1);
+  mockOnClickIcon(`Icon Test 3`);
+  expect(mockOnClickIcon).toBeCalledWith(`Icon Test 3`);
 });

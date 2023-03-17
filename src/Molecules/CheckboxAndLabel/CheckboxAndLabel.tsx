@@ -19,6 +19,7 @@ const CheckboxAndLabel = forwardRef<CheckboxRef, CheckboxAndLabelProps>(
         justify="start"
         fontSize="1rem"
         fontWeight="500"
+        testId="test-textLabel-id"
       >
         {infoText}
       </TextLabel>

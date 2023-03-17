@@ -46,7 +46,7 @@ test(`Should render with text`, () => {
   const TextLabelElement =
     within(ChecboxAndLabelElem).getByTestId(`test-textLabel-id`);
   expect(TextLabelElement).toBeInTheDocument();
-  expect(TextLabelElement).toHaveTextContent(`TextLabel test`);
+  expect(TextLabelElement).toHaveTextContent(`CheckboxAndLabel Test`);
 });
 
 test(`CheckboxInput should not be checked`, () => {

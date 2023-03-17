@@ -70,7 +70,7 @@ test(`Should render and handle onIconLinkClick`, () => {
   const FooterElement = screen.getByTestId(`test-footer-id`);
   expect(FooterElement).toBeInTheDocument();
 
-  const IconLinkElement = within(FooterElement).getByTestId(`Icon-3-case`);
+  const IconLinkElement = within(FooterElement).getByTestId(`test-icon3-id`);
   expect(IconLinkElement).toBeInTheDocument();
 
   expect(mockOnClickIcon).toBeCalledTimes(0);
