@@ -45,6 +45,4 @@ test(`Should handleClick`, () => {
   const LinkButtonElement = screen.getByTestId(`test-linkButton-id`);
   fireEvent.click(LinkButtonElement);
   expect(mockonClickLink).toBeCalledTimes(1);
-  mockonClickLink(`LinkButton Test 1`);
-  expect(mockonClickLink).toBeCalledWith(`LinkButton Test 1`);
 });

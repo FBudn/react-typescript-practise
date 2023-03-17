@@ -10,8 +10,8 @@ const SignUpPage: React.FC = () => {
     console.log(email, password);
   };
 
-  const onClickIcon = (i: string) => {
-    console.log(i);
+  const onClickIcon = (icon: string) => {
+    console.log(icon);
   };
   const navigate = useNavigate();
   const onClickLink = (url: string) => {

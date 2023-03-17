@@ -7,11 +7,8 @@ import "jest-styled-components";
 const mockOnClickIcon = jest.fn();
 
 const props: IconsSectionProps = {
-  testId: `iconsSection-test-id`,
+  testId: `test-iconsSection-id`,
   onClickIcon: mockOnClickIcon,
-  testIdIcon1: `Icon-1-case`,
-  testIdIcon2: `Icon-2-case`,
-  testIdIcon3: `Icon-3-case`,
 };
 
 test(`Should render IconsSection component`, () => {
@@ -46,13 +43,13 @@ test(`Should render three icon components`, () => {
   const IconsSectionElement = screen.getByTestId(`iconsSection-test-id`);
   expect(IconsSectionElement).toBeInTheDocument();
 
-  const Icon1 = within(IconsSectionElement).getByTestId(`Icon-1-case`);
+  const Icon1 = within(IconsSectionElement).getByTestId(`test-icon1-id`);
   expect(Icon1).toBeInTheDocument();
 
-  const Icon2 = within(IconsSectionElement).getByTestId(`Icon-2-case`);
+  const Icon2 = within(IconsSectionElement).getByTestId(`test-icon2-id`);
   expect(Icon2).toBeInTheDocument();
 
-  const Icon3 = within(IconsSectionElement).getByTestId(`Icon-3-case`);
+  const Icon3 = within(IconsSectionElement).getByTestId(`test-icon3-id`);
   expect(Icon3).toBeInTheDocument();
 });
 
@@ -61,17 +58,17 @@ test(`Should render and handle onClickIcon`, () => {
   const IconsSectionlement = screen.getByTestId(`iconsSection-test-id`);
   expect(IconsSectionlement).toBeInTheDocument();
 
-  const IconElement = within(IconsSectionlement).getByTestId(`Icon-1-case`);
+  const IconElement = within(IconsSectionlement).getByTestId(`test-icon1-id`);
   expect(mockOnClickIcon).toBeCalledTimes(0);
   fireEvent.click(IconElement);
   expect(mockOnClickIcon).toBeCalledTimes(1);
 
-  const IconElement2 = within(IconsSectionlement).getByTestId(`Icon-2-case`);
+  const IconElement2 = within(IconsSectionlement).getByTestId(`test-icon2-id`);
   expect(mockOnClickIcon).toBeCalledTimes(1);
   fireEvent.click(IconElement2);
   expect(mockOnClickIcon).toBeCalledTimes(2);
 
-  const IconElement3 = within(IconsSectionlement).getByTestId(`Icon-3-case`);
+  const IconElement3 = within(IconsSectionlement).getByTestId(`test-icon3-id`);
   expect(mockOnClickIcon).toBeCalledTimes(2);
   fireEvent.click(IconElement3);
   expect(mockOnClickIcon).toBeCalledTimes(3);

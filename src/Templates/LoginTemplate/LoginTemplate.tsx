@@ -17,7 +17,7 @@ export interface LoginTemplateProps {
     password: undefined | string,
     checkbox: undefined | boolean,
   ) => void;
-  onClickIcon: (i: string) => void;
+  onClickIcon: (icon: string) => void;
   onClickLink: (url: string) => void;
   testId?: string;
 }

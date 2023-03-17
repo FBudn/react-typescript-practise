@@ -6,8 +6,12 @@ import "jest-styled-components";
 
 const mockOnClickIcon = jest.fn();
 
+/* const props: IconProps = {
+  testId: `test-icon-id`,
+}; */
+
 test(`Should render Icon component`, () => {
-  render(<Icon onClickIcon={mockOnClickIcon} color="red" icon="facebook" />);
+  render(<Icon onClickIcon={mockOnClickIcon} color="blue" icon="google" />);
   render(<Icon onClickIcon={mockOnClickIcon} color="blue" icon="google" />);
   render(<Icon onClickIcon={mockOnClickIcon} color="blue" icon="linkedin" />);
   const IconElement1 = screen.getByTestId(`Icon-1-case`);
@@ -34,7 +38,7 @@ test(`Should match snapshot and have styles:`, () => {
   expect(IconElement3).toMatchSnapshot();
 });
 
-test(`Should render have styles:`, () => {
+test(`Should render and have styles:`, () => {
   const IconElement1 = TestRenderer.create(
     <Icon onClickIcon={mockOnClickIcon} color="red" icon="facebook" />,
   ).toJSON();

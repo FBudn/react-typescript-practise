@@ -41,8 +41,12 @@ test(`Should render and have styles:`, () => {
 
 test(`Should render with text`, () => {
   render(<CheckboxAndLabel {...props} />);
-  const { getByText } = within(screen.getByTestId(`checkboxAndLabel-test-id`));
-  expect(getByText("CheckboxAndLabel Test")).toBeInTheDocument();
+  const ChecboxAndLabelElem = screen.getByTestId(`checkboxAndLabel-test-id`);
+  expect(ChecboxAndLabelElem).toBeInTheDocument();
+  const TextLabelElement =
+    within(ChecboxAndLabelElem).getByTestId(`test-textLabel-id`);
+  expect(TextLabelElement).toBeInTheDocument();
+  expect(TextLabelElement).toHaveTextContent(`TextLabel test`);
 });
 
 test(`CheckboxInput should not be checked`, () => {

@@ -3,41 +3,42 @@ import { IconsContainer } from "./IconsSection.style";
 import Icon from "../../Atoms/Icon/Icon";
 
 export interface IconsSectionProps {
-  onClickIcon: (i: string) => void;
+  onClickIcon: (icon: string) => void;
   testId?: string;
-  testIdIcon1?: string;
-  testIdIcon2?: string;
-  testIdIcon3?: string;
 }
 
-const IconsSection: React.FC<IconsSectionProps> = ({
-  onClickIcon,
-  testId,
-  testIdIcon1,
-  testIdIcon2,
-  testIdIcon3,
-}) => {
+const IconsSection: React.FC<IconsSectionProps> = ({ onClickIcon, testId }) => {
+  const handleIcon1Click = () => {
+    onClickIcon(`Facebook`);
+  };
+  const handleIcon2Click = () => {
+    onClickIcon(`Google`);
+  };
+  const handleIcon3Click = () => {
+    onClickIcon(`LinkedIn`);
+  };
+
   return (
     <IconsContainer data-testid={testId}>
       <Icon
         color="red"
         icon="facebook"
-        data-testid={testIdIcon1}
-        onClickIcon={onClickIcon}
+        testId="test-icon1-id"
+        onClickIcon={handleIcon1Click}
       />
 
       <Icon
         color="blue"
         icon="google"
-        data-testid={testIdIcon2}
-        onClickIcon={onClickIcon}
+        testId="test-icon2-id"
+        onClickIcon={handleIcon2Click}
       />
 
       <Icon
         color="blue"
         icon="linkedin"
-        data-testid={testIdIcon3}
-        onClickIcon={onClickIcon}
+        testId="test-icon3-id"
+        onClickIcon={handleIcon3Click}
       />
     </IconsContainer>
   );

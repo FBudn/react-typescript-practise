@@ -28,8 +28,7 @@ exports[`Should match snapshot and have styles: 1`] = `
 <div
   className="c0"
   color="red"
-  data-testid="Icon-1-case"
-  onClick={[Function]}
+  onClick={[MockFunction]}
 >
   <svg
     aria-hidden="true"
@@ -79,8 +78,7 @@ exports[`Should match snapshot and have styles: 2`] = `
 <div
   className="c0"
   color="blue"
-  data-testid="Icon-2-case"
-  onClick={[Function]}
+  onClick={[MockFunction]}
 >
   <svg
     aria-hidden="true"
@@ -130,8 +128,7 @@ exports[`Should match snapshot and have styles: 3`] = `
 <div
   className="c0"
   color="blue"
-  data-testid="Icon-3-case"
-  onClick={[Function]}
+  onClick={[MockFunction]}
 >
   <svg
     aria-hidden="true"

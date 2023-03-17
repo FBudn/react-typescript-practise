@@ -8,21 +8,20 @@ import React from "react";
 import { SoloIconContainer } from "./Icon.style";
 
 export interface IconProps {
-  onClickIcon: (i: string) => void;
+  onClickIcon: () => void;
   color: string;
   icon: "facebook" | "google" | "linkedin";
+  testId?: string;
 }
 
-const Icon: React.FC<IconProps> = ({ onClickIcon, color, icon }) => {
+const Icon: React.FC<IconProps> = ({ onClickIcon, color, icon, testId }) => {
   switch (icon) {
     case "facebook":
       return (
         <SoloIconContainer
-          data-testid="Icon-1-case"
+          data-testid={testId}
           color={color}
-          onClick={() => {
-            onClickIcon(`Facebook Clicked`);
-          }}
+          onClick={onClickIcon}
         >
           <FontAwesomeIcon icon={faFacebookF} />
         </SoloIconContainer>
@@ -30,11 +29,9 @@ const Icon: React.FC<IconProps> = ({ onClickIcon, color, icon }) => {
     case "google":
       return (
         <SoloIconContainer
-          data-testid="Icon-2-case"
+          data-testid={testId}
           color={color}
-          onClick={() => {
-            onClickIcon(`Google Clicked`);
-          }}
+          onClick={onClickIcon}
         >
           <FontAwesomeIcon icon={faGoogle} />
         </SoloIconContainer>
@@ -42,11 +39,9 @@ const Icon: React.FC<IconProps> = ({ onClickIcon, color, icon }) => {
     case "linkedin":
       return (
         <SoloIconContainer
-          data-testid="Icon-3-case"
+          data-testid={testId}
           color={color}
-          onClick={() => {
-            onClickIcon(`LinkedIn Clicked`);
-          }}
+          onClick={onClickIcon}
         >
           <FontAwesomeIcon icon={faLinkedinIn} />
         </SoloIconContainer>
@@ -54,12 +49,7 @@ const Icon: React.FC<IconProps> = ({ onClickIcon, color, icon }) => {
 
     default:
       return (
-        <SoloIconContainer
-          color={color}
-          onClick={() => {
-            onClickIcon(`Facebook Clicked`);
-          }}
-        >
+        <SoloIconContainer color={color} onClick={onClickIcon}>
           <FontAwesomeIcon icon={faFacebookF} />
         </SoloIconContainer>
       );

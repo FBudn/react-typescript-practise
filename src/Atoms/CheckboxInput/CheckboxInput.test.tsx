@@ -21,7 +21,7 @@ test(`Should match snapshot`, () => {
   expect(checkboxInputElement).toMatchSnapshot();
 });
 
-test(`Should have styles`, () => {
+test(`Should render and have styles`, () => {
   render(<CheckboxInput {...props} />);
   const checkboxInputElement = screen.getByTestId(`test-checkbox-id`);
   expect(checkboxInputElement).toBeInTheDocument();
