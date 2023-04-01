@@ -36,8 +36,13 @@ test(`Should render and have styles:`, () => {
 
 test(`Should render with text`, () => {
   render(<Line {...props} />);
-  const { getByText } = within(screen.getByTestId(`test-line-id`));
-  expect(getByText("Line Test")).toBeInTheDocument();
+  const LineElement = screen.getByTestId(`test-line-id`);
+  expect(LineElement).toBeInTheDocument();
+  const TextLabelElement = within(LineElement).getByTestId(
+    `test-Line-LineTextBox`,
+  );
+  expect(TextLabelElement).toBeInTheDocument();
+  expect(TextLabelElement).toHaveTextContent(`Line Test`);
 });
 
 test(`Should render and <hr> element should have styles:`, () => {
