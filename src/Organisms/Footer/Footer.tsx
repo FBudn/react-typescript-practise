@@ -1,6 +1,6 @@
 import React from "react";
 import Line from "../../Molecules/Line/Line";
-import IconsSection from "../../Molecules/IconsSecion/IconsSection";
+import IconsSection from "../../Molecules/IconsSection/IconsSection";
 import {
   FooterContainer,
   TextLabelAndLinkButtonContainer,
