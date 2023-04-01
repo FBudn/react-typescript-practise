@@ -33,6 +33,9 @@ test(`Should render with texts`, () => {
       <LoginPage />
     </BrowserRouter>,
   );
+  const LoginPageElement = screen.getByTestId(`test-loginPage-id`);
+  expect(LoginPageElement).toBeInTheDocument();
+
   const { getByText } = within(screen.getByTestId(`test-loginPage-id`));
   const { getAllByText } = within(screen.getByTestId(`test-loginPage-id`));
   expect(getByText("Email")).toBeInTheDocument();
