@@ -3,7 +3,7 @@ import React, { forwardRef, useImperativeHandle, useRef } from "react";
 import Button from "../../Atoms/Button/Button";
 import Header from "../../Atoms/Header/Header";
 import TextLabel from "../../Atoms/TextLabel/TextLabel";
-import CheckboxPass from "../../Molecules/CheckboxAndLabel/CheckboxAndLabel";
+import CheckboxAndLabel from "../../Molecules/CheckboxAndLabel/CheckboxAndLabel";
 import InputAndLabel from "../../Molecules/InputAndLabel/InputAndLabel";
 import { InputsContainer } from "../FormSignUp/Forms.style";
 import { FormLoginContainer } from "./Forms.style";
@@ -51,7 +51,7 @@ const FormLogin = forwardRef<RefHandlerLogin, FormLoginProps>(
           <InputAndLabel ref={PasswordInputRef} type="password">
             Password
           </InputAndLabel>
-          <CheckboxPass ref={CheckboxRef} infoText="Remember me?" />
+          <CheckboxAndLabel ref={CheckboxRef} infoText="Remember me?" />
           <Button onClick={onSubmit} testId="test-button-id">
             LOGIN
           </Button>

@@ -35,6 +35,9 @@ test(`Should render and have styles:`, () => {
 
 test(`Should render with texts`, () => {
   render(<FormLogin {...props} />);
+  const FormLoginElement = screen.getByTestId(`test-formLogin-id`);
+  expect(FormLoginElement).toBeInTheDocument();
+
   const { getByText } = within(screen.getByTestId(`test-formLogin-id`));
   const { getAllByText } = within(screen.getByTestId(`test-formLogin-id`));
   expect(getByText("Email")).toBeInTheDocument();
