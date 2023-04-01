@@ -19,6 +19,7 @@ const InputAndLabel = forwardRef<InputRef, InputAndLabelProps>(
         justify="start"
         fontSize="1.1rem"
         fontWeight="500"
+        testId="test-textLabel-id"
       >
         {children}
       </TextLabel>

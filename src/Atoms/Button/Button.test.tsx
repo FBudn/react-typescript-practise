@@ -54,6 +54,4 @@ test(`Should render button and handle onClick`, () => {
   expect(mockOnButtonClick).toBeCalledTimes(0);
   fireEvent.click(ButtonElement);
   expect(mockOnButtonClick).toBeCalledTimes(1);
-  // mockOnButtonClick(`Button Test 1`);
-  // expect(mockOnButtonClick).toBeCalledWith(`Button Test 1`);
 });

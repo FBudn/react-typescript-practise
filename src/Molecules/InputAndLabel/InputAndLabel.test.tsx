@@ -39,8 +39,12 @@ test(`Should render and have styles`, () => {
 
 test(`Should render with text`, () => {
   render(<InputAndLabel {...props} />);
-  const { getByText } = within(screen.getByTestId(`test-inputAndLabel-id`));
-  expect(getByText("InputAndLabel Test")).toBeInTheDocument();
+  const InputAndLabelElement = screen.getByTestId(`test-inputAndLabel-id`);
+  expect(InputAndLabelElement).toBeInTheDocument();
+  const TextLabelElement =
+    within(InputAndLabelElement).getByTestId(`test-textLabel-id`);
+  expect(TextLabelElement).toBeInTheDocument();
+  expect(TextLabelElement).toHaveTextContent(`InputAndLabel Test`);
 });
 
 test(`Should redner input element`, () => {
