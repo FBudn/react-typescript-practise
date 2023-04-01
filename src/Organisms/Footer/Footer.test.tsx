@@ -42,12 +42,36 @@ test(`Should render and have styles:`, () => {
   });
 });
 
-test(`Should render with texts`, () => {
+test(`Should render with text TextLabel`, () => {
   render(<Footer {...props} />);
-  const { getByText } = within(screen.getByTestId(`test-footer-id`));
-  expect(getByText("Link Test")).toBeInTheDocument();
-  expect(getByText("LinkText Test")).toBeInTheDocument();
-  expect(getByText("LineText Test")).toBeInTheDocument();
+  const FooterElement = screen.getByTestId(`test-footer-id`);
+  expect(FooterElement).toBeInTheDocument();
+  const TextLabelElement =
+    within(FooterElement).getByTestId(`test-textLabel-id`);
+  expect(TextLabelElement).toBeInTheDocument();
+  expect(TextLabelElement).toHaveTextContent(`Link Test`);
+});
+
+test(`Should render with text Line`, () => {
+  render(<Footer {...props} />);
+  const FooterElement = screen.getByTestId(`test-footer-id`);
+  expect(FooterElement).toBeInTheDocument();
+
+  const LineElement = within(FooterElement).getByTestId(`test-line-id`);
+  expect(LineElement).toBeInTheDocument();
+  expect(LineElement).toHaveTextContent(`LineText Test`);
+});
+
+test(`Should render with text LinkButton`, () => {
+  render(<Footer {...props} />);
+  const FooterElement = screen.getByTestId(`test-footer-id`);
+  expect(FooterElement).toBeInTheDocument();
+
+  const LinkButtonElement = within(FooterElement).getByTestId(
+    `test-Footer-linkButton-id`,
+  );
+  expect(LinkButtonElement).toBeInTheDocument();
+  expect(LinkButtonElement).toHaveTextContent(`LinkText Test`);
 });
 
 test(`Should render and handle onButtonLinkClick`, () => {

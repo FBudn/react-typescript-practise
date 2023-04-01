@@ -27,7 +27,7 @@ const Footer: React.FC<FooterProps> = ({
 }) => {
   return (
     <FooterContainer data-testid={testId}>
-      <Line>{lineText}</Line>
+      <Line testId="test-line-id">{lineText}</Line>
       <IconsSection onClickIcon={onClickIcon} />
       <TextLabelAndLinkButtonContainer>
         <TextLabel
@@ -36,6 +36,7 @@ const Footer: React.FC<FooterProps> = ({
           justify="cener"
           fontSize="1.1rem"
           fontWeight="400"
+          testId="test-textLabel-id"
         >
           {infoText}
         </TextLabel>
