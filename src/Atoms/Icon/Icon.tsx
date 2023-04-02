@@ -58,4 +58,4 @@ const Icon: React.FC<IconProps> = ({ onClickIcon, color, icon, testId }) => {
 
 export default Icon;
 
-// coment
+// coment2
